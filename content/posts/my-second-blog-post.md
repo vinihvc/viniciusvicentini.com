@@ -1,6 +1,8 @@
 ---
 title: Vinicius 2
 description: Learning how to use @nuxt/content to create a blog
+thumbnail: /assets/images/photo-1596116135375-0fb48f3fddb1-1-1-.jpg
+date: 2020-08-03 07:36:39
 ---
 
 ## This is a heading
