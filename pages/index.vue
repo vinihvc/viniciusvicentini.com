@@ -36,6 +36,8 @@ const pagination = {
   },
 }
 
+import seo from '@/helpers/seo'
+
 export default {
   components: {
     About: () => import('@/components/About'),
@@ -63,6 +65,9 @@ export default {
 
       this.posts = await pagination.getPostsOfPage(this.$content, this.page)
     },
+  },
+  head() {
+    return seo({ title: 'Início' })
   },
 }
 </script>
