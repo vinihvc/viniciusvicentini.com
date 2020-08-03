@@ -21,7 +21,7 @@ const ITEMS_PER_PAGE = 10
 const pagination = {
   getPostsOfPage($content, page) {
     return $content('posts')
-      .only(['title', 'description', 'image', 'slug'])
+      .only(['title', 'description', 'thumbnail', 'slug'])
       .sortBy('createdAt', 'desc')
       .skip(ITEMS_PER_PAGE * (page - 1))
       .limit(ITEMS_PER_PAGE)
