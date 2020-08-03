@@ -3,6 +3,8 @@ title: Vinicius
 description: Learning how to use @nuxt/content to create a blog
 image: https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1000&q=50
 alt: my first blog post
+thumbnail: /images/photo-1596116135375-0fb48f3fddb1-1-1-.jpg
+date: 2020-08-03 06:18:40
 ---
 
 ## This is a heading
