@@ -1,6 +1,6 @@
 <template>
   <article>
-    <div class="img" :style="{ backgroundImage: `url(${post.image})` }" />
+    <div class="img" :style="{ backgroundImage: `url(${post.thumbnail})` }" />
 
     <div class="container">
       <div class="wrapper">
