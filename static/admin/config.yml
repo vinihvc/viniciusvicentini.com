@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: viniciushvc/vinicius-blog
   branch: master
   site_domain: viniciusvicentini.com
