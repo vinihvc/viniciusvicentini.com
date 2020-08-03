@@ -1,7 +1,7 @@
 <template>
   <footer class="container">
     <div class="copyright">
-      &copy; {{ new Date().getFullYear() }} . built with care ♥ by
+      &copy; {{ new Date().getFullYear() }}. made by
 
       <a
         class="link"
@@ -9,30 +9,18 @@
         target="_blank"
         rel="noreferrer noopener"
       >
-        Vicentini
+        Vinicus Vicentini
       </a>
 
       <div class="social">
         <a
-          href="https://www.twitter.com/viniciushvc"
+          v-for="item in items"
+          :href="item.link"
+          :key="item.name"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <TwitterIcon />
-        </a>
-        <a
-          href="https://github.com/viniciushvc"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <GithubIcon />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/viniciushvc"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <LinkedinIcon />
+          <component :is="`${item.name}-icon`" />
         </a>
       </div>
     </div>
@@ -48,6 +36,23 @@ export default {
     GithubIcon,
     LinkedinIcon,
   },
+
+  data: () => ({
+    items: [
+      {
+        name: 'github',
+        link: 'https://github.com/viniciushvc',
+      },
+      {
+        name: 'linkedin',
+        link: 'https://www.linkedin.com/in/viniciushvc/',
+      },
+      {
+        name: 'twitter',
+        link: 'https://twitter.com/ViniciusHVC',
+      },
+    ],
+  }),
 }
 </script>
 
