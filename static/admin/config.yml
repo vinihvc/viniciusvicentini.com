@@ -5,8 +5,8 @@ backend:
   site_domain: https://viniciusvicentini.com/
 
 publish_mode: editorial_workflow
-media_folder: content/images
-public_folder: /images
+media_folder: static/assets/images
+public_folder: /assets/images
 
 collections:
   - name: 'blog'

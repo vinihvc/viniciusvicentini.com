@@ -10,7 +10,7 @@ const seo = data => {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: data.image,
+        content: data.thumbnail,
       },
       {
         hid: 'og:title',
@@ -35,7 +35,7 @@ const seo = data => {
       {
         hid: 'twitter:image:src',
         name: 'twitter:image:src',
-        content: data.image,
+        content: data.thumbnail,
       },
       {
         hid: 'twitter:creator',
