@@ -169,20 +169,5 @@ export default {}
   strong {
     font-weight: 700;
   }
-  .gatsby-resp-image-background-image {
-    z-index: 2;
-    opacity: 1 !important;
-  }
-  .gatsby-resp-image-image {
-    box-shadow: none !important;
-    transition: opacity 0.2s;
-    &.lazyload {
-      opacity: 0;
-    }
-    &.lazyloaded {
-      opacity: 1;
-      z-index: 3;
-    }
-  }
 }
 </style>
