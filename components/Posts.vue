@@ -26,9 +26,17 @@ export default {
 <style lang="scss" scoped>
 .posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: auto;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .post-item {
     img {
