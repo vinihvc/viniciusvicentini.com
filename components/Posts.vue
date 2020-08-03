@@ -3,7 +3,7 @@
     <div class="posts">
       <article v-for="post of posts" :key="post.slug" class="post-item">
         <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.slug } }">
-          <img v-if="post.img" :src="post.img" />
+          <img :src="post.image" />
 
           <div>
             <h2>{{ post.title }}</h2>
