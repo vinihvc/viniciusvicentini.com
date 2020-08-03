@@ -1,7 +1,7 @@
 ---
 title: Vinicius
 description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/photo-1500576992153-0271099def59
+image: https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1000&q=50
 alt: my first blog post
 ---
 

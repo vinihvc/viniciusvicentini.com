@@ -16,13 +16,15 @@
 </template>
 
 <script>
+const ITEMS_PER_PAGE = 10
+
 const pagination = {
   getPostsOfPage($content, page) {
     return $content('posts')
-      .only(['title', 'description', 'img', 'slug'])
+      .only(['title', 'description', 'image', 'slug'])
       .sortBy('createdAt', 'desc')
-      .skip(10 * (page - 1))
-      .limit(10)
+      .skip(ITEMS_PER_PAGE * (page - 1))
+      .limit(ITEMS_PER_PAGE)
       .fetch()
   },
   async getNumberOfPages($content) {
@@ -31,7 +33,7 @@ const pagination = {
         await $content('posts')
           .only([])
           .fetch()
-      ).length / 10
+      ).length / ITEMS_PER_PAGE
     )
   },
 }
