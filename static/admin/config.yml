@@ -1,21 +1,27 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: viniciushvc/vinicius-blog
   branch: master
+  site_domain: https://viniciusvicentini.com/
 
-media_folder: static/img
-public_folder: /img
+publish_mode: editorial_workflow
+media_folder: content/images
+public_folder: /images
 
 collections:
   - name: 'blog'
     label: 'Blog'
-    format: 'json'
     folder: 'content/posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Image', name: 'thumbnail', widget: 'image' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
