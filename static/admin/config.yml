@@ -9,7 +9,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     format: 'json'
-    folder: 'content/blog'
+    folder: 'content/posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
