@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="container">
     <About />
 
-    <h3>Blog Posts</h3>
+    <h3>Últimas postagens</h3>
 
     <Posts :posts="posts" />
 
@@ -21,7 +21,7 @@ const ITEMS_PER_PAGE = 10
 const pagination = {
   getPostsOfPage($content, page) {
     return $content('posts')
-      .only(['title', 'description', 'thumbnail', 'slug'])
+      .only(['title', 'description', 'thumbnail', 'slug', 'date'])
       .sortBy('createdAt', 'desc')
       .skip(ITEMS_PER_PAGE * (page - 1))
       .limit(ITEMS_PER_PAGE)
@@ -76,9 +76,8 @@ export default {
 
 <style lang="scss" scoped>
 h3 {
-  font-size: 42px;
-  font-weight: 700;
-  text-align: center;
-  margin: 100px 0;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 50px 0;
 }
 </style>
