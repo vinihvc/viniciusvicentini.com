@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <Searchbar v-model="query" />
+    <Searchbar v-model="filtro" />
 
-    <Posts :posts="posts" />
+    <div class="wrapper">
+      <Posts :posts="posts" />
+    </div>
   </div>
 </template>
 
@@ -14,18 +16,36 @@ export default {
   },
   data() {
     return {
-      query: '',
+      filtro: '',
       posts: [],
     }
   },
-  watch: {
-    async query(query) {
+  methods: {
+    async searchPosts(filtro) {
       this.posts = await this.$content('posts')
-        .only(['title', 'slug'])
+        .only(['title', 'description', 'thumbnail', 'slug', 'date'])
         .sortBy('createdAt', 'asc')
-        .search(query)
+        .search(filtro)
         .fetch()
+
+      this.$router.push({ query: { filtro } })
     },
+  },
+  watch: {
+    async filtro(filtro) {
+      await this.searchPosts(filtro)
+    },
+  },
+  mounted() {
+    this.filtro = this.$route.query.filtro
+
+    this.searchPosts(this.filtro)
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  margin-top: 50px;
+}
+</style>
