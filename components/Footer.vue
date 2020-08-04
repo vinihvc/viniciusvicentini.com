@@ -61,7 +61,6 @@ export default {
   text-align: center;
 
   a {
-    text-decoration: none;
     transition: opacity 0.5s ease 0s;
 
     &:hover {

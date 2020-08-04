@@ -1,19 +1,13 @@
 <template>
-  <div class="container">
-    <div class="pagination">
-      <div
-        v-if="page !== 1"
-        class="pagination-button"
-        @click="$emit('previous')"
-      >
-        Anterior
-      </div>
-
-      <span class="pagination-info"> {{ page }} de {{ total }} </span>
-
-      <div class="pagination-button" @click="$emit('next')">Próximo</div>
+  <nav class="pagination">
+    <div v-if="page !== 1" class="pagination-button" @click="$emit('previous')">
+      Anterior
     </div>
-  </div>
+
+    <span class="pagination-info"> {{ page }} de {{ total }} </span>
+
+    <div class="pagination-button" @click="$emit('next')">Próximo</div>
+  </nav>
 </template>
 
 <script>

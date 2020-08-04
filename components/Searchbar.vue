@@ -19,7 +19,9 @@ export default {
 input {
   padding: 10px 20px;
   outline: none;
-  border: none;
+  border: 1px solid var(--border-color);
+  color: var(--color);
   width: 100%;
+  background-color: transparent;
 }
 </style>
