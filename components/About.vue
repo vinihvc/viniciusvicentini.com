@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <article class="about">
       <img
         src="https://avatars3.githubusercontent.com/u/16567830"
@@ -18,7 +18,7 @@
           facere deleniti dolorem sapiente.
         </p>
 
-        <nuxt-link to="/sobre">Veja mais</nuxt-link>
+        <n-link to="/sobre" prefetch>Veja mais</n-link>
       </div>
     </article>
   </section>
@@ -57,6 +57,7 @@ section {
     }
 
     a {
+      text-decoration: underline;
       line-height: 40px;
     }
 

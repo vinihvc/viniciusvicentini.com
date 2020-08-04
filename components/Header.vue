@@ -1,12 +1,12 @@
 <template>
   <header>
     <div class="container">
-      <nuxt-link class="brand" to="/">Vicentini</nuxt-link>
+      <n-link class="brand" to="/" prefetch>Vicentini</n-link>
 
       <div class="actions">
-        <nuxt-link to="/buscar">
+        <n-link to="/buscar" prefetch>
           <SearchIcon />
-        </nuxt-link>
+        </n-link>
 
         <ColorMode />
       </div>
@@ -46,7 +46,6 @@ header {
   }
 
   .brand {
-    text-decoration: none;
     font-style: italic;
     font-size: 30px;
     font-weight: 300;
