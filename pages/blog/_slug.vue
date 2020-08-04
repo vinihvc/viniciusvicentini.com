@@ -20,6 +20,8 @@
           <nuxt-content :document="post" />
         </div>
       </div>
+
+      <PrevNext :prev="prev" :next="next" />
     </div>
   </article>
 </template>
@@ -28,10 +30,19 @@
 import seo from '@/helpers/seo'
 
 export default {
+  components: {
+    PrevNext: () => import('@/components/PrevNext'),
+  },
   async asyncData({ $content, params }) {
     const post = await $content('posts', params.slug).fetch()
 
-    return { post }
+    const [prev, next] = await $content('posts')
+      .only(['title', 'slug'])
+      .sortBy('createdAt', 'asc')
+      .surround(params.slug)
+      .fetch()
+
+    return { post, prev, next }
   },
   head() {
     return seo(this.post)
