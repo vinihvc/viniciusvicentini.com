@@ -24,3 +24,14 @@ a {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
