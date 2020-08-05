@@ -1,11 +1,9 @@
 <template>
   <ul>
     <li v-for="item in items" :key="item">
-      <n-link :to="{ name: 'buscar', query: { filtro: item } }" prefetch>
-        {{ item }}
+      {{ item }}
 
-        <span class="divider" />
-      </n-link>
+      <span class="divider" />
     </li>
   </ul>
 </template>

@@ -48,10 +48,6 @@ export default {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include desktop {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .post-item {
     .post-date {
       font-size: 12px;
@@ -62,7 +58,7 @@ export default {
 
     .post-image {
       width: 100%;
-      height: 150px;
+      height: 200px;
       border-radius: 5px 5px 0 0;
       object-fit: cover;
     }

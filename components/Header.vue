@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  height: 100px;
+  height: 60px;
 
   .container {
     height: 100%;
@@ -47,7 +47,7 @@ header {
 
   .brand {
     font-style: italic;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
     color: var(--color);
 

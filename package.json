@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "vinicius-vicentini",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vinicius Vicentini personal blog",
   "main": "index.js",
   "scripts": {
     "dev": "nuxt",
@@ -10,8 +10,8 @@
     "start": "nuxt start"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Vinicius Vicentini <viniciusvicentini@live.com>",
+  "license": "MIT",
   "dependencies": {
     "@nuxt/content": "^1.5.0",
     "nuxt": "^2.14.0",

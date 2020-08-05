@@ -22,4 +22,12 @@ export default {
     scss: ['@/styles/variables.scss', '@/styles/mixins.scss'],
   },
   loading: { color: '#0065ff' },
+  pwa: {
+    manifest: {
+      name: 'Vinicius Vicentini',
+      lang: 'pt-br',
+      display: 'standalone',
+      background_color: '#0065ff',
+    },
+  },
 }
