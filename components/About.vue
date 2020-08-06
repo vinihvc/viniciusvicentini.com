@@ -6,7 +6,7 @@
         alt="Foto de perfil"
       />
 
-      <div>
+      <div class="about-resume">
         <h2>Vinicius Vicentini</h2>
 
         <h3>Front end developer</h3>
@@ -30,17 +30,25 @@ export default {}
 
 <style lang="scss" scoped>
 section {
-  padding: 25px 0 0;
   position: relative;
 
   .about {
     display: flex;
     padding: 20px;
-    background-color: var(--border-color);
+    background-color: var(--bgSecondary);
     margin: 0 auto;
-    border-radius: 8px;
+    border-radius: $borderRadius;
     align-items: center;
-    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+
+      &-resume {
+        text-align: left;
+      }
+    }
 
     h2 {
       font-weight: 400;
@@ -62,11 +70,17 @@ section {
     }
 
     img {
-      margin-right: 25px;
-      width: 150px;
-      height: 150px;
+      margin-bottom: 25px;
+      width: 100px;
+      height: 100px;
       border-radius: 100px;
       object-fit: cover;
+
+      @include md {
+        margin-right: 25px;
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 }

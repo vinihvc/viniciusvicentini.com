@@ -1,29 +1,31 @@
 <template>
-  <footer class="container">
-    <div class="copyright">
-      &copy; {{ new Date().getFullYear() }}. made by
+  <footer>
+    <Container>
+      <div class="copyright">
+        &copy; {{ new Date().getFullYear() }}. made by
 
-      <a
-        class="link"
-        href="https://www.linkedin.com/in/viniciushvc"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Vinicus Vicentini
-      </a>
-
-      <div class="social">
         <a
-          v-for="item in items"
-          :href="item.link"
-          :key="item.name"
+          class="link"
+          href="https://www.linkedin.com/in/viniciushvc"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <component :is="`${item.name}-icon`" />
+          Vinicus Vicentini
         </a>
+
+        <div class="social">
+          <a
+            v-for="item in items"
+            :href="item.link"
+            :key="item.name"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <component :is="`${item.name}-icon`" />
+          </a>
+        </div>
       </div>
-    </div>
+    </Container>
   </footer>
 </template>
 
@@ -32,6 +34,7 @@ import { TwitterIcon, GithubIcon, LinkedinIcon } from 'vue-feather-icons/'
 
 export default {
   components: {
+    Container: () => import('@/components/Container'),
     TwitterIcon,
     GithubIcon,
     LinkedinIcon,
@@ -65,7 +68,7 @@ export default {
 
     &:hover {
       opacity: 0.8;
-      color: var(--color-primary);
+      color: var(--colorPrimary);
     }
 
     svg {

@@ -10,7 +10,7 @@
           </span>
         </time>
 
-        <img :src="post.thumbnail" class="post-image" />
+        <img :src="post.image" class="post-image" />
 
         <div class="post-content">
           <h1 class="post-title">{{ post.title }}</h1>
@@ -44,11 +44,15 @@ export default {
   grid-auto-rows: auto;
   grid-gap: 2rem;
 
-  @include tablet {
+  @include md {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .post-item {
+    padding: 10px;
+    background-color: var(--bgSecondary);
+    border-radius: $borderRadius;
+
     .post-date {
       font-size: 12px;
       font-weight: 400;
@@ -59,7 +63,7 @@ export default {
     .post-image {
       width: 100%;
       height: 200px;
-      border-radius: 5px 5px 0 0;
+      border-radius: $borderRadius;
       object-fit: cover;
     }
 
@@ -67,13 +71,17 @@ export default {
       margin-top: 0.5rem;
 
       .post-title {
-        font-weight: 500;
-        font-size: 18px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.022em;
+        line-height: 1.3em;
         margin-bottom: 1rem;
       }
 
       .post-description {
-        font-size: 14px;
+        font-size: 1.1rem;
+        letter-spacing: -0.04px;
+        line-height: 1.3em;
         margin-bottom: 1.5rem;
       }
 

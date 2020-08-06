@@ -10,7 +10,7 @@
     "start": "nuxt start"
   },
   "keywords": [],
-  "author": "Vinicius Vicentini <viniciusvicentini@live.com>",
+  "author": "@viniciushvc",
   "license": "MIT",
   "dependencies": {
     "@nuxt/content": "^1.5.0",

@@ -1,29 +1,30 @@
 <template>
-  <div class="container">
+  <Container>
     <Searchbar v-model="filtro" />
 
     <div class="wrapper">
       <Posts :posts="posts" />
     </div>
-  </div>
+  </Container>
 </template>
 
 <script>
 export default {
   components: {
+    Container: () => import('@/components/Container'),
     Searchbar: () => import('@/components/Searchbar'),
     Posts: () => import('@/components/Posts'),
   },
   data() {
     return {
-      filtro: '',
+      filtro: null,
       posts: [],
     }
   },
   methods: {
     async searchPosts(filtro) {
       this.posts = await this.$content('posts')
-        .only(['title', 'description', 'thumbnail', 'slug', 'date'])
+        .only(['title', 'description', 'image', 'slug', 'date'])
         .sortBy('createdAt', 'asc')
         .search(filtro)
         .fetch()

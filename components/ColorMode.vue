@@ -25,6 +25,7 @@ export default {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
+  border: 1px solid var(--bg);
 
   .toggle-inner {
     width: 20px;
