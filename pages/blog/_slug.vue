@@ -1,28 +1,30 @@
 <template>
   <article>
-    <div class="img" :style="{ backgroundImage: `url(${post.thumbnail})` }" />
+    <div class="img" :style="{ backgroundImage: `url(${post.image})` }" />
 
-    <div class="container">
+    <Container>
       <div class="wrapper">
+        <n-link class="back" to="/">← Voltar na listagem</n-link>
+
         <div class="post-meta">
           <span>{{ new Date(post.updatedAt).toLocaleDateString() }}</span>
 
-          <span>|</span>
+          <span>
+            ·
+          </span>
 
-          <span>5 min de leitura</span>
+          <span>Leitura de 5 min</span>
         </div>
 
         <h1 class="title">{{ post.title }}</h1>
 
-        <p>{{ post.description }}</p>
+        <h2 class="description">{{ post.description }}</h2>
 
-        <div class="content">
-          <nuxt-content :document="post" />
-        </div>
+        <nuxt-content :document="post" />
+
+        <PrevNext :prev="prev" :next="next" />
       </div>
-
-      <PrevNext :prev="prev" :next="next" />
-    </div>
+    </Container>
   </article>
 </template>
 
@@ -31,6 +33,7 @@ import seo from '@/helpers/seo'
 
 export default {
   components: {
+    Container: () => import('@/components/Container'),
     PrevNext: () => import('@/components/PrevNext'),
   },
   async asyncData({ $content, params }) {
@@ -50,41 +53,60 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .img {
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 30vh;
   background-position: center;
   background-size: cover;
+  margin-top: -3rem;
 
   @media (max-width: 720px) {
-    height: 50vh;
+    height: 30vh;
     padding: 20px;
   }
 }
 
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-meta {
+  font-size: 14px;
+}
+
+.back {
+  margin: 20px 0;
+  display: block;
+  color: var(--colorPrimary);
+}
+
 .title {
-  font-size: 50px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 20px 0;
 
   @media (max-width: 720px) {
     font-size: 30px;
   }
 }
 
-.wrapper {
-  margin-top: -140px;
-  background-color: var(--bg-secondary);
-  padding: 50px;
-
-  @media (max-width: 720px) {
-    margin-top: 0;
-    padding: 50px 0;
-  }
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.45px;
+  line-height: 1.5em;
 }
 
 .nuxt-content {
-  margin: 40px 0;
+  margin-top: 30px;
+
+  p a,
+  li a {
+    color: var(--colorPrimary);
+  }
+
   p,
   h1,
   h2,
@@ -135,7 +157,7 @@ export default {
     width: 100%;
   }
   blockquote {
-    color: var(--primaryColor);
+    color: var(--color);
     border-left: 0.3rem solid var(--secondaryColor);
     padding: 0 1.875rem;
     margin: 3.125rem auto;
@@ -171,6 +193,39 @@ export default {
   }
   strong {
     font-weight: 700;
+  }
+
+  p,
+  h2,
+  ul {
+    color: var(--color);
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.069rem;
+  }
+
+  h2 {
+    font-weight: 800;
+    letter-spacing: 0.069rem;
+    line-height: 1.4;
+    font-size: 2.1rem;
+    margin: 2.4rem auto 1rem;
+  }
+  ul,
+  ol {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 0 auto 1.6rem;
+  }
+  ul ul {
+    list-style: circle;
+  }
+  li {
+    padding: 0.625rem 0;
+    & > ul {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

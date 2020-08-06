@@ -10,7 +10,7 @@ const seo = data => {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: data.thumbnail,
+        content: data.image,
       },
       {
         hid: 'og:title',
@@ -35,7 +35,7 @@ const seo = data => {
       {
         hid: 'twitter:image:src',
         name: 'twitter:image:src',
-        content: data.thumbnail,
+        content: data.image,
       },
       {
         hid: 'twitter:creator',
@@ -55,7 +55,7 @@ const seo = data => {
       {
         hid: 'aplication-name',
         name: 'aplication-name',
-        content: 'Vicentini',
+        content: 'Vinicius Vicentini',
       },
     ],
   }

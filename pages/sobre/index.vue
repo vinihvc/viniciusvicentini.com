@@ -1,62 +1,64 @@
 <template>
-  <div>
-    <div class="container">
-      <div class="about">
-        <h2>Resumo</h2>
+  <Container>
+    <div class="about">
+      <h2>Resumo</h2>
 
-        <p>
-          Sou de Brodowski, interior de São Paulo, proximo a Ribeirão Preto.
-          Comecei a trabalhar como programador em 2016 como programador
-          fullstack. Atualmente como programador Front-End.
-        </p>
+      <p>
+        Sou de Brodowski, interior de São Paulo, proximo a Ribeirão Preto.
+        Comecei a trabalhar como programador em 2016 como programador fullstack.
+        Atualmente como programador Front-End.
+      </p>
 
-        <h2>Educação</h2>
+      <h2>Educação</h2>
 
-        <ul>
-          <li>
-            2015-2016
-            <ul>
-              <li>Informática</li>
+      <ul>
+        <li>
+          2015-2016
+          <ul>
+            <li>Informática</li>
 
-              <li>ETEC José Martimiano da Silva</li>
-            </ul>
-          </li>
+            <li>ETEC José Martimiano da Silva</li>
+          </ul>
+        </li>
 
-          <li>
-            2016-2019
-            <ul>
-              <li>Ciência da computação</li>
+        <li>
+          2016-2019
+          <ul>
+            <li>Ciência da computação</li>
 
-              <li>Centro Universitário Barão de Mauá</li>
-            </ul>
-          </li>
-        </ul>
+            <li>Centro Universitário Barão de Mauá</li>
+          </ul>
+        </li>
+      </ul>
 
-        <h2>Habilidades</h2>
+      <h2>Habilidades</h2>
 
-        <ul>
-          <li>HTML</li>
-          <li>CSS (Sass)</li>
-          <li>C</li>
-          <li>C# e .NET</li>
-          <li>Java</li>
-          <li>Javascript</li>
-          <li>Css Frameworks (Bootstrap, Materialize, Semantic UI)</li>
-          <li>ReactJS / Redux / Flux</li>
-          <li>Angular / RxJs</li>
-          <li>Vue / Vuex</li>
-          <li>NodeJS</li>
-          <li>Git</li>
-          <li>MySQL - Oracle</li>
-          <li>O que eu não sei, aprendo rápido =)</li>
-        </ul>
-      </div>
+      <ul>
+        <li>HTML</li>
+        <li>CSS (Sass)</li>
+        <li>C</li>
+        <li>C# e .NET</li>
+        <li>Java</li>
+        <li>Javascript</li>
+        <li>Css Frameworks (Bootstrap, Materialize, Semantic UI)</li>
+        <li>ReactJS / Redux / Flux</li>
+        <li>Angular / RxJs</li>
+        <li>Vue / Vuex</li>
+        <li>NodeJS</li>
+        <li>Git</li>
+        <li>MySQL - Oracle</li>
+        <li>O que eu não sei, aprendo rápido =)</li>
+      </ul>
     </div>
-  </div>
+  </Container>
 </template>
 
 <script>
-export default {}
+export default {
+  components: {
+    Container: () => import('@/components/Container'),
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -65,7 +67,7 @@ export default {}
   p,
   h2,
   ul {
-    color: var(--primaryColor);
+    color: var(--color);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;

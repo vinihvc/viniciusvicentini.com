@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <Container>
     <About />
 
     <h3>Últimas postagens</h3>
@@ -12,7 +12,7 @@
       @next="page = page + 1"
       @previous="page = page - 1"
     />
-  </div>
+  </Container>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ const ITEMS_PER_PAGE = 10
 const pagination = {
   getPostsOfPage($content, page) {
     return $content('posts')
-      .only(['title', 'description', 'thumbnail', 'slug', 'date'])
+      .only(['title', 'description', 'image', 'slug', 'date'])
       .sortBy('createdAt', 'desc')
       .skip(ITEMS_PER_PAGE * (page - 1))
       .limit(ITEMS_PER_PAGE)
@@ -42,6 +42,7 @@ import seo from '@/helpers/seo'
 
 export default {
   components: {
+    Container: () => import('@/components/Container'),
     About: () => import('@/components/About'),
     Posts: () => import('@/components/Posts'),
     Pagination: () => import('@/components/Pagination'),

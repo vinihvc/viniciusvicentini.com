@@ -1,0 +1,11 @@
+@mixin lg {
+  @media (min-width: $lg-width) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $md-width) {
+    @content;
+  }
+}

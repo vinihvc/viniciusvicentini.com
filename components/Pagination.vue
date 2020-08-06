@@ -6,7 +6,9 @@
 
     <span class="pagination-info"> {{ page }} de {{ total }} </span>
 
-    <div class="pagination-button" @click="$emit('next')">Próximo</div>
+    <div v-if="page < total" class="pagination-button" @click="$emit('next')">
+      Próximo →
+    </div>
   </nav>
 </template>
 
@@ -22,8 +24,8 @@ export default {
   justify-content: space-between;
   margin: 50px 0;
   line-height: 40px;
-  background-color: var(--border-color);
-  border-radius: 8px;
+  background-color: var(--bgSecondary);
+  border-radius: $borderRadius;
   padding: 10px 20px;
 
   &-button {

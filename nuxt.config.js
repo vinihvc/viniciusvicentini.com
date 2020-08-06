@@ -10,7 +10,7 @@ export default {
     htmlAttrs: {
       lang: 'pt-br',
     },
-    titleTemplate: '%s | Vicentini',
+    titleTemplate: '%s | Vinicius Vicentini',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,7 +19,7 @@ export default {
   },
   css: ['@/styles/global.scss'],
   styleResources: {
-    scss: ['@/styles/variables.scss', '@/styles/mixins.scss'],
+    scss: ['@/styles/variables.scss', '@/styles/breakpoints.scss'],
   },
   loading: { color: '#0065ff' },
   pwa: {
