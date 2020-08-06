@@ -68,13 +68,9 @@ Passar algum tempo estudando Git e seus comandos é muito importante. Todos os p
 
 Importante também dizer que Git e Github são coisas diferentes, assim como Java e JavaScript.
 
-https://twitter.com/felipefialho_/status/1172208296213864448
-
 Muitas pessoas ainda fazem essa confusão, mas Git é a tecnologia para controle de versões. Github, Bitbucket, Gitlab e etc, são sites com interfaces visuais para navegar e visualizar o resultado desse versionamento. Sendo que o Github por exemplo, também funciona como uma rede social de desenvolvimento.
 
 ## HTML, CSS e JavaScript
-
-https://twitter.com/felipefialho_/status/1146852062027767808
 
 Virou clichê, muitas pessoas falam para estudar a base (eu falo o tempo todo). E como estamos falando de desenvolvimento Web, por de trás do fantástico mundo dos frameworks, no fim tudo vai gerar HTML, CSS e JavaScript, e exatamente por isso é tão importante saber bem essas coisas.
 
@@ -105,8 +101,6 @@ Isso seria impossível se eu não tivesse um bom conhecimento da base.
 
 ### Perfeito! Então só saber essa base basta? 😁
 
-https://twitter.com/felipefialho_/status/1045659621820694528
-
 Existem outras coisas essenciais, e vou falar sobre algumas delas agora.
 
 ## Conceitos e Metodologias
@@ -118,8 +112,6 @@ Toda nova lib ou tecnologia de desenvolvimento criada, tem como objetivo resolve
 Parte dos frameworks JavaScript atuais, por exemplo, servem para resolver problemas de componentização e alguns são baseados no conceito de programação reativa. São coisas que nós já tentávamos resolver de outras formas no passado. Essas tecnologias são as (re)evoluções de várias técnicas que já usávamos antes.
 
 O mundo do desenvolvimento é cíclico.
-
-https://twitter.com/felipefialho_/status/1164506266712051713
 
 ### Outro bom exemplo, as libs de CSS-in-JS
 
@@ -163,8 +155,6 @@ Além disso, uma pessoa Fullstack numa stack, não necessariamente será Fullsta
 
 No mundo Front-end, a possibilidade de ser Fullstack dentro de alguns projetos aumentou muito com o advento de tecnologias como [Node.js](https://nodejs.org/en/) anos atrás e o [Serverless](https://serverless.com/) atualmente.
 
-https://twitter.com/felipefialho_/status/1135880180029898754
-
 **Mas então preciso ser Fullstack?** 😱
 
 Como sempre, depende.
@@ -198,8 +188,6 @@ Segundo porque como disse acima, nós não desenvolvemos código pelo código, n
 A questão emocional também é muito importante, saber lidar com pressão, priorizar suas atividades e receber (e também dar) feedbacks são fatores que precisamos trabalhar dia após dia.
 
 Também precisamos buscar uma vida equilibrada, pela natureza dessa profissão é muito fácil sermos engolidos pelo código, negligenciando nossa saúde (física e mental) e também nossa vida pessoal. Saber equilibrar tudo isso também é uma _soft skill_, e das mais importantes, se você não estiver bem consigo mesmo, não vai conseguir dar o seu melhor.
-
-https://twitter.com/felipefialho_/status/1022092350254968833
 
 ## Roadmap de Desenvolvimento Front-end
 

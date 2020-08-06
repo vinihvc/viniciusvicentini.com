@@ -12,8 +12,6 @@ De lá pra cá tive acesso a milhares e milhares de libs gratuitas, desenvolvida
 
 Mas esse é só um ponto. E é só código.
 
-https://twitter.com/felipefialho_/status/1105801949377716225
-
 ## Tem todos os outros pontos
 
 Você já fez qualquer uma dessas coisas?
@@ -162,8 +160,6 @@ Basta dar uma rápida passada no Github e vai encontrar diversos projetos em que
 Não é exagero dizer que o Github está para projetos open source como o Google está para a internet.
 
 ### E o Github é uma rede social
-
-https://twitter.com/felipefialho_/status/1073168175515295749
 
 Isso significa que você pode seguir as pessoas e ver suas rotinas como developer:
 

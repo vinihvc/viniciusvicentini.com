@@ -28,8 +28,6 @@ Não, não é “O Fim” de final, é “O Fim” de **finalidade**... afinal d
 
 Foi criado em 2009 e o [mundo nunca mais foi o mesmo](https://twitter.com/felipefialho_/status/872606926915481601).
 
-https://twitter.com/felipefialho_/status/872606926915481601
-
 E não, eu não estava exagerando. O [Node.js](https://nodejs.org/en/) é um marco na história do desenvolvimento e transformou todo o ecossistema ao seu redor.
 
 Nem sempre Front-Enders tinham background em Ciências da Computação ou fluência em programação. Isso porque muitos eram Designers ou tinham background em Design, e eu sou um deles.
@@ -71,8 +69,6 @@ Mas ontem, hoje ou amanhã, a finalidade será sempre a mesma: **desenvolver ent
 ## O Meio
 
 E qual o meio para isso? [Sim, código](https://twitter.com/felipefialho_/status/861745079714799617).
-
-https://twitter.com/felipefialho_/status/861745079714799617
 
 Você pode fazer um código extraordinário e ficar horas olhando para a tela impressionado com a criação, mas se o resultado desse código incrível for um produto sem relevância, ele vai servir só para alimentar seu próprio ego.
 

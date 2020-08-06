@@ -127,8 +127,6 @@ E falando em praticar...
 Apesar de conhecimento teórico ser importante, a prática é o que realmente vai
 fazer você ficar bom em alguma coisa.
 
-https://twitter.com/felipefialho_/status/1128269083940655106
-
 Uns anos atrás escrevi um
 [artigo que vale ler depois](/blog/aproximando-seus-estudos-de-cenarios-reais/)
 contando como aproximar a teoria da prática, agora vou me aprofundar nisso e dar
@@ -279,8 +277,6 @@ tem nenhuma confiança para apostar em você naquela vaga que você curtiu tanto
 
 E é assim com (quase) todo mundo:
 
-https://twitter.com/felipefialho_/status/1029340640931467264
-
 Vale ressaltar, que evito falar sobre assuntos que não tenho vivência prática e
 quase não tenho experiências com freelas. Sendo assim todas as próximas dicas
 são focadas em oportunidades dentro de empresas, sendo elas alocadas ou _home
@@ -327,8 +323,6 @@ noção do nível técnico, sendo possível alguns casos, dispensar testes prát
 até mesmo avaliar algumas soft skills por conta do engajamento em projetos.
 
 Além disso, o Github é uma rede social como qualquer outra.
-
-https://twitter.com/felipefialho_/status/1073168175515295749
 
 Já escrevi um [artigo completíssimo](/blog/como-contribuir-com-open-source/)
 contando como contribuir com open source (que vai muito além do código) e o
@@ -482,8 +476,6 @@ E se você chegou até aqui, ainda vale falar algumas coisas:
 
 ### Não se compare
 
-https://twitter.com/felipefialho_/status/1182639200820219905
-
 Cada etapa, por menor que seja, é importante na sua evolução. Mas são suas
 etapas e sua evolução.
 
@@ -498,8 +490,6 @@ Portanto, tenha sim pessoas como inspirações e exemplos, isso pode te ajudar a
 construir seus próprios caminhos, mas sempre se compare apenas com você mesmo.
 
 ### Cuide de você
-
-https://twitter.com/felipefialho_/status/1156171344201101312
 
 Eu falo muito sobre open source. Mas vá com calma.
 

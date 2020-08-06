@@ -36,8 +36,6 @@ Ou seja, era tenso!
 
 Para adicionar uma simples borda arredondada ou sombra nos elementos, precisávamos adicionar imagens com transparência, e em `.gif`, já que o IE6 não aceitava `.png`.
 
-https://twitter.com/felipefialho_/status/1176453466904023041
-
 ### Mas as coisas melhoraram
 
 Nos últimos anos aconteceram grandes (re)evoluções no CSS, e não só questões básicas como adicionar transparência e bordas arredondadas foram resolvidas, como já faz um bom tempo que é possível usar propriedades e seletores que facilitam demais no dia a dia, dando alguns exemplos:
@@ -89,8 +87,6 @@ Desde então até variáveis nativas foram adicionadas, no chamado CSS Módulo 4
 
 E olhando para o futuro, coisas como nesting nativo podem surgir em breve, removendo assim parte da necessidade do uso de pré-processadores:
 
-https://twitter.com/felipefialho_/status/1104854866395099136
-
 ## Especificidade e colisão de estilos
 
 Mas mesmo com toda evolução das propriedades e seletores CSS, alguns problemas seguiram sem solução, como especificidade e colisão de estilos.
@@ -112,8 +108,6 @@ Essa bagunça toda, também tende a aumentar o uso de `!important`. E quando usa
 (Pra mim a única exceção para o uso de `!important`, e com cautela, é para sobrescrever propriedades de _third-party_ libs que não temos acesso).
 
 Essa bagunça toda, gera códigos como esse:
-
-https://twitter.com/felipefialho_/status/1103700905575309313
 
 E o CSS sozinho, não possui mecanismos para evitar que isso aconteça.
 

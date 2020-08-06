@@ -36,8 +36,6 @@ Primeiro de tudo... entenda o que sua empresa faz, como ela espera ganhar dinhei
 
 Saiba que boa parte dos frameworks do mercado foram feitos para desenvolver produtos e aplicações, e se você desenvolve sites institucionais e precisa entregar em três dias, dificilmente fará sentido usar essas soluções.
 
-https://twitter.com/felipefialho_/status/870471694531559424
-
 Isso pode ser surpreendente no mundo com milhares de coisas para estudar, em que developers vivem, mas...
 
 - Jade? Pug? Nunjucks? Halm? É apenas... HTML
