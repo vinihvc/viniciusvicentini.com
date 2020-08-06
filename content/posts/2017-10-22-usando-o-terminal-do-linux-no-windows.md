@@ -14,8 +14,6 @@ Isso é possível porque o módulo "Subsistema do Windows para o Linux", fornece
 
 Por vezes temos a impressão que pouquíssimas pessoas ainda usam o Windows para desenvolvimento. Mas tenho certeza que essa impressão destoa da realidade. Fiz uma rápida pesquisa no Twitter (sendo que é bastante nichada) e os resultados foram:
 
-https://twitter.com/felipefialho/status/921109237501227013
-
 Isso mostra que mesmo entre meus seguidores, muitas pessoas usam Windows, e isso realmente não deveria ser um problema.
 
 MacBooks são caríssimos e inacessíveis para boa parte das pessoas. O Linux acaba gerando resistência entre alguns developers, [mas não deveria, leia esse texto do Jaydson](https://jaydson.com/por-que-uso-linux/) e apresenta uma lista de softwares incompatíveis

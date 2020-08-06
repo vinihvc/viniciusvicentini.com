@@ -85,8 +85,6 @@ Tentaria então entender porque são tidas como referências.
 
 E então me inspiraria para construir minha própria história.
 
-https://twitter.com/felipefialho_/status/1182639200820219905
-
 Isso porque cada pessoa é totalmente diferente entre si e apesar de achar muito
 importante ter inspirações, compararia minha evolução somente comigo mesmo
 ontem.
@@ -164,11 +162,7 @@ Então assim que estivesse totalmente confortável, cairia de cabeça em
 JavaScript, essa linguagem é poderosa, incrível e mudou (e continua mudando) o
 mundo de desenvolvimento.
 
-https://twitter.com/felipefialho_/status/1067383811615440896
-
 ## 6. Melhoraria minhas soft skills
-
-https://twitter.com/felipefialho_/status/1191684813155160064
 
 Entenda como _soft skills_ todas suas habilidades comportamentais, emocionais e
 sociais.
@@ -295,8 +289,6 @@ intensos de estudo, o que é uma contradição: quanto mais você estuda e apren
 mais descobre que está longe de chegar em um estado que se considere bom
 profissional.
 
-https://twitter.com/felipefialho_/status/1014130865272705024
-
 É muito difícil lidar com isso, mas o que faria para me previnir desses
 problemas:
 
@@ -358,8 +350,6 @@ fazendo de tudo para usar bem esse tempo com pessoas e coisas que deixassem
 feliz.
 
 ## 15. Compartilharia meus conhecimentos
-
-https://twitter.com/felipefialho_/status/1175126276182396928
 
 Jamais deixaria que os resultados dos estudos, aprendizados que tive nos
 projetos ou os conhecimentos adquiridos, ficassem apenas dentro no meu cérebro.

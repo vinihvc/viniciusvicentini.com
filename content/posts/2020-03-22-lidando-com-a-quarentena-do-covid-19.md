@@ -10,8 +10,6 @@ A última vez que escrevi por aqui foi em novembro, ou seja, cinco meses atrás.
 
 Até então, ninguém poderia prever o que viria pela frente dali em diante, nem os impactos que isso traria na economia mundial e nas nossas vidas.
 
-https://twitter.com/felipefialho_/status/1237358692632322049
-
 ## O Estoicismo e nossas vidas
 
 Nesse período de quarentena que pode durar pelos próximos dias ou meses (de novo... não dá pra prever), uma coisa me preocupa bastante:
@@ -22,13 +20,9 @@ Muito tempo sem sair de casa, sozinho(a) ou convivendo com as mesmas pessoas e l
 
 Alguma hora só a internet pode não ser suficiente.
 
-https://twitter.com/felipefialho_/status/1241523876640718848
-
 Buscar adaptação para continuar cuidando do nosso corpo e mente, torna-se essencial.
 
 Em janeiro, criei uma thread sobre Estoicismo:
-
-https://twitter.com/felipefialho_/status/1218152249173708801
 
 A filosofia estóica ensina que a forma que reagimos e agimos diante dos acontecimentos da vida é mais importante do que tentar ter controle sobre tudo.
 
@@ -154,8 +148,6 @@ Usar alguns momentos da quarentena para literalmente não fazer nada, sem sentir
 Sabendo da importância do ócio e do efeito dele na criatividade, quem sabe idéias geniais não surgem a partir disso?
 
 ## Conclusão
-
-https://twitter.com/felipefialho_/status/1240407532209913859
 
 Se tem uma coisa que seres humanos são bons é em **se adaptar**.
 

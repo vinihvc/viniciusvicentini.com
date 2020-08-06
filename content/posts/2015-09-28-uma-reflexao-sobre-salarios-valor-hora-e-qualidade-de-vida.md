@@ -184,8 +184,6 @@ Surgiu um tempo ocioso no trabalho?
 
 Pode estudar inglês, fazer cursos online, estudar programação ou melhorar habilidades que você tem dificuldades ao invés de passar 1h rolando a página nas redes sociais ou vendo memes 🙃
 
-https://twitter.com/felipefialho_/status/1171397789521252352
-
 ### Trabalhar com o que te da prazer
 
 Parece clichê e realmente é muito clichê. Mas é um fator importante já que passamos a maior parte da nossa vida envolvidos com trabalho.

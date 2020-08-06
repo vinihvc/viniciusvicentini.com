@@ -10,8 +10,6 @@ Nos últimos dias o Twitter recebeu várias threads super úteis partindo do pri
 
 Achei a brincadeira legal e adaptei para o cenário developer com essa thread:
 
-https://twitter.com/felipefialho_/status/1083160362642522112
-
 A verdade é que achei que teria poucos RTs na minha thread, não imaginava que a brincadeira pegasse tanto entre devs, mas a parada pegou!
 
 Além do alto número de retweets, outras pessoas resolveram aproveitar para também brincarem com a temática dev e quem usa Twitter teve uma semana com dicas sensacionais.

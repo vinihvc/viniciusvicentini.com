@@ -16,8 +16,6 @@ Apesar das dicas estarem levemente enviesadas para Desenvolvimento Front-end, po
 
 Sim, o mundo Developer é frenético, novas soluções, novos conceitos, novas ferramentas e novas bibliotecas surgem praticamente todos os dias.
 
-https://twitter.com/felipefialho_/status/1196913549005742082
-
 Apesar de curtir esse ritmo, existem alguns pontos negativos, como a dificuldade para se sentir atualizado e até uma certa [desmotivação](blog/a-motivacao-desmotivacional-no-mundo-do-desenvolvimento/) por conta da ansiedade que essa velocidade toda causa.
 
 Então é bom falar:
@@ -34,8 +32,6 @@ Por isso vale ler:
 ## Como se atualizar
 
 ### Github
-
-https://twitter.com/felipefialho_/status/1073168175515295749
 
 Como sempre digo: Github é uma rede social.
 
@@ -64,8 +60,6 @@ Mais uma rede social baseada em seguidores, assim como no exemplo do Github, voc
 Outra vantagem é a quantidade de caracteres, já foi 140 e hoje é 280. O que é muito bom, porque faz com que as pessoas sejam mais diretas e evitem escrever monólogos para dizer algo que poderiam usar poucas palavras.
 
 Um recurso bastante interessante é a possibilidade de criar _thread_, onde as pessoas aprofundam sobre determinado assunto através de vários tuites sequenciais, como quando dei 100 dicas sobre desenvolvimento Front-end (e depois virou um artigo que pode ser [lido aqui](blog/100-dicas-sobre-desenvolvimento-front-end/)).
-
-https://twitter.com/felipefialho_/status/1083160362642522112
 
 Developers que geram conteúdo e criadores de projetos importantes, brasileiros e estrangeiros, geralmente estão no Twitter. Não vou passar uma lista porque não gosto muito de listas desse tipo, mas vale procurar profissionais que você gosta e acompanha-los por lá.
 
@@ -176,8 +170,6 @@ Isso porque todas as atividades dessas pessoas vão aparecer na sua timeline.
 
 Colocando como página inicial (do seu ambiente trabalho), você vai receber atualizações sem fazer muito esforço. Como citei anteriormente, sempre vale olhar o [Github Explore](https://github.com/explore).
 
-https://twitter.com/felipefialho_/status/1171397789521252352
-
 Também costumo deixar o Github aberto, então quando termino uma task ou preciso relaxar, costumo dar uma navegada por lá.
 
 ### Feed do Twitter
@@ -209,8 +201,6 @@ Dessa forma, só me aprofundo em determinado assunto caso me chame muito a aten�
 Como disse, muita coisa nova sai todos os dias, o que significa que de tempos em tempos coisas **muito** boas surgem.
 
 É difícil fazer esse filtro inicialmente, muitas vezes boas idéias não se traduzem na adoção delas pelo mercado. O que faço então, é observar quais libs ou conceitos estão sendo mais comentadas, mesmo que ainda sejam _hypes_.
-
-https://twitter.com/felipefialho_/status/1146775281090347008
 
 Um bom exemplo é o Svelte, quando vi algumas pessoas dando _stars_ no Github, li superficialmente e gostei da proposta. Também dei _star_ e passei a acompanhar de longe o repositório.
 

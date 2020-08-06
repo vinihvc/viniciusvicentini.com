@@ -17,8 +17,6 @@ anos quando tive o primeiro contato com esses blocos, o que mais me impressionou
 foi a possibilidade de fazer várias combinações com resultados completamente
 diferentes, mas sem modificar as peças originais.
 
-https://twitter.com/felipefialho_/status/1260986959171854337
-
 ## Antes: JS+ Tech Talks
 
 No dia 23/04/2020 tivemos a primeira edição da JS+ Tech Talks organizado pelo
@@ -128,8 +126,6 @@ considerável imprevisibilidade acabou sendo um fator decisivo, já que o DS iri
 crescer e seria complicado voltar atrás de novo.
 
 ## O Plano B: Múltiplos Design Systems
-
-https://twitter.com/felipefialho_/status/1242798337348247553
 
 Então o jeito foi partir para o plano B, ou seja, diferentes versões para
 diferentes frameworks.
