@@ -5,8 +5,6 @@
         :to="{ name: 'blog-post-slug', params: { slug: post.slug } }"
         prefetch
       >
-        <img :src="post.image" class="post-image" />
-
         <div class="post-content">
           <time class="post-date">
             {{ new Date(post.date).toLocaleDateString() }}
@@ -72,13 +70,6 @@ export default {
       margin-bottom: 8px;
       font-size: 12px;
       font-weight: 400;
-    }
-
-    .post-image {
-      width: 100%;
-      height: 200px;
-      border-radius: var(--borderRadius);
-      object-fit: cover;
     }
 
     .post-content {
