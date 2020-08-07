@@ -21,6 +21,16 @@ export default {
       posts: [],
     }
   },
+  watch: {
+    async filtro(filtro) {
+      await this.searchPosts(filtro)
+    },
+  },
+  mounted() {
+    this.filtro = this.$route.query.filtro
+
+    this.searchPosts(this.filtro)
+  },
   methods: {
     async searchPosts(filtro) {
       this.posts = await this.$content('posts')
@@ -31,16 +41,6 @@ export default {
 
       this.$router.push({ query: { filtro } })
     },
-  },
-  watch: {
-    async filtro(filtro) {
-      await this.searchPosts(filtro)
-    },
-  },
-  mounted() {
-    this.filtro = this.$route.query.filtro
-
-    this.searchPosts(this.filtro)
   },
 }
 </script>

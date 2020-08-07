@@ -1,4 +1,4 @@
-const seo = data => {
+const seo = (data) => {
   return {
     title: data.title,
     meta: [

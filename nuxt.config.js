@@ -5,6 +5,7 @@ export default {
     '@nuxtjs/color-mode',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    '@nuxtjs/stylelint-module',
   ],
   head: {
     htmlAttrs: {
@@ -21,13 +22,13 @@ export default {
   styleResources: {
     scss: ['@/styles/variables.scss', '@/styles/breakpoints.scss'],
   },
-  loading: { color: '#0065ff' },
+  loading: { color: '#03a9f4' },
   pwa: {
     manifest: {
       name: 'Vinicius Vicentini',
       lang: 'pt-br',
       display: 'standalone',
-      background_color: '#0065ff',
+      background_color: '#03a9f4',
     },
   },
 }

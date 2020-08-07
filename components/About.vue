@@ -18,7 +18,9 @@
           facere deleniti dolorem sapiente.
         </p>
 
-        <n-link to="/sobre" prefetch>Veja mais</n-link>
+        <n-link to="/sobre" prefetch>
+          Mais sobre Vinicius
+        </n-link>
       </div>
     </article>
   </section>
@@ -34,13 +36,13 @@ section {
 
   .about {
     display: flex;
-    padding: 20px;
-    background-color: var(--bgSecondary);
-    margin: 0 auto;
-    border-radius: $borderRadius;
-    align-items: center;
-    text-align: center;
     flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--bgSecondary);
+    border-radius: var(--borderRadius);
 
     @include md {
       flex-direction: row;
@@ -51,13 +53,13 @@ section {
     }
 
     h2 {
-      font-weight: 400;
       margin-bottom: 5px;
+      font-weight: 400;
     }
 
     h3 {
-      font-weight: 300;
       margin-bottom: 20px;
+      font-weight: 300;
     }
 
     p {
@@ -65,21 +67,21 @@ section {
     }
 
     a {
-      text-decoration: underline;
       line-height: 40px;
+      text-decoration: underline;
     }
 
     img {
-      margin-bottom: 25px;
       width: 100px;
       height: 100px;
+      margin-bottom: 25px;
       border-radius: 100px;
       object-fit: cover;
 
       @include md {
-        margin-right: 25px;
         width: 150px;
         height: 150px;
+        margin-right: 25px;
       }
     }
   }
