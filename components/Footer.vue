@@ -60,26 +60,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.copyright {
-  text-align: center;
+footer {
+  padding: 20px 0;
 
-  a {
-    transition: opacity 0.5s ease 0s;
+  .copyright {
+    text-align: center;
 
-    &:hover {
-      color: var(--colorPrimary);
-      opacity: 0.8;
-    }
+    a {
+      transition: opacity 0.5s ease 0s;
 
-    svg {
-      margin: 0 20px;
+      &:hover {
+        color: var(--colorPrimary);
+        opacity: 0.8;
+      }
+
+      svg {
+        margin: 0 20px;
+      }
     }
   }
-}
 
-.social {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 </style>
