@@ -1,10 +1,7 @@
 <template>
   <section>
     <article class="about">
-      <img
-        src="https://avatars3.githubusercontent.com/u/16567830"
-        alt="Foto de perfil"
-      />
+      <img src="/assets/images/profile-image.jpg" alt="Foto de perfil" />
 
       <div class="about-resume">
         <h2>Vinicius Vicentini</h2>
