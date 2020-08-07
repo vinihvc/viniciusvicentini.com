@@ -6,6 +6,10 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-analytics',
+    {
+      id: 'UA-174908670-1',
+    },
   ],
   head: {
     htmlAttrs: {
