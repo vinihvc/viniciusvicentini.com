@@ -1,11 +1,13 @@
 <template>
   <div class="wrapper">
-    <div class="more">Mais postagens</div>
+    <div class="more">
+      Mais postagens
+    </div>
 
     <div class="cards">
       <n-link
         v-if="prev"
-        :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+        :to="{ name: 'blog-post-slug', params: { slug: prev.slug } }"
       >
         {{ prev.title }}
       </n-link>
@@ -14,7 +16,7 @@
 
       <n-link
         v-if="next"
-        :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+        :to="{ name: 'blog-post-slug', params: { slug: next.slug } }"
       >
         {{ next.title }}
       </n-link>
@@ -41,10 +43,10 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  margin-top: 5rem;
+  margin-top: 50px;
 
   .more {
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 500;
   }
 }
@@ -52,7 +54,7 @@ export default {
 .cards {
   display: grid;
   grid-auto-rows: auto;
-  grid-gap: 2rem;
+  grid-gap: 20px;
   grid-template-columns: repeat(1, 1fr);
   margin: 30px 0;
 
@@ -61,12 +63,10 @@ export default {
   }
 }
 a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1.3em;
-
-  background-color: var(--bgSecondary);
-  border-radius: $borderRadius;
   padding: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--bgSecondary);
+  border-radius: var(--borderRadius);
 }
 </style>

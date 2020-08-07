@@ -7,7 +7,7 @@
 <script>
 export default {
   methods: {
-    toggleColor(color) {
+    toggleColor() {
       const { preference } = this.$colorMode
 
       this.$colorMode.preference = preference === 'dark' ? 'light' : 'dark'
@@ -18,21 +18,21 @@ export default {
 
 <style lang="scss" scoped>
 .toggle-wrapper {
-  width: 50px;
-  padding: 5px;
-  background-color: var(--color);
   display: block;
-  border-radius: 50px;
+  width: 50px;
+  padding: 3.5px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in;
+  background-color: var(--color);
   border: 1px solid var(--bg);
+  border-radius: 50px;
+  transition: background-color 0.2s ease-in;
 
   .toggle-inner {
     width: 20px;
     height: 15px;
+    margin-left: 0;
     background-color: var(--bg);
     border-radius: 50px;
-    margin-left: 0;
     transition: margin-left 0.2s ease-in, background-color 0.2s ease-in;
   }
 }

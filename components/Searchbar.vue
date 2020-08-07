@@ -17,11 +17,12 @@ export default {
 
 <style lang="scss" scoped>
 input {
-  padding: 10px 20px;
-  outline: none;
-  border: 1px solid var(--border);
-  color: var(--color);
+  display: block;
   width: 100%;
+  padding: 10px 20px;
+  color: var(--color);
   background-color: transparent;
+  border: 1px solid var(--border);
+  outline: none;
 }
 </style>

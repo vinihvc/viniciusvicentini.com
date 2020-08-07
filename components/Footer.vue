@@ -16,8 +16,8 @@
         <div class="social">
           <a
             v-for="item in items"
-            :href="item.link"
             :key="item.name"
+            :href="item.link"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -67,8 +67,8 @@ export default {
     transition: opacity 0.5s ease 0s;
 
     &:hover {
-      opacity: 0.8;
       color: var(--colorPrimary);
+      opacity: 0.8;
     }
 
     svg {
@@ -78,8 +78,8 @@ export default {
 }
 
 .social {
-  padding: 20px 0;
   display: flex;
   justify-content: center;
+  padding: 20px 0;
 }
 </style>

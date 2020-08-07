@@ -1,26 +1,31 @@
 <template>
   <section class="posts">
     <article v-for="post of posts" :key="post.slug" class="post-item">
-      <n-link :to="{ name: 'blog-slug', params: { slug: post.slug } }" prefetch>
-        <time class="post-date">
-          {{ new Date(post.date).toLocaleDateString() }}
-
-          <span>
-            · Leitura de 10 min
-          </span>
-        </time>
-
+      <n-link
+        :to="{ name: 'blog-post-slug', params: { slug: post.slug } }"
+        prefetch
+      >
         <img :src="post.image" class="post-image" />
 
         <div class="post-content">
-          <h1 class="post-title">{{ post.title }}</h1>
+          <time class="post-date">
+            {{ new Date(post.date).toLocaleDateString() }}
+
+            <span>
+              · Leitura de 10 min
+            </span>
+          </time>
+
+          <h1 class="post-title">
+            {{ post.title }}
+          </h1>
 
           <h2 class="post-description">
             {{ post.description }}
           </h2>
 
           <div class="post-tags">
-            <Tags :items="['Javascript', 'Vue']" />
+            <Tags :items="post.tags" />
           </div>
         </div>
       </n-link>
@@ -30,9 +35,14 @@
 
 <script>
 export default {
-  props: ['posts'],
   components: {
     Tags: () => import('@/components/Tags'),
+  },
+  props: {
+    posts: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>
@@ -42,57 +52,59 @@ export default {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: auto;
-  grid-gap: 2rem;
+  grid-gap: 32px;
 
   @include md {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .post-item {
-    padding: 10px;
-    background-color: var(--bgSecondary);
-    border-radius: $borderRadius;
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    transition: var(--transition);
+
+    &:hover {
+      border: 1px solid var(--colorPrimary);
+    }
 
     .post-date {
+      display: block;
+      margin-bottom: 8px;
       font-size: 12px;
       font-weight: 400;
-      margin-bottom: 0.5rem;
-      display: block;
     }
 
     .post-image {
       width: 100%;
       height: 200px;
-      border-radius: $borderRadius;
+      border-radius: var(--borderRadius);
       object-fit: cover;
     }
 
     .post-content {
-      margin-top: 0.5rem;
+      padding: 15px;
+      margin-top: 8px;
 
       .post-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        letter-spacing: -0.022em;
-        line-height: 1.3em;
-        margin-bottom: 1rem;
+        max-height: 48px;
+        margin-bottom: 0;
+        font-size: 20px;
+        text-overflow: -o-ellipsis-lastline;
       }
 
       .post-description {
-        font-size: 1.1rem;
-        letter-spacing: -0.04px;
-        line-height: 1.3em;
-        margin-bottom: 1.5rem;
+        margin-top: 15px;
+        margin-bottom: 0;
+        overflow: hidden;
+        font-weight: 500;
+        line-height: 1.5;
       }
 
       .post-tags {
         display: flex;
         align-items: center;
+        margin-top: 16px;
         font-size: 14px;
-
-        svg {
-          margin-right: 0.5rem;
-        }
       }
     }
   }

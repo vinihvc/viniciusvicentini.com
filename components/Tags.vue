@@ -10,7 +10,12 @@
 
 <script>
 export default {
-  props: ['items'],
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -21,10 +26,10 @@ li {
   &:not(:last-child) {
     .divider {
       &::after {
-        content: '·';
-        font-weight: 900;
         margin-right: 7px;
         margin-left: 5px;
+        font-weight: 900;
+        content: '·';
       }
     }
   }

@@ -14,7 +14,16 @@
 
 <script>
 export default {
-  props: ['page', 'total'],
+  props: {
+    page: {
+      type: [String, Number],
+      required: true,
+    },
+    total: {
+      type: [String, Number],
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -22,11 +31,11 @@ export default {
 .pagination {
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
   margin: 50px 0;
   line-height: 40px;
   background-color: var(--bgSecondary);
-  border-radius: $borderRadius;
-  padding: 10px 20px;
+  border-radius: var(--borderRadius);
 
   &-button {
     cursor: pointer;

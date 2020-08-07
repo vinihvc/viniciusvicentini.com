@@ -1,54 +1,48 @@
 @import './reset';
 
 * {
-  margin: 0;
   bottom: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
 /* https://github.com/sass/libsass/issues/2621 */
 
 .light-mode {
-  --color: #{$colorDark};
-  --colorPrimary: #{$colorBlueWhite};
-  --bg: #{$colorWhite};
-  --bgSecondary: #{$colorWhiteSecondary};
-  --border: #{$colorGrayDark};
+  --color: var(--colorDark);
+  --colorPrimary: var(--colorBlueWhite);
+  --bg: var(--colorWhite);
+  --bgSecondary: var(--colorWhiteSecondary);
+  --border: var(--colorGrayWhite);
 }
 
 .dark-mode {
-  --color: #{$colorWhite};
-  --colorPrimary: #{$colorBlueDark};
-  --bg: #{$colorDark};
-  --bgSecondary: #{$colorDarkSecondary};
-  --border: #{$colorGrayDark};
+  --color: var(--colorWhite);
+  --colorPrimary: var(--colorBlueDark);
+  --bg: var(--colorDark);
+  --bgSecondary: var(--colorDarkSecondary);
+  --border: var(--colorGrayDark);
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--color);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  font-size: 1rem;
-  min-height: calc(100vh);
-  -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-  transition: background-color $transition;
-  will-change: background-color;
+  font-size: 16px;
+  color: var(--color);
+  background-color: var(--bg);
 }
 
 a {
-  text-decoration: none;
   color: var(--color);
+  text-decoration: none;
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition-property: opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: $transition;
+  transition-duration: var(--transition);
+  transition-property: opacity;
 }
 .page-enter,
 .page-leave-to {
