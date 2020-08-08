@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 export default {
   target: 'static',
   buildModules: [
@@ -7,9 +10,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-analytics',
-    {
-      id: process.env.ANALYTICS_UA,
-    },
   ],
   head: {
     htmlAttrs: {
@@ -33,6 +33,11 @@ export default {
       lang: 'pt-br',
       display: 'standalone',
       background_color: '#03a9f4',
+    },
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
     },
   },
 }
