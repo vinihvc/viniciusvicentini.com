@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="more">
+    <div v-if="prev && next" class="more">
       Mais postagens
     </div>
 
@@ -12,16 +12,12 @@
         {{ prev.title }}
       </n-link>
 
-      <span v-else>&nbsp;</span>
-
       <n-link
         v-if="next"
         :to="{ name: 'blog-post-slug', params: { slug: next.slug } }"
       >
         {{ next.title }}
       </n-link>
-
-      <span v-else>&nbsp;</span>
     </div>
   </div>
 </template>
