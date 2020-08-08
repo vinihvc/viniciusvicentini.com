@@ -8,7 +8,7 @@
 
         <h2>Front end developer</h2>
 
-        <n-link to="/sobre" prefetch>
+        <n-link to="/sobre">
           Mais sobre Vinicius
         </n-link>
       </div>

@@ -1,5 +1,4 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import metas from './content/metas'
 
 export default {
   target: 'static',
@@ -16,11 +15,8 @@ export default {
       lang: 'pt-br',
     },
     titleTemplate: '%s | Vinicius Vicentini',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
+    metas,
   },
   css: ['@/styles/global.scss'],
   styleResources: {
@@ -30,9 +26,10 @@ export default {
   pwa: {
     manifest: {
       name: 'Vinicius Vicentini',
+      short_name: '@viniciushvc',
       lang: 'pt-br',
       display: 'standalone',
-      background_color: '#03a9f4',
+      background_color: '#37383c',
     },
   },
   publicRuntimeConfig: {
