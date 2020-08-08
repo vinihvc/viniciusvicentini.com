@@ -10,10 +10,6 @@
       <article>
         <time class="post-date">
           {{ new Date(post.date).toLocaleDateString() }}
-
-          <span>
-            · Leitura de 10 min
-          </span>
         </time>
 
         <h1 class="post-title">
