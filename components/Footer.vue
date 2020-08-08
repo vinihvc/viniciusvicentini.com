@@ -2,7 +2,7 @@
   <footer>
     <Container>
       <div class="copyright">
-        &copy; {{ new Date().getFullYear() }}. made by
+        &copy; {{ new Date().getFullYear() }}
 
         <a
           class="link"
@@ -10,7 +10,7 @@
           target="_blank"
           rel="noreferrer noopener"
         >
-          Vinicus Vicentini
+          Vinicius Vicentini
         </a>
 
         <div class="social">

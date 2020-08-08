@@ -6,7 +6,7 @@
     <h1 v-else>
       An error occurred
     </h1>
-    <n-link to="/" prefetch>
+    <n-link to="/">
       Home page
     </n-link>
   </Container>

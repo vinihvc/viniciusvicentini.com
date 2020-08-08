@@ -34,9 +34,8 @@ export default {
   methods: {
     async searchPosts(filtro) {
       this.posts = await this.$content('posts')
-        .only(['title', 'description', 'image', 'slug', 'date'])
+        .only(['title', 'description', 'slug', 'date'])
         .sortBy('createdAt', 'asc')
-        .search(filtro)
         .fetch()
 
       this.$router.push({ query: { filtro } })

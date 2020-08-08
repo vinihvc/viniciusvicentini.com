@@ -19,10 +19,6 @@ export default {
   padding: 2rem 0;
   margin: auto;
 
-  @include md {
-    padding: 2rem;
-  }
-
   p,
   h1,
   h2,
@@ -33,7 +29,7 @@ export default {
   iframe {
     font-size: 1.25rem;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.5;
     letter-spacing: 0.069rem;
     word-break: break-word;
   }
