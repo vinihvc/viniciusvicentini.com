@@ -3,17 +3,11 @@
     <Container>
       <div class="wrapper">
         <n-link class="back" to="/">
-          ← Voltar na listagem
+          ← Voltar ao início
         </n-link>
 
         <div class="post-meta">
           <span>{{ new Date(post.updatedAt).toLocaleDateString() }}</span>
-
-          <span>
-            ·
-          </span>
-
-          <span>Leitura de 5 min</span>
         </div>
 
         <h1 class="title">
@@ -83,7 +77,7 @@ export default {
 
 .back {
   display: block;
-  margin: 20px 0;
+  margin-bottom: 40px;
   color: var(--colorPrimary);
 }
 

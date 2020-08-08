@@ -1,30 +1,30 @@
 <template>
   <header>
     <Container>
-      <n-link class="brand" to="/">
-        Vinicius Vicentini
-      </n-link>
-
-      <div class="actions">
-        <n-link to="/labs">
-          labs
+      <nav>
+        <n-link class="brand" to="/">
+          Vinicius Vicentini
         </n-link>
 
-        <n-link to="/portfolio">
-          portfolio
-        </n-link>
-
-        <ColorMode />
-      </div>
+        <div class="actions">
+          <!-- <n-link to="/buscar" prefetch>
+            <SearchIcon />
+          </n-link> -->
+          <ColorMode />
+        </div>
+      </nav>
     </Container>
   </header>
 </template>
 
 <script>
+// import { SearchIcon } from 'vue-feather-icons'
+
 export default {
   components: {
     Container: () => import('@/components/Container'),
     ColorMode: () => import('@/components/ColorMode'),
+    // SearchIcon,
   },
 }
 </script>
@@ -38,15 +38,11 @@ header {
   margin-bottom: 48px;
   background-color: rgba(15, 15, 15, 0.9);
 
-  .container {
+  nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
-  }
-
-  .nuxt-link-active {
-    color: var(--colorPrimary);
   }
 
   .actions {
@@ -54,7 +50,7 @@ header {
     align-items: center;
 
     :not(:last-child) {
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
 
