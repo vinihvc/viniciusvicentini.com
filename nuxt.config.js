@@ -26,7 +26,7 @@ export default {
   pwa: {
     manifest: {
       name: 'Vinicius Vicentini',
-      short_name: '@viniciushvc',
+      short_name: 'Vicentini',
       lang: 'pt-br',
       background_color: '#37383c',
     },
