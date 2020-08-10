@@ -1,12 +1,12 @@
 <template>
-  <header>
+  <header class="header">
     <Container>
       <nav>
-        <n-link class="brand" to="/">
+        <n-link class="header-brand" to="/">
           Vinicius Vicentini
         </n-link>
 
-        <div class="actions">
+        <div class="header-actions">
           <!-- <n-link to="/buscar" prefetch>
             <SearchIcon />
           </n-link> -->
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
+.header {
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -45,20 +45,7 @@ header {
     height: 100%;
   }
 
-  .actions {
-    display: flex;
-    align-items: center;
-
-    :not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-
-  a {
-    color: #fff;
-  }
-
-  .brand {
+  &-brand {
     font-size: 16px;
     font-style: italic;
     font-weight: 300;
@@ -79,6 +66,15 @@ header {
 
     &::after {
       content: ' />';
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+
+    :not(:last-child) {
+      margin-right: 20px;
     }
   }
 }

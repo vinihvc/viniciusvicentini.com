@@ -2,6 +2,7 @@
   <input
     v-model="search"
     type="search"
+    class="search"
     placeholder="Ex: CSS, Javascript, Carreira"
     @input="$emit('input', search)"
   />
@@ -16,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-input {
+.search {
   display: block;
   width: 100%;
   padding: 10px 20px;

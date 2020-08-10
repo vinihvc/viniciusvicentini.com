@@ -1,11 +1,12 @@
 <template>
-  <section class="posts">
+  <nav class="posts">
     <n-link
       v-for="post of posts"
       :key="post.slug"
       :to="{ name: 'blog-slug', params: { slug: post.slug } }"
-      prefetch
+      :title="post.title"
       class="post-item"
+      prefetch
     >
       <article>
         <time class="post-date">
@@ -25,7 +26,7 @@
         </div>
       </article>
     </n-link>
-  </section>
+  </nav>
 </template>
 
 <script>

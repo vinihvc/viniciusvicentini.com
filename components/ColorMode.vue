@@ -1,5 +1,5 @@
 <template>
-  <div class="toggle-wrapper" @click="toggleColor">
+  <div class="toggle" @click="toggleColor">
     <div class="toggle-inner" />
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.toggle-wrapper {
+.toggle {
   display: block;
   width: 50px;
   padding: 3.5px;
@@ -27,7 +27,7 @@ export default {
   border-radius: 50px;
   transition: background-color 0.2s ease-in;
 
-  .toggle-inner {
+  &-inner {
     width: 20px;
     height: 15px;
     margin-left: 0;

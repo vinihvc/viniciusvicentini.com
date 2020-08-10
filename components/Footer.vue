@@ -1,7 +1,7 @@
 <template>
-  <footer>
+  <footer class="footer">
     <Container>
-      <div class="copyright">
+      <div class="footer-copyright">
         &copy; {{ new Date().getFullYear() }}
 
         <a
@@ -13,11 +13,12 @@
           Vinicius Vicentini
         </a>
 
-        <div class="social">
+        <div class="footer-social">
           <a
             v-for="item in items"
             :key="item.name"
             :href="item.link"
+            :title="item.name"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -43,15 +44,15 @@ export default {
   data: () => ({
     items: [
       {
-        name: 'github',
+        name: 'Github',
         link: 'https://github.com/viniciushvc',
       },
       {
-        name: 'linkedin',
+        name: 'Linkedin',
         link: 'https://www.linkedin.com/in/viniciushvc/',
       },
       {
-        name: 'twitter',
+        name: 'Twitter',
         link: 'https://twitter.com/ViniciusHVC',
       },
     ],
@@ -60,18 +61,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer {
-  padding: 20px 0;
+.footer {
+  padding: 50px 0;
 
-  .copyright {
+  &-copyright {
     text-align: center;
 
     a {
-      transition: opacity 0.5s ease 0s;
+      transition: var(--transition);
 
       &:hover {
         color: var(--colorPrimary);
-        opacity: 0.8;
       }
 
       svg {
@@ -80,7 +80,7 @@ footer {
     }
   }
 
-  .social {
+  &-social {
     display: flex;
     justify-content: center;
     margin-top: 20px;
