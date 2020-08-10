@@ -15,10 +15,6 @@ export default {
 
 <style lang="scss">
 .nuxt-content {
-  max-width: 100%;
-  padding: 2rem 0;
-  margin: auto;
-
   p,
   h1,
   h2,
@@ -28,8 +24,8 @@ export default {
   ol,
   iframe {
     font-size: 1.25rem;
-    font-weight: 300;
-    line-height: 1.5;
+    font-weight: 400;
+    line-height: 1.7;
     letter-spacing: 0.069rem;
     word-break: break-word;
   }

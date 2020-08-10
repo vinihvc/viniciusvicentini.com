@@ -1,24 +1,24 @@
 <template>
-  <article>
+  <article class="post">
     <Container>
-      <div class="wrapper">
-        <n-link class="back" to="/">
+      <div class="post-wrapper">
+        <n-link class="post-back" to="/">
           ← Voltar ao início
         </n-link>
 
-        <div class="post-meta">
-          <span>{{ new Date(post.updatedAt).toLocaleDateString() }}</span>
-        </div>
+        <time class="post-date">
+          {{ new Date(post.updatedAt).toLocaleDateString() }}
+        </time>
 
-        <h1 class="title">
+        <h1 class="post-title">
           {{ post.title }}
         </h1>
 
-        <h2 class="description">
+        <h2 class="post-description">
           {{ post.description }}
         </h2>
 
-        <Content :content="post" />
+        <Content :content="post" class="post-content" />
 
         <PrevNext :prev="prev" :next="next" />
       </div>
@@ -52,48 +52,50 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.img {
-  height: 30vh;
-  margin-top: 50px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  @media (max-width: 720px) {
-    height: 30vh;
-    padding: 20px;
+<style lang="scss" scoped>
+.post {
+  &-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
   }
-}
 
-.wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-}
+  &-back {
+    display: inline-block;
+    margin-bottom: 40px;
+    line-height: 30px;
+    color: var(--colorPrimary);
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
 
-.post-meta {
-  font-size: 14px;
-}
-
-.back {
-  display: block;
-  margin-bottom: 40px;
-  color: var(--colorPrimary);
-}
-
-.title {
-  margin: 20px 0;
-  font-size: 40px;
-  font-weight: 600;
-
-  @media (max-width: 720px) {
-    font-size: 30px;
+    &:hover {
+      color: var(--colorPrimary);
+      border-bottom: 2px solid var(--colorPrimary);
+    }
   }
-}
 
-.description {
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: -0.45px;
+  &-date {
+    display: block;
+    font-size: 14px;
+  }
+
+  &-title {
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 700;
+
+    @media (max-width: 720px) {
+      font-size: 30px;
+    }
+  }
+
+  &-description {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -0.45px;
+  }
+
+  &-content {
+    padding: 2rem 0;
+  }
 }
 </style>

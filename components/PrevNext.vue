@@ -1,10 +1,10 @@
 <template>
-  <div class="wrapper">
-    <div v-if="prev && next" class="more">
+  <div v-if="prev && next" class="prevnext">
+    <div class="prevnext-more">
       Mais postagens
     </div>
 
-    <div class="cards">
+    <div class="prevnext-cards">
       <n-link
         v-if="prev"
         :to="{ name: 'blog-post-slug', params: { slug: prev.slug } }"
@@ -38,31 +38,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.prevnext {
   margin-top: 50px;
 
-  .more {
+  &-more {
     font-size: 16px;
     font-weight: 500;
   }
-}
 
-.cards {
-  display: grid;
-  grid-auto-rows: auto;
-  grid-gap: 20px;
-  grid-template-columns: repeat(1, 1fr);
-  margin: 30px 0;
+  &-cards {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 0;
 
-  @include md {
-    grid-template-columns: repeat(2, 1fr);
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    a {
+      padding: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: var(--bgSecondary);
+      border-radius: var(--borderRadius);
+    }
   }
-}
-a {
-  padding: 20px;
-  font-size: 15px;
-  font-weight: 500;
-  background-color: var(--bgSecondary);
-  border-radius: var(--borderRadius);
 }
 </style>

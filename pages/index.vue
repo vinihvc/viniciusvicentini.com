@@ -2,7 +2,9 @@
   <Container>
     <About />
 
-    <h3>Postagens do blog</h3>
+    <h3>
+      Postagens do blog
+    </h3>
 
     <Posts :posts="posts" />
 
@@ -77,9 +79,5 @@ h3 {
   margin: 50px 0;
   font-size: 18px;
   font-weight: 500;
-}
-
-.mt-5 {
-  margin-top: 25px;
 }
 </style>

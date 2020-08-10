@@ -1,5 +1,5 @@
 <template>
-  <n-link :to="to" :style="{ backgroundColor: color }">
+  <n-link :to="to" :style="{ backgroundColor: color }" class="button">
     <slot />
   </n-link>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
+.button {
   display: inline-flex;
   padding: 10px 25px;
   font-weight: 600;

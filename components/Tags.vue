@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="item in items" :key="item">
+  <ul class="tags">
+    <li v-for="item in items" :key="item" class="tags-item">
       {{ item }}
 
       <span class="divider" />
@@ -13,23 +13,25 @@ export default {
   props: {
     items: {
       type: Array,
-      required: true,
+      default: () => [],
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-li {
-  display: inline-block;
+.tags {
+  &-item {
+    display: inline-block;
 
-  &:not(:last-child) {
-    .divider {
-      &::after {
-        margin-right: 7px;
-        margin-left: 5px;
-        font-weight: 900;
-        content: '·';
+    &:not(:last-child) {
+      .divider {
+        &::after {
+          margin-right: 7px;
+          margin-left: 5px;
+          font-weight: 900;
+          content: '·';
+        }
       }
     }
   }

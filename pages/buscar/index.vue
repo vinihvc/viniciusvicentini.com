@@ -1,18 +1,20 @@
 <template>
-  <Container>
-    <Searchbar v-model="filtro" />
+  <section class="search">
+    <Container>
+      <Search v-model="filtro" />
 
-    <div class="wrapper">
-      <Posts :posts="posts" />
-    </div>
-  </Container>
+      <div class="search-wrapper">
+        <Posts :posts="posts" />
+      </div>
+    </Container>
+  </section>
 </template>
 
 <script>
 export default {
   components: {
     Container: () => import('@/components/Container'),
-    Searchbar: () => import('@/components/Searchbar'),
+    Search: () => import('@/components/Search'),
     Posts: () => import('@/components/Posts'),
   },
   data() {
@@ -45,7 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-  margin-top: 50px;
+.search {
+  &-wrapper {
+    margin-top: 50px;
+  }
 }
 </style>

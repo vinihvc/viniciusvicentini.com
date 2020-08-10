@@ -1,14 +1,22 @@
 <template>
-  <section>
-    <div class="about">
-      <img src="/assets/images/profile-image.jpg" alt="Foto de perfil" />
+  <section class="about">
+    <div class="about-card">
+      <img
+        src="/assets/images/profile-image.jpg"
+        alt="Foto de perfil do autor"
+        class="about-image"
+      />
 
       <div class="about-resume">
-        <h1>Vinicius Vicentini</h1>
+        <h1 class="about-name">
+          Vinicius Vicentini
+        </h1>
 
-        <h2>Front end developer</h2>
+        <h2 class="about-role">
+          Front end developer
+        </h2>
 
-        <n-link to="/sobre">
+        <n-link to="/sobre" class="about-more">
           Mais sobre Vinicius
         </n-link>
       </div>
@@ -21,41 +29,41 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-section {
-  .about {
+.about {
+  &-card {
     padding: 15px;
     text-align: center;
     background-color: var(--bgSecondary);
     border-radius: var(--borderRadius);
+  }
 
-    img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 20px;
-      border-radius: 100px;
-      object-fit: cover;
-    }
+  &-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    object-fit: cover;
+  }
 
-    h1 {
-      margin-bottom: 5px;
-      font-size: 20px;
-      font-weight: 400;
-    }
+  &-name {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 400;
+  }
 
-    h2 {
-      margin-bottom: 20px;
-      font-weight: 300;
-    }
+  &-role {
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
 
-    a {
-      line-height: 40px;
-      border-bottom: 1px dashed var(--color);
-      transition: var(--transition);
+  &-more {
+    line-height: 40px;
+    border-bottom: 1px dashed var(--color);
+    transition: var(--transition);
 
-      &:hover {
-        color: var(--colorPrimary);
-        border-bottom: 1px solid var(--colorPrimary);
-      }
+    &:hover {
+      color: var(--colorPrimary);
+      border-bottom: 1px solid var(--colorPrimary);
     }
   }
 }

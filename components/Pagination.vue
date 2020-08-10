@@ -1,10 +1,10 @@
 <template>
   <nav class="pagination">
     <div v-if="page !== 1" class="pagination-button" @click="$emit('previous')">
-      Anterior
+      ← Anterior
     </div>
 
-    <span class="pagination-info"> {{ page }} de {{ total }} </span>
+    <span> {{ page }} de {{ total }} </span>
 
     <div v-if="page < total" class="pagination-button" @click="$emit('next')">
       Próximo →
