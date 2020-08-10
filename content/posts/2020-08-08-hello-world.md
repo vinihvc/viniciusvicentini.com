@@ -4,6 +4,7 @@ description: Esse é meu primeiro post, espero criar muitos tutoriais por aqui
 image: /assets/images/hello.jpg
 date: 2020-08-07 11:42:16
 ---
+
 ## Me aventurando nesse mundo de blogeirinho
 
 Fala pessoal, para quem não me conhece, muito prazer, me chamo Vinicius e caso queira saber mais um pouco sobre mim, acesse a página sobre ou [clicando aqui](https://viniciusvicentini.com/sobre). Criei este site/blog para escrever sobre o que estou estudando, dicas e tutoriais, nunca fui muito fã de escrever mas aparentemente isso tem mudado. A criação do blog foi uma ideia que tiver para me incentivar a escrever e também para divulgar meu projetos, quero escrever sobre o que estou aprendendo e também contribuir um pouco que sei para poder ajudar as pessoas.
@@ -12,13 +13,13 @@ Fala pessoal, para quem não me conhece, muito prazer, me chamo Vinicius e caso 
 
 Este são os tópicos que gostaria de aprender ou aprimorar meu conhecimento sobre:
 
-* CSS Grid
-* GraphQL
-* Testes
-* Relay
-* Mirage JS
-* Animações em CSS
-* Inglês
+- CSS Grid
+- GraphQL
+- Testes
+- Relay
+- Mirage JS
+- Animações em CSS
+- Inglês
 
 ## Documentando tudo
 
@@ -28,13 +29,18 @@ Acredito que escrever o que estou aprendendo seja uma forma de fixar ainda mais 
 
 Costumo ler bastante sobre artigos de programação e acompanhar alguns blogs, recomendo que você faça o mesmo, vou listar aqui alguns deles:
 
-* [Willian Justen](http://willianjusten.com.br/)
-* [Gabs Ferreira](http://gabsferreira.com/)
-* [Felipe Fialho](https://www.felipefialho.com/)
-* [dev.to](https://dev.to/)
-* [CSS-Tricks](https://css-tricks.com/)
-* [Overreacted](https://overreacted.io/)
+- [Willian Justen](http://willianjusten.com.br/)
+- [Gabs Ferreira](http://gabsferreira.com/)
+- [Felipe Fialho](https://www.felipefialho.com/)
+- [dev.to](https://dev.to/)
+- [CSS-Tricks](https://css-tricks.com/)
+- [Overreacted](https://overreacted.io/)
 
 ## Considerações finais
 
-Gostaria de mandar um beijo para minha mã… (brincadeira). Fica aqui então registrado o meu primeiro post de muito, espero escrever bastantes tutoriais por aqui. Valeu pessoal ❤
+Gostaria de mandar um beijo para minha mã… (brincadeira). Fica aqui então registrado o meu primeiro post de muito, espero escrever bastantes tutoriais por aqui.
+
+</br>
+</br>
+
+Valeu pessoal :heart:!!
