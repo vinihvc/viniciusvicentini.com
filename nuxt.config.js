@@ -28,7 +28,6 @@ export default {
       name: 'Vinicius Vicentini',
       short_name: '@viniciushvc',
       lang: 'pt-br',
-      display: 'standalone',
       background_color: '#37383c',
     },
   },
