@@ -13,6 +13,7 @@ Este são os tópicos que gostaria de aprender ou aprimorar meu conhecimento sob
 - CSS Grid
 - GraphQL
 - Testes
+- a11y
 - Relay
 - Mirage JS
 - Animações em CSS
