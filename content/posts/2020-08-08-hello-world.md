@@ -1,12 +1,9 @@
 ---
 title: Hello World
-description: Esse é meu primeiro post, espero criar muitos tutoriais por aqui
+description: Esse é meu primeiro post, vou me aventurar nesse mundo de blogueirinho
 image: /assets/images/hello.jpg
 date: 2020-08-07 11:42:16
 ---
-
-## Me aventurando nesse mundo de blogueirinho
-
 Fala pessoal, para quem não me conhece, muito prazer, me chamo Vinicius e caso queira saber mais um pouco sobre mim, acesse a página sobre ou [clique aqui](https://viniciusvicentini.com/sobre). Criei este site/blog para escrever sobre o que estou estudando, dicas e tutoriais, nunca fui muito fã de escrever mas aparentemente isso tem mudado. A criação do blog foi uma ideia que tive para me incentivar a escrever e também para divulgar meus projetos e também contribuir um pouco que sei para poder ajudar a comunidade.
 
 ## Checklist dos estudos
