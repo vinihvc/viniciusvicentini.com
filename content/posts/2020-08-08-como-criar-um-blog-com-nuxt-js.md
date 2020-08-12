@@ -20,6 +20,29 @@ Enquato todos (pelo menos para mim) estão criando blogs utilizando Gatsby, porq
 
 É o Next.js do Vue, É o Vue em SSR (Server Side Rendering) ou SSG (Static Site Generation), ou seja, rederizado no servidor, ou mesmo gerar sites estáticos (como este).
 
+```bash
+├── components
+│   ├── Avatar
+│   │   ├── index.js
+│   │   └── styled.js
+│   ├── Course
+│   │   ├── Image.js
+│   │   ├── index.js
+│   │   └── styled.js
+│   ├── Layout
+│   │   ├── index.js
+│   │   └── styled.js
+│   ├── MenuBar
+│   │   ├── index.js
+│   │   ├── styled.js
+│   │   └── trackers.js
+│   ├── MenuLinks
+│   │   ├── content.js
+│   │   ├── index.js
+│   │   └── styled.js
+...
+```
+
 ## Netlify CMS
 
 É onde este post está sendo escrito, ele é um gerador de conteúdo, um editor de texto markdown onde após publicar o post, ele gera um pull-request no github, basta aprovar e pronto, seu post está no ar.
@@ -33,3 +56,15 @@ Primeiro vamos preparar nosso ambiente de desenvolvimento, você precisar ter in
 * Node
 * Editor de texto - Recomendo o VS Code
 * Git
+
+```bash
+mkdir <project-name>
+cd <project-name>
+```
+
+Rode o comando `npm init -y`
+
+```bash
+npm install nuxt # OR yarn add nuxt
+```
+
