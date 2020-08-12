@@ -1,5 +1,5 @@
 ---
-title: Como criar um blog com Nuxt.js
+title: Como criar um blog com Nuxt.js - Parte 1
 description: Quais foram as bibliotecas utilizadas e porquê de cada uma delas.
 image: /assets/images/nuxt.jpg
 date: 2020-08-08 07:16:12
@@ -56,6 +56,8 @@ Primeiro vamos preparar nosso ambiente de desenvolvimento, você precisar ter in
 * Node
 * Editor de texto - Recomendo o VS Code
 * Git
+
+Não é necessário você ser um expert nessas tecnologias, mas como vamos construir um blog com muitas funcionalidades, eu espero que você tenha ao menos um pouco de experiência com as tecnologias abaixo:
 
 ```bash
 mkdir <project-name>
