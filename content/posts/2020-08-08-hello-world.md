@@ -1,6 +1,6 @@
 ---
 title: Hello World
-description: Esse é meu primeiro post, vou me aventurar nesse mundo de blogueirinho
+description: Esse é meu primeiro post, vou me aventurar nesse mundo de blogueirinho.
 image: /assets/images/hello.jpg
 date: 2020-08-07 11:42:16
 ---
@@ -36,7 +36,7 @@ Costumo ler bastante sobre artigos de programação e acompanhar alguns blogs, r
 
 ## Considerações finais
 
-Gostaria de mandar um beijo para minha mã… (brincadeira). Fica aqui então registrado o meu primeiro post de muito, espero escrever bastantes tutoriais por aqui.
+Gostaria de mandar um beijo para minha mã… (brincadeira). Fica aqui então registrado o meu primeiro post de muitos, espero escrever bastantes tutoriais por aqui.
 
 </br>
 </br>
