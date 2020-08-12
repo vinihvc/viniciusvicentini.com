@@ -49,13 +49,19 @@ Enquato todos (pelo menos para mim) estão criando blogs utilizando Gatsby, porq
 
 ## Site estático (SSG)
 
+Em um site estático (ou gerado estaticamente), o fluxo é bem simples:
+
+Caso seja um site gerado estáticamente, nós iremos fazer as requisições para uma API (ou até um conjunto de Markdown), vamos pegar esses dados e "colar" com os arquivos de template/componentes e iremos gerar a partir dali os arquivos de HTML, CSS e JS.
+
+A partir daí, nós subimos esses arquivos em um servidor (que pode inclusive ser uma CDN) e não haverá nenhum processo mais ocorrendo no lado do servidor mais. Toda vez que um usuário requisitar uma página, nós vamos pegar o conteúdo daquela página e vamos entregar, como os arquivos foram gerados estaticamente, nenhuma chamada extra será feita e a página já vai ter incluso o HTML total da página, isso inclui as meta-tags e tudo mais.
+
 ## Vamos começar
 
 Primeiro vamos preparar nosso ambiente de desenvolvimento, você precisar ter instalado em sua máquina:
 
-* Node
-* Editor de texto - Recomendo o VS Code
-* Git
+* [Node](https://nodejs.org/en/)
+* Editor de texto favorito - [Recomendo o VS Code](https://code.visualstudio.com/)
+* [Git](https://git-scm.com/)
 
 Não é necessário você ser um expert nessas tecnologias, mas como vamos construir um blog com muitas funcionalidades, eu espero que você tenha ao menos um pouco de experiência com as tecnologias abaixo:
 
