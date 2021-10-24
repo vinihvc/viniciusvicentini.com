@@ -6,7 +6,8 @@
       "@primitives/*": ["src/components/primitives/*"],
       "@templates/*": ["src/templates/*"],
       "@lib/*": ["src/lib/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

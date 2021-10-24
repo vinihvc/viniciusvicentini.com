@@ -2,7 +2,7 @@ import { createStitches, PropertyValue } from '@stitches/react'
 
 import type * as Stitches from '@stitches/react'
 
-import pxToRem from 'src/utils/pxToRem'
+import pxToRem from '@utils/pxToRem'
 
 export const { config, css, globalCss, styled, getCssText } = createStitches({
   theme: {
