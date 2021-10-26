@@ -1,13 +1,17 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import { motion, AnimatePresence } from 'framer-motion'
+
 import { DefaultSeo } from 'next-seo'
 import SEO from 'next-seo.config'
+
+import BaseTemplate from '@templates/Base'
 
 import resetStyles from '@styles/reset'
 import globalStyles from '@styles/global'
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   resetStyles()
   globalStyles()
 
@@ -24,7 +28,27 @@ const App = ({ Component, pageProps }: AppProps) => {
 
       <DefaultSeo {...SEO} />
 
-      <Component {...pageProps} />
+      <BaseTemplate>
+        <AnimatePresence>
+          <motion.div
+            key={router.route}
+            initial={{
+              opacity: 0
+            }}
+            animate={{
+              opacity: 1
+            }}
+            exit={{
+              opacity: 0,
+              transition: {
+                duration: 0.2
+              }
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
+      </BaseTemplate>
     </>
   )
 }
