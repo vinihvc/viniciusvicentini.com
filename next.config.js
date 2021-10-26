@@ -26,6 +26,21 @@ module.exports = withBundleAnalyzer(
       }
 
       return config
+    },
+
+    async redirects() {
+      return [
+        {
+          source: '/twitter',
+          destination: 'https://twitter.com/viniciushvc',
+          permanent: true
+        },
+        {
+          source: '/github',
+          destination: 'https://github.com/viniciushvc',
+          permanent: true
+        }
+      ]
     }
   })
 )
