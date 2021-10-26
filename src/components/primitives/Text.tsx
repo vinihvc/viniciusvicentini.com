@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion'
+
 import { styled } from 'stitches.config'
 
-export const Text = styled('span', {
+export const Text = styled(motion.span, {
   d: 'block',
   fontFamily: 'inherit',
   lineHeight: 'inherit',

@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion'
+
 import { styled } from 'stitches.config'
 
-export const Heading = styled('h2', {
+export const Heading = styled(motion.h2, {
   variants: {
     level: {
       1: {
