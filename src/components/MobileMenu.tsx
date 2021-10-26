@@ -1,73 +1,72 @@
 import { ComponentProps, useState } from 'react'
 
+import * as DialogPrimitive from '@radix-ui/react-dialog'
+
 import { BsList, BsX } from 'react-icons/bs'
 
 import { styled } from 'stitches.config'
 
-import * as DialogPrimitive from '@radix-ui/react-dialog'
-
 import Stack from '@primitives/Stack'
-import Link from '@primitives/Link'
 
 import VisuallyHidden from '@components/VisuallyHidden'
 
-const StyledOverlay = styled(DialogPrimitive.Overlay, {
+const OverlayStyled = styled(DialogPrimitive.Overlay, {
   bg: 'rgba(0,0,0, 0.9)',
   position: 'fixed',
   inset: 0
 })
 
-const StyledContent = styled(DialogPrimitive.Content, {
+const ContentStyled = styled(DialogPrimitive.Content, {
   d: 'flex',
   align: 'center',
   justify: 'center',
-  h: '100vh',
-  w: '100vw'
+  w: '100vw',
+  h: '100vh'
 })
 
-const DialogTrigger = styled(DialogPrimitive.Trigger, {
+const TriggerStyled = styled(DialogPrimitive.Trigger, {
   appearance: 'none',
   position: 'absolute',
   bg: 'none',
   color: '$white',
-  fontSize: '$2xl',
+  fontSize: '$3xl',
   border: 0,
-  top: 20,
-  right: 20
+  top: 0,
+  right: 0,
+  p: '$4',
+  cursor: 'pointer'
 })
 
-const DialogClose = styled(DialogTrigger)
+const CloseStyled = styled(TriggerStyled)
 
-type MobileMenuProps = ComponentProps<typeof DialogTrigger>
+type MobileMenuProps = {
+  children: React.ReactNode
+} & ComponentProps<typeof TriggerStyled>
 
-const MobileMenu = ({ ...props }: MobileMenuProps) => {
+const MobileMenu = ({ children, ...props }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <DialogPrimitive.Root onOpenChange={() => setIsOpen((e) => !e)}>
-      <StyledOverlay />
+      <OverlayStyled />
 
       {!isOpen && (
-        <DialogTrigger {...props}>
+        <TriggerStyled {...props}>
           <BsList />
 
           <VisuallyHidden>Open menu</VisuallyHidden>
-        </DialogTrigger>
+        </TriggerStyled>
       )}
 
-      <StyledContent onInteractOutside={(e) => e.preventDefault()}>
-        <DialogClose>
+      <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
+        <CloseStyled>
           <BsX />
 
           <VisuallyHidden>Close menu</VisuallyHidden>
-        </DialogClose>
+        </CloseStyled>
 
-        <Stack direction="column">
-          <Link href="#">Home</Link>
-          <Link href="#">About</Link>
-          <Link href="#">Blog</Link>
-        </Stack>
-      </StyledContent>
+        <Stack direction="column">{children}</Stack>
+      </ContentStyled>
     </DialogPrimitive.Root>
   )
 }
