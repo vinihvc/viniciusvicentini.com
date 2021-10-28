@@ -2,14 +2,14 @@ import { NextSeo } from 'next-seo'
 
 import AboutTemplate from '@templates/About'
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <>
-      <NextSeo title="About" />
+      <NextSeo title="About me" />
 
       <AboutTemplate />
     </>
   )
 }
 
-export default HomePage
+export default AboutPage
