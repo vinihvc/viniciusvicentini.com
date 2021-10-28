@@ -1,3 +1,5 @@
+import type { MotionProps } from 'framer-motion'
+
 /**
  * @example
  * ```js
@@ -6,7 +8,7 @@
  *
  * @param delay duration of animation
  */
-export const fadeIn = (delay = 0.25) => ({
+export const fadeIn: (delay?: number) => MotionProps = (delay = 0.25) => ({
   initial: {
     opacity: 0
   },
