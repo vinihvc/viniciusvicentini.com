@@ -30,6 +30,15 @@ const NavLinks = () => (
       </Link>
     </NextLink>
 
+    <NextLink href="/repo" passHref>
+      <Link
+        {...animations.fadeIn(0.75)}
+        css={{ fontSize: '$3xl', '@sm': { fontSize: '$md' } }}
+      >
+        Repositories
+      </Link>
+    </NextLink>
+
     <NextLink href="/blog" passHref>
       <Link
         {...animations.fadeIn(0.75)}
