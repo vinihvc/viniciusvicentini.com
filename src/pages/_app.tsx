@@ -8,11 +8,9 @@ import SEO from 'next-seo.config'
 
 import BaseTemplate from '@templates/Base'
 
-import resetStyles from '@styles/reset'
 import globalStyles from '@styles/global'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
-  resetStyles()
   globalStyles()
 
   return (

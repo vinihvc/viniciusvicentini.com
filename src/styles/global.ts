@@ -1,15 +1,16 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
 import { globalCss } from 'stitches.config'
 
+import resetStyles from './reset'
+
 const globalStyles = globalCss({
-  'html, body': {
-    transition: '$fast'
-  },
+  // Reset
+  ...resetStyles,
+
   body: {
     fontFamily: '$sans',
     bg: '$bg',
-    color: '$white'
+    color: '$white',
+    overflowY: 'scroll'
   }
 })
 
