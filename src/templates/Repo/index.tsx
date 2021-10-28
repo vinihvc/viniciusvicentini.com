@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 
-import { RepoPageProps } from 'src/pages/repos'
+import type { RepoPageProps } from 'src/pages/repo'
 
 import Grid from '@primitives/Grid'
 import Box from '@primitives/Box'
