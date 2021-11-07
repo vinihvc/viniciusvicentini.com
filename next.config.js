@@ -1,46 +1,71 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const withPWA = require('next-pwa')
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
-})
-
+// Environment type
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = withBundleAnalyzer(
-  withPWA({
-    reactStrictMode: true,
-    pwa: {
-      dest: 'public',
-      disable: !isProd
-    },
-    // Replace React with Preact
-    webpack: (config, { dev, isServer }) => {
-      // only in client production build
-      if (!dev && !isServer) {
-        Object.assign(config.resolve.alias, {
-          react: 'preact/compat',
-          'react-dom/test-utils': 'preact/test-utils',
-          'react-dom': 'preact/compat'
-        })
-      }
+//Compose Plugins
+const withPlugins = require('next-compose-plugins')
 
-      return config
-    },
+// Generate PWA manifest
+const withPWA = require('next-pwa')
 
-    async redirects() {
-      return [
-        {
-          source: '/twitter',
-          destination: 'https://twitter.com/viniciushvc',
-          permanent: true
-        },
-        {
-          source: '/github',
-          destination: 'https://github.com/viniciushvc',
-          permanent: true
-        }
-      ]
+// Bundle analyzer
+const withBundleAnalyzer = require('@next/bundle-analyzer')
+
+// MDX support
+const withMDX = require('@next/mdx')
+
+// Next configs
+const nextConfigs = {
+  reactStrictMode: true,
+  swcMinify: true
+}
+
+// Redirects to social media
+const redirectConfigs = async () => [
+  {
+    source: '/twitter',
+    destination: 'https://twitter.com/viniciushvc',
+    permanent: true
+  },
+  {
+    source: '/github',
+    destination: 'https://github.com/viniciushvc',
+    permanent: true
+  }
+]
+
+// Replace React with Preact
+const replaceReactConfig = {
+  webpack: (config, { dev, isServer }) => {
+    // only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat'
+      })
     }
-  })
+
+    return config
+  }
+}
+
+// Export config
+module.exports = withPlugins(
+  [
+    withBundleAnalyzer({
+      enabled: process.env.ANALYZE === 'true'
+    }),
+    withMDX({
+      extension: /\.mdx?$/
+    }),
+    withPWA({
+      pwa: {
+        dest: 'public',
+        disable: !isProd
+      }
+    })
+  ],
+  { ...nextConfigs, redirectConfigs, ...replaceReactConfig }
 )

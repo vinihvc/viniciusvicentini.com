@@ -14,8 +14,8 @@ const NavLinks = () => (
   <>
     <NextLink href="/" passHref>
       <Link
-        {...animations.fadeIn(0.25)}
         css={{ fontSize: '$3xl', '@sm': { fontSize: '$md' } }}
+        {...animations.fadeIn(0.5)}
       >
         Home
       </Link>
@@ -23,8 +23,8 @@ const NavLinks = () => (
 
     <NextLink href="/about" passHref>
       <Link
-        {...animations.fadeIn(0.5)}
         css={{ fontSize: '$3xl', '@sm': { fontSize: '$md' } }}
+        {...animations.fadeIn(0.75)}
       >
         About
       </Link>
@@ -32,8 +32,8 @@ const NavLinks = () => (
 
     <NextLink href="/repo" passHref>
       <Link
-        {...animations.fadeIn(0.75)}
         css={{ fontSize: '$3xl', '@sm': { fontSize: '$md' } }}
+        {...animations.fadeIn(1)}
       >
         Repositories
       </Link>
@@ -41,8 +41,8 @@ const NavLinks = () => (
 
     <NextLink href="/blog" passHref>
       <Link
-        {...animations.fadeIn(0.75)}
         css={{ fontSize: '$3xl', '@sm': { fontSize: '$md' } }}
+        {...animations.fadeIn(1.25)}
       >
         Blog
       </Link>
@@ -61,11 +61,7 @@ const Header = () => (
       }}
     >
       <NextLink href="/" passHref>
-        <Logo
-          initial={{ y: -50 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 1.25 }}
-        />
+        <Logo {...animations.fadeIn(0.25)} />
       </NextLink>
 
       <Stack
