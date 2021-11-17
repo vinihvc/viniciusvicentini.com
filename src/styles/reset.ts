@@ -6,27 +6,27 @@ const resetStyles = {
       border: 0,
       fontSize: '100%',
       font: 'inherit',
-      verticalAlign: 'baseline'
+      verticalAlign: 'baseline',
     },
   'article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section':
     {
-      d: 'block'
+      d: 'block',
     },
   '*[hidden]': {
-    d: 'none'
+    d: 'none',
   },
   'ol, ul': {
-    listStyle: 'none'
+    listStyle: 'none',
   },
   'blockquote, q': {
-    quotes: 'none'
+    quotes: 'none',
   },
   'blockquote:before, blockquote:after, q:before, q:after': {
-    content: ''
+    content: '',
   },
   table: {
-    borderSpacing: 0
-  }
+    borderSpacing: 0,
+  },
 }
 
 export default resetStyles

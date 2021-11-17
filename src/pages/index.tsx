@@ -1,11 +1,11 @@
 import { NextSeo } from 'next-seo'
 
-import HomeTemplate from '@templates/Home'
+import HomeTemplate from '@layouts/Home'
 
 const HomePage = () => {
   return (
     <>
-      <NextSeo title="Home" />
+      <NextSeo />
 
       <HomeTemplate />
     </>

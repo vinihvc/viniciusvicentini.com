@@ -1,17 +1,12 @@
 import Container from '@components/Container'
 
 import HomeHero from './components/Hero'
-import HomeServices from './components/Services'
 
 const HomeTemplate = () => {
   return (
-    <>
+    <Container>
       <HomeHero />
-
-      <Container>
-        <HomeServices />
-      </Container>
-    </>
+    </Container>
   )
 }
 

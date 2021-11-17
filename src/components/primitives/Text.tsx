@@ -1,56 +1,77 @@
-import { motion } from 'framer-motion'
-
 import { styled } from 'stitches.config'
 
-export const Text = styled(motion.span, {
+export const Text = styled('span', {
   d: 'block',
   fontFamily: 'inherit',
   lineHeight: 'inherit',
   margin: 0,
 
+  color: '$text',
+
   variants: {
     size: {
       sm: {
         fontSize: '$sm',
-        lineHeight: '$sm'
+        lineHeight: '$sm',
       },
       md: {
         fontSize: '$md',
-        lineHeight: '$md'
+        lineHeight: '$md',
       },
       lg: {
         fontSize: '$lg',
-        lineHeight: '$lg'
+        lineHeight: '$lg',
       },
       xl: {
         fontSize: '$xl',
-        lineHeight: '$xl'
+        lineHeight: '$xl',
       },
       '2xl': {
         fontSize: '$2xl',
-        lineHeight: '$2xl'
-      }
+        lineHeight: '$2xl',
+      },
+      '3xl': {
+        fontSize: '$3xl',
+        lineHeight: '$3xl',
+      },
+      '4xl': {
+        fontSize: '$4xl',
+        lineHeight: '$4xl',
+      },
     },
     weight: {
+      thin: {
+        fontStyle: 'normal',
+        fontWeight: '$normal',
+      },
       normal: {
         fontStyle: 'normal',
-        fontWeight: '$normal'
+        fontWeight: '$normal',
       },
       medium: {
         fontStyle: 'normal',
-        fontWeight: '$medium'
+        fontWeight: '$medium',
       },
       bold: {
         fontStyle: 'normal',
-        fontWeight: '$bold'
-      }
-    }
+        fontWeight: '$bold',
+      },
+    },
+    color: {
+      text: {
+        color: '$text',
+      },
+      grey: {
+        color: '$grey',
+      },
+    },
   },
 
   defaultVariants: {
     size: 'md',
-    weight: 'medium'
-  }
+    weight: 'thin',
+    color: 'text',
+  },
 })
 
 export default Text

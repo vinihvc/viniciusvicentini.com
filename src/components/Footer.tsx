@@ -16,19 +16,19 @@ const Footer = () => {
           css={{
             columns: 'repeat(1, 1fr)',
             '@md': {
-              columns: 'repeat(2, 1fr)'
+              columns: 'repeat(2, 1fr)',
             },
             justify: 'space-between',
             align: 'space-around',
-            gap: '$3'
+            gap: '$3',
           }}
         >
           <Text
             css={{
               textAlign: 'center',
               '@md': {
-                textAlign: 'left'
-              }
+                textAlign: 'left',
+              },
             }}
           >
             All rights reserved &copy; Vinicius Vicentini 2021
@@ -38,9 +38,9 @@ const Footer = () => {
             css={{
               justify: 'center',
               '@md': {
-                justify: 'flex-end'
+                justify: 'flex-end',
               },
-              fontSize: '$2xl'
+              fontSize: '$2xl',
             }}
           >
             <Link

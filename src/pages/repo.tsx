@@ -1,29 +1,11 @@
 import { NextSeo } from 'next-seo'
 
-import type { RepositoriesTypes } from '../types/repositories'
+import RepoTemplate from '@layouts/Repo'
 
-import RepoTemplate from '@templates/Repo'
-
-import { fetchPinnedRepos } from '@services/api'
-
-export const getServerSideProps = async () => {
-  const repos = await fetchPinnedRepos()
-
-  return {
-    props: {
-      repos
-    }
-  }
-}
-
-export type RepoPageProps = {
-  repos: RepositoriesTypes[]
-}
-
-const RepoPage = ({ ...props }: RepoPageProps) => {
+const RepoPage = ({ ...props }) => {
   return (
     <>
-      <NextSeo title="My repositories" />
+      <NextSeo title="My projects" />
 
       <RepoTemplate {...props} />
     </>

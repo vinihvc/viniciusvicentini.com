@@ -15,20 +15,20 @@ const Shape = styled(Box, {
   variants: {
     shape: {
       square: {
-        br: 0
+        br: 0,
       },
       circle: {
-        br: '$full'
+        br: '$full',
       },
       rounded: {
-        br: '8px'
-      }
-    }
+        br: '8px',
+      },
+    },
   },
 
   defaultVariants: {
-    shape: 'circle'
-  }
+    shape: 'circle',
+  },
 })
 
 export default Shape

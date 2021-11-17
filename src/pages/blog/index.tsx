@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 
-import BlogTemplate from '@templates/Blog'
+import BlogTemplate from '@layouts/Blog'
 import { postFilePaths, POSTS_PATH } from '@lib/mdxUtils'
 
 import fs from 'fs'
@@ -31,7 +31,7 @@ export function getStaticProps() {
     return {
       content,
       metadata,
-      slug
+      slug,
     }
   })
 

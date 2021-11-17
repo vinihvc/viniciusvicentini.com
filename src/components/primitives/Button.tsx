@@ -1,10 +1,8 @@
 import { forwardRef } from 'react'
 
-import { motion } from 'framer-motion'
-
 import { styled } from 'stitches.config'
 
-export const ButtonStyled = styled(motion.button, {
+export const ButtonStyled = styled('button', {
   appearance: 'none',
   border: 'none',
   margin: 0,
@@ -20,8 +18,8 @@ export const ButtonStyled = styled(motion.button, {
 
   '&:hover': {
     bg: '$black',
-    color: '$white'
-  }
+    color: '$white',
+  },
 })
 
 type ButtonProps = React.ComponentProps<typeof ButtonStyled>
@@ -31,7 +29,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     <ButtonStyled ref={ref} {...props}>
       {children}
     </ButtonStyled>
-  )
+  ),
 )
 
 Button.displayName = 'Button'

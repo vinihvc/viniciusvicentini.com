@@ -9,9 +9,12 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
     colors: {
       white: '#fff',
       black: '#000',
-      bg: '#141621',
-      primary: '#805AD5',
-      card: '#1F2028'
+      text: '#ededed',
+      grey: '#8795A1',
+      bg: '#08070b',
+      hover: '#212024',
+      primary: '#909EFA',
+      card: '#1f2028',
     },
     space: {
       1: pxToRem(4),
@@ -23,17 +26,17 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       7: pxToRem(28),
       8: pxToRem(32),
       9: pxToRem(36),
-      10: pxToRem(40)
+      10: pxToRem(40),
     },
     radii: {
-      full: '9999px'
+      full: '9999px',
     },
     sizes: {
       full: '100%',
       sm: pxToRem(640),
       md: pxToRem(768),
       lg: pxToRem(1024),
-      xl: pxToRem(1280)
+      xl: pxToRem(1280),
     },
     fontSizes: {
       xs: pxToRem(12),
@@ -44,7 +47,7 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       '2xl': pxToRem(24),
       '3xl': pxToRem(30),
       '4xl': pxToRem(36),
-      '5xl': pxToRem(40)
+      '5xl': pxToRem(60),
     },
     lineHeights: {
       xs: pxToRem(20),
@@ -52,113 +55,113 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       md: pxToRem(28),
       lg: pxToRem(32),
       xl: pxToRem(36),
-      '2xl': pxToRem(40)
+      '2xl': pxToRem(40),
     },
     fontWeights: {
+      thin: 300,
       normal: 400,
       medium: 600,
-      bold: 700
+      bold: 700,
     },
     fonts: {
-      sans: "'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-      serif: "'serif'"
+      sans: '"Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
     },
     transitions: {
-      fast: 'all 0.2s ease'
-    }
+      fast: 'all 0.2s ease',
+    },
   },
   utils: {
     m: (value: PropertyValue<'margin'>) => ({
-      margin: value
+      margin: value,
     }),
     mt: (value: PropertyValue<'margin'>) => ({
-      marginTop: value
+      marginTop: value,
     }),
     mr: (value: PropertyValue<'margin'>) => ({
-      marginRight: value
+      marginRight: value,
     }),
     mb: (value: PropertyValue<'margin'>) => ({
-      marginBottom: value
+      marginBottom: value,
     }),
     ml: (value: PropertyValue<'margin'>) => ({
-      marginLeft: value
+      marginLeft: value,
     }),
     mx: (value: PropertyValue<'margin'>) => ({
       marginLeft: value,
-      marginRight: value
+      marginRight: value,
     }),
     my: (value: PropertyValue<'margin'>) => ({
       marginTop: value,
-      marginBottom: value
+      marginBottom: value,
     }),
     p: (value: PropertyValue<'padding'>) => ({
-      padding: value
+      padding: value,
     }),
     pt: (value: PropertyValue<'padding'>) => ({
-      paddingTop: value
+      paddingTop: value,
     }),
     pr: (value: PropertyValue<'padding'>) => ({
-      paddingRight: value
+      paddingRight: value,
     }),
     pb: (value: PropertyValue<'padding'>) => ({
-      paddingBottom: value
+      paddingBottom: value,
     }),
     pl: (value: PropertyValue<'padding'>) => ({
-      paddingLeft: value
+      paddingLeft: value,
     }),
     px: (value: PropertyValue<'padding'>) => ({
       paddingLeft: value,
-      paddingRight: value
+      paddingRight: value,
     }),
     py: (value: PropertyValue<'padding'>) => ({
       paddingTop: value,
-      paddingBottom: value
+      paddingBottom: value,
     }),
     bg: (value: PropertyValue<'background'>) => ({
-      background: value
+      background: value,
     }),
     size: (value: PropertyValue<'width'> | PropertyValue<'height'>) => ({
       width: value,
-      height: value
+      height: value,
     }),
     br: (value: PropertyValue<'borderRadius'>) => ({
-      borderRadius: value
+      borderRadius: value,
     }),
     justify: (value: PropertyValue<'justifyContent'>) => ({
-      justifyContent: value
+      justifyContent: value,
     }),
     align: (value: PropertyValue<'alignItems'>) => ({
-      alignItems: value
+      alignItems: value,
     }),
     h: (value: PropertyValue<'height'>) => ({
-      height: value
+      height: value,
     }),
     maxH: (value: PropertyValue<'maxHeight'>) => ({
-      maxHeight: value
+      maxHeight: value,
     }),
     w: (value: PropertyValue<'width'>) => ({
-      width: value
+      width: value,
     }),
     maxW: (value: PropertyValue<'maxWidth'>) => ({
-      maxWidth: value
+      maxWidth: value,
     }),
     d: (value: PropertyValue<'display'>) => ({
-      display: value
+      display: value,
     }),
     columns: (value: PropertyValue<'gridTemplateColumns'>) => ({
-      gridTemplateColumns: value
+      gridTemplateColumns: value,
     }),
     rows: (value: PropertyValue<'gridTemplateRows'>) => ({
-      gridTemplateRows: value
-    })
+      gridTemplateRows: value,
+    }),
   },
   media: {
     sm: '(min-width: 576px)',
     md: '(min-width: 768px)',
     lg: '(min-width: 992px)',
     xl: '(min-width: 1200px)',
-    '2xl': '(min-width: 1400px)'
-  }
+    '2xl': '(min-width: 1400px)',
+  },
 })
 
 export type VariantProps<T> = Stitches.VariantProps<T>

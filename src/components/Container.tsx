@@ -4,9 +4,22 @@ import Box from '@primitives/Box'
 
 export const Container = styled(Box, {
   w: '$full',
-  maxWidth: '$xl',
   px: '$4',
-  mx: 'auto'
+  mx: 'auto',
+
+  variants: {
+    size: {
+      md: {
+        maxWidth: '$md',
+      },
+      xl: {
+        maxWidth: '$xl',
+      },
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+  },
 })
 
 export default Container

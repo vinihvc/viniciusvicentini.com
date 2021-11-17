@@ -1,4 +1,4 @@
-import { ComponentProps, useState } from 'react'
+import React, { ComponentProps, useState } from 'react'
 
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 
@@ -13,7 +13,7 @@ import VisuallyHidden from '@components/VisuallyHidden'
 const OverlayStyled = styled(DialogPrimitive.Overlay, {
   bg: 'rgba(0,0,0, 0.9)',
   position: 'fixed',
-  inset: 0
+  inset: 0,
 })
 
 const ContentStyled = styled(DialogPrimitive.Content, {
@@ -21,7 +21,7 @@ const ContentStyled = styled(DialogPrimitive.Content, {
   align: 'center',
   justify: 'center',
   w: '100vw',
-  h: '100vh'
+  h: '100vh',
 })
 
 const TriggerStyled = styled(DialogPrimitive.Trigger, {
@@ -34,20 +34,23 @@ const TriggerStyled = styled(DialogPrimitive.Trigger, {
   top: 0,
   right: 0,
   p: '$4',
-  cursor: 'pointer'
+  cursor: 'pointer',
 })
 
 const CloseStyled = styled(TriggerStyled)
 
 type MobileMenuProps = {
-  children: React.ReactNode
+  children: JSX.Element
 } & ComponentProps<typeof TriggerStyled>
 
 const MobileMenu = ({ children, ...props }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <DialogPrimitive.Root onOpenChange={() => setIsOpen((e) => !e)}>
+    <DialogPrimitive.Root
+      open={isOpen}
+      onOpenChange={() => setIsOpen((e) => !e)}
+    >
       <OverlayStyled />
 
       {!isOpen && (
@@ -65,7 +68,14 @@ const MobileMenu = ({ children, ...props }: MobileMenuProps) => {
           <VisuallyHidden>Close menu</VisuallyHidden>
         </CloseStyled>
 
-        <Stack direction="column">{children}</Stack>
+        <Stack direction="column" onClick={() => setIsOpen(false)}>
+          {/* Inject onClick to each link, to close Modal */}
+          {React.Children.map(children, (child) =>
+            React.cloneElement(child as React.ReactElement, {
+              onClick: () => setIsOpen(false),
+            }),
+          )}
+        </Stack>
       </ContentStyled>
     </DialogPrimitive.Root>
   )

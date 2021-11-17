@@ -10,8 +10,13 @@ const globalStyles = globalCss({
     fontFamily: '$sans',
     bg: '$bg',
     color: '$white',
-    overflowY: 'scroll'
-  }
+    overflowY: 'scroll',
+  },
+
+  '::selection': {
+    color: '$black',
+    background: '$white',
+  },
 })
 
 export default globalStyles

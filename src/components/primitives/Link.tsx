@@ -1,19 +1,31 @@
-import { motion } from 'framer-motion'
-
 import { styled } from 'stitches.config'
 
-export const Link = styled(motion.a, {
-  d: 'block',
+export const Link = styled('a', {
   textDecoration: 'none',
   color: '$white',
+  cursor: 'pointer',
 
   '&:visited': {
-    color: '$white'
+    color: '$white',
   },
 
   '&:hover': {
-    color: '$primary'
-  }
+    color: '$white',
+  },
+
+  variants: {
+    decorated: {
+      true: {
+        borderBottom: '1px solid $colors$grey',
+        pb: 2,
+        transition: '$fast',
+
+        '&:hover': {
+          borderBottomColor: '$colors$white',
+        },
+      },
+    },
+  },
 })
 
 export default Link

@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 
-import AboutTemplate from '@templates/About'
+import AboutTemplate from '@layouts/About'
 
 const AboutPage = () => {
   return (

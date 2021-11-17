@@ -1,6 +1,6 @@
 {
-  "name": "Next Boilerplate",
-  "short_name": "Next Boilerplate",
+  "name": "Vinicius Vicentini",
+  "short_name": "Vinicius Vicentini",
   "icons": [
     {
       "src": "/img/icon-192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#06092B",
-  "description": "Next Boilerplate",
+  "description": "Vinicius Vicentini",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#06092B"

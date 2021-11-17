@@ -10,16 +10,16 @@ import type { MotionProps } from 'framer-motion'
  */
 export const fadeIn: (delay?: number) => MotionProps = (delay = 0.25) => ({
   initial: {
-    opacity: 0
+    opacity: 0,
   },
   animate: {
-    opacity: 1
+    opacity: 1,
   },
   transition: {
-    delay
-  }
+    delay,
+  },
 })
 
 export default {
-  fadeIn
+  fadeIn,
 }
