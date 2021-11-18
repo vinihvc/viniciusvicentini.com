@@ -4,6 +4,12 @@ import Box from '@primitives/Box'
 
 const childWithGap = '> * + *'
 
+/**
+ * @example
+ * ```jsx
+ *  css={{ $$gap: '$space$10' }}
+ * ```
+ */
 export const Stack = styled(Box, {
   d: 'flex',
   $$gap: '$space$10',
