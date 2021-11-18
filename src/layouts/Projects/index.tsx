@@ -3,14 +3,16 @@ import Text from '@primitives/Text'
 
 import Container from '@components/Container'
 
-import RepoHero from './components/Hero'
+import ProjectsHero from './components/Hero'
 
-const RepoTemplate = () => {
+const ProjectsTemplate = () => {
   return (
     <Container>
-      <RepoHero />
+      <ProjectsHero />
 
-      <Text as="h3">Featured Projects</Text>
+      <Text as="h3" size="2xl" weight="medium">
+        Featured Projects
+      </Text>
 
       <Grid
         css={{
@@ -38,4 +40,4 @@ const RepoTemplate = () => {
   )
 }
 
-export default RepoTemplate
+export default ProjectsTemplate
