@@ -19,13 +19,13 @@ const Wrapper = styled('div', {
     fontWeight: '$bold',
   },
 
-  //all child but not hr
   '> *': {
     mb: '$4',
   },
 
-  iframe: {
+  'img, iframe': {
     w: '$full',
+    br: '$md',
   },
 
   ul: {
