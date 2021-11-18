@@ -9,9 +9,10 @@ import { styled } from 'stitches.config'
 import Stack from '@primitives/Stack'
 
 import VisuallyHidden from '@components/VisuallyHidden'
+import HeaderLinks from '@components/HeaderLinks'
 
 const OverlayStyled = styled(DialogPrimitive.Overlay, {
-  bg: 'rgba(0,0,0, 0.9)',
+  bg: 'rgba(0, 0, 0, 0.9)',
   position: 'fixed',
   inset: 0,
 })
@@ -39,11 +40,9 @@ const TriggerStyled = styled(DialogPrimitive.Trigger, {
 
 const CloseStyled = styled(TriggerStyled)
 
-type MobileMenuProps = {
-  children: JSX.Element
-} & ComponentProps<typeof TriggerStyled>
+type HeaderMobileProps = ComponentProps<typeof TriggerStyled>
 
-const MobileMenu = ({ children, ...props }: MobileMenuProps) => {
+const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -68,10 +67,10 @@ const MobileMenu = ({ children, ...props }: MobileMenuProps) => {
           <VisuallyHidden>Close menu</VisuallyHidden>
         </CloseStyled>
 
-        <Stack direction="column" onClick={() => setIsOpen(false)}>
+        <Stack direction="column">
           {/* Inject onClick to each link, to close Modal */}
-          {React.Children.map(children, (child) =>
-            React.cloneElement(child as React.ReactElement, {
+          {React.Children.map(<HeaderLinks />, (child) =>
+            React.cloneElement(child as JSX.Element, {
               onClick: () => setIsOpen(false),
             }),
           )}
@@ -81,4 +80,4 @@ const MobileMenu = ({ children, ...props }: MobileMenuProps) => {
   )
 }
 
-export default MobileMenu
+export default HeaderMobile
