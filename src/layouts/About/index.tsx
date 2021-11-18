@@ -4,49 +4,13 @@ import Link from '@primitives/Link'
 
 import Container from '@components/Container'
 
-import AboutHero from './components/Hero'
 import formatDate from '@utils/formatDate'
 
-const AboutTemplate = () => {
-  const items = [
-    {
-      title: 'Front End Engineering',
-      company: 'Foton Tech',
-      url: 'https://foton.tech',
-      city: 'Florianópolis',
-      state: 'Santa Catarina',
-      startDate: '2021-07-21T03:00:00.000Z',
-      endDate: '',
-    },
-    {
-      title: 'Front End Engineering',
-      company: 'Insigna Consultoria',
-      url: 'https://www.insignaconsultoria.com.br',
-      city: 'Campinas',
-      state: 'São Paulo',
-      startDate: '2021-03-21T03:00:00.000Z',
-      endDate: '2021-07-21T03:00:00.000Z',
-    },
-    {
-      title: 'Front End Developer',
-      company: 'Dryve Tecnologia',
-      url: 'https://dryve.com.br',
-      city: 'Ribeirão Preto',
-      state: 'São Paulo',
-      startDate: '2019-07-21T03:00:00.000Z',
-      endDate: '2020-01-21T03:00:00.000Z',
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'Datamob',
-      url: 'http://datamob.com.br',
-      city: 'Ribeirão Preto',
-      state: 'São Paulo',
-      startDate: '2016-07-21T03:00:00.000Z',
-      endDate: '2018-07-21T03:00:00.000Z',
-    },
-  ]
+import carrerCompanies from '@configs/carrer-companies'
 
+import AboutHero from './components/Hero'
+
+const AboutTemplate = () => {
   return (
     <Container css={{ maxW: '$md' }}>
       <AboutHero />
@@ -89,7 +53,7 @@ const AboutTemplate = () => {
         Career
       </Text>
 
-      {items?.map((item, i) => {
+      {carrerCompanies?.map((item, i) => {
         const formattedStartDate = formatDate(item.startDate)
         const formattedEndDate = formatDate(item.endDate)
 
@@ -98,13 +62,7 @@ const AboutTemplate = () => {
             <Text as="h3">{item.title}</Text>
 
             <Text>
-              <Link
-                href={item.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                css={{ d: 'inline' }}
-                decorated
-              >
+              <Link href={item.url} css={{ d: 'inline' }} decorated isExternal>
                 {item.company}
               </Link>{' '}
               • {item.city}, {item.state}
