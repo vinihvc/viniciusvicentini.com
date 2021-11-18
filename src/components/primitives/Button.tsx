@@ -1,8 +1,6 @@
-import { forwardRef } from 'react'
-
 import { styled } from 'stitches.config'
 
-export const ButtonStyled = styled('button', {
+export const Button = styled('button', {
   appearance: 'none',
   border: 'none',
   margin: 0,
@@ -21,17 +19,5 @@ export const ButtonStyled = styled('button', {
     color: '$white',
   },
 })
-
-type ButtonProps = React.ComponentProps<typeof ButtonStyled>
-
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, ...props }, ref) => (
-    <ButtonStyled ref={ref} {...props}>
-      {children}
-    </ButtonStyled>
-  ),
-)
-
-Button.displayName = 'Button'
 
 export default Button
