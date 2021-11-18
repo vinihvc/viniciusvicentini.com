@@ -29,6 +29,7 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       10: pxToRem(40),
     },
     radii: {
+      md: '4px',
       full: '9999px',
     },
     sizes: {
