@@ -1,5 +1,12 @@
 import { styled } from 'stitches.config'
 
+/**
+ * @example
+ * ```js
+ *  $$start: '$colors$text',
+ *  $$end: '$colors$text',
+ * ```
+ */
 const Title = styled('h1', {
   // variables
   $$start: '$colors$text',
