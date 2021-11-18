@@ -1,10 +1,15 @@
-import * as VisuallyHiddenBase from '@radix-ui/react-visually-hidden'
+import { styled } from 'stitches.config'
 
-type VisuallyHiddenProps = {
-  children: React.ReactNode
-}
+const VisuallyHidden = styled('div', {
+  border: 0,
+  clip: 'rect(0px, 0px, 0px, 0px)',
+  height: 1,
+  width: 1,
+  margin: -1,
+  p: 0,
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  position: 'absolute',
+})
 
-const VisuallyHidden = ({ children }: VisuallyHiddenProps) => (
-  <VisuallyHiddenBase.Root>{children}</VisuallyHiddenBase.Root>
-)
 export default VisuallyHidden
