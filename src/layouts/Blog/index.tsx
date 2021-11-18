@@ -3,9 +3,9 @@ import Grid from '@primitives/Grid'
 import PostCard from '@components/PostCard'
 import Container from '@components/Container'
 
-import BlogHero from './components/Hero'
+import { BlogPageProps } from '@pages/blog'
 
-import { BlogPageProps } from 'src/pages/blog'
+import BlogHero from './components/Hero'
 
 const BlogTemplate = ({ posts }: BlogPageProps) => {
   return (
