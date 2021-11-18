@@ -8,7 +8,9 @@
       "@lib/*": ["src/lib/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@pages/*": ["src/pages/*"],
+      "@configs/*": ["src/configs/*"]
     },
     "target": "es5",
     "lib": [
