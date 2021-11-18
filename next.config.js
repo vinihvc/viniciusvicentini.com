@@ -18,7 +18,7 @@ const withMDX = require('@next/mdx')
 // Next configs
 const nextConfigs = {
   reactStrictMode: true,
-  swcMinify: true
+  swcMinify: true,
 }
 
 // Redirects to social media
@@ -26,13 +26,13 @@ const redirectConfigs = async () => [
   {
     source: '/twitter',
     destination: 'https://twitter.com/viniciushvc',
-    permanent: true
+    permanent: true,
   },
   {
     source: '/github',
     destination: 'https://github.com/viniciushvc',
-    permanent: true
-  }
+    permanent: true,
+  },
 ]
 
 // Replace React with Preact
@@ -43,29 +43,29 @@ const replaceReactConfig = {
       Object.assign(config.resolve.alias, {
         react: 'preact/compat',
         'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat'
+        'react-dom': 'preact/compat',
       })
     }
 
     return config
-  }
+  },
 }
 
 // Export config
 module.exports = withPlugins(
   [
     withBundleAnalyzer({
-      enabled: process.env.ANALYZE === 'true'
+      enabled: process.env.ANALYZE === 'true',
     }),
     withMDX({
-      extension: /\.mdx?$/
+      extension: /\.mdx?$/,
     }),
     withPWA({
       pwa: {
         dest: 'public',
-        disable: !isProd
-      }
-    })
+        disable: !isProd,
+      },
+    }),
   ],
-  { ...nextConfigs, redirectConfigs, ...replaceReactConfig }
+  { ...nextConfigs, redirectConfigs, ...replaceReactConfig },
 )
