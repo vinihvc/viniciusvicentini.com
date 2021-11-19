@@ -3,17 +3,18 @@ import Text from '@primitives/Text'
 import Link from '@primitives/Link'
 
 import Container from '@components/Container'
+import Hero from '@components/Hero'
 
 import formatDate from '@utils/formatDate'
 
 import carrerCompanies from '@configs/carrer-companies'
 
-import AboutHero from './components/Hero'
-
 const AboutTemplate = () => {
   return (
     <Container css={{ maxW: '$md' }}>
-      <AboutHero />
+      <Hero start="#cc2b5e" end="#753a88">
+        about me
+      </Hero>
 
       <Box>
         <Text>

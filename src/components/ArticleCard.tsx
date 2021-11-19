@@ -5,7 +5,7 @@ import { styled } from 'stitches.config'
 import Box from '@primitives/Box'
 import Text from '@primitives/Text'
 
-import { PostProps } from 'src/types/post'
+import { ArticleProps } from 'src/types/article'
 
 const Content = styled(Text, {
   display: '-webkit-box',
@@ -14,20 +14,20 @@ const Content = styled(Text, {
   overflow: 'hidden',
 })
 
-type PostCardProps = {
-  post: PostProps
+type ArticleCardProps = {
+  article: ArticleProps
 }
 
-const PostCard = ({ post }: PostCardProps) => {
+const ArticleCard = ({ article }: ArticleCardProps) => {
   const {
     metadata: { title },
     content,
-  } = post
+  } = article
 
   const minText = content.slice(0, 100)
 
   return (
-    <NextLink href={`/blog/${post.slug}`} passHref>
+    <NextLink href={`/articles/${article.slug}`} passHref>
       <Box as="a">
         <Box as="article">
           <Text as="h3" weight="bold">
@@ -41,4 +41,4 @@ const PostCard = ({ post }: PostCardProps) => {
   )
 }
 
-export default PostCard
+export default ArticleCard

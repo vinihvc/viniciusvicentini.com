@@ -13,9 +13,8 @@ const globalStyles = globalCss({
     overflowY: 'scroll',
   },
 
-  '::selection': {
-    color: '$black',
-    background: '$white',
+  a: {
+    textDecoration: 'none',
   },
 })
 

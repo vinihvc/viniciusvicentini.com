@@ -1,3 +1,5 @@
+import Flex from '@primitives/Flex'
+
 import Container from '@components/Container'
 
 import HomeHero from './components/Hero'
@@ -5,7 +7,16 @@ import HomeHero from './components/Hero'
 const HomeTemplate = () => {
   return (
     <Container>
-      <HomeHero />
+      <Flex
+        css={{
+          w: '$full',
+          h: '90vh',
+          justify: 'center',
+          align: 'center',
+        }}
+      >
+        <HomeHero />
+      </Flex>
     </Container>
   )
 }

@@ -5,7 +5,7 @@ import ProjectsTemplate from '@layouts/Projects'
 const ProjectsPage = ({ ...props }) => {
   return (
     <>
-      <NextSeo title="My projects" />
+      <NextSeo title="Projects" />
 
       <ProjectsTemplate {...props} />
     </>

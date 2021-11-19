@@ -12,7 +12,7 @@ const Title = styled('h1', {
   $$start: '$colors$text',
   $$end: '$colors$text',
   fontWeight: '$bold',
-  fontSize: '$3xl',
+  fontSize: '$4xl',
   backgroundColor: '$text',
   bg: 'linear-gradient(to right, $$start, $$end)',
   '-webkit-background-clip': 'text',

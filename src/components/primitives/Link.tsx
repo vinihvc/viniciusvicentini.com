@@ -3,21 +3,16 @@ import { AnchorHTMLAttributes, forwardRef } from 'react'
 import { styled, CSS, VariantProps } from 'stitches.config'
 
 export const LinkStyled = styled('a', {
-  textDecoration: 'none',
-  color: '$white',
   cursor: 'pointer',
 
-  '&:visited': {
-    color: '$white',
-  },
-
-  '&:hover': {
+  '&:hover, &:focus, &:active,': {
     color: '$white',
   },
 
   variants: {
     decorated: {
       true: {
+        color: '$white',
         borderBottom: '1px solid $colors$grey',
         pb: 2,
         transition: '$fast',

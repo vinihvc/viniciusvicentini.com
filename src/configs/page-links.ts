@@ -1,9 +1,5 @@
 const pageLinks = [
   {
-    href: '/',
-    label: 'Home',
-  },
-  {
     href: '/about',
     label: 'About',
   },
@@ -12,8 +8,8 @@ const pageLinks = [
     label: 'Projects',
   },
   {
-    href: '/blog',
-    label: 'Blog',
+    href: '/articles',
+    label: 'Articles',
   },
 ]
 

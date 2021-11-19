@@ -37,13 +37,28 @@ const Wrapper = styled('div', {
     fontWeight: '$thin',
     fontStyle: 'italic',
   },
+
+  a: {
+    borderBottom: '1px solid $colors$grey',
+    pb: 2,
+    transition: '$fast',
+
+    '&:hover': {
+      color: '$white',
+      borderBottomColor: '$colors$white',
+    },
+
+    '&:focus, &:active,': {
+      color: '$grey',
+    },
+  },
 })
 
-type PostContentProps = {
+type ArticleContentProps = {
   css?: CSS
 } & ComponentProps<typeof MDXRemote>
 
-const PostContent = ({ css, ...props }: PostContentProps) => {
+const ArticleContent = ({ css, ...props }: ArticleContentProps) => {
   return (
     <Wrapper css={css}>
       <MDXRemote {...props} />
@@ -51,4 +66,4 @@ const PostContent = ({ css, ...props }: PostContentProps) => {
   )
 }
 
-export default PostContent
+export default ArticleContent

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-export type PostProps = {
+export type ArticleProps = {
   content: any
   slug: string
   metadata: {

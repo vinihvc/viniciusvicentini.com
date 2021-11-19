@@ -25,6 +25,4 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(({ ...props }, ref) => (
   </LogoStyled>
 ))
 
-Logo.displayName = 'Logo'
-
 export default Logo

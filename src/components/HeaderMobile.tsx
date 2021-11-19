@@ -68,12 +68,7 @@ const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
         </CloseStyled>
 
         <Stack direction="column">
-          {/* Inject onClick to each link, to close Modal */}
-          {React.Children.map(<HeaderLinks />, (child) =>
-            React.cloneElement(child as JSX.Element, {
-              onClick: () => setIsOpen(false),
-            }),
-          )}
+          <HeaderLinks onClick={() => setIsOpen(false)} />
         </Stack>
       </ContentStyled>
     </DialogPrimitive.Root>

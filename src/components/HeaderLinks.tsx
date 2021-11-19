@@ -1,40 +1,44 @@
+import { useRouter } from 'next/router'
+
 import NextLink from 'next/link'
 
 import { styled } from 'stitches.config'
 
-import Link from '@primitives/Link'
-
 import pageLinks from '@configs/page-links'
 
-const LinkStyled = styled(Link, {
-  fontSize: '$3xl',
+const LinkStyled = styled('a', {
+  color: '$grey',
   p: '$2 $4',
-  br: '$full',
+  fontSize: '$3xl',
   transition: '$fast',
-  border: '1px solid transparent',
-  textAlign: 'center',
 
   '@sm': {
     fontSize: '$md',
   },
 
-  '&:hover': {
-    bg: '$hover',
-  },
-
-  '&:focus': {
-    borderColor: '$grey',
+  '&:hover, &:focus, &:active, &[aria-current="true"]': {
+    color: '$white',
   },
 })
 
-const HeaderLinks = () => (
-  <>
-    {pageLinks.map(({ href, label }) => (
-      <NextLink key={href} href={href} passHref>
-        <LinkStyled>{label}</LinkStyled>
-      </NextLink>
-    ))}
-  </>
-)
+type HeaderLinksProps = {
+  onClick?: () => void
+}
+
+const HeaderLinks = (props: HeaderLinksProps) => {
+  const { pathname } = useRouter()
+
+  return (
+    <>
+      {pageLinks.map(({ href, label }) => (
+        <NextLink key={href} href={href} passHref>
+          <LinkStyled aria-current={href === pathname || undefined} {...props}>
+            {label}
+          </LinkStyled>
+        </NextLink>
+      ))}
+    </>
+  )
+}
 
 export default HeaderLinks
