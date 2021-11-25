@@ -2,10 +2,12 @@ import { ArticlesPageProps } from '@pages/articles'
 
 import Grid from '@primitives/Grid'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import ArticleCard from '@components/ArticleCard'
 import Container from '@components/Container'
 import Hero from '@components/Hero'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ArticleTemplate = ({ articles }: ArticlesPageProps) => {
   return (
     <Container>
@@ -22,9 +24,10 @@ const ArticleTemplate = ({ articles }: ArticlesPageProps) => {
           },
         }}
       >
-        {articles.map((article) => (
+        Soon
+        {/* {articles.map((article) => (
           <ArticleCard key={article.slug} article={article} />
-        ))}
+        ))} */}
       </Grid>
     </Container>
   )
