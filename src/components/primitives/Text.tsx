@@ -1,12 +1,13 @@
 import { styled } from 'stitches.config'
 
 export const Text = styled('span', {
+  // reset
   d: 'block',
   fontFamily: 'inherit',
   lineHeight: 'inherit',
   margin: 0,
 
-  color: '$text',
+  color: 'currentColor',
 
   variants: {
     size: {
@@ -42,7 +43,7 @@ export const Text = styled('span', {
     weight: {
       thin: {
         fontStyle: 'normal',
-        fontWeight: '$normal',
+        fontWeight: '$thin',
       },
       normal: {
         fontStyle: 'normal',
