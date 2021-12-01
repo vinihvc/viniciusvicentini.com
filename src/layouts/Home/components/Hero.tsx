@@ -11,7 +11,7 @@ const HomeHero = () => {
         Vinicius Vicentini
       </Text>
 
-      <Text color="grey">
+      <Text weight="normal" color="grey">
         Front-end engineer who loves UX, Performance and Design.
       </Text>
 
@@ -24,18 +24,20 @@ const HomeHero = () => {
         }}
       />
 
-      <Text color="grey">Brazilian based in Ribeirão Preto, Brazil.</Text>
+      <Text weight="normal" color="grey">
+        Brazilian based in Ribeirão Preto, Brazil.
+      </Text>
 
-      <Text color="grey">
+      <Text weight="normal" color="grey">
         {'Currently working at '}
 
         <Link
-          href="https://fotontech.io/"
+          href="https://blockade.games/"
           target="_blank"
           rel="noreferrer noopener"
           decorated
         >
-          Foton Tech.
+          Blockade Games.
         </Link>
       </Text>
 

@@ -27,12 +27,12 @@ const ProjectCard = ({
         size: 16,
       })}
 
-      <Text as="h3" size="xl" weight="medium" css={{ mt: '$2' }}>
+      <Text as="h3" size="lg" weight="medium" css={{ mt: '$2' }}>
         {title}
       </Text>
 
       <Box>
-        <Text weight="thin" css={{ color: '$grey', py: '$5' }}>
+        <Text weight="normal" css={{ color: '$grey', py: '$5' }}>
           {description}
         </Text>
 

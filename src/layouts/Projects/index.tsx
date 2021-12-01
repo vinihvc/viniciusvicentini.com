@@ -35,7 +35,7 @@ const ProjectsTemplate = () => {
         ))}
       </Grid>
 
-      <Text as="h4" size="lg" css={{ pt: '$10' }}>
+      <Text as="h4" weight="normal" css={{ pt: '$10' }}>
         {'Check out all my projects on '}
         <Link
           href="https://github.com/viniciushvc?tab=repositories"
