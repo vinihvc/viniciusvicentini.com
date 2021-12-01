@@ -7,10 +7,10 @@ const pageLinks = [
     href: '/projects',
     label: 'Projects',
   },
-  {
-    href: '/articles',
-    label: 'Articles',
-  },
+  // {
+  //   href: '/articles',
+  //   label: 'Articles',
+  // },
 ]
 
 export default pageLinks
