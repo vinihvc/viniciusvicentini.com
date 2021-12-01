@@ -1,12 +1,21 @@
 const carrerCompanies = [
   {
+    title: 'Software Engineering',
+    company: 'Blockade Games',
+    url: 'https://blockade.games/',
+    city: 'Indianapolis',
+    state: 'Indiana',
+    startDate: '2021-12-01T03:00:00.000Z',
+    endDate: '',
+  },
+  {
     title: 'Front End Engineering',
     company: 'Foton Tech',
     url: 'https://foton.tech',
     city: 'Florianópolis',
     state: 'Santa Catarina',
     startDate: '2021-07-21T03:00:00.000Z',
-    endDate: '',
+    endDate: '2021-12-01T03:00:00.000Z',
   },
   {
     title: 'Front End Engineering',
