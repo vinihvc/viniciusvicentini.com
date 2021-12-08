@@ -22,7 +22,7 @@ const nextConfigs = {
 }
 
 // Redirects to social media
-const redirectConfigs = async () => [
+const redirects = async () => [
   {
     source: '/twitter',
     destination: 'https://twitter.com/viniciushvc',
