@@ -67,5 +67,5 @@ module.exports = withPlugins(
       },
     }),
   ],
-  { ...nextConfigs, redirectConfigs, ...replaceReactConfig },
+  { ...nextConfigs, redirects, ...replaceReactConfig },
 )
