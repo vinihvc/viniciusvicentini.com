@@ -43,7 +43,7 @@
     "react-intersection-observer": "^8.33.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
+    "@babel/core": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
