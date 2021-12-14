@@ -8,6 +8,8 @@ import { IdProvider } from '@radix-ui/react-id'
 
 import BaseTemplate from '@layouts/Base'
 
+import Analytics from '@components/Analytics'
+
 import globalStyles from '@styles/global'
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -28,6 +30,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <DefaultSeo {...SEO} />
 
         <Component {...pageProps} />
+
+        <Analytics />
       </BaseTemplate>
     </IdProvider>
   )
