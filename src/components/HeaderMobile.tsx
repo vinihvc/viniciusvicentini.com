@@ -23,6 +23,8 @@ const ContentStyled = styled(DialogPrimitive.Content, {
   justify: 'center',
   w: '100vw',
   h: '100vh',
+  position: 'absolute',
+  inset: 0,
 })
 
 const TriggerStyled = styled(DialogPrimitive.Trigger, {
@@ -50,8 +52,6 @@ const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
       open={isOpen}
       onOpenChange={() => setIsOpen((e) => !e)}
     >
-      <OverlayStyled />
-
       {!isOpen && (
         <TriggerStyled {...props}>
           <BsList />
@@ -60,17 +60,21 @@ const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
         </TriggerStyled>
       )}
 
-      <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
-        <CloseStyled>
-          <BsX />
+      <DialogPrimitive.Portal>
+        <OverlayStyled />
 
-          <VisuallyHidden>Close menu</VisuallyHidden>
-        </CloseStyled>
+        <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
+          <CloseStyled>
+            <BsX />
 
-        <Stack direction="column">
-          <HeaderLinks onClick={() => setIsOpen(false)} />
-        </Stack>
-      </ContentStyled>
+            <VisuallyHidden>Close menu</VisuallyHidden>
+          </CloseStyled>
+
+          <Stack direction="column">
+            <HeaderLinks onClick={() => setIsOpen(false)} />
+          </Stack>
+        </ContentStyled>
+      </DialogPrimitive.Portal>
     </DialogPrimitive.Root>
   )
 }
