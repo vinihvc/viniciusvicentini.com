@@ -20,7 +20,7 @@ const AboutTemplate = () => {
       <Stack direction="column" css={{ $$gap: '$space$2' }}>
         <Text size="lg">
           I am a software engineer with a passion for building things that make
-          people&apos;s lives better. Graduated in Somputer Science and started working
+          people&apos;s lives better. Graduated in Computer Science and started working
           as a software engineer back in 2016.
         </Text>
       </Stack>
