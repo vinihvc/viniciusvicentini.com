@@ -7,9 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "test": "jest --maxWorkers=50% ",
-    "test:watch": "jest --watch --maxWorkers=25%",
-    "test:ci": "jest --runInBand --passWithNoTests",
     "postinstall": "husky install",
     "prepare": "husky install",
     "postbuild": "next-sitemap",
@@ -17,8 +14,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "yarn lint --fix"
     ]
   },
   "dependencies": {
@@ -44,9 +40,6 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@types/jest": "^27.0.3",
     "@types/marked": "^4.0.1",
     "@types/node": "^17.0.0",
     "@types/react": "17.0.37",
@@ -60,7 +53,6 @@
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
-    "jest": "^27.4.5",
     "lint-staged": "^12.1.2",
     "next-sitemap": "^1.6.203",
     "prettier": "^2.5.1",

@@ -11,8 +11,6 @@ Start your project with Next and all <a href='#--technologies'>modern technologi
 -  [NextJS](https://nextjs.org/)
 -  [Preact](https://preactjs.com/)
 -  [TypeScript](https://www.typescriptlang.org/)
--  [Jest](https://jestjs.io/)
--  [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 -  [ESLint](https://eslint.org/)
 -  [Prettier](https://prettier.io/)
 -  [Husky](https://github.com/typicode/husky)
@@ -49,8 +47,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -  `build`: creates the production build version
 -  `start`: starts a simple server with the build production code
 -  `lint`: runs the linter in all components and pages
--  `test`: runs jest to test all components and pages
--  `test:watch`: runs jest in watch mode
 -  `analyze`: same as `build` but creates bundle analyzer file
 
 ## :stars: Reducing bundle size

@@ -16,13 +16,13 @@ export default {
         url: 'https://raw.githubusercontent.com/viniciushvc/next-boilerplate/master/public/img/icon-512.png',
         width: 512,
         height: 512,
-        alt: 'Vinicius Vicentini'
-      }
-    ]
+        alt: 'Vinicius Vicentini',
+      },
+    ],
   },
   twitter: {
     handle: '@viniciushvc',
     site: 'http',
-    cardType: 'summary_large_image'
-  }
+    cardType: 'summary_large_image',
+  },
 }

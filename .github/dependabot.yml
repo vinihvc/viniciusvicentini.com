@@ -47,10 +47,6 @@ updates:
     - 7.21.0
     - 7.22.0
     - 7.25.0
-  - dependency-name: "@testing-library/jest-dom"
-    versions:
-    - 5.11.10
-    - 5.12.0
   - dependency-name: "@babel/core"
     versions:
     - 7.12.17
@@ -92,10 +88,6 @@ updates:
     - 5.1.1
     - 5.2.0
     - 6.0.0
-  - dependency-name: "@types/jest"
-    versions:
-    - 26.0.20
-    - 26.0.22
   - dependency-name: eslint-plugin-react
     versions:
     - 7.23.0
@@ -128,7 +120,3 @@ updates:
     versions:
     - 7.12.17
     - 7.13.0
-  - dependency-name: "@testing-library/react"
-    versions:
-    - 11.2.3
-    - 11.2.5
