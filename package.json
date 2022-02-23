@@ -23,7 +23,7 @@
     "@next/mdx": "^12.1.0",
     "@radix-ui/react-dialog": "^0.1.5",
     "@stitches/react": "^1.2.6",
-    "framer-motion": "^6.2.7",
+    "framer-motion": "^6.2.8",
     "gray-matter": "^4.0.3",
     "next": "12.1.0",
     "next-compose-plugins": "^2.2.1",
