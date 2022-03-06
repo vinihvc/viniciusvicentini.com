@@ -25,12 +25,12 @@ const nextConfigs = {
 const redirects = async () => [
   {
     source: '/twitter',
-    destination: 'https://twitter.com/viniciushvc',
+    destination: 'https://twitter.com/vinihvc',
     permanent: true,
   },
   {
     source: '/github',
-    destination: 'https://github.com/viniciushvc',
+    destination: 'https://github.com/vinihvc',
     permanent: true,
   },
 ]

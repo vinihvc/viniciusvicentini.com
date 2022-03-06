@@ -38,7 +38,7 @@ const ProjectsTemplate = () => {
       <Text as="h4" weight="normal" css={{ pt: '$10' }}>
         {'Check out all my projects on '}
         <Link
-          href="https://github.com/viniciushvc?tab=repositories"
+          href="https://github.com/vinihvc?tab=repositories"
           decorated
           isExternal
         >
