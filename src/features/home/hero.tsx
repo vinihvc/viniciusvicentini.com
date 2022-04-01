@@ -42,7 +42,7 @@ export const HomeHero = () => {
             layoutId={`dot-${i}`}
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.6 + 0.1 * i }}
+            transition={{ duration: 0.2, delay: 0.6 + 0.1 * i }}
             viewport={{ once: true }}
             css={{
               size: 3,

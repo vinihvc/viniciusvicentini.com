@@ -92,9 +92,8 @@ const AboutPage = () => {
                 <Box
                   as={motion.article}
                   key={i}
-                  layoutId={`carrer-${i}`}
-                  initial={{ opacity: 0, x: 200 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3 }}
                   css={{ mb: '$10' }}
@@ -104,7 +103,12 @@ const AboutPage = () => {
                   </Text>
 
                   <Text>
-                    <Link href={url} css={{ d: 'inline' }} decorated isExternal>
+                    <Link
+                      href={url}
+                      css={{ d: 'inline', color: '$primary' }}
+                      decorated
+                      isExternal
+                    >
                       {company}
                     </Link>{' '}
                     • {city}, {state}
