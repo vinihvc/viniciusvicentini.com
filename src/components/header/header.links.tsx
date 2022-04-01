@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router'
 
-import NextLink from 'next/link'
+import Link from 'next/link'
 
 import { styled } from 'stitches.config'
 
 import { pageLinks } from '@constants/page-links'
+import { motion } from 'framer-motion'
 
 const LinkStyled = styled('a', {
   color: '$grey',
@@ -31,11 +32,16 @@ export const HeaderLinks = (props: HeaderLinksProps) => {
   return (
     <>
       {pageLinks.map(({ href, label }) => (
-        <NextLink key={href} href={href} passHref>
-          <LinkStyled aria-current={href === pathname || undefined} {...props}>
-            {label}
-          </LinkStyled>
-        </NextLink>
+        <motion.div key={href} initial={{ x: -100 }} animate={{ x: 0 }}>
+          <Link href={href} passHref>
+            <LinkStyled
+              aria-current={href === pathname || undefined}
+              {...props}
+            >
+              {label}
+            </LinkStyled>
+          </Link>
+        </motion.div>
       ))}
     </>
   )

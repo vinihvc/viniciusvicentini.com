@@ -4,6 +4,8 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 
 import { BsList, BsX } from 'react-icons/bs'
 
+import { AnimatePresence, motion } from 'framer-motion'
+
 import { styled } from 'stitches.config'
 
 import { Stack } from '@primitives/stack'
@@ -61,19 +63,27 @@ export const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
       )}
 
       <DialogPrimitive.Portal>
-        <OverlayStyled />
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <OverlayStyled />
 
-        <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
-          <CloseStyled>
-            <BsX />
+            <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
+              <CloseStyled>
+                <BsX />
 
-            <VisuallyHidden>Close menu</VisuallyHidden>
-          </CloseStyled>
+                <VisuallyHidden>Close menu</VisuallyHidden>
+              </CloseStyled>
 
-          <Stack direction="column">
-            <HeaderLinks onClick={() => setIsOpen(false)} />
-          </Stack>
-        </ContentStyled>
+              <Stack direction="column">
+                <HeaderLinks onClick={() => setIsOpen(false)} />
+              </Stack>
+            </ContentStyled>
+          </motion.div>
+        </AnimatePresence>
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>
   )

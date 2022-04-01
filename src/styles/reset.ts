@@ -27,6 +27,11 @@ const resetStyles = {
   table: {
     borderSpacing: 0,
   },
+  '*, *:before, *:after': {
+    boxSizing: 'border-box',
+    p: 0,
+    m: 0,
+  },
 }
 
 export default resetStyles

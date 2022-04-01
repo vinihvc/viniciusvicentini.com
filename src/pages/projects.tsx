@@ -22,11 +22,18 @@ const ProjectsPage = () => {
           projects
         </Hero>
 
-        <Text as="h3" size="2xl" weight="bold">
+        <Text
+          as={motion.h3}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          size="2xl"
+          weight="bold"
+        >
           Featured Projects
         </Text>
 
         <Grid
+          as={motion.div}
           css={{
             columns: 'repeat(1, 1fr)',
             gap: 80,
@@ -40,30 +47,25 @@ const ProjectsPage = () => {
           {projectLinks?.map((item, i) => (
             <motion.article
               key={item.title}
-              layoutId={item.title}
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.3 * (i + 0.5),
-              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 * (i + 0.5) }}
             >
               <ProjectCard {...item} />
             </motion.article>
           ))}
         </Grid>
 
-        <Text as="h4" weight="normal" css={{ pt: '$10' }}>
+        <Text as="h4" weight="normal" css={{ py: '$10' }}>
           {'Check out all my projects on '}
+
           <Link
             href="https://github.com/vinihvc?tab=repositories"
             decorated
             isExternal
+            css={{ color: '$primary' }}
           >
-            Github
+            GitHub
           </Link>
         </Text>
       </Container>

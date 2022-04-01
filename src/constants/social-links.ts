@@ -2,7 +2,7 @@ import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
 
 export const socialLinks = [
   {
-    title: 'Github',
+    title: 'GitHub',
     icon: BsGithub,
     link: 'https://viniciusvicentini.com/github',
   },

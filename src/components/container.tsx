@@ -3,15 +3,15 @@ import { styled } from 'stitches.config'
 export const Container = styled('div', {
   w: '$full',
   px: '$4',
-  mx: 'auto',
+  m: '0 auto',
 
   variants: {
     size: {
       md: {
-        maxWidth: '$md',
+        maxW: '$md',
       },
       xl: {
-        maxWidth: '$xl',
+        maxW: '$xl',
       },
     },
   },

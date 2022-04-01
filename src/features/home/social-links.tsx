@@ -1,41 +1,41 @@
-import { createElement } from 'react'
-
 import { motion } from 'framer-motion'
 
 import { Stack } from '@primitives/stack'
 import { Link } from '@primitives/link'
+import { Box } from '@primitives/box'
 
 import { socialLinks } from '@constants/social-links'
 
 export const HomeSocialLinks = () => {
   return (
     <Stack
-      as="section"
+      as={motion.div}
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: 1.7 }}
       css={{
-        $$gap: '$space$5',
+        $$gap: '$space$10',
         mt: '$5',
+
+        '@md': {
+          $$gap: '$space$5',
+        },
       }}
     >
-      {socialLinks.map(({ title, icon, link }, i) => (
-        <motion.div
-          key={link}
-          layoutId={link}
-          initial={{ opacity: 0, scale: 0 }}
-          viewport={{
-            amount: 0.5,
-          }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.3,
-            delay: 6 * 0.3 + i,
-          }}
-        >
-          <Link href={link} title={`Visit my ${title}`} isExternal>
-            {createElement(icon, {
-              'aria-hidden': true,
-            })}
-          </Link>
-        </motion.div>
+      {socialLinks.map(({ title, icon, link }) => (
+        <Link key={link} href={link} title={`Visit my ${title}`} isExternal>
+          <Box
+            as={icon}
+            aria-hidden
+            css={{
+              fontSize: '$2xl',
+              transition: '$fast',
+              '@md': {
+                fontSize: '$lg',
+              },
+            }}
+          />
+        </Link>
       ))}
     </Stack>
   )

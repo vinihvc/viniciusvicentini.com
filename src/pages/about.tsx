@@ -25,19 +25,39 @@ const AboutPage = () => {
         </Hero>
 
         <Stack direction="column" css={{ $$gap: '$space$2' }}>
-          <Text size="lg">
+          <Text
+            as={motion.p}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            size="lg"
+          >
             I am a software engineer with a passion for building things that
             make people&apos;s lives better. Graduated in Computer Science and
             started working as a software engineer back in 2016.
           </Text>
         </Stack>
 
-        <Text size="2xl" weight="bold" css={{ my: '$5' }}>
+        <Text
+          as={motion.h3}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          size="2xl"
+          weight="bold"
+          css={{ my: '$5' }}
+        >
           Bio
         </Text>
 
         <Stack as="blockquote" direction="column" css={{ $$gap: '$space$2' }}>
-          <Text size="lg">
+          <Text
+            as={motion.p}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            size="lg"
+          >
             Vinicius Henrique Vicentini Cardozo, born on March 30, 1995 in
             Brodowski, São Paulo, Brazil, studied computer science at
             Universidade Barão de Mauá, and worked as a software engineer at
@@ -46,48 +66,58 @@ const AboutPage = () => {
             technologies, read books and ride your bike around the town. He also
             loves drink beer with friends. His interest in development started
             because of electronic games. Already created mods for Counter Strike
-            1.6, also created a software download blog.
+            1.6, also was the owner of a popular download website in 2008-2010.
           </Text>
         </Stack>
 
-        <Text size="2xl" weight="bold" css={{ my: '$5' }}>
+        <Text
+          as={motion.h3}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          size="2xl"
+          weight="bold"
+          css={{ my: '$5' }}
+        >
           Career
         </Text>
 
-        {carrerCompanies?.map(
-          ({ startDate, endDate, company, title, url, city, state }, i) => {
-            const formattedStartDate = formatDate(startDate)
-            const formattedEndDate = endDate ? formatDate(endDate) : 'Present'
+        <motion.div transition={{ delayChildren: 0.4 }}>
+          {carrerCompanies?.map(
+            ({ startDate, endDate, company, title, url, city, state }, i) => {
+              const formattedStartDate = formatDate(startDate)
+              const formattedEndDate = endDate ? formatDate(endDate) : 'Present'
 
-            return (
-              <Box
-                as={motion.article}
-                key={i}
-                layoutId={`carrer-${i}`}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.1 * (i + 0.3) }}
-                css={{ mb: '$10' }}
-              >
-                <Text as="h3" weight="medium">
-                  {title}
-                </Text>
+              return (
+                <Box
+                  as={motion.article}
+                  key={i}
+                  layoutId={`carrer-${i}`}
+                  initial={{ opacity: 0, x: 200 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  css={{ mb: '$10' }}
+                >
+                  <Text as="h3" weight="medium">
+                    {title}
+                  </Text>
 
-                <Text>
-                  <Link href={url} css={{ d: 'inline' }} decorated isExternal>
-                    {company}
-                  </Link>{' '}
-                  • {city}, {state}
-                </Text>
+                  <Text>
+                    <Link href={url} css={{ d: 'inline' }} decorated isExternal>
+                      {company}
+                    </Link>{' '}
+                    • {city}, {state}
+                  </Text>
 
-                <Text>
-                  {formattedStartDate} – {formattedEndDate}
-                </Text>
-              </Box>
-            )
-          },
-        )}
+                  <Text>
+                    {formattedStartDate} – {formattedEndDate}
+                  </Text>
+                </Box>
+              )
+            },
+          )}
+        </motion.div>
       </Container>
     </>
   )
