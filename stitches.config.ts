@@ -66,7 +66,7 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       bold: 700,
     },
     fonts: {
-      sans: '"Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
+      sans: '"Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
     },
     transitions: {
       fast: 'all 0.2s ease',
