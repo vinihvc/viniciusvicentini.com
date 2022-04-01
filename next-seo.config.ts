@@ -8,7 +8,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vini-boilerplate.vercel.app',
+    url: 'https://www.viniciusvicentini.com',
     site_name: 'Vinicius Vicentini',
     title: 'Vinicius Vicentini',
     images: [
