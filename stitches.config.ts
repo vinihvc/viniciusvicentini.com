@@ -13,7 +13,8 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       grey: '#8795A1',
       bg: '#08070b',
       hover: '#212024',
-      primary: '#909EFA',
+      primary: '#ca2b5f',
+      secondary: '#793986',
       card: '#1f2028',
     },
     space: {
@@ -65,7 +66,7 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
       bold: 700,
     },
     fonts: {
-      sans: '"Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
+      sans: '"Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
     },
     transitions: {
       fast: 'all 0.2s ease',

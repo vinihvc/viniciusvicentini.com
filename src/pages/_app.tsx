@@ -4,17 +4,19 @@ import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import SEO from 'next-seo.config'
 
-import BaseTemplate from '@layouts/Base'
+import { motion } from 'framer-motion'
 
-import Analytics from '@components/Analytics'
+import { DefaultLayout } from '@layouts/default'
+
+import { Analytics } from '@components/analytics'
 
 import globalStyles from '@styles/global'
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   globalStyles()
 
   return (
-    <BaseTemplate>
+    <DefaultLayout>
       <Head>
         <title>Vinicius Vicentini</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
@@ -26,10 +28,17 @@ const App = ({ Component, pageProps }: AppProps) => {
 
       <DefaultSeo {...SEO} />
 
-      <Component {...pageProps} />
+      <motion.div
+        key={router.route}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Component {...pageProps} />
+      </motion.div>
 
       <Analytics />
-    </BaseTemplate>
+    </DefaultLayout>
   )
 }
 

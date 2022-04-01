@@ -12,9 +12,6 @@ const withPWA = require('next-pwa')
 // Bundle analyzer
 const withBundleAnalyzer = require('@next/bundle-analyzer')
 
-// MDX support
-const withMDX = require('@next/mdx')
-
 // Next configs
 const nextConfigs = {
   reactStrictMode: true,
@@ -24,13 +21,23 @@ const nextConfigs = {
 // Redirects to social media
 const redirects = async () => [
   {
+    source: '/github',
+    destination: 'https://github.com/vinihvc',
+    permanent: true,
+  },
+  {
     source: '/twitter',
     destination: 'https://twitter.com/vinihvc',
     permanent: true,
   },
   {
-    source: '/github',
-    destination: 'https://github.com/vinihvc',
+    source: '/linkedin',
+    destination: 'https://www.linkedin.com/in/vinihvc',
+    permanent: true,
+  },
+  {
+    source: '/instagram',
+    destination: 'https://www.instagram.com/vinihvc',
     permanent: true,
   },
 ]
@@ -57,10 +64,9 @@ module.exports = withPlugins(
     withBundleAnalyzer({
       enabled: process.env.ANALYZE === 'true',
     }),
-    withMDX({
-      extension: /\.mdx?$/,
-    }),
     withPWA({
+      reactStrictMode: true,
+      swcMinify: true,
       pwa: {
         dest: 'public',
         disable: !isProd,
