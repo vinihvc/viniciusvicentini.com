@@ -1,4 +1,4 @@
-export const SongIcon = () => (
+export const SongIcon = ({ ...props }) => (
   <svg
     stroke="currentColor"
     fill="currentColor"
@@ -8,6 +8,7 @@ export const SongIcon = () => (
     width="16"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden
+    {...props}
   >
     <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
     <path fillRule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />

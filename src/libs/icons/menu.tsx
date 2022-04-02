@@ -1,4 +1,4 @@
-export const MenuIcon = () => (
+export const MenuIcon = ({ ...props }) => (
   <svg
     stroke="currentColor"
     fill="currentColor"
@@ -8,6 +8,7 @@ export const MenuIcon = () => (
     width="1em"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden
+    {...props}
   >
     <path
       fillRule="evenodd"

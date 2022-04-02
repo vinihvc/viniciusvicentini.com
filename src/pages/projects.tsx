@@ -63,7 +63,12 @@ const ProjectsPage = () => {
             href="https://github.com/vinihvc?tab=repositories"
             decorated
             isExternal
-            css={{ color: '$primary' }}
+            css={{
+              color: '$primary',
+              '&:hover': {
+                color: '$primary',
+              },
+            }}
           >
             GitHub
           </Link>
