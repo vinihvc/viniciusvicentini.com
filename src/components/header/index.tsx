@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import NextLink from 'next/link'
 
 import { Box } from '@primitives/box'
@@ -7,7 +8,8 @@ import { Container } from '@components/container'
 import { Logo } from '@components/logo'
 
 import { HeaderLinks } from '@components/header/header.links'
-import { HeaderMobile } from '@components/header/header.mobile'
+
+const HeaderMobile = dynamic(() => import('./header.mobile'))
 
 export const Header = () => {
   return (

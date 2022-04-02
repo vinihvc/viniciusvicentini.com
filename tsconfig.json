@@ -5,7 +5,7 @@
       "@components/*": ["src/components/*"],
       "@primitives/*": ["src/components/primitives/*"],
       "@layouts/*": ["src/features/*"],
-      "@lib/*": ["src/lib/*"],
+      "@libs/*": ["src/libs/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
       "@services/*": ["src/services/*"],

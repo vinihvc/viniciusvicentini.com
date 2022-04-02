@@ -1,7 +1,3 @@
-import { createElement } from 'react'
-
-import { IconType } from 'react-icons'
-
 import { Box } from '@primitives/box'
 import { Text } from '@primitives/text'
 import { Link } from '@primitives/link'
@@ -11,7 +7,7 @@ type ProjectCardProps = {
   description: string
   repo_url: string
   website_url: string
-  icon: IconType
+  icon: () => JSX.Element
 }
 
 export const ProjectCard = ({
@@ -23,9 +19,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Box>
-      {createElement(icon, {
-        size: 16,
-      })}
+      <Box as={icon} />
 
       <Text as="h3" size="lg" weight="medium" css={{ mt: '$2' }}>
         {title}

@@ -28,9 +28,8 @@
     "next-seo": "^5.3.0",
     "preact": "^10.7.0",
     "preact-render-to-string": "^5.1.20",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-icons": "^4.3.1"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

@@ -30,9 +30,9 @@ const App = ({ Component, pageProps, router }: AppProps) => {
 
       <motion.div
         key={router.route}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        initial={{ opacity: 0, filter: 'blur(10px)' }}
+        animate={{ opacity: 1, filter: 'blur(0px)' }}
+        transition={{ duration: 0.3 }}
       >
         <Component {...pageProps} />
       </motion.div>
