@@ -47,7 +47,7 @@ const CloseStyled = styled(TriggerStyled)
 
 type HeaderMobileProps = ComponentProps<typeof TriggerStyled>
 
-const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
+export const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -89,5 +89,3 @@ const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
     </DialogPrimitive.Root>
   )
 }
-
-export default HeaderMobile

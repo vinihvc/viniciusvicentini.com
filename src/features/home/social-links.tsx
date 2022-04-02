@@ -23,7 +23,18 @@ export const HomeSocialLinks = () => {
       }}
     >
       {socialLinks.map(({ title, icon, link }) => (
-        <Link key={link} href={link} title={`Visit my ${title}`} isExternal>
+        <Link
+          key={link}
+          href={link}
+          title={`Visit my ${title}`}
+          isExternal
+          css={{
+            transition: '$fast',
+            '&:hover': {
+              color: '$primary',
+            },
+          }}
+        >
           <Box
             as={icon}
             aria-hidden

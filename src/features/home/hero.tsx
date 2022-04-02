@@ -12,7 +12,7 @@ export const HomeHero = () => {
     <Box>
       <Text
         as={motion.h1}
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
         viewport={{ once: true }}
@@ -24,7 +24,7 @@ export const HomeHero = () => {
 
       <Text
         as={motion.h2}
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, delay: 0.3 }}
         viewport={{ once: true }}
