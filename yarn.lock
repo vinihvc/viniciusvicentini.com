@@ -3549,18 +3549,6 @@ postcss@8.4.5:
     picocolors "^1.0.0"
     source-map-js "^1.0.1"
 
-preact-render-to-string@^5.1.20:
-  version "5.1.20"
-  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-5.1.20.tgz#9e61a478e8514e5c4140282c7c43d9747a6d32a9"
-  integrity sha512-ivh2oOGzth0o7XqbatWUQ81WQGoJwSqDKP5z917SoqTWYCAr7dlBzMv3SAMTAu3Gr5g47BJwrvyO44H2Y10ubg==
-  dependencies:
-    pretty-format "^3.8.0"
-
-preact@^10.7.0:
-  version "10.7.0"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.7.0.tgz#3bd424677a894c8199f66a881df283b44bea0eeb"
-  integrity sha512-9MEURwzNMKpAil/t6+wabDIJI6oG6GnwypYxiJDvQnW+fHDTt51PYuLZ1QUM31hFr7sDaj9qTaShAF9VIxuxGQ==
-
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -3582,11 +3570,6 @@ pretty-bytes@^5.3.0, pretty-bytes@^5.4.1:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
   integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
-
-pretty-format@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-3.8.0.tgz#bfbed56d5e9a776645f4b1ff7aa1a3ac4fa3c385"
-  integrity sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U=
 
 prop-types@^15.8.1:
   version "15.8.1"
