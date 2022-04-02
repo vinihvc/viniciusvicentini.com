@@ -2,8 +2,7 @@ import React, { ComponentProps, useState } from 'react'
 
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 
-import { CloseIcon } from '@libs/icons/close'
-import { MenuIcon } from '@libs/icons/menu'
+import { BsList, BsX } from 'react-icons/bs'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -57,7 +56,7 @@ export const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
     >
       {!isOpen && (
         <TriggerStyled {...props}>
-          <MenuIcon />
+          <BsList />
 
           <VisuallyHidden>Open menu</VisuallyHidden>
         </TriggerStyled>
@@ -74,7 +73,7 @@ export const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
 
             <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
               <CloseStyled>
-                <CloseIcon />
+                <BsX />
 
                 <VisuallyHidden>Close menu</VisuallyHidden>
               </CloseStyled>

@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons'
+
 import { Box } from '@primitives/box'
 import { Text } from '@primitives/text'
 import { Link } from '@primitives/link'
@@ -7,7 +9,7 @@ type ProjectCardProps = {
   description: string
   repo_url: string
   website_url: string
-  icon: () => JSX.Element
+  icon: IconType
 }
 
 export const ProjectCard = ({

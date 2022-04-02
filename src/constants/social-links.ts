@@ -1,27 +1,24 @@
-import { GitHubIcon } from '@libs/icons/github'
-import { TwitterIcon } from '@libs/icons/twitter'
-import { LinkedInIcon } from '@libs/icons/linkedin'
-import { InstagramIcon } from '@libs/icons/instagram'
+import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs'
 
 export const socialLinks = [
   {
     title: 'GitHub',
-    icon: GitHubIcon,
+    icon: BsGithub,
     link: 'https://viniciusvicentini.com/github',
   },
   {
     title: 'Twitter',
-    icon: TwitterIcon,
+    icon: BsTwitter,
     link: 'https://viniciusvicentini.com/twitter',
   },
   {
     title: 'Linkedin',
-    icon: LinkedInIcon,
+    icon: BsLinkedin,
     link: 'https://viniciusvicentini.com/linkedin',
   },
   {
     title: 'Instagram',
-    icon: InstagramIcon,
+    icon: BsInstagram,
     link: 'https://viniciusvicentini.com/instagram',
   },
 ]
