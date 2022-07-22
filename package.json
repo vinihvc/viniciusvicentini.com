@@ -26,8 +26,8 @@
     "next-compose-plugins": "^2.2.1",
     "next-pwa": "5.5.4",
     "next-seo": "^5.5.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-icons": "^4.4.0"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@types/marked": "^4.0.3",
     "@types/node": "^18.0.6",
-    "@types/react": "18.0.9",
+    "@types/react": "18.0.15",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "babel-loader": "^8.2.5",
