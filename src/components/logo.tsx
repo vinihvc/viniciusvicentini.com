@@ -2,10 +2,10 @@ import { ComponentProps, forwardRef } from 'react'
 
 import { styled } from 'stitches.config'
 
-const LogoStyled = styled('a', {
+const LogoStyled = styled('div', {
   d: 'flex',
   size: 33,
-  color: 'currentColor',
+  color: '$white',
   justify: 'center',
   align: 'center',
   fontSize: '$2xl',
@@ -21,9 +21,9 @@ const LogoStyled = styled('a', {
 
 type LogoProps = ComponentProps<typeof LogoStyled>
 
-export const Logo = forwardRef<HTMLAnchorElement, LogoProps>(
+export const Logo = forwardRef<HTMLDivElement, LogoProps>(
   ({ ...props }, ref) => (
-    <LogoStyled as="a" ref={ref} role="img" {...props}>
+    <LogoStyled ref={ref} role="img" {...props}>
       V
     </LogoStyled>
   ),

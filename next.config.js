@@ -1,29 +1,20 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-// Environment type
-const isProd = process.env.NODE_ENV === 'production'
+const withPWA = require('next-pwa', {
+  dest: 'public',
+  disable: process.env.NODE_ENV === 'development',
+})
 
-//Compose Plugins
-const withPlugins = require('next-compose-plugins')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-// Generate PWA manifest
-const withPWA = require('next-pwa')
-
-// Bundle analyzer
-const withBundleAnalyzer = require('@next/bundle-analyzer')
-
-// Export config
-module.exports = withPlugins([
-  withBundleAnalyzer({
-    enabled: process.env.ANALYZE === 'true',
-  }),
+/** @type {import('next').NextConfig} */
+module.exports = withBundleAnalyzer(
   withPWA({
     reactStrictMode: true,
     swcMinify: true,
-    pwa: {
-      dest: 'public',
-      disable: !isProd,
-    },
+
     async redirects() {
       return [
         {
@@ -49,4 +40,4 @@ module.exports = withPlugins([
       ]
     },
   }),
-])
+)

@@ -21,7 +21,7 @@ export const Header = () => {
           h: 70,
         }}
       >
-        <NextLink href="/" passHref>
+        <NextLink href="/">
           <Logo />
         </NextLink>
 
