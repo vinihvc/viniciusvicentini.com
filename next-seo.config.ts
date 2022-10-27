@@ -8,7 +8,7 @@ export default {
     title: 'Vinicius Vicentini',
     images: [
       {
-        url: 'https://github.com/vinihvc.png',
+        url: 'https://www.viniciusvicentini.com/api/og',
         width: 512,
         height: 512,
         alt: 'Vinicius Vicentini',
