@@ -16,7 +16,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
   globalStyles()
 
   return (
-    <DefaultLayout>
+    <>
       <Head>
         <title>Vinicius Vicentini</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
@@ -28,17 +28,19 @@ const App = ({ Component, pageProps, router }: AppProps) => {
 
       <DefaultSeo {...SEO} />
 
-      <motion.div
-        key={router.route}
-        initial={{ opacity: 0, filter: 'blur(10px)' }}
-        animate={{ opacity: 1, filter: 'blur(0px)' }}
-        transition={{ duration: 0.3 }}
-      >
-        <Component {...pageProps} />
-      </motion.div>
+      <DefaultLayout>
+        <motion.div
+          key={router.route}
+          initial={{ opacity: 0, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, filter: 'blur(0px)' }}
+          transition={{ duration: 0.3 }}
+        >
+          <Component {...pageProps} />
+        </motion.div>
 
-      <Analytics />
-    </DefaultLayout>
+        <Analytics />
+      </DefaultLayout>
+    </>
   )
 }
 

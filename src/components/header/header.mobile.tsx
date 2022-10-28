@@ -55,36 +55,38 @@ export const HeaderMobile = ({ ...props }: HeaderMobileProps) => {
       onOpenChange={() => setIsOpen((e) => !e)}
     >
       {!isOpen && (
-        <TriggerStyled {...props}>
-          <BsList />
-
-          <VisuallyHidden>Open menu</VisuallyHidden>
-        </TriggerStyled>
-      )}
-
-      <DialogPrimitive.Portal>
         <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <OverlayStyled />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <TriggerStyled {...props}>
+              <BsList />
 
-            <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
-              <CloseStyled>
-                <BsX />
-
-                <VisuallyHidden>Close menu</VisuallyHidden>
-              </CloseStyled>
-
-              <Stack direction="column">
-                <HeaderLinks onClick={() => setIsOpen(false)} />
-              </Stack>
-            </ContentStyled>
+              <VisuallyHidden>Open menu</VisuallyHidden>
+            </TriggerStyled>
           </motion.div>
         </AnimatePresence>
-      </DialogPrimitive.Portal>
+      )}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <DialogPrimitive.Portal>
+          <OverlayStyled />
+
+          <ContentStyled onInteractOutside={(e) => e.preventDefault()}>
+            <CloseStyled>
+              <BsX />
+
+              <VisuallyHidden>Close menu</VisuallyHidden>
+            </CloseStyled>
+
+            <Stack direction="column">
+              <HeaderLinks onClick={() => setIsOpen(false)} />
+            </Stack>
+          </ContentStyled>
+        </DialogPrimitive.Portal>
+      </motion.div>
     </DialogPrimitive.Root>
   )
 }
