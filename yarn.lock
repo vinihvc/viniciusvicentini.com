@@ -2610,10 +2610,10 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-framer-motion@^7.9.0:
-  version "7.9.0"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.9.0.tgz#3b789bd2a959327190a917f943883e351ead2c21"
-  integrity sha512-jgAHQkbGDgG/ebv7gPqyNWfePdAHedjIciycemITQbyZeQSZMCcOe50xNef2ahJmRqKjGgzo8T3mIki8ACmdnw==
+framer-motion@^7.10.0:
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.10.0.tgz#500c44f064aa26904abc3a1a683afc1311b7cec9"
+  integrity sha512-HZUl5hFIO23XuhxhGaWSVXaElYv0Wlk3iYXeqNmp1WF1JvD1vQMvuH3OE7Q5PsFX+a5+FrWRam7a4S7xDigEag==
   dependencies:
     "@motionone/dom" "^10.15.3"
     hey-listen "^1.0.8"
