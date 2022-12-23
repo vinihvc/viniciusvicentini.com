@@ -18,7 +18,7 @@
     ]
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^13.0.7",
+    "@next/bundle-analyzer": "^13.1.0",
     "@radix-ui/react-dialog": "^1.0.2",
     "@stitches/react": "^1.2.8",
     "@vercel/og": "^0.0.21",
