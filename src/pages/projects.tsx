@@ -9,7 +9,7 @@ import { Hero } from '@/components/hero'
 import { ProjectCard } from '@/components/project-card'
 
 import { projectLinks } from '@/constants/project-links'
-import { Box } from '@/components/primitives/box'
+import { Stack } from '@/components/primitives/stack'
 
 const ProjectsPage = () => {
   return (
@@ -21,6 +21,7 @@ const ProjectsPage = () => {
           projects
         </Hero>
 
+        <Stack></Stack>
         <Text as="h3" size="2xl" weight="bold">
           Featured Projects
         </Text>
@@ -29,7 +30,6 @@ const ProjectsPage = () => {
           css={{
             columns: 'repeat(1, 1fr)',
             gap: 80,
-            my: '$10',
             '@md': {
               columns: 'repeat(3, 1fr)',
               gap: '$5',
@@ -37,9 +37,7 @@ const ProjectsPage = () => {
           }}
         >
           {projectLinks?.map((item) => (
-            <Box as="article" key={item.title}>
-              <ProjectCard {...item} />
-            </Box>
+            <ProjectCard key={item.title} {...item} />
           ))}
         </Grid>
 

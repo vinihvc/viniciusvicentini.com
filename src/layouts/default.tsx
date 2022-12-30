@@ -12,7 +12,7 @@ export const DefaultLayout = ({ children, ...props }: DefaultLayoutProps) => {
     <>
       <Header />
 
-      <Box as="main" {...props} css={{ py: '$6' }}>
+      <Box as="main" {...props}>
         {children}
       </Box>
 
