@@ -1,4 +1,4 @@
-export const carrerCompanies = [
+export const careerCompanies = [
   {
     title: 'Software Engineering',
     company: 'Blockade Games',

@@ -11,6 +11,10 @@ export const Text = styled('span', {
 
   variants: {
     size: {
+      xs: {
+        fontSize: '$xs',
+        lineHeight: '$xs',
+      },
       sm: {
         fontSize: '$sm',
         lineHeight: '$sm',
@@ -70,7 +74,5 @@ export const Text = styled('span', {
 
   defaultVariants: {
     size: 'md',
-    weight: 'thin',
-    color: 'text',
   },
 })

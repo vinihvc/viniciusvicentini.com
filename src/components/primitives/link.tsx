@@ -50,8 +50,10 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   return (
     <LinkStyled
       ref={ref}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
-      target={isExternal ? '_blank' : undefined}
+      {...(isExternal && {
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      })}
       {...rest}
     >
       {children}

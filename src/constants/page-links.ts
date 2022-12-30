@@ -1,7 +1,7 @@
 export const pageLinks = [
   {
-    href: '/about',
-    label: 'About',
+    href: '/career',
+    label: 'Career',
   },
   {
     href: '/projects',

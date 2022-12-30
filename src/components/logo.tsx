@@ -13,6 +13,7 @@ const LogoStyled = styled('div', {
   br: '$full',
   cursor: 'pointer',
   transition: '$fast',
+  pt: '$2',
 
   '&:hover': {
     bg: '$hover',
@@ -23,7 +24,7 @@ type LogoProps = ComponentProps<typeof LogoStyled>
 
 export const Logo = forwardRef<HTMLDivElement, LogoProps>(
   ({ ...props }, ref) => (
-    <LogoStyled ref={ref} role="img" {...props}>
+    <LogoStyled ref={ref} {...props}>
       V
     </LogoStyled>
   ),

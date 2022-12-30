@@ -21,7 +21,7 @@ export const Header = () => {
           h: 70,
         }}
       >
-        <NextLink href="/">
+        <NextLink href="/" aria-label="Back to homepage">
           <Logo />
         </NextLink>
 

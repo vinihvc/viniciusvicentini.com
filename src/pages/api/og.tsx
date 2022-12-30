@@ -9,15 +9,16 @@ export default function () {
     (
       <div
         style={{
-          fontSize: 128,
+          fontSize: 72,
           background: 'black',
           color: 'white',
           width: '100%',
           height: '100%',
           display: 'flex',
-          textAlign: 'center',
-          alignItems: 'center',
           justifyContent: 'center',
+          alignItems: 'center',
+          backgroundImage:
+            'linear-gradient(to bottom right, rgba(68, 3, 69, 0.1), rgba(201, 44, 96, 0.1), rgba(72, 104, 219, 0.1))',
         }}
       >
         Vinicius Vicentini
