@@ -1,13 +1,13 @@
 import NextLink from 'next/link'
 
-import { Box } from '@primitives/box'
-import { Stack } from '@primitives/stack'
+import { Box } from '@/components/primitives/box'
+import { Stack } from '@/components/primitives/stack'
 
-import { Container } from '@components/container'
-import { Logo } from '@components/logo'
+import { Container } from '@/components/container'
+import { Logo } from '@/components/logo'
 
-import { HeaderLinks } from '@components/header/header.links'
-import { HeaderMobile } from '@components/header/header.mobile'
+import { HeaderLinks } from '@/components/header/header.links'
+import { HeaderMobile } from '@/components/header/header.mobile'
 
 export const Header = () => {
   return (

@@ -4,7 +4,7 @@ import { styled } from 'stitches.config'
 
 const LogoStyled = styled('div', {
   d: 'flex',
-  size: 33,
+  size: 40,
   color: '$white',
   justify: 'center',
   align: 'center',

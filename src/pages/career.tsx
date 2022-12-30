@@ -1,17 +1,15 @@
 import { NextSeo } from 'next-seo'
 
-import { motion } from 'framer-motion'
+import { Text } from '@/components/primitives/text'
+import { Link } from '@/components/primitives/link'
 
-import { Box } from '@primitives/box'
-import { Text } from '@primitives/text'
-import { Link } from '@primitives/link'
+import { COMPANIES } from '@/constants/companies'
 
-import { careerCompanies } from '@constants/career-companies'
+import { Container } from '@/components/container'
+import { Hero } from '@/components/hero'
 
-import { Container } from '@components/container'
-import { Hero } from '@components/hero'
-
-import formatDate from '@utils/formatDate'
+import formatDate from '@/utils/formatDate'
+import { Stack } from '@/components/primitives/stack'
 
 const AboutPage = () => {
   return (
@@ -23,41 +21,42 @@ const AboutPage = () => {
           career
         </Hero>
 
-        <motion.div transition={{ delayChildren: 0.4 }}>
-          {careerCompanies?.map(
-            ({ startDate, endDate, company, title, url, city, state }, i) => {
+        <Stack direction="column">
+          {COMPANIES?.map(
+            ({ startDate, endDate, company, title, url, city, state }) => {
               const formattedStartDate = formatDate(startDate)
               const formattedEndDate = endDate ? formatDate(endDate) : 'Present'
 
               return (
-                <Box
-                  as={motion.article}
-                  key={i}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3 }}
-                  css={{ mb: '$10' }}
-                >
-                  <Text as="h3" weight="medium">
+                <Text key={company} as="article" size="sm">
+                  <Text as="h3" color="grey">
                     {title}
                   </Text>
 
-                  <Text weight="thin">
-                    <Link href={url} css={{ d: 'inline' }} decorated isExternal>
+                  <Text weight="thin" size="md">
+                    <Link
+                      href={url}
+                      css={{
+                        d: 'inline',
+                        fontWeight: '$medium',
+                        fontSize: '$lg',
+                      }}
+                      decorated
+                      isExternal
+                    >
                       {company}
                     </Link>
                     {` • ${city}, ${state}`}
                   </Text>
 
-                  <Text size="sm">
+                  <Text color="grey">
                     {formattedStartDate} – {formattedEndDate}
                   </Text>
-                </Box>
+                </Text>
               )
             },
           )}
-        </motion.div>
+        </Stack>
       </Container>
     </>
   )

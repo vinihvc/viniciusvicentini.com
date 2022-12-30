@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
-import { Stack } from '@primitives/stack'
-import { Link } from '@primitives/link'
-import { Box } from '@primitives/box'
+import { Stack } from '@/components/primitives/stack'
+import { Link } from '@/components/primitives/link'
+import { Box } from '@/components/primitives/box'
 
-import { socialLinks } from '@constants/social-links'
+import { socialLinks } from '@/constants/social-links'
 
-export const HomeSocialLinks = () => {
+export const SocialLinks = () => {
   return (
     <Stack
       as={motion.div}

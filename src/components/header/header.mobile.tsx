@@ -10,8 +10,8 @@ import { styled } from 'stitches.config'
 
 import { Stack } from '@primitives/stack'
 
-import { VisuallyHidden } from '@components/visually-hidden'
-import { HeaderLinks } from '@components/header/header.links'
+import { VisuallyHidden } from '@/components/visually-hidden'
+import { HeaderLinks } from '@/components/header/header.links'
 
 const OverlayStyled = styled(DialogPrimitive.Overlay, {
   bg: 'rgba(0, 0, 0, 0.9)',

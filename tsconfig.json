@@ -2,15 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@primitives/*": ["src/components/primitives/*"],
-      "@layouts/*": ["src/features/*"],
-      "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"],
-      "@services/*": ["src/services/*"],
-      "@pages/*": ["src/pages/*"],
-      "@constants/*": ["src/constants/*"],
-      "@features/*": ["src/features/*"]
+      "@/*": ["src/*"]
     },
     "target": "es5",
     "lib": [

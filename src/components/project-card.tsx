@@ -1,8 +1,8 @@
 import { IconType } from 'react-icons'
 
-import { Box } from '@primitives/box'
-import { Text } from '@primitives/text'
-import { Link } from '@primitives/link'
+import { Box } from '@/components/primitives/box'
+import { Text } from '@/components/primitives/text'
+import { Link } from '@/components/primitives/link'
 
 type ProjectCardProps = {
   title: string

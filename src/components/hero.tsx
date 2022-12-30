@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
-import { Flex } from '@primitives/flex'
+import { Flex } from '@/components/primitives/flex'
 
-import { PageTitle } from '@components/page-title'
+import { PageTitle } from '@/components/page-title'
 
 type HeroProps = {
   /**
@@ -27,7 +27,7 @@ export const Hero = ({ start, end, children }: HeroProps) => {
         align: 'center',
 
         '@md': {
-          h: 300,
+          h: 250,
         },
       }}
     >

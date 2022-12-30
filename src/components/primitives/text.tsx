@@ -5,6 +5,8 @@ export const Text = styled('span', {
   d: 'block',
   fontFamily: 'inherit',
   lineHeight: 'inherit',
+  fontSize: 'inherit',
+  fontWeight: 'inherit',
   margin: 0,
 
   color: 'currentColor',
@@ -70,9 +72,5 @@ export const Text = styled('span', {
         color: '$grey',
       },
     },
-  },
-
-  defaultVariants: {
-    size: 'md',
   },
 })

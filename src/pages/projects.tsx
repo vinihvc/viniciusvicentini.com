@@ -1,16 +1,15 @@
 import { NextSeo } from 'next-seo'
 
-import { motion } from 'framer-motion'
+import { Text } from '@/components/primitives/text'
+import { Grid } from '@/components/primitives/grid'
+import { Link } from '@/components/primitives/link'
 
-import { Text } from '@primitives/text'
-import { Grid } from '@primitives/grid'
-import { Link } from '@primitives/link'
+import { Container } from '@/components/container'
+import { Hero } from '@/components/hero'
+import { ProjectCard } from '@/components/project-card'
 
-import { Container } from '@components/container'
-import { Hero } from '@components/hero'
-import { ProjectCard } from '@components/project-card'
-
-import { projectLinks } from '@constants/project-links'
+import { projectLinks } from '@/constants/project-links'
+import { Box } from '@/components/primitives/box'
 
 const ProjectsPage = () => {
   return (
@@ -22,18 +21,11 @@ const ProjectsPage = () => {
           projects
         </Hero>
 
-        <Text
-          as={motion.h3}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          size="2xl"
-          weight="bold"
-        >
+        <Text as="h3" size="2xl" weight="bold">
           Featured Projects
         </Text>
 
         <Grid
-          as={motion.div}
           css={{
             columns: 'repeat(1, 1fr)',
             gap: 80,
@@ -44,15 +36,10 @@ const ProjectsPage = () => {
             },
           }}
         >
-          {projectLinks?.map((item, i) => (
-            <motion.article
-              key={item.title}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 * (i + 0.5) }}
-            >
+          {projectLinks?.map((item) => (
+            <Box as="article" key={item.title}>
               <ProjectCard {...item} />
-            </motion.article>
+            </Box>
           ))}
         </Grid>
 

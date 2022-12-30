@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { styled } from 'stitches.config'
 
-import { pageLinks } from '@constants/page-links'
+import { pageLinks } from '@/constants/page-links'
 import { motion } from 'framer-motion'
 
 const LinkStyled = styled(Link, {
@@ -14,7 +14,7 @@ const LinkStyled = styled(Link, {
   transition: '$fast',
 
   '@sm': {
-    fontSize: '$md',
+    fontSize: '$lg',
   },
 
   '&:hover, &:focus, &:active, &[aria-current="true"]': {

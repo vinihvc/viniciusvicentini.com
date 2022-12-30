@@ -1,7 +1,7 @@
-import { Box } from '@primitives/box'
+import { Box } from '@/components/primitives/box'
 
-import { Header } from '@components/header'
-import { ShadowBg } from '@components/shadow-bg'
+import { Header } from '@/components/header'
+import { ShadowBg } from '@/components/shadow-bg'
 
 type DefaultLayoutProps = {
   children?: React.ReactNode
@@ -12,7 +12,7 @@ export const DefaultLayout = ({ children, ...props }: DefaultLayoutProps) => {
     <>
       <Header />
 
-      <Box as="main" {...props}>
+      <Box as="main" {...props} css={{ py: '$6' }}>
         {children}
       </Box>
 

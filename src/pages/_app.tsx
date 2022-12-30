@@ -6,9 +6,9 @@ import SEO from 'next-seo.config'
 
 import { motion } from 'framer-motion'
 
-import { DefaultLayout } from '@layouts/default'
+import { DefaultLayout } from '@/layouts/default'
 
-import { Analytics } from '@components/analytics'
+import { Analytics } from '@/components/analytics'
 
 import globalStyles from '@styles/global'
 

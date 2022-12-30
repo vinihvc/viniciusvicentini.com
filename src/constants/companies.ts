@@ -1,4 +1,4 @@
-export const careerCompanies = [
+export const COMPANIES = [
   {
     title: 'Software Engineering',
     company: 'Blockade Games',
@@ -33,7 +33,7 @@ export const careerCompanies = [
     city: 'Ribeirão Preto',
     state: 'São Paulo',
     startDate: '2019-07-21T03:00:00.000Z',
-    endDate: '2020-01-21T03:00:00.000Z',
+    endDate: '2021-01-21T03:00:00.000Z',
   },
   {
     title: 'Full Stack Developer',

@@ -2,7 +2,7 @@ import { createStitches, PropertyValue } from '@stitches/react'
 
 import type * as Stitches from '@stitches/react'
 
-import pxToRem from '@utils/pxToRem'
+import pxToRem from '@/utils/pxToRem'
 
 export const { config, css, globalCss, styled, getCssText } = createStitches({
   theme: {
@@ -43,8 +43,8 @@ export const { config, css, globalCss, styled, getCssText } = createStitches({
     fontSizes: {
       xs: pxToRem(14),
       sm: pxToRem(16),
-      md: pxToRem(18),
-      lg: pxToRem(20),
+      md: pxToRem(16),
+      lg: pxToRem(18),
       xl: pxToRem(22),
       '2xl': pxToRem(26),
       '3xl': pxToRem(32),

@@ -6,8 +6,9 @@
 const formatDate = (date: string) => {
   if (!date) return ''
 
+  // MM/YYYY
   return new Intl.DateTimeFormat('en-US', {
-    month: 'numeric',
+    month: 'long',
     year: 'numeric',
   }).format(new Date(date))
 }

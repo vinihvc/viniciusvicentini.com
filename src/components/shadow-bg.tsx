@@ -13,9 +13,9 @@ export const ShadowBg = () => {
     >
       <Box
         css={{
-          $$primary: '68, 3, 69, 0.1',
-          $$secondary: '201, 44, 96 ,0.1',
-          $$tertiary: '72, 104, 219 ,0.1',
+          $$primary: '68, 3, 69, 0.15',
+          $$secondary: '201, 44, 96 ,0.15',
+          $$tertiary: '72, 104, 219 ,0.15',
 
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s',
           position: 'fixed',
