@@ -10,7 +10,7 @@ import { DefaultLayout } from '@/layouts/default'
 
 import { Analytics } from '@/components/analytics'
 
-import globalStyles from '@styles/global'
+import globalStyles from '@/styles/global'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
   globalStyles()

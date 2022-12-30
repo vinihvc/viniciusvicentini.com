@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 import { styled } from 'stitches.config'
 
-import { Stack } from '@primitives/stack'
+import { Stack } from '@/components/primitives/stack'
 
 import { VisuallyHidden } from '@/components/visually-hidden'
 import { HeaderLinks } from '@/components/header/header.links'
