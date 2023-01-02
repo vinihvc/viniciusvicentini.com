@@ -22,14 +22,10 @@ const ProjectsPage = () => {
         </Hero>
 
         <Stack direction="column">
-          <Text as="h3" size="2xl" weight="bold">
-            Featured Projects
-          </Text>
-
           <Grid
             css={{
               columns: 'repeat(1, 1fr)',
-              gap: 80,
+              gap: '$10',
               '@md': {
                 columns: 'repeat(3, 1fr)',
                 gap: '$5',

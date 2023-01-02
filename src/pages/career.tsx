@@ -49,8 +49,10 @@ const AboutPage = () => {
                     {` • ${city}, ${state}`}
                   </Text>
 
-                  <Text color="grey">
-                    {formattedStartDate} – {formattedEndDate}
+                  <Text color="grey" css={{ d: 'flex', gap: '$2', mt: '$1' }}>
+                    <Text as="time">{formattedStartDate}</Text>
+                    <span>–</span>
+                    <Text as="time">{formattedEndDate}</Text>
                   </Text>
                 </Text>
               )

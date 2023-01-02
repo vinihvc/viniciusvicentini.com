@@ -23,7 +23,7 @@ export const Hero = ({ start, end, children }: HeroProps) => {
   return (
     <Flex
       css={{
-        h: 200,
+        h: 150,
         align: 'center',
 
         '@md': {
