@@ -42,6 +42,6 @@ export const COMPANIES = [
     city: 'Ribeirão Preto',
     state: 'São Paulo',
     startDate: '2016-07-21T03:00:00.000Z',
-    endDate: '2018-07-21T03:00:00.000Z',
+    endDate: '2019-06-21T03:00:00.000Z',
   },
 ]
