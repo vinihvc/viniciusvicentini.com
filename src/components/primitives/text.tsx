@@ -2,7 +2,6 @@ import { styled } from 'stitches.config'
 
 export const Text = styled('span', {
   // reset
-  d: 'block',
   fontFamily: 'inherit',
   lineHeight: 'inherit',
   fontSize: 'inherit',

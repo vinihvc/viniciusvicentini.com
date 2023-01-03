@@ -4,7 +4,6 @@ import { Text } from '@/components/primitives/text'
 import { Grid } from '@/components/primitives/grid'
 import { Link } from '@/components/primitives/link'
 
-import { Container } from '@/components/container'
 import { Hero } from '@/components/hero'
 import { ProjectCard } from '@/components/project-card'
 
@@ -16,46 +15,44 @@ const ProjectsPage = () => {
     <>
       <NextSeo title="Projects" />
 
-      <Container>
-        <Hero start="#4568dc" end="#b06ab3">
-          projects
-        </Hero>
+      <Hero start="#4568dc" end="#b06ab3">
+        projects
+      </Hero>
 
-        <Stack direction="column">
-          <Grid
+      <Stack direction="column">
+        <Grid
+          css={{
+            columns: 'repeat(1, 1fr)',
+            gap: '$10',
+            '@md': {
+              columns: 'repeat(3, 1fr)',
+              gap: '$5',
+            },
+          }}
+        >
+          {projectLinks?.map((item) => (
+            <ProjectCard key={item.title} {...item} />
+          ))}
+        </Grid>
+
+        <Text as="h4" weight="normal" css={{ py: '$10' }}>
+          {'Check out all my projects on '}
+
+          <Link
+            href="https://github.com/vinihvc?tab=repositories"
+            decorated
+            isExternal
             css={{
-              columns: 'repeat(1, 1fr)',
-              gap: '$10',
-              '@md': {
-                columns: 'repeat(3, 1fr)',
-                gap: '$5',
+              color: '$primary',
+              '&:hover': {
+                color: '$primary',
               },
             }}
           >
-            {projectLinks?.map((item) => (
-              <ProjectCard key={item.title} {...item} />
-            ))}
-          </Grid>
-
-          <Text as="h4" weight="normal" css={{ py: '$10' }}>
-            {'Check out all my projects on '}
-
-            <Link
-              href="https://github.com/vinihvc?tab=repositories"
-              decorated
-              isExternal
-              css={{
-                color: '$primary',
-                '&:hover': {
-                  color: '$primary',
-                },
-              }}
-            >
-              GitHub
-            </Link>
-          </Text>
-        </Stack>
-      </Container>
+            GitHub
+          </Link>
+        </Text>
+      </Stack>
     </>
   )
 }

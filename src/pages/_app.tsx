@@ -11,6 +11,7 @@ import { DefaultLayout } from '@/layouts/default'
 import { Analytics } from '@/components/analytics'
 
 import globalStyles from '@/styles/global'
+import { Container } from '@/components/container'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
   globalStyles()
@@ -29,14 +30,15 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       <DefaultSeo {...SEO} />
 
       <DefaultLayout>
-        <motion.div
+        <motion.main
           key={router.route}
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           animate={{ opacity: 1, filter: 'blur(0px)' }}
-          transition={{ duration: 0.3 }}
         >
-          <Component {...pageProps} />
-        </motion.div>
+          <Container>
+            <Component {...pageProps} />
+          </Container>
+        </motion.main>
 
         <Analytics />
       </DefaultLayout>

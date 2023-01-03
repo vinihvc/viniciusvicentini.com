@@ -5,7 +5,6 @@ import { Link } from '@/components/primitives/link'
 
 import { COMPANIES } from '@/constants/companies'
 
-import { Container } from '@/components/container'
 import { Hero } from '@/components/hero'
 
 import formatDate from '@/utils/formatDate'
@@ -16,50 +15,48 @@ const AboutPage = () => {
     <>
       <NextSeo title="Career" />
 
-      <Container css={{ maxW: '$md' }}>
-        <Hero start="#cc2b5e" end="#753a88">
-          career
-        </Hero>
+      <Hero start="#cc2b5e" end="#753a88">
+        career
+      </Hero>
 
-        <Stack direction="column" css={{ $$gap: '$space$8' }}>
-          {COMPANIES?.map(
-            ({ startDate, endDate, company, title, url, city, state }) => {
-              const formattedStartDate = formatDate(startDate)
-              const formattedEndDate = endDate ? formatDate(endDate) : 'Present'
+      <Stack direction="column" css={{ $$gap: '$space$8' }}>
+        {COMPANIES?.map(
+          ({ startDate, endDate, company, title, url, city, state }) => {
+            const formattedStartDate = formatDate(startDate)
+            const formattedEndDate = endDate ? formatDate(endDate) : 'Present'
 
-              return (
-                <Text key={company} as="article" size="sm">
-                  <Text as="h3" color="grey">
-                    {title}
-                  </Text>
-
-                  <Text weight="thin" size="md">
-                    <Link
-                      href={url}
-                      css={{
-                        d: 'inline',
-                        fontWeight: '$medium',
-                        fontSize: '$lg',
-                      }}
-                      decorated
-                      isExternal
-                    >
-                      {company}
-                    </Link>
-                    {` • ${city}, ${state}`}
-                  </Text>
-
-                  <Text color="grey" css={{ d: 'flex', gap: '$2', mt: '$1' }}>
-                    <Text as="time">{formattedStartDate}</Text>
-                    <span>–</span>
-                    <Text as="time">{formattedEndDate}</Text>
-                  </Text>
+            return (
+              <Text key={company} as="article" size="sm">
+                <Text as="h3" color="grey">
+                  {title}
                 </Text>
-              )
-            },
-          )}
-        </Stack>
-      </Container>
+
+                <Text weight="thin" size="md">
+                  <Link
+                    href={url}
+                    css={{
+                      d: 'inline',
+                      fontWeight: '$medium',
+                      fontSize: '$lg',
+                    }}
+                    decorated
+                    isExternal
+                  >
+                    {company}
+                  </Link>
+                  {` • ${city}, ${state}`}
+                </Text>
+
+                <Text color="grey" css={{ d: 'flex', gap: '$2', mt: '$1' }}>
+                  <Text as="time">{formattedStartDate}</Text>
+                  <span>–</span>
+                  <Text as="time">{formattedEndDate}</Text>
+                </Text>
+              </Text>
+            )
+          },
+        )}
+      </Stack>
     </>
   )
 }

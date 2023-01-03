@@ -1,15 +1,21 @@
 import { styled } from 'stitches.config'
 
 export const Button = styled('button', {
+  // reset
   appearance: 'none',
   border: 'none',
-  margin: 0,
-  height: 50,
+  outline: 'none',
+  textDecoration: 'none',
+
+  h: 50,
+  d: 'flex',
+  justify: 'center',
+  align: 'center',
   px: '$10',
-  backgroundColor: '$primary',
+  bg: '$primary',
   color: '$white',
   fontFamily: '$system',
-  fontSize: '$3',
+  fontSize: '$md',
   lineHeight: 1,
   cursor: 'pointer',
   transition: '$fast',
