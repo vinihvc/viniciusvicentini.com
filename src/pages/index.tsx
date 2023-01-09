@@ -4,7 +4,7 @@ import { SocialLinks } from '@/components/social-links'
 import { Text } from '@/components/primitives/text'
 import { Box } from '@/components/primitives/box'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Link } from '@/components/primitives/link'
 import { COMPANIES } from '@/constants/companies'
 
@@ -22,7 +22,7 @@ const HomePage = () => {
     >
       <Box>
         <Text
-          as={motion.h1}
+          as={m.h1}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
@@ -34,7 +34,7 @@ const HomePage = () => {
         </Text>
 
         <Text
-          as={motion.h2}
+          as={m.h2}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
@@ -49,7 +49,7 @@ const HomePage = () => {
         <Flex css={{ gap: '$1', ml: '$1', my: '$5' }}>
           {[...Array(5)].map((_, i) => (
             <Box
-              as={motion.div}
+              as={m.div}
               key={i}
               layoutId={`dot-${i}`}
               initial={{ opacity: 0, x: 100 }}
@@ -66,7 +66,7 @@ const HomePage = () => {
         </Flex>
 
         <Text
-          as={motion.div}
+          as={m.div}
           color="grey"
           size="lg"
           initial={{ opacity: 0, y: 50 }}

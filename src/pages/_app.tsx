@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import SEO from 'next-seo.config'
 
-import { motion } from 'framer-motion'
+import { domAnimation, LazyMotion, m } from 'framer-motion'
 
 import { DefaultLayout } from '@/layouts/default'
 
@@ -30,17 +30,19 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       <DefaultSeo {...SEO} />
 
       <DefaultLayout>
-        <motion.main
-          key={router.route}
-          initial={{ opacity: 0, filter: 'blur(10px)' }}
-          animate={{ opacity: 1, filter: 'blur(0px)' }}
-        >
-          <Container>
-            <Component {...pageProps} />
-          </Container>
-        </motion.main>
+        <LazyMotion features={domAnimation}>
+          <m.main
+            key={router.route}
+            initial={{ opacity: 0, filter: 'blur(10px)' }}
+            animate={{ opacity: 1, filter: 'blur(0px)' }}
+          >
+            <Container>
+              <Component {...pageProps} />
+            </Container>
+          </m.main>
 
-        <Analytics />
+          <Analytics />
+        </LazyMotion>
       </DefaultLayout>
     </>
   )

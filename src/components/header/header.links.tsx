@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { styled } from 'stitches.config'
 
 import { pageLinks } from '@/constants/page-links'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 const LinkStyled = styled(Link, {
   color: '$grey',
@@ -32,7 +32,7 @@ export const HeaderLinks = (props: HeaderLinksProps) => {
   return (
     <>
       {pageLinks.map(({ href, label }) => (
-        <motion.div key={href} initial={{ x: -100 }} animate={{ x: 0 }}>
+        <m.div key={href} initial={{ x: -100 }} animate={{ x: 0 }}>
           <LinkStyled
             href={href}
             aria-current={href === pathname || undefined}
@@ -40,7 +40,7 @@ export const HeaderLinks = (props: HeaderLinksProps) => {
           >
             {label}
           </LinkStyled>
-        </motion.div>
+        </m.div>
       ))}
     </>
   )

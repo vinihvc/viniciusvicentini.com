@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 import { Flex } from '@/components/primitives/flex'
 
@@ -31,7 +31,7 @@ export const Hero = ({ start, end, children }: HeroProps) => {
         },
       }}
     >
-      <motion.div
+      <m.div
         initial={{
           opacity: 0,
           x: -100,
@@ -42,7 +42,7 @@ export const Hero = ({ start, end, children }: HeroProps) => {
         }}
       >
         <PageTitle css={{ $$start: start, $$end: end }}>{children}</PageTitle>
-      </motion.div>
+      </m.div>
     </Flex>
   )
 }

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 import { Stack } from '@/components/primitives/stack'
 import { Link } from '@/components/primitives/link'
@@ -9,7 +9,7 @@ import { socialLinks } from '@/constants/social-links'
 export const SocialLinks = () => {
   return (
     <Stack
-      as={motion.div}
+      as={m.div}
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 1.7 }}
