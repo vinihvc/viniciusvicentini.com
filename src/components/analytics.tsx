@@ -5,13 +5,13 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 export const Analytics = () => (
   <>
     <Script
-      strategy="afterInteractive"
+      strategy="worker"
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
     />
 
     <Script
       id="gtag"
-      strategy="afterInteractive"
+      strategy="worker"
       dangerouslySetInnerHTML={{
         __html: `
             window.dataLayer = window.dataLayer || [];

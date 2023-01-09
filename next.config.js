@@ -14,6 +14,9 @@ module.exports = withBundleAnalyzer(
   withPWA({
     reactStrictMode: true,
     swcMinify: true,
+    experimental: {
+      nextScriptWorkers: true,
+    },
 
     async redirects() {
       return [
