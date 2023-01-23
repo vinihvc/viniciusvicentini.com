@@ -917,10 +917,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@builder.io/partytown@^0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.4.tgz#7ac078bf288efc041ecec025679a58ca78ab4ab9"
-  integrity sha512-dcZBPNQiHbMhvDGmdWRFNe75Z/XYmeZ2bubYmC5BeQpF09ObbPcbSqIP2NaNOFonKlWLfsE6u1790o9ZmlfpIw==
+"@builder.io/partytown@^0.7.5":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.5.tgz#f501e3db37a5ac659f21ba0c2e61b278e58b64b9"
+  integrity sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==
 
 "@corex/deepmerge@^4.0.29":
   version "4.0.29"
