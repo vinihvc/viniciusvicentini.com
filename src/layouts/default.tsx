@@ -1,7 +1,9 @@
-import { Analytics } from '@/components/analytics'
-import { Header } from '@/components/header'
-import { ShadowBg } from '@/components/shadow-bg'
 import { domAnimation, LazyMotion } from 'framer-motion'
+
+import { Analytics } from '@/components/analytics'
+import { Container } from '@/components/container'
+import { Header } from '@/components/header'
+import { GradientBg } from '@/components/gradient-bg'
 
 type DefaultLayoutProps = {
   children?: React.ReactNode
@@ -12,9 +14,11 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <LazyMotion features={domAnimation}>
       <Header />
 
-      {children}
+      <main>
+        <Container>{children}</Container>
+      </main>
 
-      <ShadowBg />
+      <GradientBg />
 
       <Analytics />
     </LazyMotion>

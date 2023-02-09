@@ -1,6 +1,6 @@
 import { Box } from './primitives/box'
 
-export const ShadowBg = () => {
+export const GradientBg = () => {
   return (
     <Box
       css={{
