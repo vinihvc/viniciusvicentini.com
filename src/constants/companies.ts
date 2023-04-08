@@ -1,12 +1,21 @@
 export const COMPANIES = [
   {
-    title: 'Software Engineering',
+    title: 'Senior Software Engineering',
     company: 'Blockade Games',
     url: 'https://blockade.games/',
     city: 'Indianapolis',
     state: 'Indiana',
     startDate: '2021-12-01T03:00:00.000Z',
     endDate: '',
+  },
+  {
+    title: 'Senior Front End Engineering',
+    company: 'Invillia',
+    url: 'https://invillia.com/',
+    city: 'Araraquara',
+    state: 'São Paulo',
+    startDate: '2022-05-10T03:00:00.000Z',
+    endDate: '2023-03-10T03:00:00.000Z',
   },
   {
     title: 'Front End Engineering',

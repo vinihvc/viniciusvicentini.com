@@ -19,7 +19,7 @@ const AboutPage = () => {
         career
       </Hero>
 
-      <Stack direction="column" css={{ $$gap: '$space$8' }}>
+      <Stack direction="column" css={{ $$gap: '$space$8', pb: '$10' }}>
         {COMPANIES?.map(
           ({ startDate, endDate, company, title, url, city, state }) => {
             const formattedStartDate = formatDate(startDate)

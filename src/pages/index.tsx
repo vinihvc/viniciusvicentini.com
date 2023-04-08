@@ -73,7 +73,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 1.3 }}
         >
-          <Text as="p">Brazilian based in Ribeirão Preto, Brazil.</Text>
+          <Text as="p">Brazilian based in Dublin, Ireland.</Text>
 
           <Text as="p">
             {'Currently working at '}
