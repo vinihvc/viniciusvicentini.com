@@ -8,7 +8,7 @@ const HomePage = () => {
   const currentWork = COMPANIES.find((company) => !company.endDate) ?? null
 
   return (
-    <div className="flex h-[calc(100vh_-_100px)] w-full items-center justify-center">
+    <section className="container flex flex-1 flex-col items-center justify-center">
       <div>
         <m.h1
           initial={{ opacity: 0, x: -20 }}
@@ -71,7 +71,7 @@ const HomePage = () => {
 
         <SocialLinks />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -9,7 +9,7 @@ export const PageTitle = (props: PageTitleProps) => {
   return (
     <h1
       className={cn(
-        'inline-block bg-gradient-to-r bg-clip-text py-10 text-4xl font-bold text-transparent transition duration-200 sm:text-5xl',
+        'inline-block bg-gradient-to-r bg-clip-text py-16 text-4xl font-bold text-transparent transition duration-200 sm:text-5xl',
         className,
       )}
       {...rest}

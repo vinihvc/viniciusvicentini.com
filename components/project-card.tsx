@@ -1,25 +1,18 @@
 import * as React from 'react'
+import { projectLinks } from '@/constants/project-links'
+import { LucideIcon } from 'lucide-react'
 
 import { Link } from '@/components/ui/link'
 
-type ProjectCardProps = {
-  title: string
-  description: string
-  repo_url: string
-  website_url: string
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-}
+type ProjectCardProps = (typeof projectLinks)[0]
 
-export const ProjectCard = ({
-  title,
-  description,
-  repo_url,
-  website_url,
-  icon,
-}: ProjectCardProps) => {
+export const ProjectCard = (props: ProjectCardProps) => {
+  const { title, description, repo_url, website_url, icon } = props
+
   return (
     <article className="flex flex-col space-y-5">
       {React.createElement(icon, {
+        size: 16,
         'aria-hidden': true,
       })}
 

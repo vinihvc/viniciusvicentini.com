@@ -11,11 +11,11 @@ export const Header = () => {
           <Logo />
         </NextLink>
 
-        <nav className="hidden space-x-3 sm:flex">
-          <HeaderLinks />
-        </nav>
+        <nav className="flex items-center">
+          <HeaderLinks className="hidden space-x-10 sm:flex" />
 
-        <HeaderMobile className="sm:hidden" />
+          <HeaderMobile className="sm:hidden" />
+        </nav>
       </div>
     </header>
   )

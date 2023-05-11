@@ -16,14 +16,15 @@ export const SocialLinks = () => {
         <Link
           key={link}
           href={link}
-          title={`Visit my ${title}`}
+          className="transition duration-150 hover:text-pink-500"
           isExternal
-          className="transition duration-150 hover:text-gray-400"
         >
           {React.createElement(icon, {
+            className: 'w-7 h-7 sm:w-5 sm:h-5',
             'aria-hidden': true,
-            className: 'text-2xl transition duration-150 md:text-lg',
           })}
+
+          <span className="sr-only">{`Visit my ${title}`}</span>
         </Link>
       ))}
     </m.div>

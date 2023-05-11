@@ -1,23 +1,19 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { cn } from '@/utils/cn'
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="anonymous"
-          />
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-        <body>
+        <Head />
+        <body
+          className={cn(
+            'overflow-x-hidden overflow-y-scroll font-sans antialiased',
+            'flex h-full min-h-screen flex-col',
+            'bg-black',
+            'text-white',
+          )}
+        >
           <Main />
           <NextScript />
         </body>

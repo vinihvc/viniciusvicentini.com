@@ -8,7 +8,7 @@ export const linkVariants = tv({
   base: 'cursor-pointer hover:text-white focus:text-white active:text-white transition duration-150',
   variants: {
     decorated: {
-      true: 'text-white underline underline-offset-4 decoration-pink-500',
+      true: 'text-white underline underline-offset-4 decoration-pink-500 hover:text-pink-500 font-medium',
     },
   },
 })

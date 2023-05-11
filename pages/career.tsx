@@ -21,18 +21,19 @@ const AboutPage = () => {
 
               return (
                 <article key={company} className="text-sm">
-                  <h3 className="text-gray">{title}</h3>
+                  <h3 className="text-gray-400">{title}</h3>
 
-                  <p className="text-sm font-thin">
+                  <p className="text-lg">
                     <Link
                       href={url}
-                      className="inline text-lg font-medium"
+                      className="font-medium"
                       decorated
                       isExternal
                     >
                       {company}
                     </Link>
-                    {` • ${city}, ${state}`}
+
+                    <span className="font-light">{` • ${city}, ${state}`}</span>
                   </p>
 
                   <div className="mt-1 flex gap-2 text-gray-400">

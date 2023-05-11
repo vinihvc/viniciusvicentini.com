@@ -27,7 +27,6 @@ const ProjectsPage = () => {
               href="https://github.com/vinihvc?tab=repositories"
               decorated
               isExternal
-              className="text-gray-400"
             >
               GitHub
             </Link>
