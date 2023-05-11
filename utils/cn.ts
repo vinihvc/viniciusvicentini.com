@@ -1,4 +1,4 @@
-import { ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
-export const cn = (...input: ClassValue[]) => twMerge(clsx(input));
+export const cn = (...input: ClassValue[]) => twMerge(clsx(input))
