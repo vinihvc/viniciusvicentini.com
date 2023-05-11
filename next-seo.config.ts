@@ -1,4 +1,4 @@
-export default {
+const DEFAULT_SEO = {
   titleTemplate: '%s // Vinicius Vicentini',
   openGraph: {
     type: 'website',
@@ -21,3 +21,5 @@ export default {
     cardType: 'summary_large_image',
   },
 }
+
+export default DEFAULT_SEO
