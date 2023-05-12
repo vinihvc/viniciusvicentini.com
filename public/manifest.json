@@ -1,21 +1,24 @@
 {
   "name": "Vinicius Vicentini",
-  "short_name": "Vinicius Vicentini",
+  "short_name": "Vini Vicentini",
+  "description": "My Personal Website",
+  "theme_color": "#06092B",
+  "start_url": "/?source=pwa",
+  "background_color": "#06092B",
+  "display": "standalone",
+  "scope": "/",
   "icons": [
     {
       "src": "/images/icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "/images/icon-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
-  ],
-  "background_color": "#06092B",
-  "description": "Vinicius Vicentini",
-  "display": "fullscreen",
-  "start_url": "/",
-  "theme_color": "#06092B"
+  ]
 }

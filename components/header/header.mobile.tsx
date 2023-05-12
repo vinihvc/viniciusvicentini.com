@@ -15,7 +15,7 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen((e) => !e)}>
       <DialogTrigger asChild {...props}>
-        <Button variant="ghost">
+        <Button variant="ghost" size="sm">
           <Menu />
 
           <span className="sr-only">Open menu</span>

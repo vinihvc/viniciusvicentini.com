@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   applicationName: SEO.title,
   description: SEO.description,
   keywords: SEO.keywords,
-
+  manifest: '/manifest.json',
+  themeColor: '#0A0A0A',
   openGraph: {
     locale: 'en',
     title: SEO.title,
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
         url: 'https://viniciusvicentini.com/images/thumb.png',
         width: 1200,
         height: 630,
-        alt: 'Vinicius Vicentini, Personal website',
+        alt: 'Vinicius Vicentini, My personal website',
       },
     ],
     siteName: SEO.title,
