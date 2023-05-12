@@ -57,12 +57,7 @@ const HomePage = () => {
             <p>
               {'Currently working at '}
 
-              <Link
-                href={currentWork?.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                decorated
-              >
+              <Link href={currentWork?.url} isExternal decorated>
                 {`${currentWork?.company}.`}
               </Link>
             </p>

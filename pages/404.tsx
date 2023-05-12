@@ -14,7 +14,7 @@ const NotFoundPage = () => {
         }}
       />
 
-      <div className="z-[2] flex flex-col items-center space-y-2">
+      <div className="z-[2] flex flex-col items-center space-y-10">
         <div className="flex flex-col items-center space-y-2">
           <p className="text-[150px] font-thin">404</p>
 

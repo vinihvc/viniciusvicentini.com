@@ -1,6 +1,6 @@
 import { BookMarked, LayoutTemplate, Music4 } from 'lucide-react'
 
-export const projectLinks = [
+export const REPO_LINKS = [
   {
     title: 'Summer Eletrohits',
     description: 'A music streaming Summer Eletrohits',

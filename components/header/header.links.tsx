@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { pageLinks } from '@/constants/page-links'
-import { m } from 'framer-motion'
+import { APP_ROUTES } from '@/constants/page-links'
 
 import { Link } from '@/components/ui/link'
 
@@ -12,7 +11,7 @@ export const HeaderLinks = (props: HeaderLinksProps) => {
 
   return (
     <div {...props}>
-      {pageLinks.map(({ href, label }) => (
+      {APP_ROUTES.map(({ href, label }) => (
         <Link
           key={href}
           className="text-3xl font-semibold text-gray-400 aria-[current=true]:text-white sm:text-lg"

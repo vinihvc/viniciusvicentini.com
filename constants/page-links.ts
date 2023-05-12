@@ -1,4 +1,4 @@
-export const pageLinks = [
+export const APP_ROUTES = [
   {
     href: '/career',
     label: 'Career',

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { socialLinks } from '@/constants/social-links'
+import { SOCIAL_LINKS } from '@/constants/social'
 import { m } from 'framer-motion'
 
 import { Link } from '@/components/ui/link'
@@ -12,7 +12,7 @@ export const SocialLinks = () => {
       transition={{ duration: 0.3, delay: 1.7 }}
       className="mt-5 flex space-x-10 md:space-x-5"
     >
-      {socialLinks.map(({ title, icon, link }) => (
+      {SOCIAL_LINKS.map(({ title, icon, link }) => (
         <Link
           key={link}
           href={link}

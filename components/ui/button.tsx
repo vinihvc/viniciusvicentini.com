@@ -3,17 +3,18 @@ import { cn } from '@/utils/cn'
 import { VariantProps, tv } from 'tailwind-variants'
 
 export const buttonVariants = tv({
-  base: 'appearance-none border-none outline-none text-decoration-none h-[50] flex items-center justify-center px-10 text-white font-sans text-base leading-[1] cursor-pointer transition-colors duration-200 ease-in-out hover:bg-black hover:text-white',
+  base: [
+    'inline-flex items-center justify-center ',
+    'font-semibold',
+    'transition-colors',
+    'ring-offset-background',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+    'disabled:opacity-50 disabled:pointer-events-none',
+  ],
   variants: {
     variant: {
-      default: 'bg-pink-500 text-pink-500-foreground hover:bg-pink-500/90',
-      destructive:
-        'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-      outline:
-        'border border-input hover:bg-accent hover:text-accent-foreground',
-      secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+      default: 'bg-pink-500 text-pink-500-foreground hover:bg-pink-500/50',
       ghost: 'hover:bg-accent hover:text-accent-foreground',
-      link: 'underline-offset-4 hover:underline text-pink-500',
     },
     size: {
       default: 'h-10 py-2 px-4',

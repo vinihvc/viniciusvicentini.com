@@ -1,5 +1,6 @@
 import { COMPANIES } from '@/constants/companies'
 import formatDate from '@/utils/formatDate'
+import { m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
 import { PageTitle } from '@/components/page-title'
@@ -11,22 +12,31 @@ const AboutPage = () => {
       <NextSeo title="Career" />
 
       <div className="container max-w-3xl">
-        <PageTitle className="from-purple-500 to-pink-500 ">career</PageTitle>
+        <PageTitle className="from-pink-500 to-purple-500 ">career</PageTitle>
 
         <div className="flex flex-col space-y-8 pb-10">
           {COMPANIES?.map(
-            ({ startDate, endDate, company, title, url, city, state }) => {
+            (
+              { startDate, endDate, company, title, url, city, state },
+              index,
+            ) => {
               const formattedStartDate = formatDate(startDate)
               const formattedEndDate = endDate ? formatDate(endDate) : 'Present'
 
               return (
-                <article key={company} className="text-sm">
-                  <h3 className="text-gray-400">{title}</h3>
+                <m.article
+                  key={company}
+                  className="text-sm"
+                  initial={{ opacity: 0, y: 20 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                >
+                  <h3 className="font-semibold text-gray-400">{title}</h3>
 
                   <p className="text-lg">
                     <Link
                       href={url}
-                      className="font-medium"
+                      className="font-semibold"
                       decorated
                       isExternal
                     >
@@ -41,7 +51,7 @@ const AboutPage = () => {
                     <span>–</span>
                     <time>{formattedEndDate}</time>
                   </div>
-                </article>
+                </m.article>
               )
             },
           )}

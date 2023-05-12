@@ -1,24 +1,24 @@
 import { Github, Instagram, Linkedin, Twitter } from 'lucide-react'
 
-export const socialLinks = [
+export const SOCIAL_LINKS = [
   {
     title: 'GitHub',
     icon: Github,
-    link: 'https://viniciusvicentini.com/github',
+    link: '/github',
   },
   {
     title: 'Twitter',
     icon: Twitter,
-    link: 'https://viniciusvicentini.com/twitter',
+    link: '/twitter',
   },
   {
     title: 'Linkedin',
     icon: Linkedin,
-    link: 'https://viniciusvicentini.com/linkedin',
+    link: '/linkedin',
   },
   {
     title: 'Instagram',
     icon: Instagram,
-    link: 'https://viniciusvicentini.com/instagram',
+    link: '/instagram',
   },
 ]

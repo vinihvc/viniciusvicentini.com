@@ -8,7 +8,6 @@ import { DefaultSeo } from 'next-seo'
 import SEO from 'next-seo.config'
 
 import { Analytics } from '@/components/analytics'
-import { GradientBg } from '@/components/gradient-bg'
 import { Header } from '@/components/header'
 
 const fontSans = FontSans({
@@ -42,8 +41,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <main className="flex flex-1 flex-col">
           <Component {...pageProps} />
         </main>
-
-        <GradientBg />
 
         <Analytics />
       </LazyMotion>

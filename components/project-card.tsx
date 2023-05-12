@@ -1,10 +1,9 @@
 import * as React from 'react'
-import { projectLinks } from '@/constants/project-links'
-import { LucideIcon } from 'lucide-react'
+import { REPO_LINKS } from '@/constants/repo'
 
 import { Link } from '@/components/ui/link'
 
-type ProjectCardProps = (typeof projectLinks)[0]
+type ProjectCardProps = (typeof REPO_LINKS)[0]
 
 export const ProjectCard = (props: ProjectCardProps) => {
   const { title, description, repo_url, website_url, icon } = props

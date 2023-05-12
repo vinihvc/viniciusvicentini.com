@@ -1,5 +1,6 @@
-import { projectLinks } from '@/constants/project-links'
+import { REPO_LINKS } from '@/constants/repo'
 import { ProjectCard } from 'components/project-card'
+import { m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
 import { PageTitle } from '@/components/page-title'
@@ -15,19 +16,22 @@ const ProjectsPage = () => {
 
         <div className="flex flex-col space-y-10">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5">
-            {projectLinks?.map((item) => (
-              <ProjectCard key={item.title} {...item} />
+            {REPO_LINKS?.map((item, index) => (
+              <m.div
+                key={item.title}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <ProjectCard {...item} />
+              </m.div>
             ))}
           </div>
 
           <h4 className="py-10">
             {'Check out all my projects on '}
 
-            <Link
-              href="https://github.com/vinihvc?tab=repositories"
-              decorated
-              isExternal
-            >
+            <Link href="/github" decorated isExternal>
               GitHub
             </Link>
           </h4>

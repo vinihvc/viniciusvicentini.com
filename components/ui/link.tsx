@@ -20,7 +20,7 @@ type LinkProps = {
   isExternal?: boolean
 } & VariantProps<typeof linkVariants> &
   NextLinkProps &
-  React.ComponentPropsWithoutRef<'a'>
+  React.HTMLAttributes<HTMLAnchorElement>
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const { href, decorated, isExternal, className, children, ...rest } = props

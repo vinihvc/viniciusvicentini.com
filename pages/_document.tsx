@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
           className={cn(
             'overflow-x-hidden overflow-y-scroll font-sans antialiased',
             'flex h-full min-h-screen flex-col',
-            'bg-black',
+            'bg-neutral-950',
             'text-white',
           )}
         >
