@@ -18,7 +18,7 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
 
   return (
     <div className="container max-w-3xl">
-      <Title className="from-blue to-purple">{PAGE_NAME}</Title>
+      <Title className="from-blue-500 to-purple-500">{PAGE_NAME}</Title>
 
       <div className="flex flex-col space-y-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5">
@@ -28,7 +28,12 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
         <h4 className="py-10">
           {'Check out all my projects on '}
 
-          <Link href="/github" decorated isExternal>
+          <Link
+            href="/github"
+            className="text-primary decoration-white hover:text-white"
+            decorated
+            isExternal
+          >
             GitHub
           </Link>
         </h4>

@@ -14,17 +14,15 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen((e) => !e)}>
-      {!isOpen && (
-        <DialogTrigger asChild {...props}>
-          <Button variant="ghost">
-            <Menu />
+      <DialogTrigger asChild {...props}>
+        <Button variant="ghost">
+          <Menu />
 
-            <span className="sr-only">Open menu</span>
-          </Button>
-        </DialogTrigger>
-      )}
+          <span className="sr-only">Open menu</span>
+        </Button>
+      </DialogTrigger>
 
-      <DialogContent className="bg-black/70 flex flex-col items-center justify-center">
+      <DialogContent className="flex flex-col items-center justify-center bg-black/50">
         <HeaderLinks
           className="flex flex-col space-y-10"
           onClick={() => setIsOpen(false)}

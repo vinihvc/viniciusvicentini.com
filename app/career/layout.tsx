@@ -17,7 +17,7 @@ const CareerLayout = (props: CareerLayoutProps) => {
 
   return (
     <div className="container max-w-3xl">
-      <Title className="from-primary to-purple">{PAGE_NAME}</Title>
+      <Title className="from-primary to-purple-500">{PAGE_NAME}</Title>
 
       <div className="flex flex-col space-y-8 pb-10">{children}</div>
     </div>
