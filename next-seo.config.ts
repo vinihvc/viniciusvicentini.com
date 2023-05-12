@@ -1,4 +1,4 @@
-export default {
+const DEFAULT_SEO = {
   titleTemplate: '%s // Vinicius Vicentini',
   openGraph: {
     type: 'website',
@@ -8,7 +8,7 @@ export default {
     title: 'Vinicius Vicentini',
     images: [
       {
-        url: 'https://www.viniciusvicentini.com/api/og',
+        url: 'https://www.viniciusvicentini.com/images/thumb.png',
         width: 512,
         height: 512,
         alt: 'Vinicius Vicentini',
@@ -21,3 +21,5 @@ export default {
     cardType: 'summary_large_image',
   },
 }
+
+export default DEFAULT_SEO
