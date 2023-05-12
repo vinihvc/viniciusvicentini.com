@@ -1,16 +1,18 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
+import { Link } from '@/components/link'
+import { Social } from '@/components/social'
 import { COMPANIES } from '@/constants/companies'
-import { SocialLinks } from 'components/social-links'
-import { m } from 'framer-motion'
 
-import { Link } from '@/components/ui/link'
-
-const HomePage = () => {
+const RootPage = () => {
   const currentWork = COMPANIES.find((company) => !company.endDate) ?? null
 
   return (
     <section className="container flex flex-1 flex-col items-center justify-center">
       <div>
-        <m.h1
+        <motion.h1
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
@@ -18,21 +20,21 @@ const HomePage = () => {
           className="text-2xl font-bold sm:text-4xl"
         >
           Vinicius Vicentini
-        </m.h1>
+        </motion.h1>
 
-        <m.h2
+        <motion.h2
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-lg text-gray-400"
+          className="text-lg text-muted"
         >
-          Front-end engineer who loves UX, Performance and Design.
-        </m.h2>
+          Front-end engineer who loves UX, Performance and Design
+        </motion.h2>
 
         <div className="my-5 ml-1 flex gap-1">
           {[...Array(5)].map((_, i) => (
-            <m.div
+            <motion.div
               key={i}
               layoutId={`dot-${i}`}
               initial={{ opacity: 0, x: 100 }}
@@ -45,29 +47,29 @@ const HomePage = () => {
           ))}
         </div>
 
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 1.3 }}
-          className="text-lg text-gray-400"
+          className="text-lg text-muted"
         >
-          <p>Brazilian based in Dublin, Ireland.</p>
+          <p>Brazilian based in Dublin, Ireland</p>
 
           {currentWork && (
             <p>
               {'Currently working at '}
 
               <Link href={currentWork?.url} isExternal decorated>
-                {`${currentWork?.company}.`}
+                {currentWork?.company}
               </Link>
             </p>
           )}
-        </m.div>
+        </motion.div>
 
-        <SocialLinks />
+        <Social />
       </div>
     </section>
   )
 }
 
-export default HomePage
+export default RootPage

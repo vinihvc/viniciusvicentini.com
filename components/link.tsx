@@ -1,14 +1,17 @@
+'use client'
+
 import { forwardRef } from 'react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
-import { useRouter } from 'next/router'
-import { cn } from '@/utils/cn'
+import { usePathname } from 'next/navigation'
 import { VariantProps, tv } from 'tailwind-variants'
+
+import { cn } from '@/utils/cn'
 
 export const linkVariants = tv({
   base: 'cursor-pointer hover:text-white focus:text-white active:text-white transition duration-150',
   variants: {
     decorated: {
-      true: 'text-white underline underline-offset-4 decoration-pink-500 hover:text-pink-500 font-medium',
+      true: 'text-white underline underline-offset-4 decoration-primary hover:text-primary font-medium',
     },
   },
 })
@@ -25,7 +28,7 @@ type LinkProps = {
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const { href, decorated, isExternal, className, children, ...rest } = props
 
-  const { pathname } = useRouter()
+  const pathname = usePathname()
 
   return (
     <NextLink

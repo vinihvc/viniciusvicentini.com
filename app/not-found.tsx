@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/button'
 
 const NotFoundPage = () => {
   return (
@@ -19,7 +19,7 @@ const NotFoundPage = () => {
           <p className="text-[150px] font-thin">404</p>
 
           <div className="md:text-xl">
-            <strong className="bg-purple-500 p-1">Don&apos;t panic</strong>, but
+            <strong className="bg-purple p-1">Don&apos;t panic</strong>, but
             this page doesn&apos;t exist.
           </div>
         </div>

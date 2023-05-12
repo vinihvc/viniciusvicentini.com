@@ -1,11 +1,11 @@
 import * as React from 'react'
+
+import { Link } from '@/components/link'
 import { REPO_LINKS } from '@/constants/repo'
 
-import { Link } from '@/components/ui/link'
+type RepoProps = (typeof REPO_LINKS)[0]
 
-type ProjectCardProps = (typeof REPO_LINKS)[0]
-
-export const ProjectCard = (props: ProjectCardProps) => {
+export const Repo = (props: RepoProps) => {
   const { title, description, repo_url, website_url, icon } = props
 
   return (
@@ -17,7 +17,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
       <h3 className="text-lg font-medium">{title}</h3>
 
-      <p className="text-gray-400">{description}</p>
+      <p className="text-muted">{description}</p>
 
       <div>
         <Link href={repo_url} decorated isExternal>

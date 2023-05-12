@@ -1,6 +1,7 @@
 import React from 'react'
-import { cn } from '@/utils/cn'
 import { VariantProps, tv } from 'tailwind-variants'
+
+import { cn } from '@/utils/cn'
 
 export const buttonVariants = tv({
   base: [
@@ -13,18 +14,18 @@ export const buttonVariants = tv({
   ],
   variants: {
     variant: {
-      default: 'bg-pink-500 text-pink-500-foreground hover:bg-pink-500/50',
-      ghost: 'hover:bg-accent hover:text-accent-foreground',
+      solid: 'bg-primary text-primary-foreground hover:bg-primary/50',
+      ghost: 'hover:bg-primary/10',
     },
     size: {
-      default: 'h-10 py-2 px-4',
       sm: 'h-9 px-3 rounded-md',
+      md: 'h-10 py-2 px-4',
       lg: 'h-11 px-8 rounded-md',
     },
   },
   defaultVariants: {
-    variant: 'default',
-    size: 'default',
+    variant: 'solid',
+    size: 'md',
   },
 })
 

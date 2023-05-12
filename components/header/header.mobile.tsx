@@ -1,9 +1,11 @@
+'use client'
+
 import React, { useState } from 'react'
-import { HeaderLinks } from 'components/header/header.links'
 import { Menu } from 'lucide-react'
 
-import { Button } from '../ui/button'
-import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog'
+import { Button } from '@/components/button'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/dialog'
+import { HeaderLinks } from '@/components/header/header.links'
 
 type HeaderMobileProps = React.HTMLAttributes<HTMLButtonElement>
 
@@ -22,7 +24,7 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
         </DialogTrigger>
       )}
 
-      <DialogContent className="flex flex-col items-center justify-center bg-black/70">
+      <DialogContent className="bg-black/70 flex flex-col items-center justify-center">
         <HeaderLinks
           className="flex flex-col space-y-10"
           onClick={() => setIsOpen(false)}

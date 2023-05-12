@@ -9,11 +9,10 @@
     "lint": "eslint . --max-warnings=0",
     "format:write": "prettier --write \"**/*.{js,ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{js,ts,tsx,mdx}\" --cache",
-    "prepare": "husky install",
-    "postbuild": "next-sitemap"
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*": [
+    "*.{ts,tsx}": [
       "yarn lint --fix"
     ]
   },
