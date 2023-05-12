@@ -14,5 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://viniciusvicentini.com/projects',
       lastModified: new Date(),
     },
+    {
+      url: 'https://viniciusvicentini.com/labs',
+      lastModified: new Date(),
+    },
   ]
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
@@ -16,7 +18,7 @@ export const Social = () => {
         <Link
           key={link}
           href={link}
-          className="text-primary transition duration-150 hover:text-primaryHover"
+          className="hover:text-primaryHover"
           isExternal
         >
           {React.createElement(icon, {
