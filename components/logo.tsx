@@ -5,7 +5,7 @@ type LogoProps = {}
 export const Logo = forwardRef<HTMLDivElement, LogoProps>(
   ({ ...props }, ref) => (
     <div
-      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-2xl font-bold hover:bg-neutral-900"
+      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-2xl font-bold hover:bg-foreground"
       ref={ref}
       {...props}
     >

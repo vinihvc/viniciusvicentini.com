@@ -18,7 +18,7 @@ export const COMPANIES = [
     endDate: '2023-03-10T03:00:00.000Z',
   },
   {
-    title: 'Front End Engineering',
+    title: 'Mid Front End Engineering',
     company: 'Foton Tech',
     url: 'https://foton.tech',
     city: 'Florianópolis',
@@ -27,7 +27,7 @@ export const COMPANIES = [
     endDate: '2021-12-01T03:00:00.000Z',
   },
   {
-    title: 'Front End Engineering',
+    title: 'Mid Front End Engineering',
     company: 'Insigna Consultoria',
     url: 'https://www.insignaconsultoria.com.br',
     city: 'Campinas',
@@ -36,7 +36,7 @@ export const COMPANIES = [
     endDate: '2021-07-21T03:00:00.000Z',
   },
   {
-    title: 'Front End Developer',
+    title: 'Mid Front End Engineering',
     company: 'Dryve Tecnologia',
     url: 'https://dryve.com.br',
     city: 'Ribeirão Preto',
@@ -45,7 +45,7 @@ export const COMPANIES = [
     endDate: '2021-01-21T03:00:00.000Z',
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Junior Front End Engineering',
     company: 'Datamob',
     url: 'http://datamob.com.br',
     city: 'Ribeirão Preto',

@@ -8,6 +8,8 @@ module.exports = {
   importOrder: [
     '^(react/(.*)$)|^(react$)',
     '^(next/(.*)$)|^(next$)',
+    '^(framer-motion/(.*)$)|^(framer-motion$)',
+    '^(lucide-react/(.*)$)|^(lucide-react$)',
     '<THIRD_PARTY_MODULES>',
     '',
     '^types$',
@@ -15,6 +17,8 @@ module.exports = {
     '^@/config/(.*)$',
     '^@/lib/(.*)$',
     '^@/components/(.*)$',
+    '^@/constants/(.*)$',
+    '^@/utils/(.*)$',
     '^@/styles/(.*)$',
     '^[./]',
   ],

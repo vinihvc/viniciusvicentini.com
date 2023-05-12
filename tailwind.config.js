@@ -5,7 +5,7 @@ const colors = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: ['pages/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
+  content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,
@@ -17,6 +17,14 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
+      },
+      colors: {
+        background: colors.neutral[950],
+        foreground: colors.neutral[900],
+        primary: colors.rose[500],
+        primaryHover: colors.rose[600],
+        ring: colors.rose[700],
+        muted: colors.gray[400],
       },
     },
   },
