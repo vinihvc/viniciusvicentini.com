@@ -8,7 +8,7 @@ const DEFAULT_SEO = {
     title: 'Vinicius Vicentini',
     images: [
       {
-        url: 'https://www.viniciusvicentini.com/api/og',
+        url: 'https://www.viniciusvicentini.com/images/thumb.png',
         width: 512,
         height: 512,
         alt: 'Vinicius Vicentini',
