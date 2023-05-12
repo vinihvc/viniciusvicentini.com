@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 
-import { Link } from '@/components/link'
 import { Title } from '@/components/title'
 
 const PAGE_NAME = 'Projects'
@@ -20,24 +19,7 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
     <div className="container max-w-3xl">
       <Title className="from-blue-500 to-purple-500">{PAGE_NAME}</Title>
 
-      <div className="flex flex-col space-y-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5">
-          {children}
-        </div>
-
-        <h4 className="py-10">
-          {'Check out all my projects on '}
-
-          <Link
-            href="/github"
-            className="text-primary decoration-white hover:text-white"
-            decorated
-            isExternal
-          >
-            GitHub
-          </Link>
-        </h4>
-      </div>
+      <div className="flex flex-col space-y-4 md:space-y-10">{children}</div>
     </div>
   )
 }

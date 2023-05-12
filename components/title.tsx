@@ -15,7 +15,7 @@ export const Title = (props: TitleProps) => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       className={cn(
-        'inline-block bg-gradient-to-r bg-clip-text py-16 text-4xl font-bold lowercase text-transparent sm:text-5xl',
+        'inline-block bg-gradient-to-r bg-clip-text py-10 text-4xl font-bold lowercase text-transparent sm:text-5xl md:py-16',
         className,
       )}
       {...rest}
