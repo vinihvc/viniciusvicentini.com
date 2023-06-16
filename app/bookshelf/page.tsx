@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { Metadata } from 'next'
+
 import { Title } from '@/components/title'
 
-const PAGE_NAME = 'Bookself'
+const PAGE_NAME = 'Bookshelf'
 
 export const metadata: Metadata = {
   title: PAGE_NAME,
