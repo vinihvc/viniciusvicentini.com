@@ -17,7 +17,7 @@
     ]
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "^1.0.3",
+    "@radix-ui/react-dialog": "^1.0.4",
     "clsx": "^1.2.1",
     "framer-motion": "^10.12.17",
     "lucide-react": "0.246.0",
