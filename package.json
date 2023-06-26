@@ -22,7 +22,7 @@
     "framer-motion": "^10.12.17",
     "lucide-react": "0.246.0",
     "next": "^13.4.6",
-    "next-seo": "^6.0.0",
+    "next-seo": "^6.1.0",
     "nextjs-google-analytics": "^2.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
