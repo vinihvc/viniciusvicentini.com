@@ -18,15 +18,6 @@ export const COMPANIES = [
     endDate: '2023-04-28T03:00:00.000Z',
   },
   {
-    title: 'Senior Software Engineering',
-    company: 'Blockade Games',
-    url: 'https://blockade.games/',
-    city: 'Indianapolis',
-    state: 'Indiana',
-    startDate: '2021-12-01T03:00:00.000Z',
-    endDate: '',
-  },
-  {
     title: 'Senior Front End Engineering',
     company: 'Invillia',
     url: 'https://invillia.com/',
