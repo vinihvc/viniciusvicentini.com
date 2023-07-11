@@ -1,12 +1,21 @@
 export const COMPANIES = [
   {
+    title: 'Senior Full Stack Developer',
+    company: 'Cyber Brokers',
+    url: 'https://www.cyberbrokers.com/',
+    city: 'Chicago',
+    state: 'Illinois',
+    startDate: '2023-05-15T03:00:00.000Z',
+    endDate: '',
+  },
+  {
     title: 'Senior Software Engineering',
     company: 'Blockade Games',
     url: 'https://blockade.games/',
     city: 'Indianapolis',
     state: 'Indiana',
     startDate: '2021-12-01T03:00:00.000Z',
-    endDate: '',
+    endDate: '2023-04-28T03:00:00.000Z',
   },
   {
     title: 'Senior Front End Engineering',
