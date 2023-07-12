@@ -22,17 +22,10 @@ const ReadingPage = async () => {
           {BOOKS?.map((book) => (
             <article
               key={book.title}
-              className="relative overflow-hidden rounded"
+              className="relative overflow-hidden rounded border border-gray-600"
             >
               <div className="relative aspect-[9/13]">
-                <div
-                  className="absolute inset-x-0 top-0 z-10 h-10"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.15)',
-                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-                    backdropFilter: 'blur(0.3px)',
-                  }}
-                ></div>
+                <div className="absolute inset-x-0 top-0 z-10 h-6 rounded-b-3xl bg-white/10" />
 
                 <Image
                   src={`/books/${book.thumbnail}.jpg`}
@@ -44,7 +37,7 @@ const ReadingPage = async () => {
               <div className="absolute inset-x-0 bottom-0">
                 <div className="flex h-10 items-center bg-black/50 px-2 backdrop-blur-sm">
                   <div>
-                    <div className="truncate text-sm font-bold">
+                    <div className="truncate text-xs font-bold">
                       {book.title}
                     </div>
 
