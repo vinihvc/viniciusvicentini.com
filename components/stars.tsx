@@ -1,10 +1,14 @@
 import { cn } from '@/utils/cn'
 
 type StarsProps = {
-  rating: 1 | 2 | 3 | 4 | 5
+  rating: number
 }
 
 export const Stars = ({ rating }: StarsProps) => {
+  if (rating > 5 && rating < 0) {
+    throw new Error('Rating must be between 0 and 5')
+  }
+
   return (
     <div className="flex items-center">
       {[...Array(5)].map((_, i) => (
