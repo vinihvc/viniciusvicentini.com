@@ -16,7 +16,7 @@ export const DialogPortal = ({
   ...props
 }: RDialog.DialogPortalProps) => (
   <RDialog.Portal className={cn(className)} {...props}>
-    <div className="fixed inset-0 z-50 flex items-start justify-center sm:items-center">
+    <div className="fixed inset-0 z-40 flex items-start justify-center sm:items-center">
       {children}
     </div>
   </RDialog.Portal>
@@ -31,7 +31,7 @@ export const DialogOverlay = React.forwardRef<
   <RDialog.Overlay
     ref={ref}
     className={cn(
-      'fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in',
+      'fixed inset-0 z-40 bg-background/80 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in',
       className,
     )}
     {...props}
@@ -50,7 +50,7 @@ export const DialogContent = React.forwardRef<
     <RDialog.Content
       ref={ref}
       className={cn(
-        'fixed z-50 grid h-full w-full',
+        'fixed z-40 grid h-full w-full',
         'gap-4 rounded-b-lg border border-foreground p-6 shadow-lg animate-in data-[state=open]:fade-in-90',
         'data-[state=open]:slide-in-from-bottom-10',
         'sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',

@@ -1,56 +1,21 @@
-/* eslint-disable @next/next/no-img-element */
-import { Metadata } from 'next'
-import Image from 'next/image'
+'use client'
 
-import { Stars } from '@/components/stars'
-import { Title } from '@/components/title'
-import { BOOKS } from '@/constants/books'
+import { motion } from 'framer-motion'
 
-const PAGE_NAME = 'Bookshelf'
+import { BookCard } from '@/components/book'
+import { READ_BOOKS } from '@/constants/books'
 
-export const metadata: Metadata = {
-  title: PAGE_NAME,
-}
-
-const ReadingPage = async () => {
+const BookshelfPage = () => {
   return (
-    <div className="container max-w-3xl">
-      <Title className="from-cyan-300 to-fuchsia-700">{PAGE_NAME}</Title>
-
-      <div className="space-y-5">
-        <div className="grid grid-cols-4 items-start gap-4">
-          {BOOKS?.map((book) => (
-            <article
-              key={book.title}
-              className="relative overflow-hidden rounded border border-gray-600"
-            >
-              <div className="relative aspect-[9/13]">
-                <div className="absolute inset-x-0 top-0 z-10 h-6 rounded-b-3xl bg-white/10" />
-
-                <Image
-                  src={`/books/${book.thumbnail}.jpg`}
-                  alt={book.title}
-                  fill
-                />
-              </div>
-
-              <div className="absolute inset-x-0 bottom-0">
-                <div className="flex h-10 items-center bg-black/50 px-2 backdrop-blur-sm">
-                  <div>
-                    <div className="truncate text-xs font-bold">
-                      {book.title}
-                    </div>
-
-                    <Stars rating={book.rate} />
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
+    <motion.div
+      className="grid grid-cols-2 items-start gap-2 sm:grid-cols-3"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+    >
+      {READ_BOOKS?.map((book) => <BookCard key={book.title} book={book} />)}
+    </motion.div>
   )
 }
 
-export default ReadingPage
+export default BookshelfPage

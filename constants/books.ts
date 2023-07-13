@@ -1,7 +1,7 @@
-export const BOOKS = [
+export const READ_BOOKS = [
   {
     title: 'Robinson Crusoe',
-    rate: 4.5,
+    rate: 1,
     author: 'Daniel Defoe',
     thumbnail: 'robinson-crusoe',
   },

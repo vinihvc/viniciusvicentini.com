@@ -6,7 +6,7 @@ import { Logo } from '@/components/logo'
 
 export const Header = () => {
   return (
-    <header>
+    <header className="sticky top-0 z-50 bg-background/40 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
         <NextLink href="/" aria-label="Vinicius Vicentini, Back to homepage">
           <Logo />

@@ -7,4 +7,8 @@ export const APP_ROUTES = [
     href: '/projects',
     label: 'Projects',
   },
+  {
+    href: '/bookshelf',
+    label: 'Bookshelf',
+  },
 ]

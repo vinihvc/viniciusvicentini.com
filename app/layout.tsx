@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+
 import { Metadata } from 'next'
 import { Josefin_Sans as FontSans } from 'next/font/google'
 
@@ -61,7 +62,7 @@ const RootLayout = (props: RootLayoutProps) => {
       >
         <Header />
 
-        <main className="flex flex-1 flex-col">{props.children}</main>
+        <main className="flex flex-1 flex-col pb-10">{props.children}</main>
 
         <Analytics />
       </body>
