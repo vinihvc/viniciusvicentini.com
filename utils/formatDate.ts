@@ -8,7 +8,7 @@ const formatDate = (date: string) => {
 
   // MM/YYYY
   return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
+    month: '2-digit',
     year: 'numeric',
   }).format(new Date(date))
 }

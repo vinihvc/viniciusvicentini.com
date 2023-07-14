@@ -1,7 +1,7 @@
 export const COMPANIES = [
   {
     title: 'Senior Full Stack Developer',
-    company: 'Cyber Brokers',
+    company: 'CyberBrokers',
     url: 'https://www.cyberbrokers.com/',
     city: 'Chicago',
     state: 'Illinois',

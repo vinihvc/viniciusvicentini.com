@@ -6,14 +6,14 @@ import { Logo } from '@/components/logo'
 
 export const Header = () => {
   return (
-    <header>
-      <div className="container flex h-16 items-center justify-between">
+    <header className="container z-30 max-w-5xl backdrop-blur-sm sm:sticky sm:top-5">
+      <div className="p flex h-14 items-center justify-between rounded-full bg-neutral-950/90 backdrop-blur-sm sm:pr-8">
         <NextLink href="/" aria-label="Vinicius Vicentini, Back to homepage">
           <Logo />
         </NextLink>
 
         <nav className="flex items-center">
-          <HeaderLinks className="hidden space-x-10 sm:flex" />
+          <HeaderLinks className="hidden space-x-5 sm:flex" />
 
           <HeaderMobile className="sm:hidden" />
         </nav>

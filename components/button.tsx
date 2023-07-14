@@ -1,12 +1,12 @@
 import React from 'react'
-import { VariantProps, tv } from 'tailwind-variants'
+import { tv, VariantProps } from 'tailwind-variants'
 
 import { cn } from '@/utils/cn'
 
 export const buttonVariants = tv({
   base: [
     'inline-flex items-center justify-center ',
-    'font-semibold',
+    'font-medium',
     'transition-colors',
     'ring-offset-background',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
@@ -15,7 +15,7 @@ export const buttonVariants = tv({
   variants: {
     variant: {
       solid: 'bg-primary text-primary-foreground hover:bg-primary/50',
-      ghost: 'hover:bg-primary/10',
+      ghost: 'hover:bg-neutral-900',
     },
     size: {
       sm: 'h-9 px-3 rounded-md',
