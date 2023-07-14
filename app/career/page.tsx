@@ -7,11 +7,10 @@ import { COMPANIES } from '@/constants/companies'
 
 const CareerPage = () => {
   return (
-    <>
+    <div className="space-y-1">
       {COMPANIES?.map((company, index) => (
         <motion.div
           key={company.company}
-          className="text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
@@ -19,7 +18,7 @@ const CareerPage = () => {
           <Job job={company} />
         </motion.div>
       ))}
-    </>
+    </div>
   )
 }
 

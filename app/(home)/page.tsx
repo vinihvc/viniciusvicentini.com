@@ -25,7 +25,7 @@ const HomePage = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, delay: 0.3 }}
         viewport={{ once: true }}
-        className="text-lg text-muted"
+        className="text-muted"
       >
         Front-end engineer who loves UX, Performance and Design
       </motion.h2>
@@ -49,7 +49,7 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 1.3 }}
-        className="text-lg text-muted"
+        className="text-muted"
       >
         <p>Brazilian based in Dublin, Ireland</p>
 

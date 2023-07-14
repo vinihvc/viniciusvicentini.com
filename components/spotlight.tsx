@@ -1,11 +1,15 @@
 import { MouseEvent } from 'react'
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 
+import { cn } from '@/utils/cn'
+
 type SpotlightProps = {
   children: React.ReactNode
-}
+} & React.HTMLAttributes<HTMLDivElement>
 
-export const Spotlight = ({ children }: SpotlightProps) => {
+export const Spotlight = (props: SpotlightProps) => {
+  const { className, children, ...rest } = props
+
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
@@ -18,8 +22,12 @@ export const Spotlight = ({ children }: SpotlightProps) => {
 
   return (
     <div
-      className="group relative rounded border border-white/10 shadow-2xl"
+      className={cn(
+        'group relative rounded border border-white/10 shadow-2xl',
+        className,
+      )}
       onMouseMove={handleMouseMove}
+      {...rest}
     >
       <motion.div
         className="pointer-events-none absolute -inset-px z-40 rounded opacity-0 transition duration-300 group-hover:opacity-100"

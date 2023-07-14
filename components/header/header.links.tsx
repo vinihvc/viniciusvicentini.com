@@ -11,7 +11,7 @@ export const HeaderLinks = (props: HeaderLinksProps) => {
       {APP_ROUTES.map(({ href, label }) => (
         <Link
           key={href}
-          className="text-3xl font-semibold text-muted aria-[current=true]:text-white sm:text-lg"
+          className="text-3xl font-medium text-muted aria-[current=true]:text-white sm:text-base"
           href={href}
         >
           {label}
