@@ -22,7 +22,7 @@ export const Job = (props: JobProps) => {
       className={cn('text-sm', className)}
       {...rest}
     >
-      <div className="relative grid items-center rounded py-3 duration-200 sm:grid-cols-2 sm:px-4 sm:hover:bg-white/5">
+      <div className="relative grid items-center rounded-lg py-3 duration-200 sm:grid-cols-2 sm:px-4 sm:hover:bg-white/5">
         <div>
           <h3 className="font-semibold text-muted">{job.title}</h3>
 

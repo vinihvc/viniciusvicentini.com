@@ -1,6 +1,6 @@
 export const COMPANIES = [
   {
-    title: 'Senior Full Stack Developer',
+    title: 'Full Stack',
     company: 'CyberBrokers',
     url: 'https://www.cyberbrokers.com/',
     city: 'Chicago',
@@ -9,7 +9,7 @@ export const COMPANIES = [
     endDate: '',
   },
   {
-    title: 'Senior Software Engineering',
+    title: 'Front End',
     company: 'Blockade Games',
     url: 'https://blockade.games/',
     city: 'Indianapolis',
@@ -18,7 +18,7 @@ export const COMPANIES = [
     endDate: '2023-04-28T03:00:00.000Z',
   },
   {
-    title: 'Senior Front End Engineering',
+    title: 'Full Stack',
     company: 'Invillia',
     url: 'https://invillia.com/',
     city: 'Araraquara',
@@ -27,7 +27,7 @@ export const COMPANIES = [
     endDate: '2023-03-10T03:00:00.000Z',
   },
   {
-    title: 'Mid Front End Engineering',
+    title: 'Front End',
     company: 'Foton Tech',
     url: 'https://foton.tech',
     city: 'Florianópolis',
@@ -36,7 +36,7 @@ export const COMPANIES = [
     endDate: '2021-12-01T03:00:00.000Z',
   },
   {
-    title: 'Mid Front End Engineering',
+    title: 'Front End',
     company: 'Insigna Consultoria',
     url: 'https://www.insignaconsultoria.com.br',
     city: 'Campinas',
@@ -45,7 +45,7 @@ export const COMPANIES = [
     endDate: '2021-07-21T03:00:00.000Z',
   },
   {
-    title: 'Mid Front End Engineering',
+    title: 'Front End',
     company: 'Dryve Tecnologia',
     url: 'https://dryve.com.br',
     city: 'Ribeirão Preto',
@@ -54,7 +54,7 @@ export const COMPANIES = [
     endDate: '2021-01-21T03:00:00.000Z',
   },
   {
-    title: 'Junior Front End Engineering',
+    title: 'Full Stack',
     company: 'Datamob',
     url: 'http://datamob.com.br',
     city: 'Ribeirão Preto',
