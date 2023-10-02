@@ -14,9 +14,15 @@ export const DialogPortal = ({
   className,
   children,
   ...props
-}: RDialog.DialogPortalProps) => (
-  <RDialog.Portal className={cn(className)} {...props}>
-    <div className="fixed inset-0 z-40 flex items-start justify-center sm:items-center">
+}: RDialog.DialogPortalProps & { className?: string }) => (
+  <RDialog.Portal>
+    <div
+      className={cn(
+        'fixed inset-0 z-40 flex items-start justify-center sm:items-center',
+        className,
+      )}
+      {...props}
+    >
       {children}
     </div>
   </RDialog.Portal>
