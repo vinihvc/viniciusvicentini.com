@@ -18,14 +18,12 @@ type RootLayoutProps = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SEO.url),
   title: { absolute: SEO.title, template: `%s // ${SEO.title}` },
   applicationName: SEO.title,
   description: SEO.description,
   keywords: SEO.keywords,
-  manifest: '/manifest.json',
-  themeColor: '#0A0A0A',
   openGraph: {
-    locale: 'en',
     title: SEO.title,
     description: SEO.description,
     url: SEO.url,
