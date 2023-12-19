@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 
 import { Metadata } from 'next'
 import { Josefin_Sans as FontSans } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Analytics } from '@/components/analytics'
 import { Header } from '@/components/header'
@@ -63,6 +64,8 @@ const RootLayout = (props: RootLayoutProps) => {
         <main className="flex flex-1 flex-col pb-10">{props.children}</main>
 
         <Analytics />
+
+        <SpeedInsights />
       </body>
     </html>
   )
