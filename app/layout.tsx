@@ -64,7 +64,7 @@ const RootLayout = (props: RootLayoutProps) => {
         <main className="flex flex-1 flex-col pb-10">{props.children}</main>
 
         <Script
-          src="https://us.umami.is/umami.js"
+          src="https://us.umami.is/script.js"
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''}
           strategy="lazyOnload"
         />
