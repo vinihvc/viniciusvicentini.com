@@ -2,9 +2,8 @@ import '@/styles/globals.css'
 
 import { Metadata } from 'next'
 import { Josefin_Sans as FontSans } from 'next/font/google'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import Script from 'next/script'
 
-import { Analytics } from '@/components/analytics'
 import { Header } from '@/components/header'
 import { SEO } from '@/constants/seo'
 import { cn } from '@/utils/cn'
@@ -12,6 +11,7 @@ import { cn } from '@/utils/cn'
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
 })
 
 type RootLayoutProps = {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: 'https://viniciusvicentini.com/images/thumb.png',
         width: 1200,
         height: 630,
-        alt: 'Vinicius Vicentini, My personal website',
+        alt: 'Vinicius Vicentini, My personal website.',
       },
     ],
     siteName: SEO.title,
@@ -63,9 +63,11 @@ const RootLayout = (props: RootLayoutProps) => {
 
         <main className="flex flex-1 flex-col pb-10">{props.children}</main>
 
-        <Analytics />
-
-        <SpeedInsights />
+        <Script
+          src="https://us.umami.is/umami.js"
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''}
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   )

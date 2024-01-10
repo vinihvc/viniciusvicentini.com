@@ -37,7 +37,7 @@ export const DialogOverlay = React.forwardRef<
   <RDialog.Overlay
     ref={ref}
     className={cn(
-      'fixed inset-0 z-40 bg-background/80 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in',
+      'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in fixed inset-0 z-40 bg-background/80 backdrop-blur-sm transition-all duration-100',
       className,
     )}
     {...props}
@@ -57,9 +57,9 @@ export const DialogContent = React.forwardRef<
       ref={ref}
       className={cn(
         'fixed z-40 grid h-full w-full',
-        'gap-4 rounded-b-lg border border-foreground p-6 shadow-lg animate-in data-[state=open]:fade-in-90',
+        'animate-in data-[state=open]:fade-in-90 gap-4 rounded-b-lg border border-foreground p-6 shadow-lg',
         'data-[state=open]:slide-in-from-bottom-10',
-        'sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
+        'sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 sm:max-w-lg sm:rounded-lg',
         className,
       )}
       {...props}
