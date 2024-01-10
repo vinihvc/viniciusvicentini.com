@@ -3,7 +3,7 @@
 import { forwardRef } from 'react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
-import { VariantProps, tv } from 'tailwind-variants'
+import { tv, VariantProps } from 'tailwind-variants'
 
 import { cn } from '@/utils/cn'
 
@@ -39,6 +39,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       {...(isExternal && {
         target: '_blank',
         rel: 'noopener noreferrer',
+        prefetch: false,
       })}
       {...rest}
     >
