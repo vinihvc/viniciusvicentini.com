@@ -26,6 +26,9 @@ module.exports = {
       success: {
         DEFAULT: 'hsl(var(--success))',
       },
+      warning: {
+        DEFAULT: 'hsl(var(--warning))',
+      },
       ring: 'hsl(var(--ring))',
       border: 'hsl(var(--border))',
       'border-hover': 'hsl(var(--border-hover))',
