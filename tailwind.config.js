@@ -23,6 +23,9 @@ module.exports = {
         DEFAULT: 'hsl(var(--primary))',
         foreground: 'hsl(var(--primary-foreground))',
       },
+      success: {
+        DEFAULT: 'hsl(var(--success))',
+      },
       ring: 'hsl(var(--ring))',
       border: 'hsl(var(--border))',
       'border-hover': 'hsl(var(--border-hover))',

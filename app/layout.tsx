@@ -66,7 +66,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 
         <CustomBg />
 
-        <main className="flex flex-1 flex-col pt-24 md:pt-60">{children}</main>
+        <main className="flex flex-1 flex-col pt-24 md:pt-52">{children}</main>
 
         <Footer />
 

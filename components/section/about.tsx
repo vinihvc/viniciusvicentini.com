@@ -3,6 +3,9 @@ import Image from 'next/image'
 
 import { COMPANIES } from '@/constants/companies'
 import { SOCIAL_LINKS } from '@/constants/social'
+import { BrFlag } from '../flags/br'
+import { IeFlag } from '../flags/ie'
+import { ItFlag } from '../flags/it'
 import { Link } from '../ui/link'
 
 export const About = () => {
@@ -27,7 +30,7 @@ export const About = () => {
           </Link>
         </div>
 
-        <h2>Front-end engineer who loves UX, Performance and Design</h2>
+        <h2>Front-end engineer who loves UX, Performance and Design.</h2>
 
         <div>
           {currentWork && (
@@ -35,7 +38,7 @@ export const About = () => {
               {'Currently working at '}
 
               <Link href={currentWork?.url} isExternal decorated>
-                {currentWork?.company}
+                {currentWork?.company}.
               </Link>
             </p>
           )}

@@ -1,3 +1,5 @@
+import { ItFlag } from '@/components/flags/it'
+
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Footer = (props: FooterProps) => {
@@ -5,8 +7,21 @@ export const Footer = (props: FooterProps) => {
 
   return (
     <footer className="py-10 md:mt-20">
-      <div className="container flex justify-end text-muted">
-        &copy;{` ${new Date().getFullYear()} Vinicius Vicentini`}
+      <div className="container flex justify-between text-muted">
+        <span>
+          <div className="flex items-center space-x-2">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute h-full w-full animate-ping rounded-full bg-success opacity-75" />
+              <span className="relative h-2 w-2 rounded-full bg-success" />
+            </span>
+
+            <span className="text-xs">Living in</span>
+
+            <ItFlag />
+          </div>
+        </span>
+
+        <span>&copy;{` ${new Date().getFullYear()} Vinicius Vicentini`}</span>
       </div>
     </footer>
   )
