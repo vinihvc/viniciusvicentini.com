@@ -5,7 +5,7 @@ export const BrFlag = createIcon({
   path: (
     <>
       <title>Brazil</title>
-      <g stroke-width="1pt">
+      <g strokeWidth="1pt">
         <path fill="#229e45" fillRule="evenodd" d="M0 0h640v480H0z" />
         <path
           fill="#f8e509"
