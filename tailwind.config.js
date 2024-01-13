@@ -11,20 +11,26 @@ module.exports = {
       center: true,
       padding: '0.75rem',
       screens: {
-        '2xl': '80rem', // 1280px
+        '2xl': '64rem', // 1024px
       },
+    },
+    colors: {
+      black: colors.black,
+      white: colors.white,
+      background: 'hsl(var(--background))',
+      foreground: 'hsl(var(--foreground))',
+      primary: {
+        DEFAULT: 'hsl(var(--primary))',
+        foreground: 'hsl(var(--primary-foreground))',
+      },
+      ring: 'hsl(var(--ring))',
+      border: 'hsl(var(--border))',
+      'border-hover': 'hsl(var(--border-hover))',
+      muted: 'hsl(var(--muted))',
     },
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
-      },
-      colors: {
-        background: colors.neutral[950],
-        foreground: colors.neutral[900],
-        primary: colors.rose[500],
-        primaryHover: colors.rose[600],
-        ring: colors.rose[700],
-        muted: colors.gray[400],
       },
     },
   },

@@ -1,40 +1,24 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
-import { Link } from '@/components/link'
-import { Repo } from '@/components/repo'
+import { Link } from '@/components/ui/link'
+import { Repo } from '@/components/ui/repo'
+import { Title } from '@/components/ui/title'
 import { REPO_LINKS } from '@/constants/repo'
-
-const transition = {
-  hidden: { opacity: 0, x: 20 },
-  show: { opacity: 1, x: 0 },
-}
 
 const ProjectsPage = () => {
   return (
-    <>
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5">
-        {REPO_LINKS?.map((item, index) => (
-          <motion.div
-            key={item.title}
-            variants={transition}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: index * 0.1 }}
-          >
-            <Repo {...item} />
-          </motion.div>
-        ))}
+    <div className="container max-w-2xl space-y-20">
+      <div className="space-y-10">
+        <Title>Projects</Title>
+
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10">
+          {REPO_LINKS?.map((repo) => (
+            <Link key={repo.title} href={repo.website_url} isExternal>
+              <Repo data={repo} />
+            </Link>
+          ))}
+        </div>
       </div>
 
-      <motion.h4
-        className="py-10"
-        variants={transition}
-        initial="hidden"
-        animate="show"
-        transition={{ delay: 0.3 }}
-      >
+      <h4 className="py-10">
         {'Check out all my projects on '}
 
         <Link
@@ -45,8 +29,8 @@ const ProjectsPage = () => {
         >
           GitHub
         </Link>
-      </motion.h4>
-    </>
+      </h4>
+    </div>
   )
 }
 

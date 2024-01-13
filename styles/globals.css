@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  color-scheme: dark;
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0, 0%, 4%;
+    --foreground: 0, 0%, 100%;
+
+    --primary: 199, 89%, 48%;
+    --primary-foreground: 206, 76%, 53%;
+
+    --ring: 20 14.3% 4.1%;
+
+    --muted: 0, 0%, 52%;
+
+    --border: 0, 0%, 9%;
+    --border-hover: 0, 0%, 15%;
+  }
 }

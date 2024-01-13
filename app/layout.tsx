@@ -4,7 +4,10 @@ import { Metadata } from 'next'
 import { Josefin_Sans as FontSans } from 'next/font/google'
 import Script from 'next/script'
 
-import { Header } from '@/components/header'
+import { MediaQueriesIndicator } from '@/components/debug/media-queries'
+import { CustomBg } from '@/components/layout/custom-bg'
+import { Footer } from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
 import { SEO } from '@/constants/seo'
 import { cn } from '@/utils/cn'
 
@@ -14,13 +17,9 @@ const fontSans = FontSans({
   display: 'swap',
 })
 
-type RootLayoutProps = {
-  children: React.ReactNode
-}
-
 export const metadata: Metadata = {
   metadataBase: new URL(SEO.url),
-  title: { absolute: SEO.title, template: `%s // ${SEO.title}` },
+  title: { absolute: SEO.title, template: `%s // ${SEO.title}` },
   applicationName: SEO.title,
   description: SEO.description,
   keywords: SEO.keywords,
@@ -44,7 +43,11 @@ export const metadata: Metadata = {
   },
 }
 
-const RootLayout = (props: RootLayoutProps) => {
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html
       lang="en"
@@ -55,13 +58,19 @@ const RootLayout = (props: RootLayoutProps) => {
         className={cn(
           'font-sans antialiased',
           'flex h-full min-h-screen flex-col',
-          'bg-background text-white',
+          'text-foreground',
           fontSans.variable,
         )}
       >
         <Header />
 
-        <main className="flex flex-1 flex-col pb-10">{props.children}</main>
+        <CustomBg />
+
+        <main className="flex flex-1 flex-col pt-24 md:pt-60">{children}</main>
+
+        <Footer />
+
+        <MediaQueriesIndicator />
 
         <Script
           src="https://us.umami.is/script.js"

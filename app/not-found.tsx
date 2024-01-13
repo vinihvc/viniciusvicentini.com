@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
-import { buttonVariants } from '@/components/button'
+import { buttonVariants } from '@/components/ui/button'
 
 const NotFoundPage = () => {
   return (
-    <div className="flex h-[calc(100vh_-_100px)] w-full items-center justify-center">
+    <div className="flex flex-1 items-center justify-center">
       <div
         className="animate-zoom fixed left-1/2 top-1/2 h-px w-px rounded-full bg-white shadow-2xl"
         style={{

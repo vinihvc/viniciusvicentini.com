@@ -5,7 +5,7 @@ import { cn } from '@/utils/cn'
 
 export const buttonVariants = tv({
   base: [
-    'inline-flex items-center justify-center ',
+    'inline-flex items-center justify-center',
     'font-medium',
     'transition-colors',
     'ring-offset-background',
@@ -14,7 +14,7 @@ export const buttonVariants = tv({
   ],
   variants: {
     variant: {
-      solid: 'bg-primary text-primary-foreground hover:bg-primary/50',
+      solid: 'bg-primary hover:bg-primary-foreground',
       ghost: 'hover:bg-neutral-900',
     },
     size: {
@@ -29,8 +29,9 @@ export const buttonVariants = tv({
   },
 })
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants>
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {

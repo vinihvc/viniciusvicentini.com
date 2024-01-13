@@ -1,20 +1,18 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
-import { BookCard } from '@/components/book'
+import { BookCard } from '@/components/ui/book'
+import { Title } from '@/components/ui/title'
 import { READ_BOOKS } from '@/constants/books'
 
 const BookshelfPage = () => {
   return (
-    <motion.div
-      className="grid grid-cols-2 items-start gap-2 sm:grid-cols-3"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1 }}
-    >
-      {READ_BOOKS?.map((book) => <BookCard key={book.title} book={book} />)}
-    </motion.div>
+    <div className="container max-w-2xl">
+      <div className="space-y-10">
+        <Title>Bookshelf</Title>
+
+        <div className="grid grid-cols-3 items-start gap-2 sm:grid-cols-5 sm:gap-5">
+          {READ_BOOKS?.map((book) => <BookCard key={book.title} book={book} />)}
+        </div>
+      </div>
+    </div>
   )
 }
 

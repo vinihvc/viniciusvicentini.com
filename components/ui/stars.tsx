@@ -2,9 +2,9 @@ import { Star } from 'lucide-react'
 
 import { cn } from '@/utils/cn'
 
-type StarsProps = {
+interface StarsProps extends React.HTMLAttributes<HTMLDivElement> {
   rating: number
-} & React.HTMLAttributes<HTMLDivElement>
+}
 
 export const Stars = (props: StarsProps) => {
   const { rating, ...rest } = props
@@ -19,7 +19,7 @@ export const Stars = (props: StarsProps) => {
         <Star
           key={i}
           aria-checked={rating > i}
-          className={cn('h-5 w-5 text-gray-300 aria-checked:text-yellow-500')}
+          className={cn('text-gray-300 aria-checked:text-yellow-500 h-4 w-4')}
           fill="currentColor"
           stroke="black"
         />
