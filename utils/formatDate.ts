@@ -1,12 +1,11 @@
 /**
- * Formats a date to a string
+ * Format date to MMM YYYY
  *
- * @description return a string with the date formatted
+ * ```ts
+ * formatDate('2021-01-01') // JAN 2021
+ * ```
  */
 const formatDate = (date: string) => {
-  if (!date) return ''
-
-  // MM/YYYY
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'short',
