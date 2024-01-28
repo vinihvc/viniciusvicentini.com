@@ -5,7 +5,7 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
   ({ ...props }, ref) => (
     <div
-      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-border text-2xl font-bold leading-loose duration-200 "
+      className="flex size-10 cursor-pointer items-center justify-center rounded-full bg-border text-2xl font-bold leading-loose duration-200 "
       ref={ref}
       {...props}
     >

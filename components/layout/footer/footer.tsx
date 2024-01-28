@@ -10,9 +10,9 @@ export const Footer = (props: FooterProps) => {
       <div className="container flex justify-between text-muted">
         <span>
           <div className="flex items-center space-x-2">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute h-full w-full animate-ping rounded-full bg-success opacity-75" />
-              <span className="relative h-2 w-2 rounded-full bg-success" />
+            <span className="relative flex size-2">
+              <span className="absolute size-full animate-ping rounded-full bg-success opacity-75" />
+              <span className="relative size-2 rounded-full bg-success" />
             </span>
 
             <span className="text-xs">Living in</span>

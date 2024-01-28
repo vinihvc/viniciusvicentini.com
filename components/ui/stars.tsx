@@ -19,7 +19,7 @@ export const Stars = (props: StarsProps) => {
         <Star
           key={i}
           aria-checked={rating > i}
-          className={cn('text-gray-300 h-4 w-4 aria-checked:text-warning')}
+          className={cn('text-gray-300 size-4 aria-checked:text-warning')}
           fill="currentColor"
           stroke="black"
         />
