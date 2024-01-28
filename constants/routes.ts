@@ -6,9 +6,9 @@ export const APP_ROUTES = [
     label: 'Projects',
     icon: Code2,
   },
-  {
-    href: '/bookshelf',
-    label: 'Bookshelf',
-    icon: LibraryBig,
-  },
+  // {
+  //   href: '/bookshelf',
+  //   label: 'Bookshelf',
+  //   icon: LibraryBig,
+  // },
 ]

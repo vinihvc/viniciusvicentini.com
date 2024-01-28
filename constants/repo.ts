@@ -2,6 +2,7 @@ import {
   Apple,
   BookMarked,
   CalendarHeart,
+  Clock,
   Gamepad2,
   LayoutTemplate,
   Music4,
@@ -22,6 +23,13 @@ export const REPO_LINKS = [
     repo_url: 'https://github.com/vinihvc/challenge-books',
     website_url: 'https://challenge-books.vercel.app/',
     icon: BookMarked,
+  },
+  {
+    title: 'Gradient Clock',
+    description: 'Beautiful gradient clock',
+    repo_url: 'https://github.com/vinihvc/gradient-clock ',
+    website_url: 'https://clock.viniciusvicentini.com/',
+    icon: Clock,
   },
   {
     title: 'Next Boilerplate',
