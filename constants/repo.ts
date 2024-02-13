@@ -4,6 +4,7 @@ import {
   CalendarHeart,
   Clock,
   Gamepad2,
+  Image,
   LayoutTemplate,
   Music4,
   Wallpaper,
@@ -27,9 +28,16 @@ export const REPO_LINKS = [
   {
     title: 'Gradient Clock',
     description: 'Beautiful gradient clock',
-    repo_url: 'https://github.com/vinihvc/gradient-clock ',
+    repo_url: 'https://github.com/vinihvc/gradient-clock',
     website_url: 'https://clock.viniciusvicentini.com/',
     icon: Clock,
+  },
+  {
+    title: 'Optimizer',
+    description: 'Image optimizer and converter',
+    repo_url: 'https://github.com/vinihvc/optimizer',
+    website_url: 'https://optimizer.viniciusvicentini.com/',
+    icon: Image,
   },
   {
     title: 'Next Boilerplate',
