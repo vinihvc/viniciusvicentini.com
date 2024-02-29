@@ -1,12 +1,18 @@
+import React from 'react'
+
 import { ItFlag } from '@/components/flags/it'
+import { TRAVElING_COUNTRIES } from '@/constants/traveling'
+import { cn } from '@/utils/cn'
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Footer = (props: FooterProps) => {
   const { className, ...rest } = props
 
+  const livingCountry = TRAVElING_COUNTRIES.at(0)
+
   return (
-    <footer className="py-10 md:mt-20">
+    <footer className={cn('py-10 md:mt-20', className)} {...rest}>
       <div className="container flex justify-between text-muted">
         <span>
           <div className="flex items-center space-x-2">
@@ -15,9 +21,13 @@ export const Footer = (props: FooterProps) => {
               <span className="relative size-2 rounded-full bg-success" />
             </span>
 
-            <span className="text-xs">Living in</span>
+            {livingCountry && (
+              <>
+                <span className="text-xs">Living in {livingCountry.name}</span>
 
-            <ItFlag />
+                {React.createElement(livingCountry.flag)}
+              </>
+            )}
           </div>
         </span>
 
