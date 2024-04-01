@@ -3,7 +3,9 @@ import { IeFlag } from '@/components/flags/ie'
 import { ItFlag } from '@/components/flags/it'
 
 export const TRAVElING_COUNTRIES = [
-  { name: 'Italy', flag: ItFlag },
-  { name: 'Ireland', flag: IeFlag },
+  { name: 'Brazil', flag: BrFlag }, // went 02/04/2024
+  { name: 'Ireland', flag: IeFlag }, // went 09/03/2024 - 02/04/2024
+  { name: 'Italy', flag: ItFlag }, // went 19/01/2024 - 09/03/2024
+  { name: 'Ireland', flag: IeFlag }, // went 02/04/2023 - 19/01/2024
   { name: 'Brazil', flag: BrFlag },
 ]
