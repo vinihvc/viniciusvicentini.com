@@ -17,8 +17,8 @@
     "framer-motion": "^11.2.9",
     "lucide-react": "0.381.0",
     "next": "15.0.0-rc.0",
-    "react": "19.0.0-rc-9d4fba0788-20240530",
-    "react-dom": "19.0.0-rc-9d4fba0788-20240530",
+    "react": "19.0.0-rc-935180c7e0-20240524",
+    "react-dom": "19.0.0-rc-935180c7e0-20240524",
     "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
