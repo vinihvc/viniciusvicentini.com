@@ -1,6 +1,4 @@
 const { withTV } = require("tailwind-variants/transformer");
 
 /** @type {import('tailwindcss').Config} */
-module.exports = withTV({
-  plugins: [require("tailwindcss-animate")],
-});
+module.exports = withTV({});
