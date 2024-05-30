@@ -1,34 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  html {
-    color-scheme: dark;
-  }
+html {
+  color-scheme: dark;
 }
 
 .lucide {
-  stroke-width: 1px;
+  stroke-width: 1px !important;
 }
 
-@layer base {
-  :root {
-    --background: 0, 0%, 4%;
-    --foreground: 0, 0%, 100%;
+@theme {
+    --color-background: hsl(0, 0%, 4%);
+    --color-foreground: hsl(0, 0%, 100%);
 
-    --primary: 199, 89%, 48%;
-    --primary-foreground: 206, 76%, 53%;
+    --color-primary: hsl(199, 89%, 48%);
+    --color-primary-foreground: hsl(206, 76%, 53%);
 
-    --success: 142, 71%, 45%;
+    --color-success: hsl(142, 71%, 45%);
 
-    --warning: 44, 73%, 56%;
+    --color-warning: hsl(44, 73%, 56%);
 
-    --ring: 20 14.3% 4.1%;
+    --color-ring: hsl(20 14.3% 4.1%);
 
-    --muted: 0, 0%, 52%;
+    --color-muted: hsl(0, 0%, 52%);
 
-    --border: 0, 0%, 9%;
-    --border-hover: 0, 0%, 15%;
-  }
+    --color-border: hsl(0, 0%, 9%);
+    --color-border-hover: hsl(0, 0%, 15%);
+}
+
+.container {
+  @apply mx-auto px-2 max-w-[42rem] w-full;
 }

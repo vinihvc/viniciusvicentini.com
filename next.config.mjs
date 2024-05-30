@@ -1,6 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  experimental: {
+    reactCompiler: {
+      compilationMode: 'annotation',
+    },
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'books.google.com',
+      },
+    ],
+  },
   async redirects() {
     return [
       {
@@ -24,14 +36,6 @@ const nextConfig = {
         permanent: true,
       },
     ]
-  },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'books.google.com',
-      },
-    ],
   },
 }
 
