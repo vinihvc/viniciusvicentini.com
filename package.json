@@ -14,7 +14,7 @@
   "dependencies": {
     "babel-plugin-react-compiler": "0.0.0-experimental-487cb0e-20240529",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.9",
+    "framer-motion": "^11.2.10",
     "lucide-react": "0.381.0",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-9d4fba0788-20240530",
