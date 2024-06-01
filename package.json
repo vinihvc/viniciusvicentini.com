@@ -12,7 +12,7 @@
     "format:fix": "biome format ./ --write"
   },
   "dependencies": {
-    "babel-plugin-react-compiler": "0.0.0-experimental-487cb0e-20240529",
+    "babel-plugin-react-compiler": "0.0.0-experimental-938cd9a-20240601",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.9",
     "lucide-react": "0.381.0",
