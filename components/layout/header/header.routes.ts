@@ -15,8 +15,8 @@ export const APP_ROUTES = [
 		href: '/craft',
 		label: 'Craft',
 	},
-	// {
-	// 	href: '/bookshelf',
-	// 	label: 'Bookshelf',
-	// },
+	{
+		href: '/bookshelf',
+		label: 'Bookshelf',
+	},
 ]

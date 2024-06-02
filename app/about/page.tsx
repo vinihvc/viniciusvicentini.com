@@ -56,7 +56,8 @@ const AboutPage = () => {
 					<h2 className="text-2xl font-black">Carrer</h2>
 
 					<h3 className="text-muted">
-						{new Date().getFullYear() - 2016} years of experience in the tech
+						{new Date().getFullYear() - 2016} years of experience in the
+						industry
 					</h3>
 				</div>
 

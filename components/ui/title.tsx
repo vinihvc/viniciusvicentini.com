@@ -17,7 +17,7 @@ export const Title = (props: TitleProps) => {
 	return (
 		<Comp
 			className={cn(
-				'text-5xl font-bold bg-gradient-to-r inline-block text-transparent bg-clip-text',
+				'text-5xl font-bold bg-gradient-to-r inline-block text-transparent bg-clip-text leading-tight',
 				className,
 			)}
 			{...rest}

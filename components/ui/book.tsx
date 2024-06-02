@@ -15,7 +15,7 @@ export const BookCard = ({ book }: BookCardProps) => {
 			<div className="absolute inset-x-0 -top-10 z-[1] h-32 w-full -rotate-45 rounded-full rounded-t-lg bg-white/20" />
 
 			<Image
-				src={`/books/${book.thumbnail}.jpg`}
+				src={`/images/books/${book.thumbnail}.jpg`}
 				alt={`Cover of ${book.title}`}
 				className="rounded bg-background"
 				quality={20}

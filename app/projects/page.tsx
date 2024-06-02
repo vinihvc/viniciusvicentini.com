@@ -5,7 +5,7 @@ import { REPO_LINKS } from '@/contents/repo'
 
 const ProjectsPage = () => {
 	return (
-		<div className="container space-y-20 selection:bg-green-500 selection:text-black">
+		<div className="container selection:bg-green-500 selection:text-black">
 			<div className="space-y-1">
 				<Title className="from-green-500 to-teal-500">Projects</Title>
 
