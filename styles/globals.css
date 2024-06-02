@@ -1,32 +1,40 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   color-scheme: dark;
 }
 
-.lucide {
-  stroke-width: 1px !important;
+.lucide{
+  stroke-width: 1px;
 }
 
-@theme {
-    --color-background: hsl(0, 0%, 4%);
-    --color-foreground: hsl(0, 0%, 100%);
+@layer{
+  :root {
+    --background: 0, 0%, 5%;
+    --foreground: 0, 0%, 100%;
 
-    --color-primary: hsl(199, 89%, 48%);
-    --color-primary-foreground: hsl(206, 76%, 53%);
+    --primary: 199, 89%, 48%;
+    --primary-foreground: 206, 76%, 53%;
 
-    --color-success: hsl(142, 71%, 45%);
+    --success: 142, 71%, 45%;
 
-    --color-warning: hsl(44, 73%, 56%);
+    --warning: 44, 73%, 56%;
 
-    --color-ring: hsl(20 14.3% 4.1%);
+    --ring: 20 14.3% 4.1%;
 
-    --color-muted: hsl(0, 0%, 52%);
+    --muted: 0, 0%, 71%;
 
-    --color-border: hsl(0, 0%, 9%);
-    --color-border-hover: hsl(0, 0%, 15%);
-}
+    --border: 0, 0%, 9%;
+    --border-hover: 0, 0%, 15%;
+  }
 
-.container {
-  @apply mx-auto px-2 max-w-[42rem] w-full;
+  html {
+    @apply overflow-y-scroll bg-black
+  }
+
+  body {
+    @apply antialiased flex h-full min-h-screen flex-col text-foreground font-sans
+  }
 }

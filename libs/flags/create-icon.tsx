@@ -30,6 +30,7 @@ export interface IconProps extends Omit<React.SVGProps<SVGSVGElement>, 'path'> {
 export const createIcon = ({
 	viewBox = '0 0 24 24',
 	path,
+	title,
 	d: pathDefinition,
 	defaultProps,
 }: IconProps) => {
@@ -40,7 +41,7 @@ export const createIcon = ({
 	}
 
 	const Comp = React.forwardRef<SVGSVGElement, IconProps>(
-		({ path: unusedPath, className, title, ...rest }, ref) => {
+		({ path: unusedPath, className, ...rest }, ref) => {
 			return (
 				<svg
 					ref={ref}

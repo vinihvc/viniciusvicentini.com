@@ -1,7 +1,7 @@
 import React from 'react'
 import { ExternalLink } from 'lucide-react'
 
-import type { REPO_LINKS } from '@/content/repo'
+import type { REPO_LINKS } from '@/contents/repo'
 import { cn } from '@/utils/cn'
 
 interface RepoProps extends React.HTMLAttributes<HTMLDivElement> {

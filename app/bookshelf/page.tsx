@@ -1,10 +1,10 @@
 import { BookCard } from '@/components/ui/book'
 import { Title } from '@/components/ui/title'
-import { READ_BOOKS } from '@/content/books'
+import { READ_BOOKS } from '@/contents/books'
 
 const BookshelfPage = () => {
 	return (
-		<div className="container max-w-2xl">
+		<div className="container">
 			<div className="space-y-10">
 				<Title>Bookshelf</Title>
 

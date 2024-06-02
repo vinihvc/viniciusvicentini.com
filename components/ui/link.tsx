@@ -17,13 +17,9 @@ export const linkVariants = tv({
 				'text-primary underline underline-offset-4 decoration-primary font-medium',
 			],
 		},
-		showActive: {
-			true: ['aria-[current=true]:text-primary hover:opacity-80'],
-		},
 	},
 	defaultVariants: {
 		decorated: false,
-		showActive: false,
 	},
 })
 
@@ -39,23 +35,19 @@ interface LinkProps
 
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 	(props, ref) => {
-		const {
-			showActive,
-			href,
-			decorated,
-			isExternal,
-			className,
-			children,
-			...rest
-		} = props
+		const { href, decorated, isExternal, className, children, ...rest } = props
 
 		const pathname = usePathname()
 
+		const isCurrent = href === pathname
+
 		return (
 			<NextLink
-				className={cn(linkVariants({ decorated, showActive, className }))}
+				className={cn(linkVariants({ decorated, className }), {
+					active: isCurrent,
+				})}
 				href={href}
-				aria-current={href === pathname || undefined}
+				aria-current={isCurrent || undefined}
 				ref={ref}
 				{...(isExternal && {
 					target: '_blank',

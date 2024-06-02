@@ -1,1 +1,1 @@
-export * from './custom-bg'
+export * from './noise-background'

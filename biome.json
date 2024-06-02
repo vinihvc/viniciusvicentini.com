@@ -12,20 +12,10 @@
 				"noUselessFragments": "off"
 			},
 			"correctness": {
-				"useExhaustiveDependencies": "off",
-				"noUnusedVariables": "warn"
+				"useExhaustiveDependencies": "off"
 			},
 			"suspicious": {
 				"noExplicitAny": "off"
-			},
-			"nursery": {
-				"useSortedClasses": {
-					"level": "off",
-					"options": {
-						"attributes": ["classList"],
-						"functions": ["clsx", "cva", "tw", "cn"]
-					}
-				}
 			}
 		}
 	},
@@ -45,7 +35,7 @@
 			"*.json",
 			"tsconfig.json",
 			".turbo",
-			".next"
+			".next/*"
 		]
 	},
 	"formatter": {

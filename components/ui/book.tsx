@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import type { READ_BOOKS } from '@/content/books'
+import type { READ_BOOKS } from '@/contents/books'
 import { Stars } from './stars'
 
 interface BookCardProps {
