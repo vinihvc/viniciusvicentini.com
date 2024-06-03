@@ -3,6 +3,7 @@
 import { CompanyCard } from '@/components/ui/company-card'
 import { Link } from '@/components/ui/link'
 import type { CompanyType } from '@/contents/companies'
+import { cn } from '@/utils/cn'
 import React from 'react'
 
 interface CompaniesSectionProps {
@@ -27,7 +28,10 @@ export const CompaniesSection = (props: CompaniesSectionProps) => {
 					return (
 						<li
 							key={company.company}
-							className="group-hover:opacity-50 w-full hover:!opacity-100 transition animate-in fade-in slide-in-from-bottom-10"
+							className={cn(
+								'group-hover:opacity-50 w-full hover:!opacity-100 animate-in transition',
+								{ 'fade-in slide-in-from-bottom-10': showAll },
+							)}
 						>
 							<Link key={company.company} href={company.url} isExternal>
 								<CompanyCard data={company} />
