@@ -2,12 +2,12 @@ import { Title } from '@/components/ui/title'
 
 const CraftPage = () => {
 	return (
-		<section className="container selection:bg-amber-500 selection:text-black">
+		<section className="container selection:bg-amber-500">
 			<div className="space-y-1">
 				<Title className="from-rose-500 to-purple-500">Craft</Title>
 
 				<h2 className="text-muted text-lg">
-					Experiments and projects I've been working on. 🛠️
+					Experiments and projects I've been working on.
 				</h2>
 			</div>
 

@@ -11,7 +11,7 @@ export const Footer = (props: FooterProps) => {
 	const livingCountry = TRAVElING_COUNTRIES.at(0)
 
 	return (
-		<footer className={cn('py-10', className)} {...rest}>
+		<footer className={cn('py-10 selection:bg-green-500', className)} {...rest}>
 			<div className="container flex justify-between text-muted">
 				<span>
 					<div className="flex items-center space-x-2">

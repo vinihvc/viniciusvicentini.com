@@ -1,8 +1,10 @@
 import formatDate from '@/utils/formatDate'
 
+export type CompanyType = (typeof COMPANIES)[number]
+
 export const COMPANIES = [
 	{
-		title: 'Full Stack',
+		title: 'Design Engineer',
 		company: 'CyberBrokers',
 		image: 'cyberbrokers',
 		url: 'https://www.cyberbrokers.com/',
@@ -12,7 +14,7 @@ export const COMPANIES = [
 		endDate: null,
 	},
 	{
-		title: 'Front End',
+		title: 'Software Engineer',
 		company: 'Blockade Games',
 		image: 'blockade',
 		url: 'https://blockade.games/',
@@ -22,7 +24,7 @@ export const COMPANIES = [
 		endDate: formatDate('2023-04-28T03:00:00.000Z'),
 	},
 	{
-		title: 'Full Stack',
+		title: 'Front End Engineer',
 		company: 'Invillia',
 		image: 'invillia',
 		url: 'https://invillia.com/',
@@ -32,7 +34,7 @@ export const COMPANIES = [
 		endDate: formatDate('2023-03-10T03:00:00.000Z'),
 	},
 	{
-		title: 'Front End',
+		title: 'Front End Engineer',
 		company: 'Foton Tech',
 		image: 'foton',
 		url: 'https://foton.tech',
@@ -42,7 +44,7 @@ export const COMPANIES = [
 		endDate: formatDate('2021-12-01T03:00:00.000Z'),
 	},
 	{
-		title: 'Front End',
+		title: 'Front End Developer',
 		company: 'Insigna Consultoria',
 		image: 'insigna',
 		url: 'https://www.insignaconsultoria.com.br',
@@ -52,7 +54,7 @@ export const COMPANIES = [
 		endDate: formatDate('2021-07-21T03:00:00.000Z'),
 	},
 	{
-		title: 'Front End',
+		title: 'Front End Developer',
 		company: 'Dryve Tecnologia',
 		image: 'dryve',
 		url: 'https://dryve.com.br',
@@ -62,7 +64,7 @@ export const COMPANIES = [
 		endDate: formatDate('2021-01-21T03:00:00.000Z'),
 	},
 	{
-		title: 'Full Stack',
+		title: 'Full Stack Engineer',
 		company: 'Datamob',
 		image: 'datamob',
 		url: 'http://datamob.com.br',

@@ -5,47 +5,39 @@ import type { REPO_LINKS } from '@/contents/repo'
 import { cn } from '@/utils/cn'
 
 interface RepoProps extends React.HTMLAttributes<HTMLDivElement> {
-	data: (typeof REPO_LINKS)[0]
+	data: (typeof REPO_LINKS)[number]
 }
 
 export const Repo = (props: RepoProps) => {
 	const { data, className, ...rest } = props
 
-	if (!data) {
-		throw new Error('Repo data is required')
-	}
-
 	return (
-		<div
+		<article
 			className={cn(
-				'group relative flex h-full items-center gap-x-4 rounded-lg border border-border bg-background p-4 drop-shadow-lg duration-200 hover:border-border-hover',
+				'group relative flex items-center gap-x-5 rounded-lg border border-white/5 bg-background p-4 drop-shadow-lg hover:border-white/10 transition',
 				className,
 			)}
 			{...rest}
 		>
-			<div>
-				{React.createElement(data.icon, {
-					size: 32,
-					'aria-hidden': true,
-				})}
-			</div>
+			{React.createElement(data.icon, {
+				size: 28,
+				'aria-hidden': true,
+			})}
 
 			<div>
 				<h2 className="mb-1 text-lg font-semibold tracking-wide">
 					{data.title}
 				</h2>
 
-				<div className="line-clamp-2 text-sm text-muted">
-					{data.description}
-				</div>
+				<p className="line-clamp-2 text-sm text-muted">{data.description}</p>
 			</div>
 
 			<div className="absolute right-3 top-3">
 				<ExternalLink
 					size={12}
-					className="opacity-50 duration-200 group-hover:opacity-100"
+					className="opacity-50 group-hover:opacity-100 transition"
 				/>
 			</div>
-		</div>
+		</article>
 	)
 }

@@ -1,11 +1,22 @@
-import { Link } from '@/components/ui/link'
 import { Title } from '@/components/ui/title'
 import { COMPANIES } from '@/contents/companies'
 import Image from 'next/image'
+import { CompaniesSection } from './_components/companies'
 
-const AboutPage = () => {
+const getData = async () => {
+	return {
+		companies: COMPANIES,
+	}
+}
+
+const AboutPage = async () => {
+	const { companies } = await getData()
+
+	const firstJob = companies[companies.length - 1]
+	const startYear = new Date(firstJob.startDate).getFullYear()
+
 	return (
-		<section className="container selection:bg-orange-500 selection:text-black">
+		<section className="container selection:bg-orange-500">
 			<div className="space-y-1">
 				<Title className="from-orange-500 to-yellow-500">About</Title>
 
@@ -14,17 +25,16 @@ const AboutPage = () => {
 				</h2>
 			</div>
 
-			<div className="flex gap-14 items-center mt-10">
-				<div className="relative aspect-square w-2/5 rounded overflow-hidden shrink-0">
-					<Image
-						className="animate-in fade-in bg-background"
-						src="/images/me.webp"
-						placeholder="blur"
-						blurDataURL="/images/me.jpg"
-						alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
-						fill
-					/>
-				</div>
+			<div className="flex flex-col md:flex-row gap-14 md:items-center mt-10">
+				<Image
+					className="bg-background rounded aspect-square shrink-0"
+					src="/images/me.webp"
+					placeholder="blur"
+					width={300}
+					height={300}
+					blurDataURL="/images/me.jpg"
+					alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
+				/>
 
 				<div className="space-y-5 text-muted text-justify">
 					<p>
@@ -51,59 +61,18 @@ const AboutPage = () => {
 				</div>
 			</div>
 
-			<div className="space-y-4 mt-16">
+			<div className="space-y-4 mt-20">
 				<div>
 					<h2 className="text-2xl font-black">Carrer</h2>
 
 					<h3 className="text-muted">
-						{new Date().getFullYear() - 2016} years of experience in the
-						industry
+						{`${
+							new Date().getFullYear() - startYear
+						}+ years of experience in the industry`}
 					</h3>
 				</div>
 
-				<ul className="group space-y-2 pl-6">
-					{COMPANIES?.map((company) => (
-						<li
-							key={company.company}
-							className="group-hover:opacity-50 w-full hover:!opacity-100 transition"
-						>
-							<Link key={company.company} href={company.url} isExternal>
-								<div className="grid items-center rounded-lg py-3 duration-200 sm:grid-cols-2">
-									<div className="flex gap-5 items-center">
-										<div className="shrink-0">
-											<Image
-												className="rounded-full border border-border"
-												src={`/images/companies/${company.image}.webp`}
-												width={48}
-												height={48}
-												alt={`${company.company} logo`}
-											/>
-										</div>
-
-										<div>
-											<h3>{company.title}</h3>
-
-											<p className="text-muted">{company.company}</p>
-										</div>
-									</div>
-
-									<div className="mt-1 flex gap-1 text-muted sm:justify-end">
-										<time>{company.startDate}</time>
-										<span aria-hidden>•</span>
-
-										{company.endDate ? (
-											<time> {company.endDate}</time>
-										) : (
-											<span className="text-white">Now</span>
-										)}
-									</div>
-								</div>
-
-								<hr className="h-px w-full border-none bg-border duration-200" />
-							</Link>
-						</li>
-					))}
-				</ul>
+				<CompaniesSection data={companies} />
 			</div>
 		</section>
 	)

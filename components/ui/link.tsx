@@ -9,18 +9,8 @@ import { cn } from '@/utils/cn'
 
 export const linkVariants = tv({
 	base: [
-		'cursor-pointer hover:text-foreground focus:text-foreground active:text-foreground transition duration-200',
+		'cursor-pointer hover:text-foreground focus:text-foreground active:text-foreground transition',
 	],
-	variants: {
-		decorated: {
-			true: [
-				'text-primary underline underline-offset-4 decoration-primary font-medium',
-			],
-		},
-	},
-	defaultVariants: {
-		decorated: false,
-	},
 })
 
 interface LinkProps
@@ -35,7 +25,7 @@ interface LinkProps
 
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 	(props, ref) => {
-		const { href, decorated, isExternal, className, children, ...rest } = props
+		const { href, isExternal, className, children, ...rest } = props
 
 		const pathname = usePathname()
 
@@ -43,7 +33,7 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 
 		return (
 			<NextLink
-				className={cn(linkVariants({ decorated, className }), {
+				className={cn(linkVariants({ className }), {
 					active: isCurrent,
 				})}
 				href={href}

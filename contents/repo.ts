@@ -33,20 +33,6 @@ export const REPO_LINKS = [
 		icon: Clock,
 	},
 	{
-		title: 'Optimizer',
-		description: 'Image optimizer and converter',
-		repo_url: 'https://github.com/vinihvc/optimizer',
-		website_url: 'https://optimizer.viniciusvicentini.com',
-		icon: Image,
-	},
-	{
-		title: 'Next Boilerplate',
-		description: 'A boilerplate for next.js with all modern tecnologies',
-		repo_url: 'https://github.com/vinihvc/next-boilerplate',
-		website_url: 'https://boilerplate.viniciusvicentini.com',
-		icon: LayoutTemplate,
-	},
-	{
 		title: 'Adventure Game',
 		description: 'Idle game with a lot of adventures',
 		repo_url: 'https://github.com/vinihvc/adventure',
@@ -66,12 +52,5 @@ export const REPO_LINKS = [
 		repo_url: 'https://github.com/vinihvc/fit',
 		website_url: 'https://fit.viniciusvicentini.com',
 		icon: Apple,
-	},
-	{
-		title: 'Wallpaper',
-		description: 'Wallpaper generator app',
-		repo_url: 'https://github.com/vinihvc/wallpaper',
-		website_url: 'https://wallpaper.viniciusvicentini.com',
-		icon: Wallpaper,
 	},
 ]

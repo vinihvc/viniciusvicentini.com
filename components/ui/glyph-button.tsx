@@ -15,7 +15,7 @@ const glyphButton = tv({
 		'bg-transparent',
 		'uppercase',
 		'font-inherit cursor-pointer',
-		'after:content-[""] after:absolute after:[background:hsl(0_0%_100%)] after:opacity-[calc(var(--intent,0)_*_0.0875)] after:transition-opacity after:duration-[0.2s] after:inset-0',
+		'after:content-[""] after:absolute after:[background:hsl(0_0%_100%)] after:opacity-[calc(var(--intent,0)_*_0.0875)] after:transition-opacity after:inset-0',
 		'[transition:transform_0.5s_1s,scale_0.5s_3s,opacity_0s_3s]',
 		'hover:[--intent:1] focus-visible:[--intent:1]',
 	],

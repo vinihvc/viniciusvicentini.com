@@ -7,20 +7,22 @@ export const buttonVariants = tv({
 	base: [
 		'inline-flex items-center justify-center',
 		'font-medium',
+		'rounded',
 		'transition-colors',
-		'ring-offset-background',
-		'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+		'ring-offset-black',
+		'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/10 focus-visible:ring-offset-2',
 		'disabled:opacity-50 disabled:pointer-events-none',
 	],
 	variants: {
 		variant: {
 			solid: 'bg-primary hover:bg-primary-foreground',
-			ghost: 'hover:bg-neutral-900',
+			ghost: 'hover:bg-white/5',
 		},
 		size: {
-			sm: 'h-9 px-3 rounded-md',
+			xs: 'size-8',
+			sm: 'h-9 px-3',
 			md: 'h-10 py-2 px-4',
-			lg: 'h-11 px-8 rounded-md',
+			lg: 'h-11 px-8',
 		},
 	},
 	defaultVariants: {

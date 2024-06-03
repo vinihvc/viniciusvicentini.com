@@ -1,3 +1,5 @@
+export type RouteType = (typeof APP_ROUTES)[number]
+
 export const APP_ROUTES = [
 	{
 		href: '/about',

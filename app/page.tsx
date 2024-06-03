@@ -6,8 +6,8 @@ import { cn } from '@/utils/cn'
 
 const HomePage = () => {
 	return (
-		<div className="flex-1 container selection:bg-blue-500 selection:text-black flex flex-col justify-center">
-			<div className="animate-in fade-in-0 slide-in-from-bottom-10 zoom-in-95 origin-left">
+		<div className="flex-1 container selection:bg-blue-500 flex flex-col justify-center">
+			<div className="animate-in fade-in-0 slide-in-from-bottom-10">
 				<div className="space-y-2">
 					<h1 className="text-3xl font-bold sm:text-4xl">Vinicius Vicentini</h1>
 

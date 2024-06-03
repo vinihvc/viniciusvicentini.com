@@ -1,12 +1,10 @@
-'use client'
-
 import Image from 'next/image'
 
-import type { READ_BOOKS } from '@/contents/books'
-import { Stars } from './stars'
+import type { BookType } from '@/contents/books'
+import { Rate } from './rate'
 
 interface BookCardProps {
-	book: (typeof READ_BOOKS)[0]
+	book: BookType
 }
 
 export const BookCard = ({ book }: BookCardProps) => {
@@ -25,10 +23,10 @@ export const BookCard = ({ book }: BookCardProps) => {
 
 			<div className="absolute inset-x-0 bottom-0">
 				<div className="relative -right-1 -top-1">
-					<Stars rating={book.rate} />
+					<Rate value={book.rate} />
 				</div>
 
-				<div className="flex h-12 items-center bg-black/70 px-2 backdrop-blur-sm">
+				<div className="flex h-12 items-center bg-black/70 px-2">
 					<div className="line-clamp-2 text-xs font-semibold">{book.title}</div>
 				</div>
 			</div>

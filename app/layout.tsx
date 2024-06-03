@@ -2,14 +2,13 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 import { Josefin_Sans as FontSans } from 'next/font/google'
-import Script from 'next/script'
 
 import { MediaQueriesIndicator } from '@/components/debug/media-queries'
-import { NoiseBackground } from '@/components/layout/custom-bg'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { SEO } from '@/constants/seo'
 import { UmamiTracking } from '@/components/tracking/umami'
+import { NoiseBg } from '@/components/layout/noise-bg'
 
 const fontFamily = FontSans({
 	subsets: ['latin'],
@@ -50,7 +49,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
 			<body className={fontFamily.variable}>
 				<Header />
 
-				<NoiseBackground />
+				<NoiseBg />
 
 				<main className="flex flex-1 flex-col pt-16 md:pt-20 pb-10">
 					{children}

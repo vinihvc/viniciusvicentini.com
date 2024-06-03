@@ -21,6 +21,9 @@ module.exports = withTV({
       },
     },
     extend: {
+      transitionDuration: {
+        DEFAULT: '200ms'
+      },
       colors: {
         black: colors.black,
         white: colors.white,

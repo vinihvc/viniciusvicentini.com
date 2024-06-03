@@ -1,7 +1,9 @@
+export type BookType = (typeof READ_BOOKS)[number]
+
 export const READ_BOOKS = [
 	{
 		title: 'Robinson Crusoe',
-		rate: 1,
+		rate: 4,
 		author: 'Daniel Defoe',
 		thumbnail: 'robinson-crusoe',
 	},

@@ -35,6 +35,6 @@ html {
   }
 
   body {
-    @apply antialiased flex h-full min-h-screen flex-col text-foreground font-sans
+    @apply antialiased flex h-full min-h-screen flex-col text-foreground font-sans selection:text-black
   }
 }

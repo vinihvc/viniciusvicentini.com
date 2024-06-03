@@ -1,19 +1,19 @@
 import { tv } from 'tailwind-variants'
 
-import { Link } from '@/components/ui/link'
-import { Logo } from '@/components/ui/logo'
-
-import { HeaderNav } from './header.nav'
+import { HeaderNavItem } from './header.nav-item'
+import { HeaderMobile } from './header.mobile'
+import { HeaderLogo } from './header.logo'
+import { APP_ROUTES } from './header.routes'
 
 const headerStyle = tv({
 	base: [
 		'z-10 h-16 container',
 		'sticky inset-x-2 top-0 sm:top-5',
-		'sm:rounded-xl max-sm:border-b',
+		'sm:rounded-xl',
 		'flex items-center justify-between',
-		'px-5 bg-black/20',
+		'px-3 sm:px-5 bg-black/20',
 		'backdrop-blur drop-shadow',
-		'transition-all',
+		'selection:bg-pink-500 transition-all',
 	],
 })
 
@@ -24,11 +24,15 @@ export const Header = (props: HeaderProps) => {
 
 	return (
 		<header className={headerStyle({ className })} {...rest}>
-			<Link href="/" aria-label="Vinicius Vicentini, Back to homepage">
-				<Logo />
-			</Link>
+			<HeaderLogo />
 
-			<HeaderNav />
+			<nav className="flex max-sm:flex-col gap-2 max-sm:hidden">
+				{APP_ROUTES.map((route) => (
+					<HeaderNavItem key={route.href} data={route} />
+				))}
+			</nav>
+
+			<HeaderMobile />
 		</header>
 	)
 }
