@@ -14,7 +14,7 @@ export const NoiseBg = () => {
 			/>
 
 			<svg
-				className="fixed -z-[1] size-full min-h-screen opacity-25 inset-0 contrast-[30%] brightness-[50%]"
+				className="fixed -z-[1] size-full min-h-dvh opacity-25 inset-0 contrast-[30%] brightness-[50%]"
 				aria-hidden
 			>
 				<title>Custom Background</title>
