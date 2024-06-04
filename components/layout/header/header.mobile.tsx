@@ -15,7 +15,7 @@ export const HeaderMobile = () => {
 		<Sheet>
 			<SheetTrigger asChild>
 				<Button className="sm:hidden" variant="ghost" size="xs">
-					<Menu />
+					<Menu className="size-8" />
 				</Button>
 			</SheetTrigger>
 
@@ -25,7 +25,10 @@ export const HeaderMobile = () => {
 				<nav className="space-y-4">
 					{APP_ROUTES.map((route) => (
 						<SheetClose key={route.href} asChild>
-							<HeaderNavItem className="text-4xl px-0 font-bold animate-in fade-in slide-in-from-left-4 duration-500 transform-gpu" data={route} />
+							<HeaderNavItem
+								className="text-4xl px-0 font-bold animate-in fade-in slide-in-from-left-4 duration-500 transform-gpu"
+								data={route}
+							/>
 						</SheetClose>
 					))}
 				</nav>

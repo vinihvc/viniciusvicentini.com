@@ -1,9 +1,17 @@
 import { tv } from 'tailwind-variants'
 
 import { HeaderNavItem } from './header.nav-item'
-import { HeaderMobile } from './header.mobile'
 import { HeaderLogo } from './header.logo'
 import { APP_ROUTES } from './header.routes'
+
+import dynamic from 'next/dynamic'
+
+const HeaderMobile = dynamic(
+	() => import('./header.mobile').then((mod) => mod.HeaderMobile),
+	{
+		ssr: false,
+	},
+)
 
 const headerStyle = tv({
 	base: [
