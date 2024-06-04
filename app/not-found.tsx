@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import { Meteors } from '@/components/ui/meteors'
 
 const NotFoundPage = () => {
@@ -29,9 +29,9 @@ const NotFoundPage = () => {
 					</div>
 				</div>
 
-				<Link href="/" className={buttonVariants()}>
-					Back to Beginning
-				</Link>
+				<Button size="lg" asChild>
+					<Link href="/">Back to Beginning</Link>
+				</Button>
 			</div>
 		</div>
 	)

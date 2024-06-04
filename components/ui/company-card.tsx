@@ -33,9 +33,9 @@ export const CompanyCard = (props: CompanyCardProps) => {
 				</div>
 
 				<div>
-					<h3>{data.title}</h3>
+					<h1 className="font-medium">{data.title}</h1>
 
-					<p className="text-muted">{data.company}</p>
+					<h2 className="text-muted">{data.company}</h2>
 				</div>
 			</div>
 

@@ -9,7 +9,7 @@ export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
 		const { className, ...rest } = props
 
 		return (
-			<div
+			<span
 				ref={ref}
 				className={cn(
 					'flex size-10 items-center justify-center text-2xl font-bold',
@@ -17,8 +17,8 @@ export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
 				)}
 				{...rest}
 			>
-				<span className="relative top-1">V</span>
-			</div>
+				V
+			</span>
 		)
 	},
 )

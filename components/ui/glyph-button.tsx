@@ -6,7 +6,7 @@ import { tv } from 'tailwind-variants'
 const GLYPHS =
 	'ラドクリフマラソンわたしワタシんょンョたばこタバコとうきょうトウキョウ0123456789±!@#$%^&*()_+ABCDEFGHIJKLMNOPQRSTUVWXYZ🌮'
 
-const glyphButton = tv({
+const glyphButtonStyle = tv({
 	base: [
 		'relative',
 		'px-8 h-14',
@@ -63,7 +63,7 @@ export const GlyphButton = (props: GlyphButtonProps) => {
 
 			<button
 				type={type}
-				className={cn(glyphButton({ className }))}
+				className={cn(glyphButtonStyle({ className }))}
 				style={{ '--speed': speed } as React.CSSProperties}
 				{...rest}
 			>

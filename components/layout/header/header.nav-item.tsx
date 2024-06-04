@@ -19,7 +19,7 @@ export const HeaderNavItem = (props: HeaderNavItemProps) => {
 			)}
 			{...rest}
 		>
-			<span className="relative top-0.5">{data.label}</span>
+			{data.label}
 		</Link>
 	)
 }

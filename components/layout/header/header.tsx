@@ -19,8 +19,8 @@ const headerStyle = tv({
 		'sticky inset-x-2 top-0 sm:top-5',
 		'sm:rounded-xl',
 		'flex items-center justify-between',
-		'px-3 sm:px-5 bg-black/20',
-		'backdrop-blur drop-shadow',
+		'px-3 sm:px-5 bg-black/30 backdrop-blur',
+		'shadow-[0px_1px_1px_rgba(0,0,0,.95),0px_0px_1px_inset_#fffbed3c]',
 		'selection:bg-pink-500 transition-all',
 	],
 })

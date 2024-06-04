@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
-import { Josefin_Sans as FontSans } from 'next/font/google'
+import { Outfit as FontSans } from 'next/font/google'
 
 import { MediaQueriesIndicator } from '@/components/debug/media-queries'
 import { Footer } from '@/components/layout/footer'

@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import { CompanyCard } from '@/components/ui/company-card'
 import { Link } from '@/components/ui/link'
 import type { CompanyType } from '@/contents/companies'
@@ -42,13 +43,9 @@ export const CompaniesSection = (props: CompaniesSectionProps) => {
 			</ul>
 
 			<div className="flex justify-end mt-5">
-				<button
-					type="button"
-					className="bg-white/5 px-4 py-1.5 hover:bg-white/10 rounded-md transition"
-					onClick={() => setShowAll((prev) => !prev)}
-				>
-					{showAll ? 'Show less' : 'Show all'}
-				</button>
+				<Button onClick={() => setShowAll((prev) => !prev)}>
+					{`Show ${showAll ? 'less' : 'all'}`}
+				</Button>
 			</div>
 		</div>
 	)
