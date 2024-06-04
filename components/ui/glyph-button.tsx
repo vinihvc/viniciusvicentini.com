@@ -69,7 +69,6 @@ export const GlyphButton = (props: GlyphButtonProps) => {
 			>
 				{text.split('').map((char, index) => (
 					<span
-						// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 						key={index}
 						className="relative text-transparent"
 						data-char={char}

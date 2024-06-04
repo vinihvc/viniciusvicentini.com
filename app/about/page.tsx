@@ -24,28 +24,29 @@ const AboutPage = async () => {
 					Here's a little bit about me, my career, and what I do.
 				</h2>
 			</div>
-
-			<div className="flex flex-col md:flex-row gap-14 md:items-center mt-10">
+			pointer-events-none
+			<div className="flex flex-col sm:flex-row gap-5 sm:gap-14 sm:items-center mt-10">
 				<Image
-					className="bg-background rounded aspect-square shrink-0"
+					className="bg-background rounded aspect-square shrink-0 max-xs:w-full pointer-events-none"
 					src="/images/me.webp"
 					placeholder="blur"
 					width={300}
 					height={300}
-					blurDataURL="/images/me.jpg"
+					blurDataURL="/images/me.webp"
 					alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 				/>
 
 				<div className="space-y-5 text-muted text-justify">
 					<p>
 						<strong className="text-white">Hi, I'm Vini</strong>, my first foray
 						into programming came from managing the editing of mods for
-						Counter-Strike 1.6. Then I had some websites and blogs, and finally
-						decided to make a career out of it.
+						Counter-Strike 1.6. Then I had some websites and blogs, and
+						eventually decided to turn it into a career.
 					</p>
 
 					<p>
-						I thrive in the space where design meets code.
+						I really enjoy working where design meets code.
 						<strong className="text-white">
 							{' '}
 							CSS, Design Systems, Animation
@@ -60,7 +61,6 @@ const AboutPage = async () => {
 					</p>
 				</div>
 			</div>
-
 			<div className="space-y-4 mt-20">
 				<div>
 					<h2 className="text-2xl font-black">Carrer</h2>

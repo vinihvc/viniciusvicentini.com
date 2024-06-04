@@ -7,13 +7,14 @@ export const NoiseBg = () => {
 			<Image
 				src="/images/gradient-bg.png"
 				alt="Custom Background"
-				className="absolute -z-[1] inset-x-0 top-0 mx-auto opacity-30"
+				className="absolute -z-[1] inset-x-0 top-10 sm:top-0 mx-auto opacity-30 pointer-events-none"
 				width={1000}
 				height={670}
+				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 			/>
 
 			<svg
-				className="fixed -z-[1] w-full h-[calc(200px_+_100vh)] opacity-25 translate-y-0 left-0 top-0 contrast-[30%] brightness-[50%]"
+				className="fixed -z-[1] size-full min-h-screen opacity-25 inset-0 contrast-[30%] brightness-[50%]"
 				aria-hidden
 			>
 				<title>Custom Background</title>

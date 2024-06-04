@@ -13,14 +13,18 @@ module.exports = withTV({
     "constants/**/*.{ts,tsx}",
   ],
   theme: {
+
     container: {
       center: true,
-      padding: "0.75rem",
+      padding: "1rem", // 16px
       screens: {
         "2xl": "48rem", // 1024px
       },
     },
     extend: {
+      screens: {
+        'xs': '450px',
+      },
       transitionDuration: {
         DEFAULT: '200ms'
       },

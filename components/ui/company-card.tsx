@@ -24,11 +24,12 @@ export const CompanyCard = (props: CompanyCardProps) => {
 			<div className="flex gap-5 items-center">
 				<div className="shrink-0">
 					<Image
-						className="rounded-full border border-border"
+						className="rounded-full border border-border pointer-events-none max-sm:relative top-4"
 						src={`/images/companies/${data.image}.webp`}
 						width={48}
 						height={48}
 						alt={`${data.company} logo`}
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 					/>
 				</div>
 
@@ -39,7 +40,7 @@ export const CompanyCard = (props: CompanyCardProps) => {
 				</div>
 			</div>
 
-			<div className="mt-1 flex gap-1 text-muted sm:justify-end">
+			<div className="sm:mt-1 flex gap-1 text-muted sm:justify-end max-sm:ml-[67px]">
 				<time>{data.startDate}</time>
 				<span aria-hidden>•</span>
 

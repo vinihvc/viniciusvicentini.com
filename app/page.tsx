@@ -16,7 +16,7 @@ const HomePage = () => {
 					</h2>
 				</div>
 
-				<div className="mt-5 flex space-x-5">
+				<div className="flex gap-2 sm:gap-5 mt-5">
 					{SOCIAL_LINKS.map((link) => (
 						<Link
 							key={link.link}

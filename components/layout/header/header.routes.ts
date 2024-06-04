@@ -13,10 +13,10 @@ export const APP_ROUTES = [
 		href: '/uses',
 		label: 'Uses',
 	},
-	{
-		href: '/craft',
-		label: 'Craft',
-	},
+	// {
+	// 	href: '/craft',
+	// 	label: 'Craft',
+	// },
 	{
 		href: '/bookshelf',
 		label: 'Bookshelf',

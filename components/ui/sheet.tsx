@@ -43,7 +43,7 @@ export const SheetContent = React.forwardRef<
 		<RDialog.Content
 			ref={ref}
 			className={cn(
-				'fixed z-50 gap-4 bg-background/50 backdrop-blur p-6 inset-y-0 left-0 h-full w-full sm:w-3/4 sm:max-w-sm',
+				'fixed z-50 gap-4 bg-background/50 backdrop-blur p-4 inset-y-0 left-0 h-full w-full sm:w-3/4 sm:max-w-sm',
 				'transition ease-in-out',
 				'data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:duration-500',
 				'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:duration-300',

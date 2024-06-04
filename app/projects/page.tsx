@@ -2,6 +2,7 @@ import { Link } from '@/components/ui/link'
 import { Repo } from '@/components/ui/repo-card'
 import { Title } from '@/components/ui/title'
 import { REPO_LINKS } from '@/contents/repo'
+import { ExternalLink } from 'lucide-react'
 
 const getData = async () => {
 	return {
@@ -33,10 +34,11 @@ const ProjectsPage = async () => {
 			<div className="flex justify-end mt-5">
 				<Link
 					href="https://github.com/vinihvc?tab=repositories"
-					className="bg-white/5 px-4 py-1.5 hover:bg-white/10 rounded-md transition"
+					className="inline-flex bg-white/5 px-4 py-1.5 hover:bg-white/10 rounded-md transition items-center gap-3 text-muted hover:text-white"
 					isExternal
 				>
-					See all
+					<span className="relative top-[1px]">Visit my GitHub</span>
+					<ExternalLink className="size-4" />
 				</Link>
 			</div>
 		</div>

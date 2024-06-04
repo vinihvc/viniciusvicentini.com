@@ -7,7 +7,7 @@ import { APP_ROUTES } from './header.routes'
 
 const headerStyle = tv({
 	base: [
-		'z-10 h-16 container',
+		'z-50 h-16 container',
 		'sticky inset-x-2 top-0 sm:top-5',
 		'sm:rounded-xl',
 		'flex items-center justify-between',

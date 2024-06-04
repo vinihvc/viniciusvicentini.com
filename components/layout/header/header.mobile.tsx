@@ -20,12 +20,12 @@ export const HeaderMobile = () => {
 			</SheetTrigger>
 
 			<SheetContent>
-				<HeaderLogo className="inline-block bg-white/10 rounded mb-20 scale-150 origin-top-left" />
+				<HeaderLogo className="inline-block bg-white/10 rounded scale-150 origin-top-left mb-20 animate-in zoom-in-50 transform-gpu" />
 
 				<nav className="space-y-4">
 					{APP_ROUTES.map((route) => (
 						<SheetClose key={route.href} asChild>
-							<HeaderNavItem className="text-4xl px-0 font-bold" data={route} />
+							<HeaderNavItem className="text-4xl px-0 font-bold animate-in fade-in slide-in-from-left-4 duration-500 transform-gpu" data={route} />
 						</SheetClose>
 					))}
 				</nav>
