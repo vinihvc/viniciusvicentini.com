@@ -1,7 +1,9 @@
 import { Title } from '@/components/ui/title'
 import { COMPANIES } from '@/contents/companies'
-import Image from 'next/image'
 import { CompaniesSection } from './_components/companies'
+
+import profilePic from '@/public/images/me.webp'
+import Image from 'next/image'
 
 const getData = async () => {
 	return {
@@ -24,15 +26,13 @@ const AboutPage = async () => {
 					Here's a little bit about me, my career, and what I do.
 				</h2>
 			</div>
-			pointer-events-none
 			<div className="flex flex-col sm:flex-row gap-5 sm:gap-14 sm:items-center mt-10">
 				<Image
 					className="bg-background rounded aspect-square shrink-0 max-xs:w-full pointer-events-none"
-					src="/images/me.webp"
-					placeholder="blur"
+					src={profilePic}
 					width={300}
 					height={300}
-					blurDataURL="/images/me.webp"
+					placeholder="blur"
 					alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
 					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 				/>

@@ -1,7 +1,6 @@
-import Image from 'next/image'
-
 import type { CompanyType } from '@/contents/companies'
 import { cn } from '@/utils/cn'
+import Image from 'next/image'
 
 interface CompanyCardProps extends React.HTMLAttributes<HTMLElement> {
 	/**
@@ -28,7 +27,7 @@ export const CompanyCard = (props: CompanyCardProps) => {
 						src={`/images/companies/${data.image}.webp`}
 						width={48}
 						height={48}
-						alt={`${data.company} logo`}
+						alt={`${data.company} brand logo`}
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 					/>
 				</div>
