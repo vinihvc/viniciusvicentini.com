@@ -14,10 +14,7 @@ export const CompanyCard = (props: CompanyCardProps) => {
 
 	return (
 		<article
-			className={cn(
-				'grid items-center rounded-lg py-3 sm:grid-cols-2',
-				className,
-			)}
+			className={cn('grid items-center rounded-lg py-3 grid-cols-2', className)}
 			{...rest}
 		>
 			<div className="flex gap-5 items-center">
@@ -39,9 +36,9 @@ export const CompanyCard = (props: CompanyCardProps) => {
 				</div>
 			</div>
 
-			<div className="sm:mt-1 flex gap-1 text-muted sm:justify-end max-sm:ml-[67px]">
+			<div className="sm:mt-1 flex gap-1 text-muted justify-end items-center">
 				<time>{data.startDate}</time>
-				<span aria-hidden>•</span>
+				<span aria-hidden>-</span>
 
 				{data.endDate ? (
 					<time> {data.endDate}</time>
