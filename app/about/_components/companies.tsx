@@ -20,7 +20,7 @@ export const CompaniesSection = (props: CompaniesSectionProps) => {
 
 	return (
 		<div className={cn('', className)}>
-			<ul className="group space-y-2 pl-6">
+			<ul className="group space-y-2 sm:pl-6">
 				{data.map((company, index) => {
 					if (!showAll && index >= MAX_COMPANIES) {
 						return null

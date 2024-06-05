@@ -20,7 +20,7 @@ export const CompanyCard = (props: CompanyCardProps) => {
 			<div className="flex gap-5 items-center whitespace-nowrap">
 				<div className="shrink-0">
 					<Image
-						className="rounded-full border border-border pointer-events-none max-sm:relative top-4"
+						className="rounded-full border border-border pointer-events-none"
 						src={`/images/companies/${data.image}.webp`}
 						width={48}
 						height={48}

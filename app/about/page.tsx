@@ -4,6 +4,7 @@ import { CompaniesSection } from './_components/companies'
 import { DynamicImage } from '@/components/ui/dynamic-image'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
+import { Link } from '@/components/ui/link'
 
 const getData = async () => {
 	return {
@@ -27,14 +28,23 @@ const AboutPage = async () => {
 				</h2>
 			</div>
 			<div className="flex flex-col sm:flex-row gap-5 sm:gap-14 sm:items-center mt-10">
-				<DynamicImage
-					className="rounded aspect-square shrink-0 max-xs:w-full pointer-events-none"
-					src="/images/me.webp"
-					width={300}
-					height={300}
-					alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-				/>
+				<div className="shrink-0 space-y-2">
+					<DynamicImage
+						className="rounded aspect-square max-xs:w-full pointer-events-none"
+						src="/images/me.webp"
+						width={300}
+						height={300}
+						alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					/>
+
+					<Button className="max-xs:w-full w-[300px]" asChild>
+						<Link href="#">
+							View my Resumé
+							<ExternalLink className="size-4" />
+						</Link>
+					</Button>
+				</div>
 
 				<div className="space-y-5 text-muted text-justify">
 					<p>
@@ -70,13 +80,6 @@ const AboutPage = async () => {
 								new Date().getFullYear() - startYear
 							}+ years of experience in the industry`}
 						</h3>
-					</div>
-
-					<div>
-						<Button>
-							Check my CV
-							<ExternalLink className="size-4" />
-						</Button>
 					</div>
 				</div>
 
