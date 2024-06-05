@@ -23,11 +23,7 @@ const HomePage = async () => {
 
 			<div className="flex gap-2 sm:gap-5 mt-5">
 				{links.map((link) => (
-					<Button
-						key={link.link}
-						className={cn('p-4 size-auto', link.className)}
-						asChild
-					>
+					<Button key={link.link} className="p-4 size-auto" asChild>
 						<Link href={link.link} isExternal>
 							{React.createElement(link.icon, {
 								className: 'size-6',
