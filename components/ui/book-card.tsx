@@ -27,7 +27,7 @@ export const BookCard = async (props: BookCardProps) => {
 				src={`/images/books/${book.thumbnail}.jpg`}
 				alt={`Cover of ${book.title}`}
 				className="rounded pointer-events-none object-cover scale-105"
-				quality={50}
+				quality={20}
 				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 				fill
 			/>
