@@ -4,6 +4,7 @@ import React from 'react'
 import * as RDialog from '@radix-ui/react-dialog'
 import { cn } from '@/utils/cn'
 import { X } from 'lucide-react'
+import { Button } from './button'
 
 export const Sheet = RDialog.Root
 
@@ -52,9 +53,11 @@ export const SheetContent = React.forwardRef<
 			{...props}
 		>
 			{children}
-			<RDialog.Close className="absolute right-3 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-white">
-				<X className="size-8" />
-				<span className="sr-only">Close</span>
+			<RDialog.Close className="absolute right-3 top-4" asChild>
+				<Button className="sm:hidden" variant="ghost" size="xs">
+					<X className="size-8" />
+					<span className="sr-only">Close</span>
+				</Button>
 			</RDialog.Close>
 		</RDialog.Content>
 	</SheetPortal>

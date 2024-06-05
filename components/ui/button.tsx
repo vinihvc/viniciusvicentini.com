@@ -6,7 +6,7 @@ export const buttonStyle = tv({
 	base: [
 		'inline-flex items-center justify-center',
 		'font-medium text-muted hover:text-white ',
-		'border border-border hover:border-border-hover',
+		'gap-2',
 		'rounded-lg drop-shadow',
 		'transition-colors',
 		'outline-none focus-visible:ring-2 ring-white/30 ring-offset-2 ring-offset-black',
@@ -14,7 +14,8 @@ export const buttonStyle = tv({
 	],
 	variants: {
 		variant: {
-			solid: 'bg-white/5 hover:bg-white/10',
+			solid:
+				'bg-white/5 hover:bg-white/10 border border-border hover:border-border-hover',
 			ghost: 'hover:bg-white/5',
 		},
 		size: {

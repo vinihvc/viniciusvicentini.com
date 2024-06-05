@@ -2,6 +2,8 @@ import { Title } from '@/components/ui/title'
 import { COMPANIES } from '@/contents/companies'
 import { CompaniesSection } from './_components/companies'
 import { DynamicImage } from '@/components/ui/dynamic-image'
+import { Button } from '@/components/ui/button'
+import { ExternalLink } from 'lucide-react'
 
 const getData = async () => {
 	return {
@@ -58,18 +60,27 @@ const AboutPage = async () => {
 					</p>
 				</div>
 			</div>
-			<div className="space-y-4 mt-20">
-				<div>
-					<h2 className="text-2xl font-black">Carrer</h2>
+			<div className="mt-20">
+				<div className="flex items-center justify-between">
+					<div>
+						<h2 className="text-2xl font-black">Carrer</h2>
 
-					<h3 className="text-muted">
-						{`${
-							new Date().getFullYear() - startYear
-						}+ years of experience in the industry`}
-					</h3>
+						<h3 className="text-muted">
+							{`${
+								new Date().getFullYear() - startYear
+							}+ years of experience in the industry`}
+						</h3>
+					</div>
+
+					<div>
+						<Button>
+							Check my CV
+							<ExternalLink className="size-4" />
+						</Button>
+					</div>
 				</div>
 
-				<CompaniesSection data={companies} />
+				<CompaniesSection className="mt-4" data={companies} />
 			</div>
 		</section>
 	)

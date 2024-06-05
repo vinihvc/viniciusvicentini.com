@@ -13,19 +13,15 @@ export const NoiseBg = () => {
 				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 			/>
 
-			<svg
-				className="fixed -z-[1] size-full min-h-screen opacity-25 inset-0 contrast-[30%] brightness-[50%]"
-				aria-hidden
-			>
-				<title>Custom Background</title>
+			{/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+			<svg className="fixed inset-0 min-h-screen size-full isolate opacity-15 -z-[1] pointer-events-none">
 				<filter id="noise">
 					<feTurbulence
 						type="fractalNoise"
-						baseFrequency=".8"
+						baseFrequency="0.80"
 						numOctaves="4"
 						stitchTiles="stitch"
 					/>
-					<feColorMatrix type="saturate" values="0" />
 				</filter>
 				<rect width="100%" height="100%" filter="url(#noise)" />
 			</svg>

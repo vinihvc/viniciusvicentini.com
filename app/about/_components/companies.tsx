@@ -7,19 +7,19 @@ import type { CompanyType } from '@/contents/companies'
 import { cn } from '@/utils/cn'
 import React from 'react'
 
-interface CompaniesSectionProps {
+interface CompaniesSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 	data: CompanyType[]
 }
 
 const MAX_COMPANIES = 3
 
 export const CompaniesSection = (props: CompaniesSectionProps) => {
-	const { data } = props
+	const { className, data } = props
 
 	const [showAll, setShowAll] = React.useState(false)
 
 	return (
-		<div>
+		<div className={cn('', className)}>
 			<ul className="group space-y-2 pl-6">
 				{data.map((company, index) => {
 					if (!showAll && index >= MAX_COMPANIES) {

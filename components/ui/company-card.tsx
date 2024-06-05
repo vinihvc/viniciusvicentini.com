@@ -17,7 +17,7 @@ export const CompanyCard = (props: CompanyCardProps) => {
 			className={cn('grid items-center rounded-lg py-3 grid-cols-2', className)}
 			{...rest}
 		>
-			<div className="flex gap-5 items-center">
+			<div className="flex gap-5 items-center whitespace-nowrap">
 				<div className="shrink-0">
 					<Image
 						className="rounded-full border border-border pointer-events-none max-sm:relative top-4"
@@ -37,8 +37,7 @@ export const CompanyCard = (props: CompanyCardProps) => {
 			</div>
 
 			<div className="sm:mt-1 flex gap-1 text-muted justify-end items-center">
-				<time>{data.startDate}</time>
-				<span aria-hidden>-</span>
+				<span>{`${data.startDate} - `}</span>
 
 				{data.endDate ? (
 					<time> {data.endDate}</time>

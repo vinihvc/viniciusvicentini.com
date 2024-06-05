@@ -16,6 +16,7 @@ export const HeaderMobile = () => {
 			<SheetTrigger asChild>
 				<Button className="sm:hidden" variant="ghost" size="xs">
 					<Menu className="size-8" />
+					<div className="sr-only">Open menu</div>
 				</Button>
 			</SheetTrigger>
 

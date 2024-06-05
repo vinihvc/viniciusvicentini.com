@@ -33,7 +33,7 @@ const ProjectsPage = async () => {
 			</div>
 
 			<div className="flex justify-end mt-5">
-				<Button className="gap-2" asChild>
+				<Button asChild>
 					<Link href="https://github.com/vinihvc?tab=repositories" isExternal>
 						Visit my GitHub
 						<ExternalLink className="size-4" />
