@@ -1,9 +1,7 @@
 import { Title } from '@/components/ui/title'
 import { COMPANIES } from '@/contents/companies'
 import { CompaniesSection } from './_components/companies'
-
-import profilePic from '@/public/images/me.webp'
-import Image from 'next/image'
+import { DynamicImage } from '@/components/ui/dynamic-image'
 
 const getData = async () => {
 	return {
@@ -27,12 +25,11 @@ const AboutPage = async () => {
 				</h2>
 			</div>
 			<div className="flex flex-col sm:flex-row gap-5 sm:gap-14 sm:items-center mt-10">
-				<Image
-					className="bg-background rounded aspect-square shrink-0 max-xs:w-full pointer-events-none"
-					src={profilePic}
+				<DynamicImage
+					className="rounded aspect-square shrink-0 max-xs:w-full pointer-events-none"
+					src="/images/me.webp"
 					width={300}
 					height={300}
-					placeholder="blur"
 					alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
 					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 				/>
