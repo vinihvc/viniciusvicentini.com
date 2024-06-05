@@ -2,11 +2,18 @@ import React from 'react'
 
 import { TRAVElING_COUNTRIES } from '@/contents/traveling'
 import { cn } from '@/utils/cn'
+import { SEO } from '@/constants/seo'
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const Footer = (props: FooterProps) => {
+const getData = async () => {
+	return { about: SEO }
+}
+
+export const Footer = async (props: FooterProps) => {
 	const { className, ...rest } = props
+
+	const { about } = await getData()
 
 	const livingCountry = TRAVElING_COUNTRIES.at(0)
 
@@ -28,7 +35,7 @@ export const Footer = (props: FooterProps) => {
 					)}
 				</div>
 
-				<span>&copy;{` ${new Date().getFullYear()} Vinicius Vicentini`}</span>
+				<span>&copy;{` ${new Date().getFullYear()} ${about.title}`}</span>
 			</div>
 		</footer>
 	)

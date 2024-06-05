@@ -1,16 +1,16 @@
 import { tv } from 'tailwind-variants'
 
-import { HeaderNavItem } from './header.nav-item'
 import { HeaderLogo } from './header.logo'
 import { APP_ROUTES } from './header.routes'
 
 import dynamic from 'next/dynamic'
 
-const HeaderMobile = dynamic(
-	() => import('./header.mobile').then((mod) => mod.HeaderMobile),
-	{
-		ssr: false,
-	},
+const HeaderDesktop = dynamic(() =>
+	import('./header.desktop').then((mod) => mod.HeaderDesktop),
+)
+
+const HeaderMobile = dynamic(() =>
+	import('./header.mobile').then((mod) => mod.HeaderMobile),
 )
 
 const headerStyle = tv({
@@ -27,20 +27,24 @@ const headerStyle = tv({
 
 interface HeaderProps extends React.HTMLAttributes<HTMLElement> {}
 
-export const Header = (props: HeaderProps) => {
+const getData = async () => {
+	return {
+		routes: APP_ROUTES,
+	}
+}
+
+export const Header = async (props: HeaderProps) => {
 	const { className, ...rest } = props
+
+	const { routes } = await getData()
 
 	return (
 		<header className={headerStyle({ className })} {...rest}>
 			<HeaderLogo />
 
-			<nav className="flex max-sm:flex-col gap-2 max-sm:hidden">
-				{APP_ROUTES.map((route) => (
-					<HeaderNavItem key={route.href} data={route} />
-				))}
-			</nav>
+			<HeaderDesktop className="max-sm:hidden" routes={routes} />
 
-			<HeaderMobile />
+			<HeaderMobile className="sm:hidden" routes={routes} />
 		</header>
 	)
 }
