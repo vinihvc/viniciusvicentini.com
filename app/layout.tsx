@@ -51,9 +51,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
 
 				<NoiseBg />
 
-				<main className="flex flex-1 flex-col pt-16 md:pt-20 pb-10">
-					{children}
-				</main>
+				<main className="flex flex-1 flex-col pt-16 md:my-10">{children}</main>
 
 				<Footer />
 
