@@ -32,7 +32,9 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
 			</SheetTrigger>
 
 			<SheetContent>
-				<HeaderLogo className="inline-block bg-white/10 rounded scale-150 origin-top-left mb-20 animate-in zoom-in-50 transform-gpu" />
+				<SheetClose asChild>
+					<HeaderLogo className="inline-block bg-white/10 rounded scale-150 origin-top-left mb-20 animate-in zoom-in-50 transform-gpu" />
+				</SheetClose>
 
 				<nav className="space-y-14">
 					{routes.map((route) => (

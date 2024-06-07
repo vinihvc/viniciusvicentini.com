@@ -64,7 +64,7 @@ const AboutPage = async () => {
 			<div className="mt-20">
 				<div className="flex items-center justify-between">
 					<div>
-						<h2 className="text-2xl font-black">Carrer</h2>
+						<h2 className="text-2xl font-black">Career</h2>
 
 						<h3 className="text-muted">
 							{`${
