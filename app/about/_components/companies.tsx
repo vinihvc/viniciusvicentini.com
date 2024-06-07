@@ -14,12 +14,12 @@ interface CompaniesSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 const MAX_COMPANIES = 3
 
 export const CompaniesSection = (props: CompaniesSectionProps) => {
-	const { className, data } = props
+	const { data, ...rest } = props
 
 	const [showAll, setShowAll] = React.useState(false)
 
 	return (
-		<div className={cn('', className)}>
+		<div {...rest}>
 			<ul className="group space-y-2 sm:pl-6">
 				{data.map((company, index) => {
 					if (!showAll && index >= MAX_COMPANIES) {
@@ -27,7 +27,13 @@ export const CompaniesSection = (props: CompaniesSectionProps) => {
 					}
 
 					return (
-						<li key={company.company}>
+						<li
+							className={cn(
+								'group-hover:opacity-50 w-full hover:!opacity-100 animate-in transition',
+								{ 'fade-in slide-in-from-bottom-10': showAll },
+							)}
+							key={company.company}
+						>
 							<Link
 								className="block px-2 rounded ring-orange-500"
 								key={company.company}
