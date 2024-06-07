@@ -11,7 +11,7 @@ export const MediaQueriesIndicator = () => {
 				zIndex: 50,
 			}}
 		>
-			<div className="flex items-center justify-center rounded-full bg-foreground px-4 py-1 text-xs font-bold text-background">
+			<div className="flex items-center justify-center rounded-full bg-white px-4 py-1 text-xs font-bold text-background">
 				<div className="block sm:hidden">XS</div>
 				<div className="hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden">
 					SM

@@ -1,7 +1,6 @@
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-const colors = require("tailwindcss/colors");
 const { withTV } = require("tailwind-variants/transformer");
 
 /** @type {import('tailwindcss').Config} */
@@ -13,7 +12,6 @@ module.exports = withTV({
     "constants/**/*.{ts,tsx}",
   ],
   theme: {
-
     container: {
       center: true,
       padding: "1rem", // 16px
@@ -29,24 +27,8 @@ module.exports = withTV({
         DEFAULT: '200ms'
       },
       colors: {
-        black: colors.black,
-        white: colors.white,
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        success: {
-          DEFAULT: "hsl(var(--success))",
-        },
-        warning: {
-          DEFAULT: "hsl(var(--warning))",
-        },
-        ring: "hsl(var(--ring))",
-        border: "hsl(var(--border))",
-        "border-hover": "hsl(var(--border-hover))",
-        muted: "hsl(var(--muted))",
+        background: '#0D0D0D',
+        muted: "#B5B5B5",
         transparent: "transparent",
       },
       fontFamily: {

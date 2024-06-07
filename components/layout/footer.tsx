@@ -22,8 +22,8 @@ export const Footer = async (props: FooterProps) => {
 			<div className="container flex justify-between items-center text-muted">
 				<div className="flex items-center space-x-2">
 					<span className="relative flex size-2 top-[1px]">
-						<span className="absolute size-full animate-ping rounded-full bg-success opacity-75" />
-						<span className="relative size-2 rounded-full bg-success" />
+						<span className="absolute size-full animate-ping rounded-full bg-green-500 opacity-75" />
+						<span className="relative size-2 rounded-full bg-green-500" />
 					</span>
 
 					{livingCountry && (
