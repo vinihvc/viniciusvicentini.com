@@ -1,18 +1,8 @@
+
+import withPlaiceholder from "@plaiceholder/next";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    reactCompiler: {
-      compilationMode: 'annotation',
-    },
-  },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'books.google.com',
-      },
-    ],
-  },
   async redirects() {
     return [
       {
@@ -39,4 +29,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default withPlaiceholder(nextConfig)

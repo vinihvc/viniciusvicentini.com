@@ -1,26 +1,28 @@
 import React from 'react'
 import { tv, type VariantProps } from 'tailwind-variants'
+import { Slot } from '@radix-ui/react-slot'
 
-import { cn } from '@/utils/cn'
-
-export const buttonVariants = tv({
+export const buttonStyle = tv({
 	base: [
 		'inline-flex items-center justify-center',
-		'font-medium',
+		'font-medium text-muted hover:text-white ',
+		'gap-2',
+		'rounded-lg drop-shadow',
 		'transition-colors',
-		'ring-offset-background',
-		'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+		'outline-none focus-visible:text-white focus-visible:ring-2 ring-white/30 ring-offset-2 ring-offset-black',
 		'disabled:opacity-50 disabled:pointer-events-none',
 	],
 	variants: {
 		variant: {
-			solid: 'bg-primary hover:bg-primary-foreground',
-			ghost: 'hover:bg-neutral-900',
+			solid:
+				'bg-white/5 hover:bg-white/10 border border-border hover:border-border-hover',
+			ghost: 'hover:bg-white/5',
 		},
 		size: {
-			sm: 'h-9 px-3 rounded-md',
+			xs: 'size-8',
+			sm: 'h-9 px-3',
 			md: 'h-10 py-2 px-4',
-			lg: 'h-11 px-8 rounded-md',
+			lg: 'h-12 px-8',
 		},
 	},
 	defaultVariants: {
@@ -31,20 +33,36 @@ export const buttonVariants = tv({
 
 interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-		VariantProps<typeof buttonVariants> {}
+		VariantProps<typeof buttonStyle> {
+	/**
+	 * If true, the button will be rendered as a child of a link
+	 */
+	asChild?: boolean
+}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(props, ref) => {
-		const { variant, size, children, className, ...rest } = props
+		const {
+			type = 'button',
+			variant,
+			size,
+			asChild,
+			className,
+			children,
+			...rest
+		} = props
+
+		const Comp = asChild ? Slot : 'button'
 
 		return (
-			<button
+			<Comp
 				ref={ref}
-				className={cn(buttonVariants({ variant, size, className }))}
+				type={type}
+				className={buttonStyle({ variant, size, className })}
 				{...rest}
 			>
 				{children}
-			</button>
+			</Comp>
 		)
 	},
 )

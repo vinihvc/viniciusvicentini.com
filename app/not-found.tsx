@@ -1,10 +1,15 @@
 import Link from 'next/link'
 
-import { buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
+import { Meteors } from '@/components/ui/meteors'
 
 const NotFoundPage = () => {
 	return (
 		<div className="flex flex-1 items-center justify-center">
+			<div className="absolute inset-0 overflow-x-hidden">
+				<Meteors number={30} />
+			</div>
+
 			<div
 				className="animate-zoom fixed left-1/2 top-1/2 size-px rounded-full bg-white shadow-2xl"
 				style={{
@@ -24,9 +29,9 @@ const NotFoundPage = () => {
 					</div>
 				</div>
 
-				<Link href="/" className={buttonVariants()}>
-					Back to Beginning
-				</Link>
+				<Button size="lg" asChild>
+					<Link href="/">Back to Beginning</Link>
+				</Button>
 			</div>
 		</div>
 	)

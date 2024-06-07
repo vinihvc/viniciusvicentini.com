@@ -1,35 +1,54 @@
+import { Button } from '@/components/ui/button'
 import { Link } from '@/components/ui/link'
-import { Repo } from '@/components/ui/repo'
+import { Repo } from '@/components/ui/repo-card'
 import { Title } from '@/components/ui/title'
-import { REPO_LINKS } from '@/content/repo'
+import { REPO_LINKS } from '@/contents/repo'
+import { ExternalLink } from 'lucide-react'
 
-const ProjectsPage = () => {
+const getData = async () => {
+	return {
+		repos: REPO_LINKS,
+	}
+}
+
+const ProjectsPage = async () => {
+	const { repos } = await getData()
+
 	return (
-		<div className="container max-w-2xl space-y-20">
-			<div className="space-y-10">
-				<Title>Projects</Title>
+		<div className="container selection:bg-green-500">
+			<div className="space-y-1">
+				<Title className="from-green-500 to-teal-500">Projects</Title>
 
-				<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10">
-					{REPO_LINKS?.map((repo) => (
-						<Link key={repo.title} href={repo.website_url} isExternal>
-							<Repo data={repo} />
-						</Link>
-					))}
-				</div>
+				<h2 className="text-muted text-lg">
+					My open-source projects and contributions.
+				</h2>
 			</div>
 
-			<h4 className="py-10">
-				{'Check out all my projects on '}
+			<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 mt-10">
+				{repos.map((repo) => (
+					<Link
+						key={repo.title}
+						className="group ring-green-500 rounded"
+						href={repo.website_url}
+						isExternal
+					>
+						<Repo data={repo} />
+					</Link>
+				))}
+			</div>
 
-				<Link
-					href="/github"
-					className="text-primary hover:decoration-white"
-					decorated
-					isExternal
-				>
-					GitHub
-				</Link>
-			</h4>
+			<div className="flex justify-end mt-5">
+				<Button asChild>
+					<Link
+						className="ring-green-500"
+						href="https://github.com/vinihvc?tab=repositories"
+						isExternal
+					>
+						Visit my GitHub
+						<ExternalLink className="size-4" />
+					</Link>
+				</Button>
+			</div>
 		</div>
 	)
 }

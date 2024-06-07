@@ -1,18 +1,19 @@
 import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
-import { Josefin_Sans as FontSans } from 'next/font/google'
-import Script from 'next/script'
+import { Outfit as FontSans } from 'next/font/google'
 
 import { MediaQueriesIndicator } from '@/components/debug/media-queries'
-import { CustomBg } from '@/components/layout/custom-bg'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { SEO } from '@/constants/seo'
-import { cn } from '@/utils/cn'
+import { UmamiTracking } from '@/components/tracking/umami'
+import { NoiseBg } from '@/components/layout/noise-bg'
 
 const fontFamily = FontSans({
 	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+	variable: '--font-sans',
 	display: 'swap',
 })
 
@@ -44,34 +45,19 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: React.PropsWithChildren) => {
 	return (
-		<html
-			lang="en"
-			className="overflow-x-hidden overflow-y-scroll"
-			suppressHydrationWarning
-		>
-			<body
-				className={cn(
-					'antialiased',
-					'flex h-full min-h-screen flex-col',
-					'text-foreground',
-					fontFamily.className,
-				)}
-			>
+		<html lang="en" suppressHydrationWarning>
+			<body className={fontFamily.variable}>
 				<Header />
 
-				<CustomBg />
+				<NoiseBg />
 
-				<main className="flex flex-1 flex-col pt-24 md:pt-52">{children}</main>
+				<main className="flex flex-1 flex-col pt-16 md:my-10">{children}</main>
 
 				<Footer />
 
 				<MediaQueriesIndicator />
 
-				<Script
-					src="https://us.umami.is/script.js"
-					data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''}
-					strategy="lazyOnload"
-				/>
+				<UmamiTracking />
 			</body>
 		</html>
 	)
