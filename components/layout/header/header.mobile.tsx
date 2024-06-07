@@ -34,11 +34,11 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
 			<SheetContent>
 				<HeaderLogo className="inline-block bg-white/10 rounded scale-150 origin-top-left mb-20 animate-in zoom-in-50 transform-gpu" />
 
-				<nav className="space-y-4">
+				<nav className="space-y-14">
 					{routes.map((route) => (
 						<SheetClose key={route.href} asChild>
 							<HeaderNavItem
-								className="text-4xl px-0 font-bold animate-in fade-in slide-in-from-left-4 duration-500 transform-gpu"
+								className="text-5xl font-bold animate-in fade-in slide-in-from-left-4 duration-500 transform-gpu"
 								data={route}
 							/>
 						</SheetClose>

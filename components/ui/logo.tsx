@@ -11,6 +11,7 @@ export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
 		return (
 			<span
 				ref={ref}
+				role="img"
 				className={cn(
 					'flex size-10 items-center justify-center text-2xl font-bold',
 					className,

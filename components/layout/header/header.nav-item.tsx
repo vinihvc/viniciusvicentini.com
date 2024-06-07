@@ -5,6 +5,9 @@ import { cn } from '@/utils/cn'
 import { Button } from '@/components/ui/button'
 
 interface HeaderNavItemProps extends React.HTMLAttributes<HTMLElement> {
+	/**
+	 * Route data
+	 */
 	data: RouteType
 }
 
