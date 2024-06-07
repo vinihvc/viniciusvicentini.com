@@ -10,6 +10,7 @@ export const NoiseBg = () => {
 				className="absolute -z-[1] inset-x-0 top-10 sm:top-0 mx-auto opacity-30"
 				width={1000}
 				height={670}
+				priority
 				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 			/>
 

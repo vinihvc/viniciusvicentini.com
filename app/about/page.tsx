@@ -57,7 +57,7 @@ const AboutPage = async () => {
 
 					<p>
 						In my free time, I enjoy reading fiction books, cooking, and
-						<strong className="text-white"> spending time with dogs.</strong>
+						<strong className="text-white"> spending time with my dogs.</strong>
 					</p>
 				</div>
 			</div>
