@@ -9,7 +9,9 @@ import { cn } from '@/utils/cn'
 
 export const linkVariants = tv({
 	base: [
-		'cursor-pointer hover:text-foreground focus:text-foreground active:text-foreground transition',
+		'cursor-pointer',
+		'transition',
+		'outline-none focus-visible:ring-2 ring-white/30 ring-offset-2 ring-offset-black',
 	],
 })
 

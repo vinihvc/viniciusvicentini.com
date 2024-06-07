@@ -28,40 +28,31 @@ const AboutPage = async () => {
 				</h2>
 			</div>
 			<div className="flex flex-col sm:flex-row gap-5 sm:gap-14 sm:items-center mt-10">
-				<div className="shrink-0 space-y-2">
-					<DynamicImage
-						className="rounded aspect-square max-xs:w-full pointer-events-none"
-						src="/images/me.webp"
-						width={300}
-						height={300}
-						alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
-						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-					/>
-
-					<Button className="max-xs:w-full w-[300px]" asChild>
-						<Link href="#">
-							View my Resumé
-							<ExternalLink className="size-4" />
-						</Link>
-					</Button>
-				</div>
+				<DynamicImage
+					className="shrink-0 rounded aspect-square max-xs:w-full pointer-events-none"
+					src="/images/me.webp"
+					width={300}
+					height={300}
+					alt="Picture of Vinicius Vicentini, looking up and behind is the Rijksmuseum"
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+				/>
 
 				<div className="space-y-5 text-muted text-justify">
 					<p>
 						<strong className="text-white">Hi, I'm Vini</strong>, my first foray
-						into programming came from managing the editing of mods for
-						Counter-Strike 1.6. Then I had some websites and blogs, and
-						eventually decided to turn it into a career.
+						into programming came from editing <i>Mods</i> for Counter-Strike
+						1.6. Then I had some websites and blogs and eventually decided to
+						turn it into a career.
 					</p>
 
 					<p>
-						I really enjoy working where design meets code.
+						I enjoy working where design meets code.
 						<strong className="text-white">
 							{' '}
-							CSS, Design Systems, Animation
+							CSS, Design Systems, and Animation
 						</strong>{' '}
 						- these are my passion points. Crafting exceptional component APIs
-						that users love is what I do best.
+						that users love to use.
 					</p>
 
 					<p>

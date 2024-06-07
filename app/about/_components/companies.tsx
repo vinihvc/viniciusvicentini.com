@@ -27,14 +27,13 @@ export const CompaniesSection = (props: CompaniesSectionProps) => {
 					}
 
 					return (
-						<li
-							key={company.company}
-							className={cn(
-								'group-hover:opacity-50 w-full hover:!opacity-100 animate-in transition',
-								{ 'fade-in slide-in-from-bottom-10': showAll },
-							)}
-						>
-							<Link key={company.company} href={company.url} isExternal>
+						<li key={company.company}>
+							<Link
+								className="block px-2 rounded ring-orange-500"
+								key={company.company}
+								href={company.url}
+								isExternal
+							>
 								<CompanyCard data={company} />
 							</Link>
 						</li>
@@ -43,7 +42,10 @@ export const CompaniesSection = (props: CompaniesSectionProps) => {
 			</ul>
 
 			<div className="flex justify-end mt-5">
-				<Button onClick={() => setShowAll((prev) => !prev)}>
+				<Button
+					className="ring-orange-500"
+					onClick={() => setShowAll((prev) => !prev)}
+				>
 					{`Show ${showAll ? 'less' : 'all'}`}
 				</Button>
 			</div>

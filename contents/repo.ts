@@ -13,7 +13,7 @@ import {
 export const REPO_LINKS = [
 	{
 		title: 'Summer Eletrohits',
-		description: 'A music streaming Summer Eletrohits',
+		description: 'A streaming music app',
 		repo_url: 'https://github.com/vinihvc/summer-eletrohits',
 		website_url: 'https://summer-eletrohits.vercel.app',
 		icon: Music4,

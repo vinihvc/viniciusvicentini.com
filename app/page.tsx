@@ -16,14 +16,18 @@ const HomePage = async () => {
 	return (
 		<div className="flex-1 container selection:bg-blue-500 flex flex-col justify-center">
 			<div className="space-y-2">
-				<h1 className="text-3xl font-bold sm:text-4xl">{about.title}</h1>
+				<h1 className="text-4xl font-bold">{about.title}</h1>
 
 				<h2 className="text-muted text-lg">{about.description}</h2>
 			</div>
 
 			<div className="flex gap-2 sm:gap-5 mt-5">
 				{links.map((link) => (
-					<Button key={link.link} className="p-4 size-auto" asChild>
+					<Button
+						key={link.link}
+						className="p-4 size-auto ring-blue-500"
+						asChild
+					>
 						<Link href={link.link} isExternal>
 							{React.createElement(link.icon, {
 								className: 'size-6',

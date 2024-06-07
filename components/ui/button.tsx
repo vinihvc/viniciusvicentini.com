@@ -9,7 +9,7 @@ export const buttonStyle = tv({
 		'gap-2',
 		'rounded-lg drop-shadow',
 		'transition-colors',
-		'outline-none focus-visible:ring-2 ring-white/30 ring-offset-2 ring-offset-black',
+		'outline-none focus-visible:text-white focus-visible:ring-2 ring-white/30 ring-offset-2 ring-offset-black',
 		'disabled:opacity-50 disabled:pointer-events-none',
 	],
 	variants: {

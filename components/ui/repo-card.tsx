@@ -14,7 +14,7 @@ export const Repo = (props: RepoProps) => {
 	return (
 		<article
 			className={cn(
-				'group relative flex items-center gap-x-5 rounded-lg border border-white/5 bg-background p-4 drop-shadow-lg hover:border-white/10 transition',
+				'relative flex items-center gap-x-5 rounded-lg border border-white/5 bg-background p-4 drop-shadow-lg hover:border-white/10 transition',
 				className,
 			)}
 			{...rest}
@@ -25,9 +25,9 @@ export const Repo = (props: RepoProps) => {
 			})}
 
 			<div>
-				<h2 className="mb-1 text-lg font-semibold tracking-wide">
+				<h1 className="mb-1 text-lg font-semibold tracking-wide">
 					{data.title}
-				</h2>
+				</h1>
 
 				<p className="line-clamp-2 text-sm text-muted">{data.description}</p>
 			</div>
@@ -35,7 +35,7 @@ export const Repo = (props: RepoProps) => {
 			<div className="absolute right-3 top-3">
 				<ExternalLink
 					size={12}
-					className="opacity-50 group-hover:opacity-100 transition"
+					className="opacity-50 group-hover:opacity-100 group-focus-visible:opacity-100 transition"
 				/>
 			</div>
 		</article>

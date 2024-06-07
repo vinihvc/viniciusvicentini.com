@@ -26,7 +26,12 @@ const ProjectsPage = async () => {
 
 			<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 mt-10">
 				{repos.map((repo) => (
-					<Link key={repo.title} href={repo.website_url} isExternal>
+					<Link
+						key={repo.title}
+						className="group ring-green-500 rounded"
+						href={repo.website_url}
+						isExternal
+					>
 						<Repo data={repo} />
 					</Link>
 				))}
@@ -34,7 +39,11 @@ const ProjectsPage = async () => {
 
 			<div className="flex justify-end mt-5">
 				<Button asChild>
-					<Link href="https://github.com/vinihvc?tab=repositories" isExternal>
+					<Link
+						className="ring-green-500"
+						href="https://github.com/vinihvc?tab=repositories"
+						isExternal
+					>
 						Visit my GitHub
 						<ExternalLink className="size-4" />
 					</Link>
