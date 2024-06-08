@@ -9,6 +9,7 @@ import { Header } from '@/components/layout/header'
 import { SEO } from '@/constants/seo'
 import { UmamiTracking } from '@/components/tracking/umami'
 import { NoiseBg } from '@/components/layout/noise-bg'
+import { createOgImage } from '@/utils/create-og-image'
 
 const fontFamily = FontSans({
 	subsets: ['latin'],
@@ -30,10 +31,10 @@ export const metadata: Metadata = {
 		type: 'website',
 		images: [
 			{
-				url: 'https://viniciusvicentini.com/images/thumb.png',
-				width: 1200,
-				height: 630,
-				alt: 'Vinicius Vicentini, My personal website.',
+				url: createOgImage(SEO.title, 80),
+				width: 1300,
+				height: 836,
+				alt: 'Vinicius Vicentini',
 			},
 		],
 		siteName: SEO.title,

@@ -15,7 +15,6 @@
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
-    "@vercel/og": "^0.6.2",
     "clsx": "^2.1.1",
     "lucide-react": "0.390.0",
     "next": "14.2.3",

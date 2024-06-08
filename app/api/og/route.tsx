@@ -1,33 +1,61 @@
-import { ImageResponse } from '@vercel/og'
+import { ImageResponse } from 'next/og'
 import type { NextRequest } from 'next/server'
 
-export const dynamic = 'force-dynamic' // defaults to auto
+export const runtime = 'edge'
 
 export const GET = async (request: NextRequest) => {
 	const { searchParams } = request.nextUrl
 
-	const title = searchParams.has('title')
-		? searchParams.get('title')?.slice(0, 100)
-		: 'My default title'
+	const title = searchParams.get('title')
+	const fontSize = Number(searchParams.get('fontSize')) || 60
+
+	const fontData = await fetch(
+		new URL('../../../assets/fonts/Outfit-SemiBold.ttf', import.meta.url),
+	).then((res) => res.arrayBuffer())
 
 	return new ImageResponse(
 		<div
+			tw="h-full w-full flex flex-col items-center justify-center text-white"
 			style={{
-				backgroundImage:
-					"url('https://www.viniciusvicentini.com/images/og.jpg') no-repeat center center",
+				backgroundImage: 'url(https://www.viniciusvicentini.com/images/og.jpg)',
 			}}
-			tw="h-full w-full flex items-start justify-start"
 		>
-			<div tw="flex items-start justify-start h-full">
-				<div tw="flex flex-col justify-between w-full h-full p-20">
-					oi
-					<h1 tw="text-[60px] text-white font-bold text-left">{title}</h1>
+			<div tw="flex flex-col w-full h-full justify-between p-20">
+				<img
+					tw="rounded-full drop-shadow-md"
+					src="https://github.com/vinihvc.png"
+					alt=""
+					width={260}
+					height={260}
+					style={{
+						filter: 'grayscale(100%)',
+					}}
+				/>
+
+				<div tw="flex flex-col">
+					<h2
+						tw="flex flex-col tracking-tight leading-tight font-semibold text-left"
+						style={{
+							fontSize: `${fontSize}px`,
+						}}
+					>
+						{title}
+					</h2>
+
+					<p tw="text-neutral-400 text-3xl">viniciusvicentini.com</p>
 				</div>
 			</div>
 		</div>,
 		{
-			width: 1200,
-			height: 600,
+			width: 1300,
+			height: 836,
+			fonts: [
+				{
+					name: 'Outfit',
+					data: fontData,
+					style: 'normal',
+				},
+			],
 		},
 	)
 }
