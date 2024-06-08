@@ -40,9 +40,9 @@ const AboutPage = async () => {
 				<div className="space-y-5 text-muted text-justify">
 					<p>
 						<strong className="text-white">Hi, I'm Vini</strong>, my first foray
-						into programming came from editing <i>Mods</i> for Counter-Strike
-						1.6. Then I had some websites and blogs and eventually decided to
-						turn it into a career.
+						into programming came from editing Mods for Counter-Strike 1.6. Then
+						I had some websites and blogs and eventually decided to turn it into
+						a career.
 					</p>
 
 					<p>

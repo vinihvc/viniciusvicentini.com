@@ -2,7 +2,6 @@ import React from 'react'
 
 import { SOCIAL_LINKS } from '@/constants/social'
 import { Link } from '@/components/ui/link'
-import { cn } from '@/utils/cn'
 import { Button } from '@/components/ui/button'
 import { SEO } from '@/constants/seo'
 

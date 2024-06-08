@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Outfit as FontSans } from 'next/font/google'
 
 import { MediaQueriesIndicator } from '@/components/debug/media-queries'
@@ -13,10 +13,14 @@ import { createOgImage } from '@/utils/create-og-image'
 
 const fontFamily = FontSans({
 	subsets: ['latin'],
-	weight: ['400', '500', '600', '700'],
+	weight: ['500', '700'],
 	variable: '--font-sans',
 	display: 'swap',
 })
+
+export const viewport: Viewport = {
+	themeColor: '#0E0F0F',
+}
 
 export const metadata: Metadata = {
 	metadataBase: new URL(SEO.url),
