@@ -13,7 +13,7 @@ import { createOgImage } from '@/utils/create-og-image'
 
 const fontFamily = FontSans({
 	subsets: ['latin'],
-	weight: ['500', '700'],
+	weight: ['400', '500', '700'],
 	variable: '--font-sans',
 	display: 'swap',
 })
