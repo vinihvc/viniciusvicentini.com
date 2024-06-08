@@ -20,27 +20,26 @@ const fontFamily = FontSans({
 
 export const metadata: Metadata = {
 	metadataBase: new URL(SEO.url),
-	title: { absolute: SEO.title, template: `%s // ${SEO.title}` },
+	title: { default: SEO.title, template: `%s // ${SEO.title}` },
 	applicationName: SEO.title,
-	description: SEO.description,
 	keywords: SEO.keywords,
 	openGraph: {
 		title: SEO.title,
-		description: SEO.description,
-		url: SEO.url,
+		siteName: SEO.title,
 		type: 'website',
+		url: SEO.url,
 		images: [
 			{
 				url: createOgImage(SEO.title, 80),
-				width: 1300,
+				width: 1600,
 				height: 836,
 				alt: 'Vinicius Vicentini',
 			},
 		],
-		siteName: SEO.title,
 	},
 	twitter: {
-		site: SEO.twitter,
+		creator: SEO.twitter,
+		card: 'summary_large_image',
 	},
 }
 

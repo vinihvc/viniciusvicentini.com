@@ -47,7 +47,7 @@ export const GET = async (request: NextRequest) => {
 			</div>
 		</div>,
 		{
-			width: 1300,
+			width: 1600,
 			height: 836,
 			fonts: [
 				{
