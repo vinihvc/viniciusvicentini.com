@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Link } from '@/components/ui/link'
 import { Repo } from '@/components/ui/repo-card'
 import { Title } from '@/components/ui/title'
-import { REPO_LINKS } from '@/contents/repo'
+import { REPO_LINKS } from '@/content/repo'
 import { ExternalLink } from 'lucide-react'
 
 const getData = async () => {

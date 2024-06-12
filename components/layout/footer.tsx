@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TRAVElING_COUNTRIES } from '@/contents/traveling'
+import { TRAVElING_COUNTRIES } from '@/content/traveling'
 import { cn } from '@/utils/cn'
 import { SEO } from '@/constants/seo'
 

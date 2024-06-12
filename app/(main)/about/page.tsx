@@ -1,5 +1,5 @@
 import { Title } from '@/components/ui/title'
-import { COMPANIES } from '@/contents/companies'
+import { COMPANIES } from '@/content/companies'
 import { CompaniesSection } from './_components/companies'
 import { DynamicImage } from '@/components/ui/dynamic-image'
 import { Button } from '@/components/ui/button'

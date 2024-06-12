@@ -1,28 +1,20 @@
+import { SEO } from '@/constants/seo'
 import type { MetadataRoute } from 'next'
 
 const sitemap = (): MetadataRoute.Sitemap => {
-	return [
-		{
-			url: 'https://viniciusvicentini.com',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://viniciusvicentini.com/about',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://viniciusvicentini.com/projects',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://viniciusvicentini.com/uses',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://viniciusvicentini.com/bookshelf',
-			lastModified: new Date(),
-		},
-	]
+	const blogs = []?.map((post: any) => ({
+		url: `${SEO.url}/blog/${post.slug}`,
+		lastModified: post.metadata.publishedAt,
+	}))
+
+	const routes = ['', 'about', 'projects', 'uses', 'bookshelf'].map(
+		(route) => ({
+			url: `${SEO.url}/${route}`,
+			lastModified: new Date().toISOString().split('T')[0],
+		}),
+	)
+
+	return [...routes, ...blogs]
 }
 
 export default sitemap

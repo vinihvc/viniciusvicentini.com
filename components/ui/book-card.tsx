@@ -1,4 +1,4 @@
-import type { BookType } from '@/contents/books'
+import type { BookType } from '@/content/books'
 import { Rating } from './rating'
 import { cn } from '@/utils/cn'
 import { DynamicImage } from './dynamic-image'

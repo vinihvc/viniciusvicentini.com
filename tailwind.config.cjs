@@ -8,8 +8,6 @@ module.exports = withTV({
   content: [
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
-    "libs/**/*.{ts,tsx}",
-    "constants/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

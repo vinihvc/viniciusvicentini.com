@@ -1,6 +1,6 @@
 import { Link } from '@/components/ui/link'
 import { Title } from '@/components/ui/title'
-import { USE_STACK } from '@/contents/uses'
+import { USE_STACK } from '@/content/uses'
 
 const getData = async () => {
 	return { uses: USE_STACK }

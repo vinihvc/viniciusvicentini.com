@@ -1,6 +1,6 @@
 import { BookCard } from '@/components/ui/book-card'
 import { Title } from '@/components/ui/title'
-import { READ_BOOKS } from '@/contents/books'
+import { READ_BOOKS } from '@/content/books'
 
 const getData = async () => {
 	return {

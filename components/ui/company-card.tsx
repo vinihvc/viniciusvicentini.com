@@ -1,4 +1,4 @@
-import type { CompanyType } from '@/contents/companies'
+import type { CompanyType } from '@/content/companies'
 import { cn } from '@/utils/cn'
 import Image from 'next/image'
 

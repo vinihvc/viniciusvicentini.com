@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 	themeColor: '#0E0F0F',
 }
 
-export const metadata: Metadata = {
+export const generateMetadata = async (): Promise<Metadata> => ({
 	metadataBase: new URL(SEO.url),
 	title: { default: SEO.title, template: `%s // ${SEO.title}` },
 	applicationName: SEO.title,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 		creator: SEO.twitter,
 		card: 'summary_large_image',
 	},
-}
+})
 
 const RootLayout = ({ children }: React.PropsWithChildren) => {
 	return (

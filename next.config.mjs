@@ -1,5 +1,7 @@
 
 import withPlaiceholder from "@plaiceholder/next";
+import { withContentlayer } from "next-contentlayer"
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -29,4 +31,4 @@ const nextConfig = {
   },
 }
 
-export default withPlaiceholder(nextConfig)
+export default withPlaiceholder(withContentlayer(nextConfig))

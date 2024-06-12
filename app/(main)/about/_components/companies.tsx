@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { CompanyCard } from '@/components/ui/company-card'
 import { Link } from '@/components/ui/link'
-import type { CompanyType } from '@/contents/companies'
+import type { CompanyType } from '@/content/companies'
 import { cn } from '@/utils/cn'
 import React from 'react'
 
