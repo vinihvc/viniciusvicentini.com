@@ -7,6 +7,14 @@ import { SEO } from '@/constants/seo'
  * createOgImage('Hello World', 80) // https://www.viniciusvicentini.com/api/og?title=Hello%20World&fontSize=80
  * ```
  */
-export const createOgImage = (title: string, fontSize: number) => {
-	return `${SEO.url}/api/og?title=${title}&fontSize=${fontSize}`
+export const createOgImage = (title: string, fontSize?: number) => {
+	const params = new URLSearchParams()
+
+	params.append('title', title)
+
+	if (fontSize) {
+		params.append('fontSize', String(fontSize))
+	}
+
+	return `${SEO.url}/api/og?${params}`
 }
