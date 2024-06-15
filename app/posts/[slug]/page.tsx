@@ -56,14 +56,12 @@ const PostPage = async (props: PostPageProps) => {
 	return (
 		<div className="container selection:bg-sky-500">
 			<div className="space-y-1">
-				<h1 className="font-black text-5xl">
-					<Balancer>{post.title}</Balancer>
+				<h1 className="font-bold text-5xl">
+					<Balancer ratio={0}>{post.title}</Balancer>
 				</h1>
-
-				<h2 className="text-muted text-lg">{post.description}</h2>
 			</div>
 
-			<div className="prose prose-invert sm:gap-10 mt-10">
+			<div className="prose prose-invert sm:gap-10 mt-10 text ">
 				<MDXContent components={components} />
 			</div>
 		</div>

@@ -1,15 +1,154 @@
 ---
-title: "Animated Loading Skeletons with Tailwind CSS"
-description: "Learn how to create animated loading skeletons with Tailwind CSS."
+title: Forms using Server Actions in Next.js
+description: "Learn how to use server actions in Next.js with useFormStatus and useFormState from react-dom for secure, efficient server-side logic. Enhance your application's performance and maintain clean, simple code. Perfect for developers aiming to improve their Next.js projects."
 publishedAt: 2021-12-24
 ---
 
-# A Captivating Title
+## What Are Server Actions?
 
-This is my first post...
+Server actions in Next.js allow you to handle server-side logic in a clean and efficient manner. They enable you to execute code on the server in response to client-side events, without exposing your server logic to the client. This is particularly useful for operations that involve sensitive data, interactions with databases, or external APIs that you don't want to expose to the client directly.
 
-```js showLineNumbers title="multiply.js" {3}
-const multiply = (a, b) => a * b
+## Why Use Server Actions?
 
-multiply(2, 2) // 4
-```
+1. **Security**: Server actions keep your sensitive operations secure. Since the code runs on the server, you can safely handle API keys, database credentials, and other sensitive information without exposing them to the client.
+
+2. **Performance**: By offloading heavy computations or data-fetching operations to the server, you can keep the client-side lightweight and responsive. This can lead to faster load times and a better overall user experience.
+
+3. **Simplicity**: Server actions can simplify your codebase by keeping server-side logic centralized. This separation of concerns makes your application easier to maintain and debug.
+
+## Implementing Server Actions in Next.js
+
+To illustrate how server actions work, let's walk through a basic example of a server action in a Next.js application using the `useFormStatus` and `useFormState` hooks from `react-dom`.
+
+### Setting Up a Simple Server Action
+
+1. **Create a New Next.js Project**:
+
+   First, create a new Next.js project if you haven't already:
+
+   ```bash
+   npx create-next-app@latest my-nextjs-app
+   cd my-nextjs-app
+   ```
+
+2. **Set Up a Server Action**:
+
+   Create a new file in the `pages/api` directory. For instance, let's create `hello.js`:
+
+   ```javascript
+   // pages/api/hello.js
+
+   export default function handler(req, res) {
+     if (req.method === 'POST') {
+       const { name } = req.body;
+       res.status(200).json({ message: `Hello, ${name}!` });
+     } else {
+       res.status(405).json({ message: 'Method Not Allowed' });
+     }
+   }
+   ```
+
+   This simple server action handles a POST request and responds with a greeting message.
+
+3. **Invoke the Server Action from the Client**:
+
+   Now, let's create a form in a component to call this server action using `useFormStatus` and `useFormState`
+
+```js showLineNumbers title="components/GreetingForm.js" {3}
+   import { useFormState, useFormStatus } from 'react-dom';
+   import { useState } from 'react';
+
+   const GreetingForm = () => {
+     const [greeting, setGreeting] = useState('');
+     const { isSubmitting } = useFormStatus();
+     const { register, handleSubmit } = useFormState();
+
+     const onSubmit = async (data) => {
+       const res = await fetch('/api/hello', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(data),
+       });
+       const result = await res.json();
+       setGreeting(result.message);
+     };
+
+     return (
+       <div>
+         <form onSubmit={handleSubmit(onSubmit)}>
+           <input
+             type="text"
+             {...register('name', { required: true })}
+             placeholder="Enter your name"
+           />
+           <button type="submit" disabled={isSubmitting}>Greet Me</button>
+         </form>
+         {greeting && <p>{greeting}</p>}
+       </div>
+     );
+   };
+
+   export default GreetingForm;
+   ```
+
+4. **Use the Component in a Page**:
+
+   Finally, import and use this component in a page:
+
+   ```javascript
+   // pages/index.js
+
+   import GreetingForm from '../components/GreetingForm';
+
+   export default function Home() {
+     return (
+       <div>
+         <h1>Welcome to My Next.js App</h1>
+         <GreetingForm />
+       </div>
+     );
+   }
+   ```
+
+### Advanced Server Actions
+
+For more complex scenarios, you might interact with a database or an external API. Let's modify the server action to fetch data from an external API.
+
+1. **Modify the Server Action**:
+
+   ```javascript
+   // pages/api/hello.js
+
+   export default async function handler(req, res) {
+     if (req.method === 'POST') {
+       const { name } = req.body;
+       const response = await fetch(`https://api.example.com/greet?name=${name}`);
+       const data = await response.json();
+       res.status(200).json(data);
+     } else {
+       res.status(405).json({ message: 'Method Not Allowed' });
+     }
+   }
+   ```
+
+2. **Update Client Code (If Needed)**:
+
+   The client code remains largely the same, but you might want to handle the response differently based on the structure of the data returned by the external API.
+
+## Best Practices for Server Actions
+
+1. **Validation and Error Handling**: Always validate input data and handle errors gracefully to prevent unexpected crashes and provide meaningful feedback to the client.
+
+2. **Security**: Keep sensitive logic on the server side. Never expose API keys, database credentials, or other sensitive information to the client.
+
+3. **Performance**: Optimize server actions to be as efficient as possible. Cache results where appropriate and minimize the number of external API calls.
+
+4. **Rate Limiting**: Implement rate limiting to prevent abuse of your server actions, especially if they involve costly operations or interactions with third-party services.
+
+## Conclusion
+
+Server actions in Next.js provide a powerful way to handle server-side logic securely and efficiently. By leveraging these actions and using the `useFormStatus` and `useFormState` hooks from `react-dom`, you can keep your client-side code clean, maintain performance, and ensure the security of sensitive operations. Whether you're building a simple form or a complex application, understanding and utilizing server actions will enhance your development workflow and the robustness of your applications.
+
+Happy coding!

@@ -8,32 +8,30 @@ import { BlurImage } from './blur-image'
 export const components = {
 	h1: (props: any) => (
 		<h2
-			className="relative mt-3 border-t-2 border-rose-200/5 pt-9 text-xl font-medium text-rose-200/95 sm:text-3xl"
+			className="relative mt-3 border-t-2 border-white/5 pt-9 text-xl font-semibold sm:text-3xl"
 			{...props}
 		/>
 	),
 	h2: (props: any) => (
 		<h3
-			className="relative mt-3 border-t-2 border-rose-200/5 pt-9 text-xl font-medium text-rose-200/95 sm:text-2xl"
+			className="relative mt-3 border-t-2 border-white/5 pt-9 text-xl font-semibold sm:text-2xl"
 			{...props}
 		/>
 	),
 	h3: (props: any) => (
-		<h4 className="text-xl font-medium text-rose-200/95" {...props} />
+		<h4 className="text-xl font-semibold text-blue-500" {...props} />
 	),
 	h4: (props: any) => (
-		<h5 className="text-lg font-medium text-rose-200/95" {...props} />
+		<h5 className="text-lg font-semibold text-blue-500" {...props} />
 	),
-	hr: (props: any) => (
-		<hr className="border-t-2 border-rose-200/5" {...props} />
-	),
+	hr: (props: any) => <hr className="border-t-2 border-white/5" {...props} />,
 	a: ({ href = '', ...props }) => {
 		if (href.startsWith('http')) {
 			return (
 				<a
 					className={clsx(
-						'text-rose-200 underline decoration-rose-200/20 underline-offset-2 transition-all hover:text-rose-100 hover:decoration-rose-100/40',
-						'focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70',
+						'decoration-blue-500 underline-offset-2 transition-all hover:text-blue-500:decoration-blue-500',
+						'focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
 					)}
 					href={href}
 					target="_blank"
@@ -47,8 +45,8 @@ export const components = {
 			<NextLink
 				href={href}
 				className={clsx(
-					'text-rose-200 underline decoration-rose-200/20 underline-offset-2 transition-all hover:text-rose-100 hover:decoration-rose-100/40',
-					'focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70',
+					'decoration-blue-500 underline-offset-2 transition-all hover:text-blue-500:decoration-blue-500',
+					'focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
 				)}
 				{...props}
 			/>
@@ -56,7 +54,7 @@ export const components = {
 	},
 	ul: (props: any) => (
 		<ul
-			className="space-y-3 [li>&]:mt-3 [&>li]:relative [&>li]:pl-7 before:[&>li]:absolute before:[&>li]:left-1 before:[&>li]:top-2 before:[&>li]:h-1.5 before:[&>li]:w-1.5 before:[&>li]:rounded-full before:[&>li]:bg-rose-200/20"
+			className="space-y-3 [li>&]:mt-3 [&>li]:relative [&>li]:pl-7 before:[&>li]:absolute before:[&>li]:left-1 before:[&>li]:top-2 before:[&>li]:h-1.5 before:[&>li]:w-1.5 before:[&>li]:rounded-full before:[&>li]:bg-blue-500"
 			{...props}
 		/>
 	),
@@ -84,7 +82,7 @@ export const components = {
 					<BlurImage {...props} />
 				</div>
 				{caption ? (
-					<div className="mt-2 border-l-2 border-rose-200/5 pl-3 text-sm">
+					<div className="mt-2 border-l-2 border-white/5 pl-3 text-sm">
 						{caption}
 					</div>
 				) : null}
@@ -96,13 +94,11 @@ export const components = {
 	blockquote: (props: any) => (
 		<blockquote
 			className={clsx(
-				"relative border-l-2 border-rose-200/5 pl-4 pt-8 before:absolute before:top-5 before:-ml-1 before:-mt-6 before:text-6xl before:text-rose-200/20 before:content-['“'] [&_em]:mt-3 [&_em]:block [&_em]:not-italic [&_em]:leading-none [&_em]:before:pr-1 [&_em]:before:content-['—']",
-				'bg-gradient-to-br from-rose-200 to-rose-200/30 bg-clip-text text-transparent',
+				"relative border-l-2 border-white/5 pl-4 pt-8 before:absolute before:top-5 before:-ml-1 before:-mt-6 before:text-6xl before:before:content-['“'] [&_em]:mt-3 [&_em]:block [&_em]:not-italic [&_em]:leading-none [&_em]:before:pr-1 [&_em]:before:content-['—']",
+				'bg-gradient-to-br from-blue-500-blue-500 bg-clip-text text-transparent',
 			)}
 			{...props}
 		/>
 	),
-	del: (props: any) => (
-		<del className="text-rose-200/50 line-through" {...props} />
-	),
+	del: (props: any) => <del className="line-through" {...props} />,
 }
