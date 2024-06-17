@@ -5,5 +5,5 @@
     ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]",
     ["tw \\=([^;]*);", "'([^']*)'"],]
   ],
-  "tailwindCSS.classAttributes": ["tw"],
+  "tailwindCSS.classAttributes": ["tw","cn", "className"],
 }

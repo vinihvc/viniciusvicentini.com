@@ -1,6 +1,6 @@
 @tailwind base;
-@import "./syntax-highlighting.css";
 @tailwind components;
+@import "./syntax-highlighting.css";
 @tailwind utilities;
 
 html {

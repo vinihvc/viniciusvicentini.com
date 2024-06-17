@@ -8,13 +8,13 @@ import { BlurImage } from './blur-image'
 export const components = {
 	h1: (props: any) => (
 		<h2
-			className="relative mt-3 border-t-2 border-white/5 pt-9 text-xl font-semibold sm:text-3xl"
+			className="relative mt-3 pt-9 text-xl font-semibold sm:text-3xl"
 			{...props}
 		/>
 	),
 	h2: (props: any) => (
 		<h3
-			className="relative mt-3 border-t-2 border-white/5 pt-9 text-xl font-semibold sm:text-2xl"
+			className="relative mt-3 pt-9 text-xl font-semibold sm:text-2xl"
 			{...props}
 		/>
 	),
@@ -53,10 +53,7 @@ export const components = {
 		)
 	},
 	ul: (props: any) => (
-		<ul
-			className="space-y-3 [li>&]:mt-3 [&>li]:relative [&>li]:pl-7 before:[&>li]:absolute before:[&>li]:left-1 before:[&>li]:top-2 before:[&>li]:h-1.5 before:[&>li]:w-1.5 before:[&>li]:rounded-full before:[&>li]:bg-blue-500"
-			{...props}
-		/>
+		<ul className="space-y-3 marker:text-blue-500" {...props} />
 	),
 	ol: (props: any) => (
 		<ol className="list-decimal space-y-3 pl-10" {...props} />
