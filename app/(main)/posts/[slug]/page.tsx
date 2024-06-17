@@ -2,8 +2,7 @@ import { Link } from '@/components/ui/link'
 import { components } from '@/components/ui/post/mdx'
 import { SEO } from '@/constants/seo'
 import { createOgImage } from '@/utils/create-og-image'
-import { formatPost } from '@/utils/formatter'
-import readTime from '@/utils/read-time'
+import { formatPost, readTime } from '@/utils/formatter'
 import { allPosts } from 'contentlayer/generated'
 import { Calendar, ChevronLeft, Clock, Eye } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -93,7 +92,7 @@ const PostPage = async (props: PostPageProps) => {
 
 				<div className="flex gap-2 items-center">
 					<Clock className="size-4" />
-					{`~${readTime(formattedPost.body.raw, 238)} min`}
+					{`~${readTime(formattedPost.body.raw)} min`}
 				</div>
 
 				<div className="flex gap-2 items-center">

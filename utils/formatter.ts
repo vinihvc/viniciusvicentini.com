@@ -1,32 +1,21 @@
 import type { Post } from '@/.contentlayer/generated'
-import { format, isThisYear } from 'date-fns'
+import { format } from 'date-fns'
 
 /**
- * Format date to YYYY
- *
- * ```ts
- * formatDate('2021-01-01') // 2021
- * ```
- */
-export const formatDate = (date: string) => {
-	return new Intl.DateTimeFormat('en-US', {
-		year: 'numeric',
-	}).format(new Date(date))
-}
-
-/**
+ * Calculate the read time of a post
  *
  */
-export const formatShortDate = (date: string) => {
-	const _date = new Date(date)
+export const readTime = (content: string, wordsPerMinute = 238) => {
+	const contentText = JSON.stringify(content)
 
-	return isThisYear(_date) ? format(_date, 'MMM d') : format(_date, 'MMM d, y')
+	const words = contentText.split(' ').length
+
+	return Math.ceil(words / wordsPerMinute)
 }
 
 /**
  * Don't send fields we don't use to the client
  *
- * @see post.body.raw
  */
 export const formatPost = (post: Post) => {
 	return {
