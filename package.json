@@ -1,5 +1,5 @@
 {
-  "name": "viniciusvicentini.com",
+  "name": "vini.one",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "clsx": "^2.1.1",
-    "lucide-react": "0.390.0",
-    "next": "14.2.3",
+    "lucide-react": "0.395.0",
+    "next": "14.2.4",
     "plaiceholder": "^3.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -25,9 +25,9 @@
     "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.0",
+    "@biomejs/biome": "1.8.2",
     "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
