@@ -17,7 +17,7 @@ export const GET = async (request: NextRequest) => {
 		<div
 			tw="h-full w-full flex flex-col items-center justify-center text-white"
 			style={{
-				backgroundImage: 'url(https://www.viniciusvicentini.com/images/og.jpg)',
+				backgroundImage: 'url(https://vini.one/images/og.jpg)',
 			}}
 		>
 			<div tw="flex flex-col w-full h-full justify-between p-20">
@@ -42,7 +42,7 @@ export const GET = async (request: NextRequest) => {
 						{title}
 					</h2>
 
-					<p tw="text-neutral-400 text-3xl">viniciusvicentini.com</p>
+					<p tw="text-neutral-400 text-3xl">vini.one</p>
 				</div>
 			</div>
 		</div>,

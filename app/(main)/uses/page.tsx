@@ -30,7 +30,7 @@ const UsesPage = async () => {
 							{use.items.map((item) => (
 								<li key={item.title}>
 									<Link
-										href={`${item.link}?ref=viniciusvicentini.com`}
+										href={`${item.link}?ref=vini.one`}
 										className="underline underline-offset-4 hover:text-purple-500 transition ring-purple-500"
 										isExternal
 									>
