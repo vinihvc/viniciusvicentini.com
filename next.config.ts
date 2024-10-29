@@ -1,8 +1,10 @@
-
-import withPlaiceholder from "@plaiceholder/next";
+import withPlaiceholder from '@plaiceholder/next'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // experimental: {
+  //   typedRoutes: true,
+  // },
   async redirects() {
     return [
       {

@@ -6,7 +6,7 @@
  * ```
  */
 export const formatDate = (date: string) => {
-	return new Intl.DateTimeFormat('en-US', {
-		year: 'numeric',
-	}).format(new Date(date))
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+  }).format(new Date(date))
 }
