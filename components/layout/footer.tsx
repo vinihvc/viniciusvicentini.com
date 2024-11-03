@@ -1,7 +1,8 @@
 import React from 'react'
-import { SEO } from '@/config/seo'
-import { TRAVElING_COUNTRIES } from '@/contents/traveling'
 import { cn } from '@/utils/cn'
+
+import { SEO } from '@/config/seo'
+import { TRAVElING_COUNTRIES } from '@/config/traveling'
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 

@@ -1,4 +1,3 @@
-import { ButtonDemo } from '@/content/preview/components/button-preview'
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -60,7 +59,7 @@ export const Code = async (props: CodeProps) => {
         value="preview"
         className="data-[state=inactive]:hidden flex min-h-[350px] w-full justify-center p-10 items-center"
       >
-        <ButtonDemo />
+        {/* <ComponentPreview /> */}
       </TabsContent>
 
       <TabsContent className="data-[state=inactive]:hidden" value="raw" asChild>

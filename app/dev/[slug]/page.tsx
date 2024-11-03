@@ -1,6 +1,6 @@
-import { ButtonCode } from '@/content/code/components/button-code'
+import { allComponents } from '@/.contentlayer/generated'
 
-import { Code } from '@/components/ui/code'
+import { MdxComponents } from '@/components/ui/mdx-components'
 
 interface DevSlugPageProps {
   params: Promise<{
@@ -11,12 +11,22 @@ interface DevSlugPageProps {
 const DevSlugPage = async (props: DevSlugPageProps) => {
   const { slug } = await props.params
 
-  return (
-    <>
-      <Code code={ButtonCode} lang="tsx" filename="app/page.tsx" />
+  const component = allComponents.find((item) => item.slugAsParams === slug)
 
-      <pre>{JSON.stringify(slug, null, 2)}</pre>
-    </>
+  if (!component) {
+    throw new Error(`Page not found: /dev/${slug}`)
+  }
+
+  return (
+    <section className="space-y-4">
+      <h1 className="text-2xl font-bold capitalize">{component.title}</h1>
+
+      <h2 className="text-muted-foreground">{component.description}</h2>
+
+      <div dangerouslySetInnerHTML={{ __html: component.body.raw }} />
+
+      <MdxComponents code={component.body.code} />
+    </section>
   )
 }
 

@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react'
-import type { CompanyType } from '@/contents/companies'
 import { cn } from '@/utils/cn'
 
+import type { CompanyType } from '@/config/companies'
 import { Button } from '@/components/ui/button'
 import { NavLink } from '@/components/ui/nav-link'
 

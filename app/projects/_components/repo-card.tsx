@@ -1,6 +1,7 @@
-import type { REPO_LINKS } from '@/contents/repo'
 import { cn } from '@/utils/cn'
 import { ExternalLink } from 'lucide-react'
+
+import type { REPO_LINKS } from '@/config/repo'
 
 interface RepoCardProps extends React.HTMLAttributes<HTMLDivElement> {
   data: (typeof REPO_LINKS)[number]

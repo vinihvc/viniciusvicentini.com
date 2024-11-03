@@ -1,5 +1,4 @@
-import { REPO_LINKS } from '@/contents/repo'
-
+import { REPO_LINKS } from '@/config/repo'
 import { Heading } from '@/components/ui/heading'
 import { NavLink } from '@/components/ui/nav-link'
 

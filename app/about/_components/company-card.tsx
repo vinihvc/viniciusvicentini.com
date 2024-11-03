@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import type { CompanyType } from '@/contents/companies'
 import { cn } from '@/utils/cn'
+
+import type { CompanyType } from '@/config/companies'
 
 interface CompanyCardProps extends React.HTMLAttributes<HTMLElement> {
   /**

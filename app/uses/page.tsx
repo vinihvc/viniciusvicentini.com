@@ -1,5 +1,4 @@
-import { USE_STACK } from '@/contents/uses'
-
+import { USE_STACK } from '@/config/uses'
 import { Heading } from '@/components/ui/heading'
 import { NavLink } from '@/components/ui/nav-link'
 

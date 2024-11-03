@@ -1,10 +1,8 @@
 import withPlaiceholder from '@plaiceholder/next'
+import { withContentlayer } from 'next-contentlayer2'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // experimental: {
-  //   typedRoutes: true,
-  // },
   async redirects() {
     return [
       {
@@ -31,4 +29,4 @@ const nextConfig = {
   },
 }
 
-export default withPlaiceholder(nextConfig)
+export default withContentlayer(withPlaiceholder(nextConfig))

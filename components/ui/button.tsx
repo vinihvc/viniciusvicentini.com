@@ -18,7 +18,7 @@ export const buttonStyle = tv({
       ghost: 'hover:bg-white/5',
     },
     size: {
-      xs: 'size-8',
+      xs: 'h-8 px-3 text-sm',
       sm: 'h-9 px-3',
       md: 'h-10 px-4 py-2',
       lg: 'h-12 px-8',

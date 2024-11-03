@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { COMPANIES } from '@/contents/companies'
 
+import { COMPANIES } from '@/config/companies'
 import { Heading } from '@/components/ui/heading'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 

@@ -2,7 +2,7 @@ import { Clipboard } from 'lucide-react'
 
 const DevPage = () => {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center gap-5 pt-20">
       <Clipboard className="text-muted-foreground size-10" />
 
       <h1 className="text-2xl font-semibold">Dev Area</h1>
