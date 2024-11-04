@@ -42,4 +42,7 @@ export const Component = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: './content',
   documentTypes: [Component],
+  mdx: {
+    cwd: process.cwd(),
+  },
 })

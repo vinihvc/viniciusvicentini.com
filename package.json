@@ -22,6 +22,7 @@
     "next": "15.0.2",
     "next-contentlayer2": "^0.5.3",
     "plaiceholder": "^3.0.0",
+    "pliny": "^0.4.0",
     "react": "19.0.0-rc-7c8e5e7a-20241101",
     "react-dom": "19.0.0-rc-7c8e5e7a-20241101",
     "sharp": "^0.33.5",

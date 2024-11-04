@@ -15,6 +15,9 @@ export const buttonStyle = tv({
   variants: {
     variant: {
       solid: 'bg-white/5 hover:bg-white/10',
+      outline: 'border border-white/10 hover:bg-white/5',
+      success:
+        'bg-green-500/10 text-green-500 hover:text-green-500/80 border border-green-500/20',
       ghost: 'hover:bg-white/5',
     },
     size: {

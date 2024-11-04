@@ -37,7 +37,7 @@ interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof RDialog.Content> {}
 
 export const SheetContent = React.forwardRef<
-  React.ElementRef<typeof RDialog.Content>,
+  React.ComponentRef<typeof RDialog.Content>,
   SheetContentProps
 >(({ className, children, ...props }, ref) => (
   <SheetPortal>

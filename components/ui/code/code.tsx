@@ -3,52 +3,53 @@ import {
   transformerNotationHighlight,
 } from '@shikijs/transformers'
 import { codeToHtml } from 'shiki'
-import type { BundledLanguage, BundledTheme } from 'shiki'
+import type { BundledLanguage } from 'shiki'
 
+import { cn } from '@/lib/utils'
+
+import { MdxComponents } from '../mdx-components'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../tabs'
 import { CopyToClipboard } from './code.clipboard'
 
-type CodeProps = {
-  code: string
+interface CodeProps extends React.ComponentProps<typeof Tabs> {
+  body: {
+    code: string
+    raw: string
+  }
   lang?: BundledLanguage
-  theme?: BundledTheme
-  filename?: string
 }
 export const Code = async (props: CodeProps) => {
-  const {
-    code,
-    lang = 'tsx',
-    theme = 'material-theme-darker',
-    filename,
-  } = props
+  const { body, lang = 'tsx', className, ...rest } = props
 
-  const html = await codeToHtml(code, {
+  const html = await codeToHtml(body.raw, {
     lang,
-    theme,
+    theme: 'material-theme-darker',
     transformers: [transformerNotationHighlight(), transformerNotationDiff()],
   })
-
-  console.log(filename)
 
   return (
     <Tabs
       defaultValue="preview"
-      className="relative max-h-[650px] overflow-hidden rounded-md bg-background/20"
+      className={cn(
+        'relative max-h-[650px] overflow-hidden rounded-md bg-background/20 border',
+        className,
+      )}
+      {...rest}
     >
-      <CopyToClipboard className="absolute right-6 top-12" code={code} />
+      <CopyToClipboard className="absolute right-4 top-12" code={body.code} />
 
       <div className="flex justify-end">
-        <TabsList className="text-muted-foreground inline-flex h-9 w-full items-center justify-start rounded-none border-b bg-transparent p-0">
+        <TabsList className="w-full justify-start border-b bg-transparent p-0">
           <TabsTrigger
             value="preview"
-            className=" focus-visible:ring-ring text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative inline-flex h-9 items-center justify-center whitespace-nowrap rounded-none border-b-2 border-b-transparent bg-transparent px-4 py-1 pb-3 pt-2 text-sm font-semibold shadow-none ring-offset-background transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:shadow-none"
+            className="data-[state=active]:border-b-primary h-9 border-b-2 border-b-transparent bg-transparent"
           >
             Preview
           </TabsTrigger>
 
           <TabsTrigger
             value="raw"
-            className="focus-visible:ring-ring text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative inline-flex h-9 items-center justify-center whitespace-nowrap rounded-none border-b-2 border-b-transparent bg-transparent px-4 py-1 pb-3 pt-2 text-sm font-semibold shadow-none ring-offset-background transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:shadow-none"
+            className="data-[state=active]:border-b-primary h-9 border-b-2 border-b-transparent bg-transparent"
           >
             Code
           </TabsTrigger>
@@ -59,12 +60,12 @@ export const Code = async (props: CodeProps) => {
         value="preview"
         className="data-[state=inactive]:hidden flex min-h-[350px] w-full justify-center p-10 items-center"
       >
-        {/* <ComponentPreview /> */}
+        <MdxComponents code={body.code} />
       </TabsContent>
 
       <TabsContent className="data-[state=inactive]:hidden" value="raw" asChild>
         <div
-          className="overflow-x-auto p-4 text-xs leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:max-h-[650px]"
+          className="overflow-x-auto p-1 text-xs leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:max-h-[650px]"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </TabsContent>

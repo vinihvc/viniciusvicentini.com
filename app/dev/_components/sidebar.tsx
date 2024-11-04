@@ -17,7 +17,7 @@ export const Sidebar = (props: SidebarProps) => {
   }))
 
   return (
-    <aside className={cn('flex flex-col overflow-y-auto', className)} {...rest}>
+    <aside className={cn('flex flex-col', className)} {...rest}>
       {componentsByCategory.map((category) => (
         <div className="pb-4" key={category.name}>
           <h4 className="mb-1 rounded-md py-1 text-sm font-semibold capitalize">

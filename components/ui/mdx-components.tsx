@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { useMDXComponent } from 'next-contentlayer2/hooks'
+import { MDXLayoutRenderer } from 'pliny/mdx-components'
 
 import { cn } from '@/lib/utils'
 
@@ -199,11 +197,5 @@ interface MdxComponentsProps {
 export const MdxComponents = (props: MdxComponentsProps) => {
   const { code } = props
 
-  const Component = useMDXComponent(code)
-
-  return (
-    <div className="mdx">
-      <Component components={components} />
-    </div>
-  )
+  return <MDXLayoutRenderer code={code} components={components} />
 }

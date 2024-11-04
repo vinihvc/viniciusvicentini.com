@@ -1,11 +1,9 @@
 import { allComponents } from '@/.contentlayer/generated'
 
-import { MdxComponents } from '@/components/ui/mdx-components'
+import { Code } from '@/components/ui/code'
 
 interface DevSlugPageProps {
-  params: Promise<{
-    slug: string
-  }>
+  params: Promise<{ slug: string }>
 }
 
 const DevSlugPage = async (props: DevSlugPageProps) => {
@@ -23,9 +21,7 @@ const DevSlugPage = async (props: DevSlugPageProps) => {
 
       <h2 className="text-muted-foreground">{component.description}</h2>
 
-      <div dangerouslySetInnerHTML={{ __html: component.body.raw }} />
-
-      <MdxComponents code={component.body.code} />
+      <Code body={component.body} />
     </section>
   )
 }
