@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 import { ImageResponse } from 'next/og'
 import type { NextRequest } from 'next/server'
+import { DEFAULT_FONT_SIZE } from '@/utils/create-og-image'
+
+import { SEO } from '@/config/seo'
 
 export const runtime = 'edge'
 
@@ -8,7 +11,7 @@ export const GET = async (request: NextRequest) => {
   const { searchParams } = request.nextUrl
 
   const title = searchParams.get('title')
-  const fontSize = Number(searchParams.get('fontSize')) || 60
+  const fontSize = Number(searchParams.get('fontSize')) || DEFAULT_FONT_SIZE
 
   const fontData = await fetch(
     new URL('../../../assets/fonts/Outfit-SemiBold.ttf', import.meta.url),
@@ -45,7 +48,9 @@ export const GET = async (request: NextRequest) => {
               {title}
             </h2>
 
-            <p tw="text-neutral-400 text-3xl">vini.one</p>
+            <p tw="text-neutral-400 text-5xl">
+              {SEO.url.replace('https://', '')}
+            </p>
           </div>
         </div>
       </div>

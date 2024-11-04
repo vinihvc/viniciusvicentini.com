@@ -1,9 +1,15 @@
+import { Metadata } from 'next'
+
 import { REPO_LINKS } from '@/config/repo'
 import { Heading } from '@/components/ui/heading'
 import { NavLink } from '@/components/ui/nav-link'
 
 import { RepoCard } from './_components/repo-card'
 import { VisitGithub } from './_components/visit-github'
+
+export const metadata: Metadata = {
+  title: 'Projects',
+}
 
 const getData = async () => {
   return {

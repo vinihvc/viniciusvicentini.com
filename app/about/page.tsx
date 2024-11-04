@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 import { COMPANIES } from '@/config/companies'
@@ -5,6 +6,10 @@ import { Heading } from '@/components/ui/heading'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 
 import { CompaniesSection } from './_components/companies'
+
+export const metadata: Metadata = {
+  title: 'About',
+}
 
 const getData = async () => {
   return {

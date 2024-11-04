@@ -1,4 +1,9 @@
+import { Metadata } from 'next'
 import { Clipboard } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Dev Area',
+}
 
 const DevPage = () => {
   return (

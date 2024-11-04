@@ -2,9 +2,9 @@ import '@/styles/globals.css'
 
 import type { Metadata, Viewport } from 'next'
 import { Outfit as FontSans } from 'next/font/google'
-import { SEO } from '@/config/seo'
 import { createOgImage } from '@/utils/create-og-image'
 
+import { SEO } from '@/config/seo'
 import { MediaQueriesIndicator } from '@/components/debug/media-queries'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: SEO.url,
     images: [
       {
-        url: createOgImage(SEO.title, 80),
+        url: createOgImage(SEO.title),
         width: 1600,
         height: 836,
         alt: 'Vinicius Vicentini',

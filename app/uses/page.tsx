@@ -1,6 +1,12 @@
+import { Metadata } from 'next'
+
 import { USE_STACK } from '@/config/uses'
 import { Heading } from '@/components/ui/heading'
 import { NavLink } from '@/components/ui/nav-link'
+
+export const metadata: Metadata = {
+  title: 'Personal Uses',
+}
 
 const getData = async () => {
   return { uses: USE_STACK }
