@@ -1,6 +1,7 @@
-import type { BookType } from '@/contents/books'
+import React from 'react'
 import { cn } from '@/utils/cn'
 
+import type { BookType } from '@/config/books'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { Rating } from '@/components/ui/rating'
 

@@ -1,5 +1,4 @@
-import { READ_BOOKS } from '@/contents/books'
-
+import { READ_BOOKS } from '@/config/books'
 import { Heading } from '@/components/ui/heading'
 
 import { BookCard } from './_components/book-card'

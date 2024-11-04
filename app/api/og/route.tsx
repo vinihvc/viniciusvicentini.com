@@ -23,6 +23,7 @@ export const GET = async (request: NextRequest) => {
         }}
       >
         <div tw="flex flex-col w-full h-full justify-between p-20">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             tw="rounded-full drop-shadow-md"
             src="https://github.com/vinihvc.png"
