@@ -56,6 +56,7 @@ export const TabsContent = React.forwardRef<
     ref={ref}
     className={cn(
       'mt-2',
+      'data-[state=inactive]:hidden',
       'outline-none focus-visible:ring-2 ring-ring ring-offset-background ring-offset-2',
       className,
     )}

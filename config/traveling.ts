@@ -1,6 +1,6 @@
-import { BrFlag } from '@/libs/flags/br'
-import { IeFlag } from '@/libs/flags/ie'
-import { ItFlag } from '@/libs/flags/it'
+import { BrFlag } from '@/components/flags/br'
+import { IeFlag } from '@/components/flags/ie'
+import { ItFlag } from '@/components/flags/it'
 
 export const TRAVElING_COUNTRIES = [
   // went 02/04/2024

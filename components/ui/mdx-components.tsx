@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { codeToHtml } from 'shiki'
 
 import { cn } from '@/lib/utils'
 
@@ -134,15 +135,22 @@ const components = {
       {...props}
     />
   ),
-  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <code
-      className={cn(
-        'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm',
-        className,
-      )}
-      {...props}
-    />
-  ),
+  code: async (props: React.HTMLAttributes<HTMLElement>) => {
+    const { children, ...rest } = props
+
+    const code = await codeToHtml(children as string, {
+      lang: 'tsx',
+      theme: 'material-theme-darker',
+    })
+
+    return (
+      <div
+        className="overflow-x-auto p-1 leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:max-h-[650px] font-mono text-xs [&_pre]:rounded"
+        dangerouslySetInnerHTML={{ __html: code }}
+        {...rest}
+      />
+    )
+  },
   Image,
   Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
     <Tabs className={cn('relative mt-6 w-full', className)} {...props} />

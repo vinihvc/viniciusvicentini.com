@@ -1,22 +1,15 @@
 import '@/styles/globals.css'
 
 import type { Metadata, Viewport } from 'next'
-import { Outfit as FontSans } from 'next/font/google'
 import { createOgImage } from '@/utils/create-og-image'
 
 import { SEO } from '@/config/seo'
+import { fontMono, fontSans } from '@/lib/font'
 import { MediaQueriesIndicator } from '@/components/debug/media-queries'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { NoiseBg } from '@/components/layout/noise-bg'
 import { UmamiTracking } from '@/components/tracking/umami'
-
-const fontFamily = FontSans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-sans',
-  display: 'swap',
-})
 
 export const viewport: Viewport = {
   themeColor: '#0E0F0F',
@@ -50,7 +43,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: React.PropsWithChildren) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={fontFamily.variable}>
+      <body className={`${fontSans.variable} ${fontMono.variable}`}>
         <Header />
 
         <NoiseBg />

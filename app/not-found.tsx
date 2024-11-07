@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
-import { Meteors } from '@/components/ui/meteors'
+import { Meteors } from '@/components/layout/meteors'
 
 const NotFoundPage = () => {
   return (

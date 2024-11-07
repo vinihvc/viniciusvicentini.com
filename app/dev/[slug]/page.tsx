@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { allComponents } from '@/.contentlayer/generated'
 import { createOgImage } from '@/utils/create-og-image'
 
-import { Code } from '@/components/ui/code'
+import { MdxComponents } from '@/components/ui/mdx-components'
 
 interface DevSlugPageProps {
   params: Promise<{ slug: string }>
@@ -56,7 +56,7 @@ const DevSlugPage = async (props: DevSlugPageProps) => {
 
       <h2 className="text-muted-foreground">{component.description}</h2>
 
-      <Code body={component.body} />
+      <MdxComponents code={component.body.code} />
     </section>
   )
 }

@@ -21,6 +21,10 @@ const config = withTV({
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        mono: ['var(--font-mono)', ...fontFamily.mono],
+      },
       screens: {
         xs: '450px',
       },
@@ -70,9 +74,7 @@ const config = withTV({
           '5': 'hsl(var(--chart-5))',
         },
       },
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-      },
+
       animation: {
         meteor: 'meteor 5s linear infinite',
       },
