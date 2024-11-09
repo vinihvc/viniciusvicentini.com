@@ -1,0 +1,32 @@
+---
+title: useBreakpoint
+name: use-breakpoint
+description: Get the current breakpoint, based on Tailwind CSS breakpoints
+category: hook
+published: false
+publishedAt: 2024-11-09
+---
+
+<ComponentPreview name="use-breakpoint" type="hook" />
+
+### Usage
+
+```tsx
+'use client'
+
+import { useBreakpoint } from '@/hooks/use-breakpoint'
+
+const App = () => {
+  const { isSm, isMd, isLg, isXl, is2Xl } = useBreakpoint()
+
+  return (
+    <>
+      <p>isSm: {isSm ? 'true' : 'false'}</p>
+      <p>isMd: {isMd ? 'true' : 'false'}</p>
+      <p>isLg: {isLg ? 'true' : 'false'}</p>
+      <p>isXl: {isXl ? 'true' : 'false'}</p>
+      <p>is2Xl: {is2Xl ? 'true' : 'false'}</p>
+    </>
+  )
+}
+```
