@@ -26,9 +26,9 @@ const readFile = (type: string, name: string) => {
 export const ComponentPreview = async (props: ComponentPreviewProps) => {
   const { name, type, className, ...rest } = props
 
-  const codes = readFile(type, name)
+  const code = readFile(type, name)
 
-  const html = await codeToHtml(codes.trimEnd(), {
+  const html = await codeToHtml(code.trimEnd(), {
     lang: 'tsx',
     theme: 'material-theme-darker',
   })
@@ -61,7 +61,7 @@ export const ComponentPreview = async (props: ComponentPreviewProps) => {
           </TabsTrigger>
         </TabsList>
 
-        <CopyToClipboard code={html} className="absolute right-1.5 top-1.5" />
+        <CopyToClipboard code={code} className="absolute right-1.5 top-1.5" />
       </div>
 
       <TabsContent value="preview" asChild>

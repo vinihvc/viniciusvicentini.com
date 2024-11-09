@@ -13,9 +13,17 @@ const DevPage = () => {
       <h1 className="text-2xl font-semibold">Dev Area</h1>
 
       <div className="text-muted-foreground text-balance text-center">
-        <p>Helpers, and other stuff I use to develop faster.</p>
+        <p className="max-md:hidden">
+          Helpers, and other stuff I use to develop faster.
+        </p>
 
-        <p>Copy the code and paste it in your project.</p>
+        <p className="max-md:hidden">
+          Copy the code and paste it in your project.
+        </p>
+
+        <p className="md:hidden">
+          Please open this page on a bigger screen to see the full list.
+        </p>
       </div>
     </div>
   )

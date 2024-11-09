@@ -8,7 +8,6 @@ export const buttonStyle = tv({
     'text-muted-foreground font-medium hover:text-white',
     'gap-2',
     'rounded-lg drop-shadow',
-    'gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
     'transition-colors',
     'outline-none ring-white/30 ring-offset-2 ring-offset-black focus-visible:text-white focus-visible:ring-2',
     'disabled:pointer-events-none disabled:opacity-50',
