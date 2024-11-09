@@ -1,5 +1,5 @@
-import Button from './component/button'
-import useClipboard from './hook/use-clipboard'
+import { Button } from './component/button'
+import { useClipboard } from './hook/use-clipboard'
 
 export const CODE_COMPONENTS = {
   component: {

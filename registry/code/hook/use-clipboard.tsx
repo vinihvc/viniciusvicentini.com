@@ -1,6 +1,6 @@
 import React from 'react'
 
-const useClipboard = (value: string, options?: { timeout?: number }) => {
+export const useClipboard = (value: string, options?: { timeout?: number }) => {
   const { timeout = 2000 } = options ?? {}
 
   const [code, setCode] = React.useState(value)
@@ -22,5 +22,3 @@ const useClipboard = (value: string, options?: { timeout?: number }) => {
 
   return { isCopied, setCode, onCopy }
 }
-
-export default useClipboard

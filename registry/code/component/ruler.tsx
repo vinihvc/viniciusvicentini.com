@@ -10,13 +10,14 @@ export const Ruler = (props: RulerProps) => {
   return (
     <article
       className={cn(
-        'bg-black border border-border p-4 overflow-auto m-auto rounded flex items-center justify-center',
+        'bg-black border border-border p-4 m-auto rounded flex items-center justify-center',
         className,
       )}
       style={{
         color: 'rgba(128, 128, 128, 0.5)',
         resize: 'horizontal',
         backgroundRepeat: 'no-repeat',
+        overflow: 'auto',
         backgroundImage:
           'repeating-linear-gradient(to right, currentColor, currentColor 1px, transparent 1px, transparent 10px), repeating-linear-gradient(to right, currentColor, currentColor 1px, transparent 1px, transparent 60px)',
         backgroundSize: '100% 10px, 100% 20px',

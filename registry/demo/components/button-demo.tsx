@@ -1,4 +1,4 @@
-import Button from '@/registry/code/component/button'
+import { Button } from '@/registry/code/component/button'
 
 const ButtonDemo = () => {
   return <Button>Button</Button>
