@@ -6,6 +6,8 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
+  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
 
@@ -21,7 +23,7 @@ interface HeaderMobileProps
   routes: RouteType[]
 }
 
-export const HeaderMobile = (props: HeaderMobileProps) => {
+const HeaderMobile = (props: HeaderMobileProps) => {
   const { routes, className, ...rest } = props
 
   return (
@@ -34,6 +36,12 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
       </SheetTrigger>
 
       <SheetContent>
+        <SheetTitle className="sr-only">Menu</SheetTitle>
+
+        <SheetDescription className="sr-only">
+          Navigate through my site
+        </SheetDescription>
+
         <SheetClose asChild>
           <HeaderLogo className="mb-20 inline-block origin-top-left scale-150 transform-gpu rounded bg-white/10 animate-in zoom-in-50" />
         </SheetClose>
@@ -52,3 +60,5 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
     </Sheet>
   )
 }
+
+export default HeaderMobile

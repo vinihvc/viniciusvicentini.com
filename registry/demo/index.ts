@@ -6,7 +6,11 @@ export const DEMO_COMPONENTS = {
       component: React.lazy(
         () => import('@/registry/demo/components/button-demo'),
       ),
-      description: 'Button component',
+    },
+    ruler: {
+      component: React.lazy(
+        () => import('@/registry/demo/components/ruler-demo'),
+      ),
     },
   },
   hook: {
@@ -14,7 +18,6 @@ export const DEMO_COMPONENTS = {
       component: React.lazy(
         () => import('@/registry/demo/hooks/use-clipboard'),
       ),
-      description: 'useClipboard hook',
     },
   },
 }

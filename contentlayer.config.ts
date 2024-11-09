@@ -30,6 +30,10 @@ export const Component = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    updatedAt: {
+      type: 'string',
+      required: false,
+    },
   },
   computedFields: {
     slug: {

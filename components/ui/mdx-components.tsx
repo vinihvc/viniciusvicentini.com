@@ -5,9 +5,12 @@ import { codeToHtml } from 'shiki'
 
 import { cn } from '@/lib/utils'
 
+import { ComponentPreview } from './component-preview'
+import { ScrollArea, ScrollBar } from './scroll-area'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './tabs'
 
 const components = {
+  ComponentPreview,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -135,20 +138,20 @@ const components = {
       {...props}
     />
   ),
-  code: async (props: React.HTMLAttributes<HTMLElement>) => {
-    const { children, ...rest } = props
-
-    const code = await codeToHtml(children as string, {
+  code: async ({ children }: React.HTMLAttributes<HTMLElement>) => {
+    const code = await codeToHtml(children?.toString().trimEnd() ?? '', {
       lang: 'tsx',
       theme: 'material-theme-darker',
     })
 
     return (
-      <div
-        className="overflow-x-auto p-1 leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:max-h-[650px] font-mono text-xs [&_pre]:rounded"
-        dangerouslySetInnerHTML={{ __html: code }}
-        {...rest}
-      />
+      <ScrollArea className="max-h-[650px] grid relative rounded-md bg-background/20 border">
+        <div
+          className="p-1 text-xs leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:text-nowrap"
+          dangerouslySetInnerHTML={{ __html: code }}
+        />
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     )
   },
   Image,

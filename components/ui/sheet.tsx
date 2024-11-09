@@ -15,6 +15,10 @@ export const SheetClose = RDialog.Close
 
 export const SheetPortal = RDialog.Portal
 
+export const SheetTitle = RDialog.Title
+
+export const SheetDescription = RDialog.Description
+
 export const SheetOverlay = React.forwardRef<
   React.ComponentRef<typeof RDialog.Overlay>,
   React.ComponentPropsWithoutRef<typeof RDialog.Overlay>
@@ -45,7 +49,7 @@ export const SheetContent = React.forwardRef<
     <RDialog.Content
       ref={ref}
       className={cn(
-        'fixed inset-y-0 left-0 z-50 h-full w-full gap-4 bg-background/50 p-4 backdrop-blur sm:w-3/4 sm:max-w-sm',
+        'fixed inset-y-0 left-0 z-50 size-full gap-4 bg-background/50 p-4 backdrop-blur sm:w-3/4 sm:max-w-sm',
         'transition ease-in-out',
         'data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=open]:fade-in',
         'data-[state=closed]:duration-300 data-[state=closed]:animate-out data-[state=closed]:fade-out',

@@ -5,6 +5,8 @@ import { Slot } from '@radix-ui/react-slot'
 interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   /**
    * If true, the Heading will be rendered as a child of another component
+   *
+   * @default false
    */
   asChild?: boolean
 }

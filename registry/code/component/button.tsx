@@ -38,6 +38,8 @@ interface ButtonProps
     VariantProps<typeof buttonStyle> {
   /**
    * If true, the button will be rendered as a child of a link
+   *
+   * @default false
    */
   asChild?: boolean
 }

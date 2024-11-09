@@ -10,11 +10,7 @@ const HeaderDesktop = dynamic(() =>
   })),
 )
 
-const HeaderMobile = dynamic(() =>
-  import('./header.mobile').then((mod) => ({
-    default: mod.HeaderMobile,
-  })),
-)
+const HeaderMobile = dynamic(() => import('./header.mobile'))
 
 const headerStyle = tv({
   base: [

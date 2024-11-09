@@ -5,7 +5,7 @@ import { Clipboard, ClipboardCheck } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-import { Button } from '../button'
+import { Button } from './button'
 
 interface CopyToClipboardProps extends React.HTMLAttributes<HTMLButtonElement> {
   code: string
@@ -31,14 +31,14 @@ export const CopyToClipboard = (props: CopyToClipboardProps) => {
 
   return (
     <Button
-      className={cn('px-0 size-8 rounded-sm', className)}
+      className={cn('px-0 size-6 rounded-sm', className)}
       variant={isCopied ? 'success' : 'outline'}
       size="xs"
       onClick={copyToClipboard}
       {...rest}
     >
       {React.createElement(isCopied ? ClipboardCheck : Clipboard, {
-        className: 'size-4',
+        className: 'size-3.5',
       })}
 
       <span className="sr-only">
