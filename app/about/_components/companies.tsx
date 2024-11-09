@@ -1,60 +1,62 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { CompanyCard } from '@/components/ui/company-card'
-import { Link } from '@/components/ui/link'
-import type { CompanyType } from '@/contents/companies'
-import { cn } from '@/utils/cn'
 import React from 'react'
+import { cn } from '@/utils/cn'
+
+import type { CompanyType } from '@/config/companies'
+import { Button } from '@/components/ui/button'
+import { NavLink } from '@/components/ui/nav-link'
+
+import { CompanyCard } from './company-card'
 
 interface CompaniesSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-	data: CompanyType[]
+  data: CompanyType[]
 }
 
 const MAX_COMPANIES = 3
 
 export const CompaniesSection = (props: CompaniesSectionProps) => {
-	const { data, ...rest } = props
+  const { data, ...rest } = props
 
-	const [showAll, setShowAll] = React.useState(false)
+  const [showAll, setShowAll] = React.useState(false)
 
-	return (
-		<div {...rest}>
-			<ul className="group space-y-2 sm:pl-6">
-				{data.map((company, index) => {
-					if (!showAll && index >= MAX_COMPANIES) {
-						return null
-					}
+  return (
+    <div {...rest}>
+      <ul className="group space-y-2 sm:pl-6">
+        {data.map((company, index) => {
+          if (!showAll && index >= MAX_COMPANIES) {
+            return null
+          }
 
-					return (
-						<li
-							className={cn(
-								'group-hover:opacity-50 w-full hover:!opacity-100 animate-in transition',
-								{ 'fade-in slide-in-from-bottom-10': showAll },
-							)}
-							key={company.company}
-						>
-							<Link
-								className="block px-2 rounded ring-orange-500"
-								key={company.company}
-								href={company.url}
-								isExternal
-							>
-								<CompanyCard data={company} />
-							</Link>
-						</li>
-					)
-				})}
-			</ul>
+          return (
+            <li
+              className={cn(
+                'w-full transition animate-in hover:!opacity-100 group-hover:opacity-50',
+                { 'fade-in slide-in-from-bottom-10': showAll },
+              )}
+              key={company.company}
+            >
+              <NavLink
+                className="block rounded px-2 ring-orange-500"
+                key={company.company}
+                href={company.url}
+                isExternal
+              >
+                <CompanyCard data={company} />
+              </NavLink>
+            </li>
+          )
+        })}
+      </ul>
 
-			<div className="flex justify-end mt-5">
-				<Button
-					className="ring-orange-500"
-					onClick={() => setShowAll((prev) => !prev)}
-				>
-					{`Show ${showAll ? 'less' : 'all'}`}
-				</Button>
-			</div>
-		</div>
-	)
+      <div className="mt-5 flex justify-end">
+        <Button
+          className="ring-orange-500"
+          onClick={() => setShowAll((prev) => !prev)}
+        >
+          {`Show ${showAll ? 'less' : 'all'}`}
+        </Button>
+      </div>
+    </div>
+  )
 }

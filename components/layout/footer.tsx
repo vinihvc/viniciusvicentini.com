@@ -1,42 +1,42 @@
 import React from 'react'
-
-import { TRAVElING_COUNTRIES } from '@/contents/traveling'
 import { cn } from '@/utils/cn'
-import { SEO } from '@/constants/seo'
+
+import { SEO } from '@/config/seo'
+import { TRAVElING_COUNTRIES } from '@/config/traveling'
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const getData = async () => {
-	return { about: SEO }
+  return { about: SEO }
 }
 
 export const Footer = async (props: FooterProps) => {
-	const { className, ...rest } = props
+  const { className, ...rest } = props
 
-	const { about } = await getData()
+  const { about } = await getData()
 
-	const livingCountry = TRAVElING_COUNTRIES.at(0)
+  const livingCountry = TRAVElING_COUNTRIES.at(0)
 
-	return (
-		<footer className={cn('py-10 selection:bg-green-500', className)} {...rest}>
-			<div className="container flex justify-between items-center text-muted">
-				<div className="flex items-center space-x-2">
-					<span className="relative flex size-2 top-[1px]">
-						<span className="absolute size-full animate-ping rounded-full bg-green-500 opacity-75" />
-						<span className="relative size-2 rounded-full bg-green-500" />
-					</span>
+  return (
+    <footer className={cn('py-10 selection:bg-green-500', className)} {...rest}>
+      <div className="text-muted-foreground container flex items-center justify-between">
+        <div className="flex items-center space-x-2">
+          <span className="relative top-[1px] flex size-2">
+            <span className="absolute size-full animate-ping rounded-full bg-green-500 opacity-75" />
+            <span className="relative size-2 rounded-full bg-green-500" />
+          </span>
 
-					{livingCountry && (
-						<div className="flex gap-2">
-							<span className="text-xs">Living in</span>
+          {livingCountry && (
+            <div className="flex gap-2">
+              <span className="text-xs">Traveling in</span>
 
-							{React.createElement(livingCountry.flag)}
-						</div>
-					)}
-				</div>
+              {React.createElement(livingCountry.flag)}
+            </div>
+          )}
+        </div>
 
-				<span>&copy;{` ${new Date().getFullYear()} ${about.title}`}</span>
-			</div>
-		</footer>
-	)
+        <span>&copy;{` ${new Date().getFullYear()} ${about.title}`}</span>
+      </div>
+    </footer>
+  )
 }
