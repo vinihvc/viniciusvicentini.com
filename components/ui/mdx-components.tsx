@@ -6,6 +6,7 @@ import { codeToHtml } from 'shiki'
 import { cn } from '@/lib/utils'
 
 import { ComponentPreview } from './component-preview'
+import { CopyToClipboard } from './copy-clipboard'
 import { ScrollArea, ScrollBar } from './scroll-area'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './tabs'
 
@@ -146,6 +147,10 @@ const components = {
 
     return (
       <ScrollArea className="max-h-[650px] grid relative rounded-md bg-background/20 border">
+        <CopyToClipboard
+          className="absolute top-2 right-2"
+          code={children?.toString().trimEnd() ?? ''}
+        />
         <div
           className="p-1 text-xs leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:text-nowrap"
           dangerouslySetInnerHTML={{ __html: code }}
