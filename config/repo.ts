@@ -9,9 +9,9 @@ import {
 
 export const REPO_LINKS = [
   {
-    title: 'Summer Eletrohits',
+    title: 'Eletrohits',
     description: 'A streaming music app',
-    repo_url: 'https://github.com/vinihvc/summer-eletrohits',
+    repo_url: 'https://github.com/vinihvc/eletrohits',
     website_url: 'https://eletrohits.vini.one',
     icon: Music4,
   },
