@@ -36,7 +36,7 @@ const UsesPage = async () => {
               {use.items.map((item) => (
                 <li key={item.title}>
                   <NavLink
-                    href={`${item.link}?ref=vini.one`}
+                    href={item.link}
                     className="underline underline-offset-4 ring-purple-500 transition hover:text-purple-500"
                     isExternal
                   >
