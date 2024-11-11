@@ -11,6 +11,7 @@ const config = withTV({
     'components/**/*.{ts,tsx}',
     'libs/**/*.{ts,tsx}',
     'config/**/*.{ts,tsx}',
+    'registry/**/*.{ts,tsx}',
   ],
   theme: {
     container: {
