@@ -10,19 +10,19 @@ export const Ruler = (props: RulerProps) => {
   return (
     <article
       className={cn(
-        'bg-black border border-border p-4 m-auto rounded flex items-center justify-center',
+        'h-16 min-w-48 p-4',
+        'flex items-center justify-center',
+        'bg-white/90 bg-no-repeat',
+        'border border-border',
+        'rounded',
+        'resize-x overflow-auto',
+        '[--color:rgba(0,0,0,0.5)]',
         className,
       )}
       style={{
-        color: 'rgba(128, 128, 128, 0.5)',
-        resize: 'horizontal',
-        backgroundRepeat: 'no-repeat',
-        overflow: 'auto',
         backgroundImage:
-          'repeating-linear-gradient(to right, currentColor, currentColor 1px, transparent 1px, transparent 10px), repeating-linear-gradient(to right, currentColor, currentColor 1px, transparent 1px, transparent 60px)',
+          'repeating-linear-gradient(to right, var(--color), var(--color) 1px, transparent 1px, transparent 10px), repeating-linear-gradient(to right, var(--color), var(--color) 1px, transparent 1px, transparent 60px)',
         backgroundSize: '100% 10px, 100% 20px',
-        height: '64px',
-        minWidth: '200px',
         ...style,
       }}
       {...rest}

@@ -57,11 +57,15 @@ export const USE_STACK = [
     title: 'Coding',
     items: [
       {
-        title: 'VS Code',
-        description: 'VS Code like everybody else.',
-        link: 'https://code.visualstudio.com',
+        title: 'Cursor',
+        description: 'Fork of VS Code with the best AI coding assistant IMO.',
+        link: 'https://www.cursor.sh/',
       },
-
+      {
+        title: 'Warp',
+        description: 'Blazing fast terminal.',
+        link: 'https://www.warp.dev/',
+      },
       {
         title: 'JetBrains Mono',
         description:
@@ -117,12 +121,6 @@ export const USE_STACK = [
         description:
           'I use Apple Mail for my personal and work emails. It works great.',
         link: 'https://www.icloud.com/mail',
-      },
-      {
-        title: 'AltTab',
-        description:
-          'A better app switcher for macOS. It works like Windows alt+tab.',
-        link: 'https://alt-tab-macos.netlify.app/',
       },
       {
         title: 'Shottr',
