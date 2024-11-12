@@ -1,10 +1,9 @@
 import typography from '@tailwindcss/typography'
-import { withTV } from 'tailwind-variants/transformer'
+import type { Config } from 'tailwindcss'
 import animate from 'tailwindcss-animate'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
-/** @type {import('tailwindcss').Config} */
-const config = withTV({
+const config: Config = {
   darkMode: ['class'],
   content: [
     'app/**/*.{ts,tsx}',
@@ -90,6 +89,6 @@ const config = withTV({
     },
   },
   plugins: [animate, typography],
-})
+}
 
 export default config
