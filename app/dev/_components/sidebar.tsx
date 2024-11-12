@@ -9,11 +9,15 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const Sidebar = (props: SidebarProps) => {
   const { className, ...rest } = props
 
-  const categories = new Set(allComponents.map((c) => c.category))
+  const categories = new Set(
+    allComponents.filter((c) => c.published).map((c) => c.category),
+  )
 
   const componentsByCategory = Array.from(categories).map((category) => ({
     name: category,
-    components: allComponents.filter((c) => c.category === category),
+    components: allComponents
+      .filter((c) => c.published)
+      .filter((c) => c.category === category),
   }))
 
   return (

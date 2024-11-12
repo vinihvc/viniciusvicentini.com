@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { allComponents } from '@/.contentlayer/generated'
 import { createOgImage } from '@/utils/create-og-image'
 
@@ -9,7 +10,9 @@ interface DevSlugPageProps {
 }
 
 export const generateStaticParams = () => {
-  return allComponents.map((item) => ({ slug: item.slugAsParams }))
+  return allComponents
+    .filter((item) => item.published)
+    .map((item) => ({ slug: item.slugAsParams }))
 }
 
 export const generateMetadata = async (
@@ -17,10 +20,12 @@ export const generateMetadata = async (
 ): Promise<Metadata> => {
   const { slug } = await props.params
 
-  const component = allComponents.find((item) => item.slugAsParams === slug)
+  const component = allComponents
+    .filter((item) => item.published)
+    .find((item) => item.slugAsParams === slug)
 
   if (!component) {
-    throw new Error(`Page not found: /dev/${slug}`)
+    notFound()
   }
 
   return {
@@ -47,7 +52,7 @@ const DevSlugPage = async (props: DevSlugPageProps) => {
   const component = allComponents.find((item) => item.slugAsParams === slug)
 
   if (!component) {
-    throw new Error(`Page not found: /dev/${slug}`)
+    notFound()
   }
 
   return (

@@ -146,17 +146,21 @@ const components = {
     })
 
     return (
-      <ScrollArea className="max-h-[650px] grid relative rounded-md bg-background/20 border">
-        <CopyToClipboard
-          className="absolute top-2 right-2"
-          code={children?.toString().trimEnd() ?? ''}
-        />
-        <div
-          className="p-1 text-xs leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:text-nowrap"
-          dangerouslySetInnerHTML={{ __html: code }}
-        />
-        <ScrollBar orientation="horizontal" />
-      </ScrollArea>
+      <div className="h-full grid relative rounded-md bg-background/20 border">
+        <ScrollArea className="max-h-[650px]">
+          <CopyToClipboard
+            className="absolute top-2 right-2"
+            code={children?.toString().trimEnd() ?? ''}
+          />
+
+          <div
+            className="p-1 text-xs leading-loose [&>pre]:!bg-transparent [&_pre]:my-0 [&_pre]:text-nowrap"
+            dangerouslySetInnerHTML={{ __html: code }}
+          />
+
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
+      </div>
     )
   },
   Image,
