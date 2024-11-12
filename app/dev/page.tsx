@@ -1,8 +1,22 @@
 import { Metadata } from 'next'
+import { createOgImage } from '@/utils/create-og-image'
 import { Clipboard } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dev Area',
+  description: 'Helpers, and other stuff I use to develop faster.',
+  openGraph: {
+    title: 'Dev Area',
+    description: 'Helpers, and other stuff I use to develop faster.',
+    images: [
+      {
+        url: createOgImage('Dev Area'),
+        width: 1600,
+        height: 836,
+        alt: 'Dev Area',
+      },
+    ],
+  },
 }
 
 const DevPage = () => {
