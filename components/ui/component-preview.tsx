@@ -80,7 +80,7 @@ export const ComponentPreview = async (props: ComponentPreviewProps) => {
 
       <TabsContent value="preview">
         <ResizablePanelGroup direction="horizontal">
-          <ResizablePanel defaultSize={98} minSize={50}>
+          <ResizablePanel defaultSize={98.5} minSize={50}>
             <ScrollArea>
               <div className="flex min-h-[350px] w-full justify-center items-center p-1">
                 <React.Suspense
@@ -91,14 +91,14 @@ export const ComponentPreview = async (props: ComponentPreviewProps) => {
                     </div>
                   }
                 >
-                  <PreviewComponent />
+                  {!!PreviewComponent && <PreviewComponent />}
                 </React.Suspense>
                 <ScrollBar orientation="horizontal" />
               </div>
             </ScrollArea>
           </ResizablePanel>
           <ResizableHandle withHandle />
-          <ResizablePanel></ResizablePanel>
+          <ResizablePanel defaultSize={1.5} minSize={1.5} />
         </ResizablePanelGroup>
       </TabsContent>
 

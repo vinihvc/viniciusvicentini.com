@@ -6,10 +6,14 @@ const {
   theme: { screens },
 } = resolveConfig(tailwindConfig)
 
+type Screen = keyof typeof screens
+
 // Define breakpoints based on Tailwind's default breakpoints
 const breakpoints = Object.fromEntries(
-  Object.entries(screens).map(([key, value]) => [key, Number.parseInt(value)]),
-)
+  Object.entries(screens).map(([key, value]) => [key, parseInt(value)]),
+) as Record<Screen, number>
+
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
 
 type Breakpoint = keyof typeof breakpoints
 
@@ -31,17 +35,18 @@ export const useBreakpoint = () => {
   const isLessThan = (breakpoint: Breakpoint) =>
     windowWidth < breakpoints[breakpoint]
 
+  const customBreakpoints = Object.entries(screens).reduce(
+    (acc, [key]) => ({
+      ...acc,
+      [`is${capitalize(key)}`]: isGreaterThan(key as Breakpoint),
+      [`isMax${capitalize(key)}`]: isLessThan(key as Breakpoint),
+    }),
+    {},
+  ) as Record<`is${Capitalize<Screen>}` | `isMax${Capitalize<Screen>}`, boolean>
+
   return {
     windowWidth,
-    isSm: isGreaterThan('sm'),
-    isMd: isGreaterThan('md'),
-    isLg: isGreaterThan('lg'),
-    isXl: isGreaterThan('xl'),
-    is2Xl: isGreaterThan('2xl'),
-    isMaxSm: isLessThan('sm'),
-    isMaxMd: isLessThan('md'),
-    isMaxLg: isLessThan('lg'),
-    isMaxXl: isLessThan('xl'),
-    isMax2Xl: isLessThan('2xl'),
+    ...customBreakpoints,
+    breakpoints,
   }
 }

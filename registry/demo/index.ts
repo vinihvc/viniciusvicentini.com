@@ -19,10 +19,5 @@ export const DEMO_COMPONENTS = {
         () => import('@/registry/demo/hooks/use-clipboard'),
       ),
     },
-    // 'use-breakpoint': {
-    //   component: React.lazy(
-    //     () => import('@/registry/demo/hooks/use-breakpoint'),
-    //   ),
-    // },
   },
 }

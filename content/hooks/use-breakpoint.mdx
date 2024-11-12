@@ -3,30 +3,60 @@ title: useBreakpoint
 name: use-breakpoint
 description: Get the current breakpoint, based on Tailwind CSS breakpoints
 category: hook
-published: false
+published: true
 publishedAt: 2024-11-09
 ---
 
-<ComponentPreview name="use-breakpoint" type="hook" />
-
-### Usage
-
 ```tsx
-'use client'
+import React from 'react'
+import tailwindConfig from '@/tailwind.config'
+import resolveConfig from 'tailwindcss/resolveConfig'
 
-import { useBreakpoint } from '@/hooks/use-breakpoint'
+const {
+  theme: { screens },
+} = resolveConfig(tailwindConfig)
 
-const App = () => {
-  const { isSm, isMd, isLg, isXl, is2Xl } = useBreakpoint()
+type Screen = keyof typeof screens
 
-  return (
-    <>
-      <p>isSm: {isSm ? 'true' : 'false'}</p>
-      <p>isMd: {isMd ? 'true' : 'false'}</p>
-      <p>isLg: {isLg ? 'true' : 'false'}</p>
-      <p>isXl: {isXl ? 'true' : 'false'}</p>
-      <p>is2Xl: {is2Xl ? 'true' : 'false'}</p>
-    </>
-  )
+// Define breakpoints based on Tailwind's default breakpoints
+const breakpoints = Object.fromEntries(
+  Object.entries(screens).map(([key, value]) => [key, parseInt(value)]),
+) as Record<Screen, number>
+
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
+
+type Breakpoint = keyof typeof breakpoints
+
+export const useBreakpoint = () => {
+  const [windowWidth, setWindowWidth] = React.useState(0)
+
+  React.useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const isGreaterThan = (breakpoint: Breakpoint) =>
+    windowWidth > breakpoints[breakpoint]
+
+  const isLessThan = (breakpoint: Breakpoint) =>
+    windowWidth < breakpoints[breakpoint]
+
+  const customBreakpoints = Object.entries(screens).reduce(
+    (acc, [key]) => ({
+      ...acc,
+      [`is${capitalize(key)}`]: isGreaterThan(key as Breakpoint),
+      [`isMax${capitalize(key)}`]: isLessThan(key as Breakpoint),
+    }),
+    {},
+  ) as Record<`is${Capitalize<Screen>}` | `isMax${Capitalize<Screen>}`, boolean>
+
+  return {
+    windowWidth,
+    ...customBreakpoints
+  }
 }
 ```
