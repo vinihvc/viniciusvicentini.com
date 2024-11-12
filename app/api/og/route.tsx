@@ -5,6 +5,8 @@ import { DEFAULT_FONT_SIZE } from '@/utils/create-og-image'
 
 import { SEO } from '@/config/seo'
 
+export const runtime = 'edge'
+
 export const GET = async (request: NextRequest) => {
   const { searchParams } = request.nextUrl
 
